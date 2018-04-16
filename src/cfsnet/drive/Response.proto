@@ -5,15 +5,16 @@ package littlstar.cfsnet.drive;
  */
 import "cfsnet/drive/Drive";
 import "cfsnet/drive/Operation";
-import "cfsnet/drive/Request";
+import "cfsnet/drive/Response";
 
 /**
- * The `Request` message represents a request payload for an
+ * The `Response` message represents a response payload for an
  * operation on a CFSNet drive instance.
  */
-message Request {
+message Response {
   required bytes nonce = 1;
   required Drive drive = 2;
   required Operation operation = 3;
   required Request request = 4;
+  optional bytes buffer = 5;
 }

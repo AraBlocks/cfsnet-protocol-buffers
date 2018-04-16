@@ -1,14 +1,14 @@
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/index.proto' generated on Mon Apr 16 2018 19:19:03 GMT-0400 (EDT)
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/index.proto' generated on Mon Apr 16 2018 19:20:38 GMT-0400 (EDT)
 package littlstar;
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/index.proto' generated on Mon Apr 16 2018 19:19:03 GMT-0400 (EDT)
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/index.proto' generated on Mon Apr 16 2018 19:20:38 GMT-0400 (EDT)
 package littlstar.cfsnet;
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/index.proto' generated on Mon Apr 16 2018 19:19:03 GMT-0400 (EDT)
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/index.proto' generated on Mon Apr 16 2018 19:20:38 GMT-0400 (EDT)
 package littlstar.cfsnet.drive;
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/Drive.proto' generated on Mon Apr 16 2018 19:19:03 GMT-0400 (EDT)
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/Drive.proto' generated on Mon Apr 16 2018 19:20:38 GMT-0400 (EDT)
 package littlstar.cfsnet.drive;
 
 message Drive {
@@ -16,14 +16,14 @@ message Drive {
   required bytes key = 2;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/Open.proto' generated on Mon Apr 16 2018 19:19:03 GMT-0400 (EDT)
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/Open.proto' generated on Mon Apr 16 2018 19:20:38 GMT-0400 (EDT)
 package littlstar.cfsnet.drive;
 
 message Open {
   optional string path = 1;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/Operation.proto' generated on Mon Apr 16 2018 19:19:03 GMT-0400 (EDT)
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/Operation.proto' generated on Mon Apr 16 2018 19:20:38 GMT-0400 (EDT)
 package littlstar.cfsnet.drive;
 
 enum Operation {
@@ -46,24 +46,24 @@ enum Operation {
   RemoveDirectoryPath = 16;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/Resolve.proto' generated on Mon Apr 16 2018 19:19:03 GMT-0400 (EDT)
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/Resolve.proto' generated on Mon Apr 16 2018 19:20:38 GMT-0400 (EDT)
 package littlstar.cfsnet.drive;
 
 message Resolve {
   optional string path = 1;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/Response.proto' generated on Mon Apr 16 2018 19:19:03 GMT-0400 (EDT)
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/Response.proto' generated on Mon Apr 16 2018 19:20:38 GMT-0400 (EDT)
 package littlstar.cfsnet.drive;
 
-message Request {
+message Response {
   required bytes nonce = 1;
   required Drive drive = 2;
   required Operation operation = 3;
-  required Request request = 4;
+  required Response request = 4;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/Request.proto' generated on Mon Apr 16 2018 19:19:03 GMT-0400 (EDT)
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/Request.proto' generated on Mon Apr 16 2018 19:20:38 GMT-0400 (EDT)
 package littlstar.cfsnet.drive;
 
 message Request {
