@@ -1,0 +1,20 @@
+package littlstar.cfsnet.drive;
+enum Operation {
+  NoOperation = 0;
+  Resolve = 1;
+  Open = 2;
+  Close = 3;
+  Read = 4;
+  Write = 5;
+  ReadFile = 6;
+  WriteFile = 7;
+  StatFile = 8;
+  UnlinkFile = 9;
+  AccessFile = 10;
+  DownloadFile = 11;
+  DownloadDirectory = 12;
+  MakeDirectory = 13;
+  MakeDirectoryPath = 14;
+  RemoveDirectory = 15;
+  RemoveDirectoryPath = 16;
+}

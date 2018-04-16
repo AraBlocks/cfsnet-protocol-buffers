@@ -1,6 +1,7 @@
 package littlstar.cfsnet.drive;
 import "cfsnet/drive/Drive";
 import "cfsnet/drive/Open";
+import "cfsnet/drive/Operation";
 import "cfsnet/drive/Resolve";
-//import "cfsnet/drive/Response.proto";
+import "cfsnet/drive/Response";
 import "cfsnet/drive/Request";

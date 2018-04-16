@@ -1,0 +1,19 @@
+package littlstar.cfsnet.drive;
+
+/**
+ * Message dependencies.
+ */
+import "cfsnet/drive/Drive";
+import "cfsnet/drive/Operation";
+import "cfsnet/drive/Request";
+
+/**
+ * The `Request` message represents a request payload for an
+ * operation on a CFSNet drive instance.
+ */
+message Request {
+  required bytes nonce = 1;
+  required Drive drive = 2;
+  required Operation operation = 3;
+  required Request request = 4;
+}

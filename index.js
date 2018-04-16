@@ -8,31 +8,38 @@ const kImportPath = resolve(__dirname, 'src')
 
 // root
 const schema = Node('cfsnet/', {package: 'cfsnet', imports: ['index.proto']})
-const output = visit(schema, []).join('')
+const output = visit(schema, [], []).join('')
 const messages = compile(output)
 
 module.exports = Object.assign(messages, {raw: output})
 
-function visit(node, output) {
-  for (const k of node.imports) {
-    const child = Node(k, read(k))
+function visit(node, output, seen) {
+  for (let filename of node.imports) {
+    filename = resolve(kImportPath, filename)
+    if (isDirectory(filename)) {
+      filename = resolve(filename, 'index.proto')
+    }
+
+    if (false == /.*.proto$/.test(filename)) {
+      filename = `${filename}.proto`
+    }
+
+    if (seen.includes(filename)) {
+      continue
+    }
+
+    const child = Node(filename, read(filename))
     const buffer = stringify(child).split('\n').slice(1).join('\n')
+    seen.push(filename)
     output.push('\n')
-    output.push(`// '${k}' generated on ${Date()}`)
+    output.push(`// '${filename}' generated on ${Date()}`)
     output.push(buffer)
-    visit(child, output)
+    visit(child, output, seen)
   }
 
   return output
 
   function read(filename) {
-    filename = resolve(kImportPath, filename)
-    if (isDirectory(filename)) {
-      filename = resolve(filename, 'index.proto')
-    }
-    if (false == /.*.proto$/.test(filename)) {
-      filename = `${filename}.proto`
-    }
     return parse(readFileSync(filename))
   }
 }

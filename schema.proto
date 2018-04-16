@@ -1,14 +1,14 @@
 
-// 'index.proto' generated on Mon Apr 16 2018 18:28:07 GMT-0400 (EDT)
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/index.proto' generated on Mon Apr 16 2018 19:19:03 GMT-0400 (EDT)
 package littlstar;
 
-// 'cfsnet' generated on Mon Apr 16 2018 18:28:07 GMT-0400 (EDT)
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/index.proto' generated on Mon Apr 16 2018 19:19:03 GMT-0400 (EDT)
 package littlstar.cfsnet;
 
-// 'cfsnet/drive' generated on Mon Apr 16 2018 18:28:07 GMT-0400 (EDT)
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/index.proto' generated on Mon Apr 16 2018 19:19:03 GMT-0400 (EDT)
 package littlstar.cfsnet.drive;
 
-// 'cfsnet/drive/Drive' generated on Mon Apr 16 2018 18:28:07 GMT-0400 (EDT)
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/Drive.proto' generated on Mon Apr 16 2018 19:19:03 GMT-0400 (EDT)
 package littlstar.cfsnet.drive;
 
 message Drive {
@@ -16,32 +16,58 @@ message Drive {
   required bytes key = 2;
 }
 
-// 'cfsnet/drive/Open' generated on Mon Apr 16 2018 18:28:07 GMT-0400 (EDT)
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/Open.proto' generated on Mon Apr 16 2018 19:19:03 GMT-0400 (EDT)
 package littlstar.cfsnet.drive;
 
 message Open {
   optional string path = 1;
 }
 
-// 'cfsnet/drive/Resolve' generated on Mon Apr 16 2018 18:28:07 GMT-0400 (EDT)
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/Operation.proto' generated on Mon Apr 16 2018 19:19:03 GMT-0400 (EDT)
+package littlstar.cfsnet.drive;
+
+enum Operation {
+  NoOperation = 0;
+  Resolve = 1;
+  Open = 2;
+  Close = 3;
+  Read = 4;
+  Write = 5;
+  ReadFile = 6;
+  WriteFile = 7;
+  StatFile = 8;
+  UnlinkFile = 9;
+  AccessFile = 10;
+  DownloadFile = 11;
+  DownloadDirectory = 12;
+  MakeDirectory = 13;
+  MakeDirectoryPath = 14;
+  RemoveDirectory = 15;
+  RemoveDirectoryPath = 16;
+}
+
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/Resolve.proto' generated on Mon Apr 16 2018 19:19:03 GMT-0400 (EDT)
 package littlstar.cfsnet.drive;
 
 message Resolve {
   optional string path = 1;
 }
 
-// 'cfsnet/drive/Request' generated on Mon Apr 16 2018 18:28:07 GMT-0400 (EDT)
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/Response.proto' generated on Mon Apr 16 2018 19:19:03 GMT-0400 (EDT)
 package littlstar.cfsnet.drive;
 
 message Request {
   required bytes nonce = 1;
   required Drive drive = 2;
+  required Operation operation = 3;
+  required Request request = 4;
 }
 
-// 'cfsnet/drive/Drive' generated on Mon Apr 16 2018 18:28:07 GMT-0400 (EDT)
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/Request.proto' generated on Mon Apr 16 2018 19:19:03 GMT-0400 (EDT)
 package littlstar.cfsnet.drive;
 
-message Drive {
-  required bytes id = 1;
-  required bytes key = 2;
+message Request {
+  required bytes nonce = 1;
+  required Drive drive = 2;
+  required Operation operation = 3;
 }
