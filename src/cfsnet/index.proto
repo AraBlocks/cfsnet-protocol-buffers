@@ -1,2 +1,2 @@
-package cfsnet;
-import "cfsnet/drive/index.proto";
+package littlstar.cfsnet;
+import "cfsnet/drive";

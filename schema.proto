@@ -1,22 +1,47 @@
 
-// 'index.proto' generated on Mon Apr 16 2018 18:05:50 GMT-0400 (EDT)
-// 'cfsnet/index.proto' generated on Mon Apr 16 2018 18:05:50 GMT-0400 (EDT)
-package cfsnet;
+// 'index.proto' generated on Mon Apr 16 2018 18:28:07 GMT-0400 (EDT)
+package littlstar;
 
-// 'cfsnet/drive/index.proto' generated on Mon Apr 16 2018 18:05:50 GMT-0400 (EDT)
-package cfsnet.drive;
+// 'cfsnet' generated on Mon Apr 16 2018 18:28:07 GMT-0400 (EDT)
+package littlstar.cfsnet;
 
-// 'cfsnet/drive/Drive.proto' generated on Mon Apr 16 2018 18:05:50 GMT-0400 (EDT)
-package cfsnet.drive;
+// 'cfsnet/drive' generated on Mon Apr 16 2018 18:28:07 GMT-0400 (EDT)
+package littlstar.cfsnet.drive;
+
+// 'cfsnet/drive/Drive' generated on Mon Apr 16 2018 18:28:07 GMT-0400 (EDT)
+package littlstar.cfsnet.drive;
 
 message Drive {
   required bytes id = 1;
   required bytes key = 2;
 }
 
-// 'cfsnet/drive/Open.proto' generated on Mon Apr 16 2018 18:05:50 GMT-0400 (EDT)
-package cfsnet.drive;
+// 'cfsnet/drive/Open' generated on Mon Apr 16 2018 18:28:07 GMT-0400 (EDT)
+package littlstar.cfsnet.drive;
 
 message Open {
   optional string path = 1;
+}
+
+// 'cfsnet/drive/Resolve' generated on Mon Apr 16 2018 18:28:07 GMT-0400 (EDT)
+package littlstar.cfsnet.drive;
+
+message Resolve {
+  optional string path = 1;
+}
+
+// 'cfsnet/drive/Request' generated on Mon Apr 16 2018 18:28:07 GMT-0400 (EDT)
+package littlstar.cfsnet.drive;
+
+message Request {
+  required bytes nonce = 1;
+  required Drive drive = 2;
+}
+
+// 'cfsnet/drive/Drive' generated on Mon Apr 16 2018 18:28:07 GMT-0400 (EDT)
+package littlstar.cfsnet.drive;
+
+message Drive {
+  required bytes id = 1;
+  required bytes key = 2;
 }

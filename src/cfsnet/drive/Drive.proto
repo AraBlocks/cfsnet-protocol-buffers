@@ -1,4 +1,4 @@
-package cfsnet.drive;
+package littlstar.cfsnet.drive;
 
 message Drive {
   required bytes id = 1;

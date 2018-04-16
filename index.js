@@ -1,3 +1,4 @@
+const { sync: isDirectory } = require('is-directory')
 const { parse, stringify } = require('protocol-buffers-schema')
 const { dirname, resolve } = require('path')
 const { readFileSync } = require('fs')
@@ -14,7 +15,7 @@ module.exports = Object.assign(messages, {raw: output})
 
 function visit(node, output) {
   for (const k of node.imports) {
-    const child = Node(k, read(file(k)))
+    const child = Node(k, read(k))
     const buffer = stringify(child).split('\n').slice(1).join('\n')
     output.push('\n')
     output.push(`// '${k}' generated on ${Date()}`)
@@ -24,16 +25,15 @@ function visit(node, output) {
 
   return output
 
-  function file(filename) {
-    if (/.*.proto$/.test(filename)) {
-      return filename
-    } else {
-      return `${filename}.proto`
-    }
-  }
-
   function read(filename) {
-    return parse(readFileSync(resolve(kImportPath, filename)))
+    filename = resolve(kImportPath, filename)
+    if (isDirectory(filename)) {
+      filename = resolve(filename, 'index.proto')
+    }
+    if (false == /.*.proto$/.test(filename)) {
+      filename = `${filename}.proto`
+    }
+    return parse(readFileSync(filename))
   }
 }
 
@@ -42,11 +42,11 @@ function Node(filename, node) {
     syntax: 3,
     filename: resolve(kImportPath, filename),
     package: null,
-    imports: [],
-    enums: [],
     messages: [],
     options: {},
-    extends: []
+    extends: [],
+    imports: [],
+    enums: [],
   }
 
   return Object.assign(defaults, node || {})

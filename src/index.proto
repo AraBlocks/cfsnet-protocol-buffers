@@ -1,1 +1,2 @@
-import "cfsnet/index.proto";
+package littlstar;
+import "cfsnet";
