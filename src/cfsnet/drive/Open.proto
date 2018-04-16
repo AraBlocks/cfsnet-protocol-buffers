@@ -1,0 +1,5 @@
+package cfsnet.drive;
+
+message Open {
+  string path = 1;
+}

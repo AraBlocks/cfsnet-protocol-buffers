@@ -1,0 +1,25 @@
+{
+  "name": "cfsnet-protocol-buffers",
+  "version": "1.0.0",
+  "description": "CFSNet Protocol Buffers",
+  "main": "index.js",
+  "scripts": {
+    "build": "./scripts/build",
+    "test": ":"
+  },
+  "author": "Joseph Werle <werle@littlstar.com>",
+  "license": "Unlicense",
+  "dependencies": {
+    "pbf": "^3.1.0",
+    "protocol-buffers-encodings": "^1.1.0"
+  },
+  "devDependencies": {
+    "cross-spawn": "^6.0.5",
+    "extend": "^3.0.1",
+    "globby": "^8.0.1",
+    "minimist": "^1.2.0",
+    "pify": "^3.0.0",
+    "protocol-buffers": "^4.0.4",
+    "protocol-buffers-schema": "^3.3.2"
+  }
+}

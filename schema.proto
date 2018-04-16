@@ -1,0 +1,22 @@
+
+// 'index.proto' generated on Mon Apr 16 2018 18:05:50 GMT-0400 (EDT)
+// 'cfsnet/index.proto' generated on Mon Apr 16 2018 18:05:50 GMT-0400 (EDT)
+package cfsnet;
+
+// 'cfsnet/drive/index.proto' generated on Mon Apr 16 2018 18:05:50 GMT-0400 (EDT)
+package cfsnet.drive;
+
+// 'cfsnet/drive/Drive.proto' generated on Mon Apr 16 2018 18:05:50 GMT-0400 (EDT)
+package cfsnet.drive;
+
+message Drive {
+  required bytes id = 1;
+  required bytes key = 2;
+}
+
+// 'cfsnet/drive/Open.proto' generated on Mon Apr 16 2018 18:05:50 GMT-0400 (EDT)
+package cfsnet.drive;
+
+message Open {
+  optional string path = 1;
+}

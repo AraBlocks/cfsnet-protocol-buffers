@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+
+const { writeFile } = require('fs')
+const { resolve } = require('path')
+const minimist = require('minimist')
+const messages = require('../')
+const pify = require('pify')
+
+const kOutputFile = resolve(__dirname, '..', 'schema.proto')
+
+process.on('uncaughtException', onerror)
+process.on('unhandledRejection', onerror)
+
+function onerror(err) {
+  console.error("error:", err)
+}
+
+void async function main(argv) {
+  const output = argv.output || kOutputFile
+  await pify(writeFile)(output, Buffer.from(messages.raw))
+}(minimist(process.argv.slice(2)))

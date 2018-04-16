@@ -1,0 +1,7 @@
+package cfsnet.drive;
+import 'cfsnet/drive/Drive.proto';
+
+message Request {
+  required bytes nonce = 1;
+  required cfsnet.drive.Drive drive = 2;
+}
