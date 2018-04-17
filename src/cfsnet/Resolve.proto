@@ -1,4 +1,8 @@
 /**
+ * Implements `Resolve(path)` operation.
+ * Send this message to resolve a given file path
+ * to a fully qualified file name resolving relative
+ * paths (./) and special tokens (~).
  */
 message Resolve {
   string path = 1;
