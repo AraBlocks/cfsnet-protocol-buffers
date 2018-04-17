@@ -1,6 +1,4 @@
-package littlstar.cfsnet.drive;
-
-import "cfsnet/drive/modes";
+import "cfsnet/modes";
 
 /**
  * Implements `AccessFile(path, [mode])` operation.

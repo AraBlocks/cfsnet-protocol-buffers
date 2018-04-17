@@ -1,5 +1,3 @@
-package littlstar.cfsnet.drive;
-
 /**
  * Implements `Read(fd, start, end)` operation.
  * Send this message to read a range from an open

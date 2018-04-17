@@ -1,5 +1,3 @@
-package littlstar.cfsnet.drive;
-
 /**
  * Implements `ListDirectory(path)` operation.
  * Send this message to list a directory.

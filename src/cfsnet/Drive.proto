@@ -1,5 +1,3 @@
-package littlstar.cfsnet.drive;
-
 message Drive {
   required bytes id = 1;
   required bytes key = 2;

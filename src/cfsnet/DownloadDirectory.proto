@@ -1,5 +1,3 @@
-package littlstar.cfsnet.drive;
-
 /**
  * Implements `DownloadDirectory(path)` operation.
  * Send this message to download a directory.

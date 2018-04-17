@@ -1,2 +1,26 @@
 package littlstar.cfsnet;
-import "cfsnet/drive";
+
+import "cfsnet/AccessFile";
+import "cfsnet/Close";
+import "cfsnet/DownloadDirectory";
+import "cfsnet/DownloadFile";
+import "cfsnet/Drive";
+import "cfsnet/errors";
+import "cfsnet/ListDirectory";
+import "cfsnet/MakeDirectory";
+import "cfsnet/MakeDirectoryPath";
+import "cfsnet/modes";
+import "cfsnet/Open";
+import "cfsnet/Operation";
+import "cfsnet/Read";
+import "cfsnet/ReadFile";
+import "cfsnet/RemoveDirectory";
+import "cfsnet/RemoveDirectoryPath";
+import "cfsnet/Request";
+import "cfsnet/Resolve";
+import "cfsnet/Response";
+import "cfsnet/Stat";
+import "cfsnet/StatFile";
+import "cfsnet/TouchFile";
+import "cfsnet/UnlinkFile";
+import "cfsnet/WriteFile";

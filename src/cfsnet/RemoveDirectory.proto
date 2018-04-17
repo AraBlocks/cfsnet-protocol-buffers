@@ -1,5 +1,3 @@
-package littlstar.cfsnet.drive;
-
 /**
  * Implements `RemoveDirectory(path)` operation.
  * Send this message to remove a directory. The directory

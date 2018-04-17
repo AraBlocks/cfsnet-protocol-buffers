@@ -1,5 +1,3 @@
-package littlstar.cfsnet.drive;
-
 /**
  * Implements `ReadFile(path, [start], [end])` operation.
  * Send this message to read a file at a given path with

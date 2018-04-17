@@ -1,12 +1,10 @@
-package littlstar.cfsnet.drive;
-
 /**
  * Message dependencies.
  */
-import "cfsnet/drive/Drive";
-import "cfsnet/drive/errors";
-import "cfsnet/drive/Operation";
-import "cfsnet/drive/Request";
+import "cfsnet/Drive";
+import "cfsnet/errors";
+import "cfsnet/Operation";
+import "cfsnet/Request";
 
 /**
  * The `Response` message represents a response payload for an

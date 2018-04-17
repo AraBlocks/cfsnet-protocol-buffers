@@ -1,5 +1,3 @@
-package littlstar.cfsnet.drive.modes;
-
 enum FileMode {
   F_OK = 0;
   X_OK = 1;

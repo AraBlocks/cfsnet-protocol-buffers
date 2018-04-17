@@ -1,5 +1,3 @@
-package littlstar.cfsnet.drive;
-
 /**
  * Implements `WriteFile(path, buffer, [start], [end])` operation.
  */

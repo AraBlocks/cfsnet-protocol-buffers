@@ -1,5 +1,3 @@
-package littlstar.cfsnet.drive;
-
 /**
  * Implements `MakeDirectory(path)` operation.
  * Send this message to make a directory. Parent

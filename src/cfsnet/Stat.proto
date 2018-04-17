@@ -1,5 +1,3 @@
-package littlstar.cfsnet.drive;
-
 /**
  */
 message Stat {

@@ -1,24 +1,15 @@
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/index.proto' generated on Mon Apr 16 2018 20:10:06 GMT-0400 (EDT)
-package littlstar;
-
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/index.proto' generated on Mon Apr 16 2018 20:10:06 GMT-0400 (EDT)
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/index.proto' generated on Mon Apr 16 2018 20:31:43 GMT-0400 (EDT)
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/index.proto' generated on Mon Apr 16 2018 20:31:43 GMT-0400 (EDT)
 package littlstar.cfsnet;
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/index.proto' generated on Mon Apr 16 2018 20:10:06 GMT-0400 (EDT)
-package littlstar.cfsnet.drive;
-
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/AccessFile.proto' generated on Mon Apr 16 2018 20:10:06 GMT-0400 (EDT)
-package littlstar.cfsnet.drive;
-
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/AccessFile.proto' generated on Mon Apr 16 2018 20:31:43 GMT-0400 (EDT)
 message AccessFile {
   required string path = 1;
   optional FileMode mode = 2;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/modes.proto' generated on Mon Apr 16 2018 20:10:06 GMT-0400 (EDT)
-package littlstar.cfsnet.drive.modes;
-
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/modes.proto' generated on Mon Apr 16 2018 20:31:43 GMT-0400 (EDT)
 enum FileMode {
   F_OK = 0;
   X_OK = 1;
@@ -26,38 +17,28 @@ enum FileMode {
   R_OK = 4;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/Close.proto' generated on Mon Apr 16 2018 20:10:06 GMT-0400 (EDT)
-package littlstar.cfsnet.drive;
-
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Close.proto' generated on Mon Apr 16 2018 20:31:43 GMT-0400 (EDT)
 message Open {
   required uint32 fd = 1;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/DownloadDirectory.proto' generated on Mon Apr 16 2018 20:10:06 GMT-0400 (EDT)
-package littlstar.cfsnet.drive;
-
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/DownloadDirectory.proto' generated on Mon Apr 16 2018 20:31:43 GMT-0400 (EDT)
 message DownloadDirectory {
   required string path = 1;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/DownloadFile.proto' generated on Mon Apr 16 2018 20:10:06 GMT-0400 (EDT)
-package littlstar.cfsnet.drive;
-
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/DownloadFile.proto' generated on Mon Apr 16 2018 20:31:43 GMT-0400 (EDT)
 message DownloadFile {
   required string path = 1;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/Drive.proto' generated on Mon Apr 16 2018 20:10:06 GMT-0400 (EDT)
-package littlstar.cfsnet.drive;
-
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Drive.proto' generated on Mon Apr 16 2018 20:31:43 GMT-0400 (EDT)
 message Drive {
   required bytes id = 1;
   required bytes key = 2;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/errors.proto' generated on Mon Apr 16 2018 20:10:06 GMT-0400 (EDT)
-package littlstar.cfsnet.drive.errors;
-
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/errors.proto' generated on Mon Apr 16 2018 20:31:43 GMT-0400 (EDT)
 enum ErrorCode {
   None = 0;
   AccessDenied = 403;
@@ -66,37 +47,27 @@ enum ErrorCode {
   NotOpened = 410;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/ListDirectory.proto' generated on Mon Apr 16 2018 20:10:06 GMT-0400 (EDT)
-package littlstar.cfsnet.drive;
-
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/ListDirectory.proto' generated on Mon Apr 16 2018 20:31:43 GMT-0400 (EDT)
 message ListDirectory {
   required string path = 1;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/MakeDirectory.proto' generated on Mon Apr 16 2018 20:10:06 GMT-0400 (EDT)
-package littlstar.cfsnet.drive;
-
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/MakeDirectory.proto' generated on Mon Apr 16 2018 20:31:43 GMT-0400 (EDT)
 message MakeDirectory {
   required string path = 1;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/MakeDirectoryPath.proto' generated on Mon Apr 16 2018 20:10:06 GMT-0400 (EDT)
-package littlstar.cfsnet.drive;
-
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/MakeDirectoryPath.proto' generated on Mon Apr 16 2018 20:31:43 GMT-0400 (EDT)
 message MakeDirectoryPath {
   required string path = 1;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/Open.proto' generated on Mon Apr 16 2018 20:10:06 GMT-0400 (EDT)
-package littlstar.cfsnet.drive;
-
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Open.proto' generated on Mon Apr 16 2018 20:31:43 GMT-0400 (EDT)
 message Open {
   required string path = 1;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/Operation.proto' generated on Mon Apr 16 2018 20:10:06 GMT-0400 (EDT)
-package littlstar.cfsnet.drive;
-
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Operation.proto' generated on Mon Apr 16 2018 20:31:43 GMT-0400 (EDT)
 enum Operation {
   NoOperation = 0;
   Resolve = 1;
@@ -119,57 +90,43 @@ enum Operation {
   ListDirectory = 25;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/Read.proto' generated on Mon Apr 16 2018 20:10:06 GMT-0400 (EDT)
-package littlstar.cfsnet.drive;
-
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Read.proto' generated on Mon Apr 16 2018 20:31:43 GMT-0400 (EDT)
 message Read {
   required uint32 fd = 1;
   required uint32 start = 2;
   required uint32 end = 3;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/ReadFile.proto' generated on Mon Apr 16 2018 20:10:06 GMT-0400 (EDT)
-package littlstar.cfsnet.drive;
-
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/ReadFile.proto' generated on Mon Apr 16 2018 20:31:43 GMT-0400 (EDT)
 message ReadFile {
   required string path = 1;
   optional uint32 start = 2;
   optional uint32 end = 3;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/RemoveDirectory.proto' generated on Mon Apr 16 2018 20:10:06 GMT-0400 (EDT)
-package littlstar.cfsnet.drive;
-
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/RemoveDirectory.proto' generated on Mon Apr 16 2018 20:31:43 GMT-0400 (EDT)
 message RemoveDirectory {
   required string path = 1;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/RemoveDirectoryPath.proto' generated on Mon Apr 16 2018 20:10:06 GMT-0400 (EDT)
-package littlstar.cfsnet.drive;
-
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/RemoveDirectoryPath.proto' generated on Mon Apr 16 2018 20:31:43 GMT-0400 (EDT)
 message RemoveDirectoryPath {
   required string path = 1;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/Request.proto' generated on Mon Apr 16 2018 20:10:06 GMT-0400 (EDT)
-package littlstar.cfsnet.drive;
-
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Request.proto' generated on Mon Apr 16 2018 20:31:43 GMT-0400 (EDT)
 message Request {
   required bytes nonce = 1;
   required Drive drive = 2;
   required Operation operation = 3;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/Resolve.proto' generated on Mon Apr 16 2018 20:10:06 GMT-0400 (EDT)
-package littlstar.cfsnet.drive;
-
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Resolve.proto' generated on Mon Apr 16 2018 20:31:43 GMT-0400 (EDT)
 message Resolve {
   optional string path = 1;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/Response.proto' generated on Mon Apr 16 2018 20:10:06 GMT-0400 (EDT)
-package littlstar.cfsnet.drive;
-
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Response.proto' generated on Mon Apr 16 2018 20:31:43 GMT-0400 (EDT)
 message Response {
   required bytes nonce = 1;
   required Drive drive = 2;
@@ -179,9 +136,7 @@ message Response {
   optional bytes buffer = 6;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/Stat.proto' generated on Mon Apr 16 2018 20:10:06 GMT-0400 (EDT)
-package littlstar.cfsnet.drive;
-
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Stat.proto' generated on Mon Apr 16 2018 20:31:43 GMT-0400 (EDT)
 message Stat {
   required uint32 mode = 1;
   optional uint32 uid = 2;
@@ -194,30 +149,22 @@ message Stat {
   optional uint64 ctime = 9;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/StatFile.proto' generated on Mon Apr 16 2018 20:10:06 GMT-0400 (EDT)
-package littlstar.cfsnet.drive;
-
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/StatFile.proto' generated on Mon Apr 16 2018 20:31:43 GMT-0400 (EDT)
 message StatFile {
   required string path = 1;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/TouchFile.proto' generated on Mon Apr 16 2018 20:10:06 GMT-0400 (EDT)
-package littlstar.cfsnet.drive;
-
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/TouchFile.proto' generated on Mon Apr 16 2018 20:31:43 GMT-0400 (EDT)
 message TouchFile {
   required string path = 1;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/UnlinkFile.proto' generated on Mon Apr 16 2018 20:10:06 GMT-0400 (EDT)
-package littlstar.cfsnet.drive;
-
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/UnlinkFile.proto' generated on Mon Apr 16 2018 20:31:43 GMT-0400 (EDT)
 message UnlinkFile {
   required string path = 1;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/drive/WriteFile.proto' generated on Mon Apr 16 2018 20:10:06 GMT-0400 (EDT)
-package littlstar.cfsnet.drive;
-
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/WriteFile.proto' generated on Mon Apr 16 2018 20:31:43 GMT-0400 (EDT)
 message WriteFile {
   required string path = 1;
   required bytes buffer = 2;

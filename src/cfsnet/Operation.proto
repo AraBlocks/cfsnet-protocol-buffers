@@ -1,4 +1,3 @@
-package littlstar.cfsnet.drive;
 enum Operation {
   NoOperation = 0;
   Resolve = 1;
