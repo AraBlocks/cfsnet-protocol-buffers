@@ -4,7 +4,8 @@
   "description": "CFSNet Protocol Buffers",
   "main": "index.js",
   "scripts": {
-    "build": "./scripts/build",
+    "compile": "npm run build",
+    "build": "./scripts/compile",
     "test": ":"
   },
   "author": "Joseph Werle <werle@littlstar.com>",

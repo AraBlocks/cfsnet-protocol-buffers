@@ -1,0 +1,206 @@
+syntax = "proto3";
+
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/index.proto' generated on Mon Apr 16 2018 22:39:54 GMT-0400 (EDT)syntax = "proto3";
+
+option java_package = "com.littlstar.protobuf";
+option java_multiple_files = true;
+option java_outer_classname = "CFSNetProtobuf";
+option objc_class_prefix = "CFSPB";
+option csharp_namespace = "Littlstar.CFSNet.Protobuf";
+
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/index.proto' generated on Mon Apr 16 2018 22:39:54 GMT-0400 (EDT)syntax = "proto3";
+
+package littlstar.cfsnet;
+
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/AccessFile.proto' generated on Mon Apr 16 2018 22:39:54 GMT-0400 (EDT)syntax = "proto3";
+
+message AccessFile {
+  string path = 1;
+  FileMode mode = 2;
+}
+
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/modes.proto' generated on Mon Apr 16 2018 22:39:54 GMT-0400 (EDT)syntax = "proto3";
+
+enum FileMode {
+  F_OK = 0;
+  X_OK = 1;
+  W_OK = 2;
+  R_OK = 4;
+}
+
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Close.proto' generated on Mon Apr 16 2018 22:39:54 GMT-0400 (EDT)syntax = "proto3";
+
+message Close {
+  uint32 fd = 1;
+}
+
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/DownloadDirectory.proto' generated on Mon Apr 16 2018 22:39:54 GMT-0400 (EDT)syntax = "proto3";
+
+message DownloadDirectory {
+  string path = 1;
+}
+
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/DownloadFile.proto' generated on Mon Apr 16 2018 22:39:54 GMT-0400 (EDT)syntax = "proto3";
+
+message DownloadFile {
+  string path = 1;
+}
+
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Drive.proto' generated on Mon Apr 16 2018 22:39:54 GMT-0400 (EDT)syntax = "proto3";
+
+message Drive {
+  bytes id = 1;
+  bytes key = 2;
+}
+
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/errors.proto' generated on Mon Apr 16 2018 22:39:54 GMT-0400 (EDT)syntax = "proto3";
+
+enum ErrorCode {
+  NoError = 0;
+  AccessDeniedError = 403;
+  NotFoundError = 404;
+  NotSupportedError = 405;
+  NotOpenedError = 410;
+}
+
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/ListDirectory.proto' generated on Mon Apr 16 2018 22:39:54 GMT-0400 (EDT)syntax = "proto3";
+
+message ListDirectory {
+  string path = 1;
+}
+
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/MakeDirectory.proto' generated on Mon Apr 16 2018 22:39:54 GMT-0400 (EDT)syntax = "proto3";
+
+message MakeDirectory {
+  string path = 1;
+}
+
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/MakeDirectoryPath.proto' generated on Mon Apr 16 2018 22:39:54 GMT-0400 (EDT)syntax = "proto3";
+
+message MakeDirectoryPath {
+  string path = 1;
+}
+
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Open.proto' generated on Mon Apr 16 2018 22:39:54 GMT-0400 (EDT)syntax = "proto3";
+
+message Open {
+  string path = 1;
+}
+
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Operation.proto' generated on Mon Apr 16 2018 22:39:54 GMT-0400 (EDT)syntax = "proto3";
+
+enum Operation {
+  NoOperation = 0;
+  ResolveOperation = 1;
+  OpenOperation = 2;
+  CloseOperation = 3;
+  ReadOperation = 4;
+  WriteOperation = 5;
+  ReadFileOperation = 10;
+  WriteFileOperation = 11;
+  StatFileOperation = 12;
+  UnlinkFileOperation = 13;
+  AccessFileOperation = 14;
+  TouchFileOperation = 15;
+  DownloadFileOperation = 16;
+  DownloadDirectoryOperation = 20;
+  MakeDirectoryOperation = 21;
+  MakeDirectoryPathOperation = 22;
+  RemoveDirectoryOperation = 23;
+  RemoveDirectoryPathOperation = 24;
+  ListDirectoryOperation = 25;
+}
+
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Read.proto' generated on Mon Apr 16 2018 22:39:54 GMT-0400 (EDT)syntax = "proto3";
+
+message Read {
+  uint32 fd = 1;
+  uint32 start = 2;
+  uint32 end = 3;
+}
+
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/ReadFile.proto' generated on Mon Apr 16 2018 22:39:54 GMT-0400 (EDT)syntax = "proto3";
+
+message ReadFile {
+  string path = 1;
+  uint32 start = 2;
+  uint32 end = 3;
+}
+
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/RemoveDirectory.proto' generated on Mon Apr 16 2018 22:39:54 GMT-0400 (EDT)syntax = "proto3";
+
+message RemoveDirectory {
+  string path = 1;
+}
+
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/RemoveDirectoryPath.proto' generated on Mon Apr 16 2018 22:39:54 GMT-0400 (EDT)syntax = "proto3";
+
+message RemoveDirectoryPath {
+  string path = 1;
+}
+
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Request.proto' generated on Mon Apr 16 2018 22:39:54 GMT-0400 (EDT)syntax = "proto3";
+
+message Request {
+  bytes nonce = 1;
+  Drive drive = 2;
+  Operation operation = 3;
+}
+
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Resolve.proto' generated on Mon Apr 16 2018 22:39:54 GMT-0400 (EDT)syntax = "proto3";
+
+message Resolve {
+  string path = 1;
+}
+
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Response.proto' generated on Mon Apr 16 2018 22:39:54 GMT-0400 (EDT)syntax = "proto3";
+
+message Response {
+  bytes nonce = 1;
+  Drive drive = 2;
+  Operation operation = 3;
+  Request request = 4;
+  ErrorCode errorCode = 5;
+  bytes buffer = 6;
+}
+
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Stat.proto' generated on Mon Apr 16 2018 22:39:54 GMT-0400 (EDT)syntax = "proto3";
+
+message Stat {
+  uint32 mode = 1;
+  uint32 uid = 2;
+  uint32 gid = 3;
+  uint64 size = 4;
+  uint64 blocks = 5;
+  uint64 offset = 6;
+  uint64 byteOffset = 7;
+  uint64 mtime = 8;
+  uint64 ctime = 9;
+}
+
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/StatFile.proto' generated on Mon Apr 16 2018 22:39:54 GMT-0400 (EDT)syntax = "proto3";
+
+message StatFile {
+  string path = 1;
+}
+
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/TouchFile.proto' generated on Mon Apr 16 2018 22:39:54 GMT-0400 (EDT)syntax = "proto3";
+
+message TouchFile {
+  string path = 1;
+}
+
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/UnlinkFile.proto' generated on Mon Apr 16 2018 22:39:54 GMT-0400 (EDT)syntax = "proto3";
+
+message UnlinkFile {
+  string path = 1;
+}
+
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/WriteFile.proto' generated on Mon Apr 16 2018 22:39:54 GMT-0400 (EDT)syntax = "proto3";
+
+message WriteFile {
+  string path = 1;
+  bytes buffer = 2;
+  uint32 start = 3;
+  uint32 end = 4;
+}

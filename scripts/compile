@@ -6,7 +6,7 @@ const minimist = require('minimist')
 const messages = require('../')
 const pify = require('pify')
 
-const kOutputFile = resolve(__dirname, '..', 'schema.proto')
+const kOutputFile = resolve(__dirname, '..', 'cfsnet.proto')
 
 process.on('uncaughtException', onerror)
 process.on('unhandledRejection', onerror)
