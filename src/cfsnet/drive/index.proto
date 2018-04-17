@@ -1,12 +1,15 @@
 package littlstar.cfsnet.drive;
+
 import "cfsnet/drive/AccessFile";
 import "cfsnet/drive/Close";
 import "cfsnet/drive/DownloadDirectory";
 import "cfsnet/drive/DownloadFile";
 import "cfsnet/drive/Drive";
+import "cfsnet/drive/errors";
 import "cfsnet/drive/ListDirectory";
 import "cfsnet/drive/MakeDirectory";
 import "cfsnet/drive/MakeDirectoryPath";
+import "cfsnet/drive/modes";
 import "cfsnet/drive/Open";
 import "cfsnet/drive/Operation";
 import "cfsnet/drive/Read";

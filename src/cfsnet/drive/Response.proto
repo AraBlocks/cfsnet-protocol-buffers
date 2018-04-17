@@ -4,6 +4,7 @@ package littlstar.cfsnet.drive;
  * Message dependencies.
  */
 import "cfsnet/drive/Drive";
+import "cfsnet/drive/errors";
 import "cfsnet/drive/Operation";
 import "cfsnet/drive/Request";
 
@@ -12,9 +13,11 @@ import "cfsnet/drive/Request";
  * operation on a CFSNet drive instance.
  */
 message Response {
+  // matches `Request.nonce`
   required bytes nonce = 1;
   required Drive drive = 2;
   required Operation operation = 3;
   required Request request = 4;
-  optional bytes buffer = 5;
+  optional ErrorCode errorCode = 5;
+  optional bytes buffer = 6;
 }
