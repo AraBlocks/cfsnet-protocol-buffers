@@ -1,0 +1,10 @@
+package littlstar.cfsnet.drive;
+
+/**
+ * Implements `RemoveDirectory(path)` operation.
+ * Send this message to remove a directory. The directory
+ * should already exist and be empty.
+ */
+message RemoveDirectory {
+  required string path = 1;
+}

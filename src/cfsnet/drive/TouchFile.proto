@@ -1,8 +1,8 @@
 package littlstar.cfsnet.drive;
 
 /**
- * Implements `StatFile(path)` operation.
+ * Implements `TouchFile(path)` operation.
  */
-message StatFile {
+message TouchFile {
   required string path = 1;
 }

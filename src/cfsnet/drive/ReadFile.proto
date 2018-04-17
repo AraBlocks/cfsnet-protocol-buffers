@@ -1,0 +1,12 @@
+package littlstar.cfsnet.drive;
+
+/**
+ * Implements `ReadFile(path, [start], [end])` operation.
+ * Send this message to read a file at a given path with
+ * an optional range (start, end).
+ */
+message ReadFile {
+  required string path = 1;
+  optional uint32 start = 2;
+  optional uint32 end = 3;
+}

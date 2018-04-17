@@ -1,4 +1,7 @@
 package littlstar.cfsnet.drive;
+
+/**
+ */
 message Resolve {
   string path = 1;
 }

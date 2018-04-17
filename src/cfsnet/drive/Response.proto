@@ -5,7 +5,7 @@ package littlstar.cfsnet.drive;
  */
 import "cfsnet/drive/Drive";
 import "cfsnet/drive/Operation";
-import "cfsnet/drive/Response";
+import "cfsnet/drive/Request";
 
 /**
  * The `Response` message represents a response payload for an

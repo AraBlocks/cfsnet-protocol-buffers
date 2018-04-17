@@ -1,0 +1,11 @@
+package littlstar.cfsnet.drive;
+
+/**
+ * Implements `MakeDirectory(path)` operation.
+ * Send this message to make a directory. Parent
+ * directories will be made if they do not already
+ * exist in the path.
+ */
+message MakeDirectoryPath {
+  required string path = 1;
+}

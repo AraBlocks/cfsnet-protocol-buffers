@@ -1,0 +1,11 @@
+package littlstar.cfsnet.drive;
+
+/**
+ * Implements `WriteFile(path, buffer, [start], [end])` operation.
+ */
+message WriteFile {
+  required string path = 1;
+  required bytes buffer = 2;
+  optional uint32 start = 3;
+  optional uint32 end = 4;
+}

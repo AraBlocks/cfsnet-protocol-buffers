@@ -1,1 +1,12 @@
-package cfsnet;
+package littlstar.cfsnet.drive;
+
+/**
+ * Implements `Read(fd, start, end)` operation.
+ * Send this message to read a range from an open
+ * file descriptor.
+ */
+message Read {
+  required uint32 fd = 1;
+  required uint32 start = 2;
+  required uint32 end = 3;
+}

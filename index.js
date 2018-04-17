@@ -3,6 +3,7 @@ const { parse, stringify } = require('protocol-buffers-schema')
 const { dirname, resolve } = require('path')
 const { readFileSync } = require('fs')
 const compile = require('protocol-buffers')
+const debug = require('debug')('cfsnet-protocol-buffers')
 
 const kImportPath = resolve(__dirname, 'src')
 
@@ -30,6 +31,7 @@ function visit(node, output, seen) {
 
     const child = Node(filename, read(filename))
     const buffer = stringify(child).split('\n').slice(1).join('\n')
+    debug("visit: seen: %s", filename)
     seen.push(filename)
     output.push('\n')
     output.push(`// '${filename}' generated on ${Date()}`)

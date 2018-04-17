@@ -1,0 +1,10 @@
+package littlstar.cfsnet.drive;
+
+/**
+ * Implements `AccessFile(path, [mode])` operation.
+ * Send this message to check the access of a file.
+ */
+message AccessFile {
+  required string path = 1;
+  optional uint32 mode = 2;
+}

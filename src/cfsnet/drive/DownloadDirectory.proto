@@ -1,0 +1,9 @@
+package littlstar.cfsnet.drive;
+
+/**
+ * Implements `DownloadDirectory(path)` operation.
+ * Send this message to download a directory.
+ */
+message DownloadDirectory {
+  required string path = 1;
+}

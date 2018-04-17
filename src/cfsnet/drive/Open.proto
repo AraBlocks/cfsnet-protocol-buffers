@@ -1,5 +1,10 @@
 package littlstar.cfsnet.drive;
 
+/**
+ * Implements `Open(path)` operation.
+ * Send this message to open a file and get
+ * a file descriptor
+ */
 message Open {
-  string path = 1;
+  required string path = 1;
 }

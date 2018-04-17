@@ -1,0 +1,8 @@
+package littlstar.cfsnet.drive;
+
+/**
+ * Implements `UnlinkFile(path)` operation.
+ */
+message UnlinkFile {
+  required string path = 1;
+}
