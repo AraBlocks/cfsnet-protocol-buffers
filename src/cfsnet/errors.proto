@@ -2,11 +2,11 @@
  * Error codes that
  */
 enum ErrorCode {
-  None = 0;
+  NoError = 0;
 
   // 400s
-  AccessDenied = 403;
-  NotFound = 404;
-  NotSupported = 405;
-  NotOpened = 410;
+  AccessDeniedError = 403;
+  NotFoundError = 404;
+  NotSupportedError = 405;
+  NotOpenedError = 410;
 }

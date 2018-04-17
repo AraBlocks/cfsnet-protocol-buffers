@@ -15,6 +15,10 @@ const messages = compile(output)
 module.exports = Object.assign(messages, {raw: output})
 
 function visit(node, output, seen) {
+  if (0 == output.length) {
+    output.push('syntax = "proto3";\n')
+  }
+
   for (let filename of node.imports) {
     filename = resolve(kImportPath, filename)
     if (isDirectory(filename)) {
@@ -30,7 +34,13 @@ function visit(node, output, seen) {
     }
 
     const child = Node(filename, read(filename))
-    const buffer = stringify(child).split('\n').slice(1).join('\n')
+    const buffer = stringify(child)
+      .split('\n')
+      .slice(0)
+      .join('\n')
+      .replace(/required\s+/g, '')
+      .replace(/optional\s+/g, '')
+
     debug("visit: seen: %s", filename)
     seen.push(filename)
     output.push('\n')

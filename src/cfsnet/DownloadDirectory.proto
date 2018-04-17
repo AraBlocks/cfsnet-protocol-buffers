@@ -3,5 +3,5 @@
  * Send this message to download a directory.
  */
 message DownloadDirectory {
-  required string path = 1;
+  string path = 1;
 }

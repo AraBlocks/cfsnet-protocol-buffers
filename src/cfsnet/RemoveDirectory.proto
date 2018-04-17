@@ -4,5 +4,5 @@
  * should already exist and be empty.
  */
 message RemoveDirectory {
-  required string path = 1;
+  string path = 1;
 }

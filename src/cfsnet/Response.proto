@@ -12,10 +12,10 @@ import "cfsnet/Request";
  */
 message Response {
   // matches `Request.nonce`
-  required bytes nonce = 1;
-  required Drive drive = 2;
-  required Operation operation = 3;
-  required Request request = 4;
-  optional ErrorCode errorCode = 5;
-  optional bytes buffer = 6;
+  bytes nonce = 1;
+  Drive drive = 2;
+  Operation operation = 3;
+  Request request = 4;
+  ErrorCode errorCode = 5;
+  bytes buffer = 6;
 }

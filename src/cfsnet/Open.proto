@@ -4,5 +4,5 @@
  * a file descriptor
  */
 message Open {
-  required string path = 1;
+  string path = 1;
 }

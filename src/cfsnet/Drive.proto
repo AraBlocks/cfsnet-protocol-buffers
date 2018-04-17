@@ -1,4 +1,4 @@
 message Drive {
-  required bytes id = 1;
-  required bytes key = 2;
+  bytes id = 1;
+  bytes key = 2;
 }

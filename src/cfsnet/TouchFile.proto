@@ -2,5 +2,5 @@
  * Implements `TouchFile(path)` operation.
  */
 message TouchFile {
-  required string path = 1;
+  string path = 1;
 }

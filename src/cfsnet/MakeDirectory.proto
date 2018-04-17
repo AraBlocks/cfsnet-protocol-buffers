@@ -4,5 +4,5 @@
  * directory should already exist.
  */
 message MakeDirectory {
-  required string path = 1;
+  string path = 1;
 }

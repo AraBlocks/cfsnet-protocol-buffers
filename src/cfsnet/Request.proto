@@ -9,7 +9,7 @@ import "cfsnet/Operation";
  * operation on a CFSNet drive instance.
  */
 message Request {
-  required bytes nonce = 1;
-  required Drive drive = 2;
-  required Operation operation = 3;
+  bytes nonce = 1;
+  Drive drive = 2;
+  Operation operation = 3;
 }

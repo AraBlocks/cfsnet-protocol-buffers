@@ -2,5 +2,5 @@
  * Implements `UnlinkFile(path)` operation.
  */
 message UnlinkFile {
-  required string path = 1;
+  string path = 1;
 }

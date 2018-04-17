@@ -5,6 +5,6 @@ import "cfsnet/modes";
  * Send this message to check the access of a file.
  */
 message AccessFile {
-  required string path = 1;
-  optional FileMode mode = 2;
+  string path = 1;
+  FileMode mode = 2;
 }

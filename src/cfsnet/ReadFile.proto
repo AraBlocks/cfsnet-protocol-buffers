@@ -4,7 +4,7 @@
  * an optional range (start, end).
  */
 message ReadFile {
-  required string path = 1;
-  optional uint32 start = 2;
-  optional uint32 end = 3;
+  string path = 1;
+  uint32 start = 2;
+  uint32 end = 3;
 }

@@ -3,6 +3,6 @@
  * Send this message to open a file and get
  * a file descriptor
  */
-message Open {
-  required uint32 fd = 1;
+message Close {
+  uint32 fd = 1;
 }

@@ -5,5 +5,5 @@
  * exist in the path.
  */
 message MakeDirectoryPath {
-  required string path = 1;
+  string path = 1;
 }
