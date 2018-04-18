@@ -2,7 +2,7 @@
  * Message dependencies.
  */
 import "cfsnet/Drive";
-import "cfsnet/errors";
+import "cfsnet/ErrorCode";
 import "cfsnet/Operation";
 import "cfsnet/Request";
 

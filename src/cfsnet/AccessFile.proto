@@ -1,4 +1,4 @@
-import "cfsnet/modes";
+import "cfsnet/FileMode";
 
 /**
  * Implements `AccessFile(path, [mode])` operation.
