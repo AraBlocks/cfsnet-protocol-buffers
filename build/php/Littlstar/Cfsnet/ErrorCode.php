@@ -29,5 +29,13 @@ class ErrorCode
      * <code>NotOpenedError = 410;</code>
      */
     const NotOpenedError = 410;
+    /**
+     * <code>InternalError = 500;</code>
+     */
+    const InternalError = 500;
+    /**
+     * <code>NotImplementedError = 501;</code>
+     */
+    const NotImplementedError = 501;
 }
 

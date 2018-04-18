@@ -88,15 +88,18 @@ GPBEnumDescriptor *CFSPBErrorCode_EnumDescriptor(void) {
   if (!descriptor) {
     static const char *valueNames =
         "NoError\000AccessDeniedError\000NotFoundError\000"
-        "NotSupportedError\000NotOpenedError\000";
+        "NotSupportedError\000NotOpenedError\000Interna"
+        "lError\000NotImplementedError\000";
     static const int32_t values[] = {
         CFSPBErrorCode_NoError,
         CFSPBErrorCode_AccessDeniedError,
         CFSPBErrorCode_NotFoundError,
         CFSPBErrorCode_NotSupportedError,
         CFSPBErrorCode_NotOpenedError,
+        CFSPBErrorCode_InternalError,
+        CFSPBErrorCode_NotImplementedError,
     };
-    static const char *extraTextFormatInfo = "\005\000\007\000\001\021\000\002\r\000\003\021\000\004\016\000";
+    static const char *extraTextFormatInfo = "\007\000\007\000\001\021\000\002\r\000\003\021\000\004\016\000\005\r\000\006\023\000";
     GPBEnumDescriptor *worker =
         [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(CFSPBErrorCode)
                                        valueNames:valueNames
@@ -118,6 +121,8 @@ BOOL CFSPBErrorCode_IsValidValue(int32_t value__) {
     case CFSPBErrorCode_NotFoundError:
     case CFSPBErrorCode_NotSupportedError:
     case CFSPBErrorCode_NotOpenedError:
+    case CFSPBErrorCode_InternalError:
+    case CFSPBErrorCode_NotImplementedError:
       return YES;
     default:
       return NO;
@@ -404,11 +409,13 @@ typedef struct CFSPBDownloadFile__storage_ {
 
 @dynamic id_p;
 @dynamic key;
+@dynamic secretKey;
 
 typedef struct CFSPBDrive__storage_ {
   uint32_t _has_storage_[1];
   NSData *id_p;
   NSData *key;
+  NSData *secretKey;
 } CFSPBDrive__storage_;
 
 // This method is threadsafe because it is initially called
@@ -435,6 +442,15 @@ typedef struct CFSPBDrive__storage_ {
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBytes,
       },
+      {
+        .name = "secretKey",
+        .dataTypeSpecific.className = NULL,
+        .number = CFSPBDrive_FieldNumber_SecretKey,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(CFSPBDrive__storage_, secretKey),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom),
+        .dataType = GPBDataTypeBytes,
+      },
     };
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[CFSPBDrive class]
@@ -444,6 +460,11 @@ typedef struct CFSPBDrive__storage_ {
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(CFSPBDrive__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
+#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    static const char *extraTextFormatInfo =
+        "\001\003\t\000";
+    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }

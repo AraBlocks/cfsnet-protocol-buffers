@@ -16,4 +16,9 @@ public interface DriveOrBuilder extends
    * <code>bytes key = 2;</code>
    */
   com.google.protobuf.ByteString getKey();
+
+  /**
+   * <code>bytes secretKey = 3;</code>
+   */
+  com.google.protobuf.ByteString getSecretKey();
 }

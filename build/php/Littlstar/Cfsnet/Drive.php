@@ -21,6 +21,10 @@ class Drive extends \Google\Protobuf\Internal\Message
      * <code>bytes key = 2;</code>
      */
     private $key = '';
+    /**
+     * <code>bytes secretKey = 3;</code>
+     */
+    private $secretKey = '';
 
     public function __construct() {
         \GPBMetadata\Cfsnet::initOnce();
@@ -59,6 +63,23 @@ class Drive extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, False);
         $this->key = $var;
+    }
+
+    /**
+     * <code>bytes secretKey = 3;</code>
+     */
+    public function getSecretKey()
+    {
+        return $this->secretKey;
+    }
+
+    /**
+     * <code>bytes secretKey = 3;</code>
+     */
+    public function setSecretKey($var)
+    {
+        GPBUtil::checkString($var, False);
+        $this->secretKey = $var;
     }
 
 }

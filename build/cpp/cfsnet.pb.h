@@ -148,12 +148,14 @@ enum ErrorCode {
   NotFoundError = 404,
   NotSupportedError = 405,
   NotOpenedError = 410,
+  InternalError = 500,
+  NotImplementedError = 501,
   ErrorCode_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
   ErrorCode_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
 };
 bool ErrorCode_IsValid(int value);
 const ErrorCode ErrorCode_MIN = NoError;
-const ErrorCode ErrorCode_MAX = NotOpenedError;
+const ErrorCode ErrorCode_MAX = NotImplementedError;
 const int ErrorCode_ARRAYSIZE = ErrorCode_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* ErrorCode_descriptor();
@@ -649,12 +651,27 @@ class Drive : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   ::std::string* release_key();
   void set_allocated_key(::std::string* key);
 
+  // bytes secretKey = 3;
+  void clear_secretkey();
+  static const int kSecretKeyFieldNumber = 3;
+  const ::std::string& secretkey() const;
+  void set_secretkey(const ::std::string& value);
+  #if LANG_CXX11
+  void set_secretkey(::std::string&& value);
+  #endif
+  void set_secretkey(const char* value);
+  void set_secretkey(const void* value, size_t size);
+  ::std::string* mutable_secretkey();
+  ::std::string* release_secretkey();
+  void set_allocated_secretkey(::std::string* secretkey);
+
   // @@protoc_insertion_point(class_scope:littlstar.cfsnet.Drive)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::ArenaStringPtr id_;
   ::google::protobuf::internal::ArenaStringPtr key_;
+  ::google::protobuf::internal::ArenaStringPtr secretkey_;
   mutable int _cached_size_;
   friend struct protobuf_cfsnet_2eproto::TableStruct;
 };
@@ -2669,6 +2686,59 @@ inline void Drive::set_allocated_key(::std::string* key) {
   }
   key_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), key);
   // @@protoc_insertion_point(field_set_allocated:littlstar.cfsnet.Drive.key)
+}
+
+// bytes secretKey = 3;
+inline void Drive::clear_secretkey() {
+  secretkey_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Drive::secretkey() const {
+  // @@protoc_insertion_point(field_get:littlstar.cfsnet.Drive.secretKey)
+  return secretkey_.GetNoArena();
+}
+inline void Drive::set_secretkey(const ::std::string& value) {
+  
+  secretkey_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:littlstar.cfsnet.Drive.secretKey)
+}
+#if LANG_CXX11
+inline void Drive::set_secretkey(::std::string&& value) {
+  
+  secretkey_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:littlstar.cfsnet.Drive.secretKey)
+}
+#endif
+inline void Drive::set_secretkey(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  secretkey_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:littlstar.cfsnet.Drive.secretKey)
+}
+inline void Drive::set_secretkey(const void* value, size_t size) {
+  
+  secretkey_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:littlstar.cfsnet.Drive.secretKey)
+}
+inline ::std::string* Drive::mutable_secretkey() {
+  
+  // @@protoc_insertion_point(field_mutable:littlstar.cfsnet.Drive.secretKey)
+  return secretkey_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Drive::release_secretkey() {
+  // @@protoc_insertion_point(field_release:littlstar.cfsnet.Drive.secretKey)
+  
+  return secretkey_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Drive::set_allocated_secretkey(::std::string* secretkey) {
+  if (secretkey != NULL) {
+    
+  } else {
+    
+  }
+  secretkey_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), secretkey);
+  // @@protoc_insertion_point(field_set_allocated:littlstar.cfsnet.Drive.secretKey)
 }
 
 // -------------------------------------------------------------------

@@ -20,6 +20,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
   add_message "littlstar.cfsnet.Drive" do
     optional :id, :bytes, 1
     optional :key, :bytes, 2
+    optional :secretKey, :bytes, 3
   end
   add_message "littlstar.cfsnet.Handshake" do
     optional :nonce, :bytes, 1
@@ -109,6 +110,8 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     value :NotFoundError, 404
     value :NotSupportedError, 405
     value :NotOpenedError, 410
+    value :InternalError, 500
+    value :NotImplementedError, 501
   end
   add_enum "littlstar.cfsnet.Operation" do
     value :NoOperation, 0

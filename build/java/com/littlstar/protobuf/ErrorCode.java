@@ -28,6 +28,14 @@ public enum ErrorCode
    * <code>NotOpenedError = 410;</code>
    */
   NotOpenedError(410),
+  /**
+   * <code>InternalError = 500;</code>
+   */
+  InternalError(500),
+  /**
+   * <code>NotImplementedError = 501;</code>
+   */
+  NotImplementedError(501),
   UNRECOGNIZED(-1),
   ;
 
@@ -51,6 +59,14 @@ public enum ErrorCode
    * <code>NotOpenedError = 410;</code>
    */
   public static final int NotOpenedError_VALUE = 410;
+  /**
+   * <code>InternalError = 500;</code>
+   */
+  public static final int InternalError_VALUE = 500;
+  /**
+   * <code>NotImplementedError = 501;</code>
+   */
+  public static final int NotImplementedError_VALUE = 501;
 
 
   public final int getNumber() {
@@ -76,6 +92,8 @@ public enum ErrorCode
       case 404: return NotFoundError;
       case 405: return NotSupportedError;
       case 410: return NotOpenedError;
+      case 500: return InternalError;
+      case 501: return NotImplementedError;
       default: return null;
     }
   }

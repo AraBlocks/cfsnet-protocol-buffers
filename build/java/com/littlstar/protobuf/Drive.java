@@ -17,6 +17,7 @@ public  final class Drive extends
   private Drive() {
     id_ = com.google.protobuf.ByteString.EMPTY;
     key_ = com.google.protobuf.ByteString.EMPTY;
+    secretKey_ = com.google.protobuf.ByteString.EMPTY;
   }
 
   @java.lang.Override
@@ -52,6 +53,11 @@ public  final class Drive extends
           case 18: {
 
             key_ = input.readBytes();
+            break;
+          }
+          case 26: {
+
+            secretKey_ = input.readBytes();
             break;
           }
         }
@@ -95,6 +101,15 @@ public  final class Drive extends
     return key_;
   }
 
+  public static final int SECRETKEY_FIELD_NUMBER = 3;
+  private com.google.protobuf.ByteString secretKey_;
+  /**
+   * <code>bytes secretKey = 3;</code>
+   */
+  public com.google.protobuf.ByteString getSecretKey() {
+    return secretKey_;
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -113,6 +128,9 @@ public  final class Drive extends
     if (!key_.isEmpty()) {
       output.writeBytes(2, key_);
     }
+    if (!secretKey_.isEmpty()) {
+      output.writeBytes(3, secretKey_);
+    }
   }
 
   public int getSerializedSize() {
@@ -127,6 +145,10 @@ public  final class Drive extends
     if (!key_.isEmpty()) {
       size += com.google.protobuf.CodedOutputStream
         .computeBytesSize(2, key_);
+    }
+    if (!secretKey_.isEmpty()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBytesSize(3, secretKey_);
     }
     memoizedSize = size;
     return size;
@@ -148,6 +170,8 @@ public  final class Drive extends
         .equals(other.getId());
     result = result && getKey()
         .equals(other.getKey());
+    result = result && getSecretKey()
+        .equals(other.getSecretKey());
     return result;
   }
 
@@ -162,6 +186,8 @@ public  final class Drive extends
     hash = (53 * hash) + getId().hashCode();
     hash = (37 * hash) + KEY_FIELD_NUMBER;
     hash = (53 * hash) + getKey().hashCode();
+    hash = (37 * hash) + SECRETKEY_FIELD_NUMBER;
+    hash = (53 * hash) + getSecretKey().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -295,6 +321,8 @@ public  final class Drive extends
 
       key_ = com.google.protobuf.ByteString.EMPTY;
 
+      secretKey_ = com.google.protobuf.ByteString.EMPTY;
+
       return this;
     }
 
@@ -319,6 +347,7 @@ public  final class Drive extends
       com.littlstar.protobuf.Drive result = new com.littlstar.protobuf.Drive(this);
       result.id_ = id_;
       result.key_ = key_;
+      result.secretKey_ = secretKey_;
       onBuilt();
       return result;
     }
@@ -365,6 +394,9 @@ public  final class Drive extends
       }
       if (other.getKey() != com.google.protobuf.ByteString.EMPTY) {
         setKey(other.getKey());
+      }
+      if (other.getSecretKey() != com.google.protobuf.ByteString.EMPTY) {
+        setSecretKey(other.getSecretKey());
       }
       onChanged();
       return this;
@@ -446,6 +478,35 @@ public  final class Drive extends
     public Builder clearKey() {
       
       key_ = getDefaultInstance().getKey();
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.ByteString secretKey_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes secretKey = 3;</code>
+     */
+    public com.google.protobuf.ByteString getSecretKey() {
+      return secretKey_;
+    }
+    /**
+     * <code>bytes secretKey = 3;</code>
+     */
+    public Builder setSecretKey(com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      secretKey_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bytes secretKey = 3;</code>
+     */
+    public Builder clearSecretKey() {
+      
+      secretKey_ = getDefaultInstance().getSecretKey();
       onChanged();
       return this;
     }

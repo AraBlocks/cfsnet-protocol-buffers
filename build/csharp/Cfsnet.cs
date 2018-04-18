@@ -26,47 +26,48 @@ namespace Littlstar.CFSNet.Protobuf {
             "ZRIMCgRwYXRoGAEgASgJEigKBG1vZGUYAiABKA4yGi5saXR0bHN0YXIuY2Zz",
             "bmV0LkZpbGVNb2RlIhMKBUNsb3NlEgoKAmZkGAEgASgNIiEKEURvd25sb2Fk",
             "RGlyZWN0b3J5EgwKBHBhdGgYASABKAkiHAoMRG93bmxvYWRGaWxlEgwKBHBh",
-            "dGgYASABKAkiIAoFRHJpdmUSCgoCaWQYASABKAwSCwoDa2V5GAIgASgMIjQK",
-            "CUhhbmRzaGFrZRINCgVub25jZRgBIAEoDBILCgNrZXkYAiABKAwSCwoDYWNr",
-            "GAMgASgIIh0KDUxpc3REaXJlY3RvcnkSDAoEcGF0aBgBIAEoCSIdCg1NYWtl",
-            "RGlyZWN0b3J5EgwKBHBhdGgYASABKAkiIQoRTWFrZURpcmVjdG9yeVBhdGgS",
-            "DAoEcGF0aBgBIAEoCSIUCgRPcGVuEgwKBHBhdGgYASABKAkiLgoEUmVhZBIK",
-            "CgJmZBgBIAEoDRINCgVzdGFydBgCIAEoDRILCgNlbmQYAyABKA0iNAoIUmVh",
-            "ZEZpbGUSDAoEcGF0aBgBIAEoCRINCgVzdGFydBgCIAEoDRILCgNlbmQYAyAB",
-            "KA0iHwoPUmVtb3ZlRGlyZWN0b3J5EgwKBHBhdGgYASABKAkiIwoTUmVtb3Zl",
-            "RGlyZWN0b3J5UGF0aBIMCgRwYXRoGAEgASgJIoABCgdSZXF1ZXN0Eg0KBW5v",
-            "bmNlGAEgASgMEiYKBWRyaXZlGAIgASgLMhcubGl0dGxzdGFyLmNmc25ldC5E",
-            "cml2ZRIuCglvcGVyYXRpb24YAyABKA4yGy5saXR0bHN0YXIuY2ZzbmV0Lk9w",
-            "ZXJhdGlvbhIOCgZidWZmZXIYBCABKAwiFwoHUmVzb2x2ZRIMCgRwYXRoGAEg",
-            "ASgJIt0BCghSZXNwb25zZRINCgVub25jZRgBIAEoDBImCgVkcml2ZRgCIAEo",
-            "CzIXLmxpdHRsc3Rhci5jZnNuZXQuRHJpdmUSLgoJb3BlcmF0aW9uGAMgASgO",
-            "MhsubGl0dGxzdGFyLmNmc25ldC5PcGVyYXRpb24SKgoHcmVxdWVzdBgEIAEo",
-            "CzIZLmxpdHRsc3Rhci5jZnNuZXQuUmVxdWVzdBIuCgllcnJvckNvZGUYBSAB",
-            "KA4yGy5saXR0bHN0YXIuY2ZzbmV0LkVycm9yQ29kZRIOCgZidWZmZXIYBiAB",
-            "KAwijgEKBFN0YXQSDAoEbW9kZRgBIAEoDRILCgN1aWQYAiABKA0SCwoDZ2lk",
-            "GAMgASgNEgwKBHNpemUYBCABKAQSDgoGYmxvY2tzGAUgASgEEg4KBm9mZnNl",
-            "dBgGIAEoBBISCgpieXRlT2Zmc2V0GAcgASgEEg0KBW10aW1lGAggASgEEg0K",
-            "BWN0aW1lGAkgASgEIhgKCFN0YXRGaWxlEgwKBHBhdGgYASABKAkiGQoJVG91",
-            "Y2hGaWxlEgwKBHBhdGgYASABKAkiGgoKVW5saW5rRmlsZRIMCgRwYXRoGAEg",
-            "ASgJIkUKCVdyaXRlRmlsZRIMCgRwYXRoGAEgASgJEg4KBmJ1ZmZlchgCIAEo",
-            "DBINCgVzdGFydBgDIAEoDRILCgNlbmQYBCABKA0qMgoIRmlsZU1vZGUSCAoE",
-            "Rl9PSxAAEggKBFhfT0sQARIICgRXX09LEAISCAoEUl9PSxAEKnEKCUVycm9y",
-            "Q29kZRILCgdOb0Vycm9yEAASFgoRQWNjZXNzRGVuaWVkRXJyb3IQkwMSEgoN",
-            "Tm90Rm91bmRFcnJvchCUAxIWChFOb3RTdXBwb3J0ZWRFcnJvchCVAxITCg5O",
-            "b3RPcGVuZWRFcnJvchCaAyrjAwoJT3BlcmF0aW9uEg8KC05vT3BlcmF0aW9u",
-            "EAASFAoQUmVzb2x2ZU9wZXJhdGlvbhABEhEKDU9wZW5PcGVyYXRpb24QAhIS",
-            "Cg5DbG9zZU9wZXJhdGlvbhADEhEKDVJlYWRPcGVyYXRpb24QBBISCg5Xcml0",
-            "ZU9wZXJhdGlvbhAFEhUKEVJlYWRGaWxlT3BlcmF0aW9uEAoSFgoSV3JpdGVG",
-            "aWxlT3BlcmF0aW9uEAsSFQoRU3RhdEZpbGVPcGVyYXRpb24QDBIXChNVbmxp",
-            "bmtGaWxlT3BlcmF0aW9uEA0SFwoTQWNjZXNzRmlsZU9wZXJhdGlvbhAOEhYK",
-            "ElRvdWNoRmlsZU9wZXJhdGlvbhAPEhkKFURvd25sb2FkRmlsZU9wZXJhdGlv",
-            "bhAQEh4KGkRvd25sb2FkRGlyZWN0b3J5T3BlcmF0aW9uEBQSGgoWTWFrZURp",
-            "cmVjdG9yeU9wZXJhdGlvbhAVEh4KGk1ha2VEaXJlY3RvcnlQYXRoT3BlcmF0",
-            "aW9uEBYSHAoYUmVtb3ZlRGlyZWN0b3J5T3BlcmF0aW9uEBcSIAocUmVtb3Zl",
-            "RGlyZWN0b3J5UGF0aE9wZXJhdGlvbhAYEhoKFkxpc3REaXJlY3RvcnlPcGVy",
-            "YXRpb24QGUJOChZjb20ubGl0dGxzdGFyLnByb3RvYnVmQg5DRlNOZXRQcm90",
-            "b2J1ZlABogIFQ0ZTUEKqAhlMaXR0bHN0YXIuQ0ZTTmV0LlByb3RvYnVmYgZw",
-            "cm90bzM="));
+            "dGgYASABKAkiMwoFRHJpdmUSCgoCaWQYASABKAwSCwoDa2V5GAIgASgMEhEK",
+            "CXNlY3JldEtleRgDIAEoDCI0CglIYW5kc2hha2USDQoFbm9uY2UYASABKAwS",
+            "CwoDa2V5GAIgASgMEgsKA2FjaxgDIAEoCCIdCg1MaXN0RGlyZWN0b3J5EgwK",
+            "BHBhdGgYASABKAkiHQoNTWFrZURpcmVjdG9yeRIMCgRwYXRoGAEgASgJIiEK",
+            "EU1ha2VEaXJlY3RvcnlQYXRoEgwKBHBhdGgYASABKAkiFAoET3BlbhIMCgRw",
+            "YXRoGAEgASgJIi4KBFJlYWQSCgoCZmQYASABKA0SDQoFc3RhcnQYAiABKA0S",
+            "CwoDZW5kGAMgASgNIjQKCFJlYWRGaWxlEgwKBHBhdGgYASABKAkSDQoFc3Rh",
+            "cnQYAiABKA0SCwoDZW5kGAMgASgNIh8KD1JlbW92ZURpcmVjdG9yeRIMCgRw",
+            "YXRoGAEgASgJIiMKE1JlbW92ZURpcmVjdG9yeVBhdGgSDAoEcGF0aBgBIAEo",
+            "CSKAAQoHUmVxdWVzdBINCgVub25jZRgBIAEoDBImCgVkcml2ZRgCIAEoCzIX",
+            "LmxpdHRsc3Rhci5jZnNuZXQuRHJpdmUSLgoJb3BlcmF0aW9uGAMgASgOMhsu",
+            "bGl0dGxzdGFyLmNmc25ldC5PcGVyYXRpb24SDgoGYnVmZmVyGAQgASgMIhcK",
+            "B1Jlc29sdmUSDAoEcGF0aBgBIAEoCSLdAQoIUmVzcG9uc2USDQoFbm9uY2UY",
+            "ASABKAwSJgoFZHJpdmUYAiABKAsyFy5saXR0bHN0YXIuY2ZzbmV0LkRyaXZl",
+            "Ei4KCW9wZXJhdGlvbhgDIAEoDjIbLmxpdHRsc3Rhci5jZnNuZXQuT3BlcmF0",
+            "aW9uEioKB3JlcXVlc3QYBCABKAsyGS5saXR0bHN0YXIuY2ZzbmV0LlJlcXVl",
+            "c3QSLgoJZXJyb3JDb2RlGAUgASgOMhsubGl0dGxzdGFyLmNmc25ldC5FcnJv",
+            "ckNvZGUSDgoGYnVmZmVyGAYgASgMIo4BCgRTdGF0EgwKBG1vZGUYASABKA0S",
+            "CwoDdWlkGAIgASgNEgsKA2dpZBgDIAEoDRIMCgRzaXplGAQgASgEEg4KBmJs",
+            "b2NrcxgFIAEoBBIOCgZvZmZzZXQYBiABKAQSEgoKYnl0ZU9mZnNldBgHIAEo",
+            "BBINCgVtdGltZRgIIAEoBBINCgVjdGltZRgJIAEoBCIYCghTdGF0RmlsZRIM",
+            "CgRwYXRoGAEgASgJIhkKCVRvdWNoRmlsZRIMCgRwYXRoGAEgASgJIhoKClVu",
+            "bGlua0ZpbGUSDAoEcGF0aBgBIAEoCSJFCglXcml0ZUZpbGUSDAoEcGF0aBgB",
+            "IAEoCRIOCgZidWZmZXIYAiABKAwSDQoFc3RhcnQYAyABKA0SCwoDZW5kGAQg",
+            "ASgNKjIKCEZpbGVNb2RlEggKBEZfT0sQABIICgRYX09LEAESCAoEV19PSxAC",
+            "EggKBFJfT0sQBCqfAQoJRXJyb3JDb2RlEgsKB05vRXJyb3IQABIWChFBY2Nl",
+            "c3NEZW5pZWRFcnJvchCTAxISCg1Ob3RGb3VuZEVycm9yEJQDEhYKEU5vdFN1",
+            "cHBvcnRlZEVycm9yEJUDEhMKDk5vdE9wZW5lZEVycm9yEJoDEhIKDUludGVy",
+            "bmFsRXJyb3IQ9AMSGAoTTm90SW1wbGVtZW50ZWRFcnJvchD1AyrjAwoJT3Bl",
+            "cmF0aW9uEg8KC05vT3BlcmF0aW9uEAASFAoQUmVzb2x2ZU9wZXJhdGlvbhAB",
+            "EhEKDU9wZW5PcGVyYXRpb24QAhISCg5DbG9zZU9wZXJhdGlvbhADEhEKDVJl",
+            "YWRPcGVyYXRpb24QBBISCg5Xcml0ZU9wZXJhdGlvbhAFEhUKEVJlYWRGaWxl",
+            "T3BlcmF0aW9uEAoSFgoSV3JpdGVGaWxlT3BlcmF0aW9uEAsSFQoRU3RhdEZp",
+            "bGVPcGVyYXRpb24QDBIXChNVbmxpbmtGaWxlT3BlcmF0aW9uEA0SFwoTQWNj",
+            "ZXNzRmlsZU9wZXJhdGlvbhAOEhYKElRvdWNoRmlsZU9wZXJhdGlvbhAPEhkK",
+            "FURvd25sb2FkRmlsZU9wZXJhdGlvbhAQEh4KGkRvd25sb2FkRGlyZWN0b3J5",
+            "T3BlcmF0aW9uEBQSGgoWTWFrZURpcmVjdG9yeU9wZXJhdGlvbhAVEh4KGk1h",
+            "a2VEaXJlY3RvcnlQYXRoT3BlcmF0aW9uEBYSHAoYUmVtb3ZlRGlyZWN0b3J5",
+            "T3BlcmF0aW9uEBcSIAocUmVtb3ZlRGlyZWN0b3J5UGF0aE9wZXJhdGlvbhAY",
+            "EhoKFkxpc3REaXJlY3RvcnlPcGVyYXRpb24QGUJOChZjb20ubGl0dGxzdGFy",
+            "LnByb3RvYnVmQg5DRlNOZXRQcm90b2J1ZlABogIFQ0ZTUEKqAhlMaXR0bHN0",
+            "YXIuQ0ZTTmV0LlByb3RvYnVmYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Littlstar.CFSNet.Protobuf.FileMode), typeof(global::Littlstar.CFSNet.Protobuf.ErrorCode), typeof(global::Littlstar.CFSNet.Protobuf.Operation), }, new pbr::GeneratedClrTypeInfo[] {
@@ -74,7 +75,7 @@ namespace Littlstar.CFSNet.Protobuf {
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.Close), global::Littlstar.CFSNet.Protobuf.Close.Parser, new[]{ "Fd" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.DownloadDirectory), global::Littlstar.CFSNet.Protobuf.DownloadDirectory.Parser, new[]{ "Path" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.DownloadFile), global::Littlstar.CFSNet.Protobuf.DownloadFile.Parser, new[]{ "Path" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.Drive), global::Littlstar.CFSNet.Protobuf.Drive.Parser, new[]{ "Id", "Key" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.Drive), global::Littlstar.CFSNet.Protobuf.Drive.Parser, new[]{ "Id", "Key", "SecretKey" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.Handshake), global::Littlstar.CFSNet.Protobuf.Handshake.Parser, new[]{ "Nonce", "Key", "Ack" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.ListDirectory), global::Littlstar.CFSNet.Protobuf.ListDirectory.Parser, new[]{ "Path" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.MakeDirectory), global::Littlstar.CFSNet.Protobuf.MakeDirectory.Parser, new[]{ "Path" }, null, null, null),
@@ -111,6 +112,8 @@ namespace Littlstar.CFSNet.Protobuf {
     [pbr::OriginalName("NotFoundError")] NotFoundError = 404,
     [pbr::OriginalName("NotSupportedError")] NotSupportedError = 405,
     [pbr::OriginalName("NotOpenedError")] NotOpenedError = 410,
+    [pbr::OriginalName("InternalError")] InternalError = 500,
+    [pbr::OriginalName("NotImplementedError")] NotImplementedError = 501,
   }
 
   public enum Operation {
@@ -660,6 +663,7 @@ namespace Littlstar.CFSNet.Protobuf {
     public Drive(Drive other) : this() {
       id_ = other.id_;
       key_ = other.key_;
+      secretKey_ = other.secretKey_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -689,6 +693,17 @@ namespace Littlstar.CFSNet.Protobuf {
       }
     }
 
+    /// <summary>Field number for the "secretKey" field.</summary>
+    public const int SecretKeyFieldNumber = 3;
+    private pb::ByteString secretKey_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString SecretKey {
+      get { return secretKey_; }
+      set {
+        secretKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Drive);
@@ -704,6 +719,7 @@ namespace Littlstar.CFSNet.Protobuf {
       }
       if (Id != other.Id) return false;
       if (Key != other.Key) return false;
+      if (SecretKey != other.SecretKey) return false;
       return true;
     }
 
@@ -712,6 +728,7 @@ namespace Littlstar.CFSNet.Protobuf {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (Key.Length != 0) hash ^= Key.GetHashCode();
+      if (SecretKey.Length != 0) hash ^= SecretKey.GetHashCode();
       return hash;
     }
 
@@ -730,6 +747,10 @@ namespace Littlstar.CFSNet.Protobuf {
         output.WriteRawTag(18);
         output.WriteBytes(Key);
       }
+      if (SecretKey.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(SecretKey);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -740,6 +761,9 @@ namespace Littlstar.CFSNet.Protobuf {
       }
       if (Key.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Key);
+      }
+      if (SecretKey.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(SecretKey);
       }
       return size;
     }
@@ -754,6 +778,9 @@ namespace Littlstar.CFSNet.Protobuf {
       }
       if (other.Key.Length != 0) {
         Key = other.Key;
+      }
+      if (other.SecretKey.Length != 0) {
+        SecretKey = other.SecretKey;
       }
     }
 
@@ -771,6 +798,10 @@ namespace Littlstar.CFSNet.Protobuf {
           }
           case 18: {
             Key = input.ReadBytes();
+            break;
+          }
+          case 26: {
+            SecretKey = input.ReadBytes();
             break;
           }
         }

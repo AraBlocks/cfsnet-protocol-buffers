@@ -58,7 +58,8 @@ proto.littlstar.cfsnet.Drive.prototype.toObject = function(opt_includeInstance) 
 proto.littlstar.cfsnet.Drive.toObject = function(includeInstance, msg) {
   var f, obj = {
     id: msg.getId_asB64(),
-    key: msg.getKey_asB64()
+    key: msg.getKey_asB64(),
+    secretkey: msg.getSecretkey_asB64()
   };
 
   if (includeInstance) {
@@ -103,6 +104,10 @@ proto.littlstar.cfsnet.Drive.deserializeBinaryFromReader = function(msg, reader)
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
       msg.setKey(value);
       break;
+    case 3:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setSecretkey(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -142,6 +147,13 @@ proto.littlstar.cfsnet.Drive.serializeBinaryToWriter = function(message, writer)
   if (f.length > 0) {
     writer.writeBytes(
       2,
+      f
+    );
+  }
+  f = message.getSecretkey_asU8();
+  if (f.length > 0) {
+    writer.writeBytes(
+      3,
       f
     );
   }
@@ -223,6 +235,45 @@ proto.littlstar.cfsnet.Drive.prototype.getKey_asU8 = function() {
 /** @param {!(string|Uint8Array)} value */
 proto.littlstar.cfsnet.Drive.prototype.setKey = function(value) {
   jspb.Message.setField(this, 2, value);
+};
+
+
+/**
+ * optional bytes secretKey = 3;
+ * @return {string}
+ */
+proto.littlstar.cfsnet.Drive.prototype.getSecretkey = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
+
+
+/**
+ * optional bytes secretKey = 3;
+ * This is a type-conversion wrapper around `getSecretkey()`
+ * @return {string}
+ */
+proto.littlstar.cfsnet.Drive.prototype.getSecretkey_asB64 = function() {
+  return /** @type {string} */ (jspb.Message.bytesAsB64(
+      this.getSecretkey()));
+};
+
+
+/**
+ * optional bytes secretKey = 3;
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getSecretkey()`
+ * @return {!Uint8Array}
+ */
+proto.littlstar.cfsnet.Drive.prototype.getSecretkey_asU8 = function() {
+  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+      this.getSecretkey()));
+};
+
+
+/** @param {!(string|Uint8Array)} value */
+proto.littlstar.cfsnet.Drive.prototype.setSecretkey = function(value) {
+  jspb.Message.setField(this, 3, value);
 };
 
 

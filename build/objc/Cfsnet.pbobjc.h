@@ -69,6 +69,8 @@ typedef GPB_ENUM(CFSPBErrorCode) {
   CFSPBErrorCode_NotFoundError = 404,
   CFSPBErrorCode_NotSupportedError = 405,
   CFSPBErrorCode_NotOpenedError = 410,
+  CFSPBErrorCode_InternalError = 500,
+  CFSPBErrorCode_NotImplementedError = 501,
 };
 
 GPBEnumDescriptor *CFSPBErrorCode_EnumDescriptor(void);
@@ -200,6 +202,7 @@ typedef GPB_ENUM(CFSPBDownloadFile_FieldNumber) {
 typedef GPB_ENUM(CFSPBDrive_FieldNumber) {
   CFSPBDrive_FieldNumber_Id_p = 1,
   CFSPBDrive_FieldNumber_Key = 2,
+  CFSPBDrive_FieldNumber_SecretKey = 3,
 };
 
 @interface CFSPBDrive : GPBMessage
@@ -207,6 +210,8 @@ typedef GPB_ENUM(CFSPBDrive_FieldNumber) {
 @property(nonatomic, readwrite, copy, null_resettable) NSData *id_p;
 
 @property(nonatomic, readwrite, copy, null_resettable) NSData *key;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSData *secretKey;
 
 @end
 
