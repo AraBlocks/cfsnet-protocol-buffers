@@ -116,6 +116,7 @@
 | ----- | ---- | ----- | ----------- |
 | id | [bytes](#bytes) |  |  |
 | key | [bytes](#bytes) |  |  |
+| secretKey | [bytes](#bytes) |  |  |
 
 
 
@@ -416,6 +417,8 @@
 | NotFoundError | 404 |  |
 | NotSupportedError | 405 |  |
 | NotOpenedError | 410 |  |
+| InternalError | 500 |  |
+| NotImplementedError | 501 |  |
 
 
 
