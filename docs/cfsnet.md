@@ -413,6 +413,7 @@
 | Name | Number | Description |
 | ---- | ------ | ----------- |
 | NoError | 0 |  |
+| BadRequestError | 400 |  |
 | AccessDeniedError | 403 |  |
 | NotFoundError | 404 |  |
 | NotSupportedError | 405 |  |
