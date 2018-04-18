@@ -12,4 +12,5 @@ message Request {
   bytes nonce = 1;
   Drive drive = 2;
   Operation operation = 3;
+  bytes buffer = 4;
 }
