@@ -9,4 +9,8 @@ enum ErrorCode {
   NotFoundError = 404;
   NotSupportedError = 405;
   NotOpenedError = 410;
+
+  // Server/Remote errors
+  InternalError = 500;
+  NotImplementedError = 501;
 }
