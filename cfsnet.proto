@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/index.proto' generated on Wed Apr 18 2018 15:05:50 GMT-0400 (EDT)syntax = "proto3";
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/index.proto' generated on Wed Apr 18 2018 17:06:25 GMT-0400 (EDT)syntax = "proto3";
 
 option java_package = "com.littlstar.protobuf";
 option java_multiple_files = true;
@@ -8,18 +8,18 @@ option java_outer_classname = "CFSNetProtobuf";
 option objc_class_prefix = "CFSPB";
 option csharp_namespace = "Littlstar.CFSNet.Protobuf";
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/index.proto' generated on Wed Apr 18 2018 15:05:50 GMT-0400 (EDT)syntax = "proto3";
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/index.proto' generated on Wed Apr 18 2018 17:06:25 GMT-0400 (EDT)syntax = "proto3";
 
 package littlstar.cfsnet;
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/AccessFile.proto' generated on Wed Apr 18 2018 15:05:50 GMT-0400 (EDT)syntax = "proto3";
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/AccessFile.proto' generated on Wed Apr 18 2018 17:06:25 GMT-0400 (EDT)syntax = "proto3";
 
 message AccessFile {
   string path = 1;
   FileMode mode = 2;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/modes.proto' generated on Wed Apr 18 2018 15:05:50 GMT-0400 (EDT)syntax = "proto3";
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/FileMode.proto' generated on Wed Apr 18 2018 17:06:25 GMT-0400 (EDT)syntax = "proto3";
 
 enum FileMode {
   F_OK = 0;
@@ -28,32 +28,32 @@ enum FileMode {
   R_OK = 4;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Close.proto' generated on Wed Apr 18 2018 15:05:50 GMT-0400 (EDT)syntax = "proto3";
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Close.proto' generated on Wed Apr 18 2018 17:06:25 GMT-0400 (EDT)syntax = "proto3";
 
 message Close {
   uint32 fd = 1;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/DownloadDirectory.proto' generated on Wed Apr 18 2018 15:05:50 GMT-0400 (EDT)syntax = "proto3";
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/DownloadDirectory.proto' generated on Wed Apr 18 2018 17:06:25 GMT-0400 (EDT)syntax = "proto3";
 
 message DownloadDirectory {
   string path = 1;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/DownloadFile.proto' generated on Wed Apr 18 2018 15:05:50 GMT-0400 (EDT)syntax = "proto3";
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/DownloadFile.proto' generated on Wed Apr 18 2018 17:06:25 GMT-0400 (EDT)syntax = "proto3";
 
 message DownloadFile {
   string path = 1;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Drive.proto' generated on Wed Apr 18 2018 15:05:50 GMT-0400 (EDT)syntax = "proto3";
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Drive.proto' generated on Wed Apr 18 2018 17:06:25 GMT-0400 (EDT)syntax = "proto3";
 
 message Drive {
   bytes id = 1;
   bytes key = 2;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/errors.proto' generated on Wed Apr 18 2018 15:05:50 GMT-0400 (EDT)syntax = "proto3";
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/ErrorCode.proto' generated on Wed Apr 18 2018 17:06:25 GMT-0400 (EDT)syntax = "proto3";
 
 enum ErrorCode {
   NoError = 0;
@@ -63,7 +63,7 @@ enum ErrorCode {
   NotOpenedError = 410;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Handshake.proto' generated on Wed Apr 18 2018 15:05:50 GMT-0400 (EDT)syntax = "proto3";
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Handshake.proto' generated on Wed Apr 18 2018 17:06:25 GMT-0400 (EDT)syntax = "proto3";
 
 message Handshake {
   bytes nonce = 1;
@@ -71,31 +71,31 @@ message Handshake {
   bool ack = 3;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/ListDirectory.proto' generated on Wed Apr 18 2018 15:05:50 GMT-0400 (EDT)syntax = "proto3";
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/ListDirectory.proto' generated on Wed Apr 18 2018 17:06:25 GMT-0400 (EDT)syntax = "proto3";
 
 message ListDirectory {
   string path = 1;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/MakeDirectory.proto' generated on Wed Apr 18 2018 15:05:50 GMT-0400 (EDT)syntax = "proto3";
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/MakeDirectory.proto' generated on Wed Apr 18 2018 17:06:25 GMT-0400 (EDT)syntax = "proto3";
 
 message MakeDirectory {
   string path = 1;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/MakeDirectoryPath.proto' generated on Wed Apr 18 2018 15:05:50 GMT-0400 (EDT)syntax = "proto3";
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/MakeDirectoryPath.proto' generated on Wed Apr 18 2018 17:06:25 GMT-0400 (EDT)syntax = "proto3";
 
 message MakeDirectoryPath {
   string path = 1;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Open.proto' generated on Wed Apr 18 2018 15:05:50 GMT-0400 (EDT)syntax = "proto3";
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Open.proto' generated on Wed Apr 18 2018 17:06:25 GMT-0400 (EDT)syntax = "proto3";
 
 message Open {
   string path = 1;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Operation.proto' generated on Wed Apr 18 2018 15:05:50 GMT-0400 (EDT)syntax = "proto3";
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Operation.proto' generated on Wed Apr 18 2018 17:06:25 GMT-0400 (EDT)syntax = "proto3";
 
 enum Operation {
   NoOperation = 0;
@@ -119,7 +119,7 @@ enum Operation {
   ListDirectoryOperation = 25;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Read.proto' generated on Wed Apr 18 2018 15:05:50 GMT-0400 (EDT)syntax = "proto3";
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Read.proto' generated on Wed Apr 18 2018 17:06:25 GMT-0400 (EDT)syntax = "proto3";
 
 message Read {
   uint32 fd = 1;
@@ -127,7 +127,7 @@ message Read {
   uint32 end = 3;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/ReadFile.proto' generated on Wed Apr 18 2018 15:05:50 GMT-0400 (EDT)syntax = "proto3";
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/ReadFile.proto' generated on Wed Apr 18 2018 17:06:25 GMT-0400 (EDT)syntax = "proto3";
 
 message ReadFile {
   string path = 1;
@@ -135,19 +135,19 @@ message ReadFile {
   uint32 end = 3;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/RemoveDirectory.proto' generated on Wed Apr 18 2018 15:05:50 GMT-0400 (EDT)syntax = "proto3";
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/RemoveDirectory.proto' generated on Wed Apr 18 2018 17:06:25 GMT-0400 (EDT)syntax = "proto3";
 
 message RemoveDirectory {
   string path = 1;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/RemoveDirectoryPath.proto' generated on Wed Apr 18 2018 15:05:50 GMT-0400 (EDT)syntax = "proto3";
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/RemoveDirectoryPath.proto' generated on Wed Apr 18 2018 17:06:25 GMT-0400 (EDT)syntax = "proto3";
 
 message RemoveDirectoryPath {
   string path = 1;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Request.proto' generated on Wed Apr 18 2018 15:05:50 GMT-0400 (EDT)syntax = "proto3";
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Request.proto' generated on Wed Apr 18 2018 17:06:25 GMT-0400 (EDT)syntax = "proto3";
 
 message Request {
   bytes nonce = 1;
@@ -156,13 +156,13 @@ message Request {
   bytes buffer = 4;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Resolve.proto' generated on Wed Apr 18 2018 15:05:50 GMT-0400 (EDT)syntax = "proto3";
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Resolve.proto' generated on Wed Apr 18 2018 17:06:25 GMT-0400 (EDT)syntax = "proto3";
 
 message Resolve {
   string path = 1;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Response.proto' generated on Wed Apr 18 2018 15:05:50 GMT-0400 (EDT)syntax = "proto3";
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Response.proto' generated on Wed Apr 18 2018 17:06:25 GMT-0400 (EDT)syntax = "proto3";
 
 message Response {
   bytes nonce = 1;
@@ -173,7 +173,7 @@ message Response {
   bytes buffer = 6;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Stat.proto' generated on Wed Apr 18 2018 15:05:50 GMT-0400 (EDT)syntax = "proto3";
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/Stat.proto' generated on Wed Apr 18 2018 17:06:25 GMT-0400 (EDT)syntax = "proto3";
 
 message Stat {
   uint32 mode = 1;
@@ -187,25 +187,25 @@ message Stat {
   uint64 ctime = 9;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/StatFile.proto' generated on Wed Apr 18 2018 15:05:50 GMT-0400 (EDT)syntax = "proto3";
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/StatFile.proto' generated on Wed Apr 18 2018 17:06:25 GMT-0400 (EDT)syntax = "proto3";
 
 message StatFile {
   string path = 1;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/TouchFile.proto' generated on Wed Apr 18 2018 15:05:50 GMT-0400 (EDT)syntax = "proto3";
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/TouchFile.proto' generated on Wed Apr 18 2018 17:06:25 GMT-0400 (EDT)syntax = "proto3";
 
 message TouchFile {
   string path = 1;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/UnlinkFile.proto' generated on Wed Apr 18 2018 15:05:50 GMT-0400 (EDT)syntax = "proto3";
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/UnlinkFile.proto' generated on Wed Apr 18 2018 17:06:25 GMT-0400 (EDT)syntax = "proto3";
 
 message UnlinkFile {
   string path = 1;
 }
 
-// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/WriteFile.proto' generated on Wed Apr 18 2018 15:05:50 GMT-0400 (EDT)syntax = "proto3";
+// '/home/werle/repos/littlstar/cfsnet-protocol-buffers/src/cfsnet/WriteFile.proto' generated on Wed Apr 18 2018 17:06:25 GMT-0400 (EDT)syntax = "proto3";
 
 message WriteFile {
   string path = 1;
