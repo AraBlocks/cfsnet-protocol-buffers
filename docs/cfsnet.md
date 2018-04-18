@@ -256,6 +256,7 @@
 | nonce | [bytes](#bytes) |  |  |
 | drive | [Drive](#littlstar.cfsnet.Drive) |  |  |
 | operation | [Operation](#littlstar.cfsnet.Operation) |  |  |
+| buffer | [bytes](#bytes) |  |  |
 
 
 
