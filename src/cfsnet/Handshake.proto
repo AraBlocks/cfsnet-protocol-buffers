@@ -1,0 +1,15 @@
+/**
+ * A `Handshake` message is used between client (Alice)
+ * and server (Bob) to capture a handshake prior to a request
+ * message exchange. This should be the first payload sent in
+ * request to initiate a connection handshake.
+ *
+ * @property {bytes} nonce - A randomly generated unique SHA256 value
+ * @property {bytes} key - A BLAKE2b hash of the word "CFSNET1"
+ * @property {bool} ack - A boolean indicating that the handshake was acknowledged
+ */
+message Handshake {
+  bytes nonce = 1;
+  bytes key = 2;
+  bool ack = 3;
+}

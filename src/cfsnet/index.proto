@@ -6,6 +6,7 @@ import "cfsnet/DownloadDirectory";
 import "cfsnet/DownloadFile";
 import "cfsnet/Drive";
 import "cfsnet/errors";
+import "cfsnet/Handshake";
 import "cfsnet/ListDirectory";
 import "cfsnet/MakeDirectory";
 import "cfsnet/MakeDirectoryPath";
