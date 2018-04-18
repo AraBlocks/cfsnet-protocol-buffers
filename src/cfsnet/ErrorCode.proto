@@ -5,6 +5,7 @@ enum ErrorCode {
   NoError = 0;
 
   // 400s
+  BadRequestError = 400;
   AccessDeniedError = 403;
   NotFoundError = 404;
   NotSupportedError = 405;
