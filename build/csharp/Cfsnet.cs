@@ -33,38 +33,38 @@ namespace Littlstar.CFSNet.Protobuf {
             "DRINCgVzdGFydBgCIAEoDRILCgNlbmQYAyABKA0iNAoIUmVhZEZpbGUSDAoE",
             "cGF0aBgBIAEoCRINCgVzdGFydBgCIAEoDRILCgNlbmQYAyABKA0iHwoPUmVt",
             "b3ZlRGlyZWN0b3J5EgwKBHBhdGgYASABKAkiIwoTUmVtb3ZlRGlyZWN0b3J5",
-            "UGF0aBIMCgRwYXRoGAEgASgJInAKB1JlcXVlc3QSDQoFbm9uY2UYASABKAwS",
-            "JgoFZHJpdmUYAiABKAsyFy5saXR0bHN0YXIuY2ZzbmV0LkRyaXZlEi4KCW9w",
-            "ZXJhdGlvbhgDIAEoDjIbLmxpdHRsc3Rhci5jZnNuZXQuT3BlcmF0aW9uIhcK",
-            "B1Jlc29sdmUSDAoEcGF0aBgBIAEoCSLdAQoIUmVzcG9uc2USDQoFbm9uY2UY",
-            "ASABKAwSJgoFZHJpdmUYAiABKAsyFy5saXR0bHN0YXIuY2ZzbmV0LkRyaXZl",
-            "Ei4KCW9wZXJhdGlvbhgDIAEoDjIbLmxpdHRsc3Rhci5jZnNuZXQuT3BlcmF0",
-            "aW9uEioKB3JlcXVlc3QYBCABKAsyGS5saXR0bHN0YXIuY2ZzbmV0LlJlcXVl",
-            "c3QSLgoJZXJyb3JDb2RlGAUgASgOMhsubGl0dGxzdGFyLmNmc25ldC5FcnJv",
-            "ckNvZGUSDgoGYnVmZmVyGAYgASgMIo4BCgRTdGF0EgwKBG1vZGUYASABKA0S",
-            "CwoDdWlkGAIgASgNEgsKA2dpZBgDIAEoDRIMCgRzaXplGAQgASgEEg4KBmJs",
-            "b2NrcxgFIAEoBBIOCgZvZmZzZXQYBiABKAQSEgoKYnl0ZU9mZnNldBgHIAEo",
-            "BBINCgVtdGltZRgIIAEoBBINCgVjdGltZRgJIAEoBCIYCghTdGF0RmlsZRIM",
-            "CgRwYXRoGAEgASgJIhkKCVRvdWNoRmlsZRIMCgRwYXRoGAEgASgJIhoKClVu",
-            "bGlua0ZpbGUSDAoEcGF0aBgBIAEoCSJFCglXcml0ZUZpbGUSDAoEcGF0aBgB",
-            "IAEoCRIOCgZidWZmZXIYAiABKAwSDQoFc3RhcnQYAyABKA0SCwoDZW5kGAQg",
-            "ASgNKjIKCEZpbGVNb2RlEggKBEZfT0sQABIICgRYX09LEAESCAoEV19PSxAC",
-            "EggKBFJfT0sQBCpxCglFcnJvckNvZGUSCwoHTm9FcnJvchAAEhYKEUFjY2Vz",
-            "c0RlbmllZEVycm9yEJMDEhIKDU5vdEZvdW5kRXJyb3IQlAMSFgoRTm90U3Vw",
-            "cG9ydGVkRXJyb3IQlQMSEwoOTm90T3BlbmVkRXJyb3IQmgMq4wMKCU9wZXJh",
-            "dGlvbhIPCgtOb09wZXJhdGlvbhAAEhQKEFJlc29sdmVPcGVyYXRpb24QARIR",
-            "Cg1PcGVuT3BlcmF0aW9uEAISEgoOQ2xvc2VPcGVyYXRpb24QAxIRCg1SZWFk",
-            "T3BlcmF0aW9uEAQSEgoOV3JpdGVPcGVyYXRpb24QBRIVChFSZWFkRmlsZU9w",
-            "ZXJhdGlvbhAKEhYKEldyaXRlRmlsZU9wZXJhdGlvbhALEhUKEVN0YXRGaWxl",
-            "T3BlcmF0aW9uEAwSFwoTVW5saW5rRmlsZU9wZXJhdGlvbhANEhcKE0FjY2Vz",
-            "c0ZpbGVPcGVyYXRpb24QDhIWChJUb3VjaEZpbGVPcGVyYXRpb24QDxIZChVE",
-            "b3dubG9hZEZpbGVPcGVyYXRpb24QEBIeChpEb3dubG9hZERpcmVjdG9yeU9w",
-            "ZXJhdGlvbhAUEhoKFk1ha2VEaXJlY3RvcnlPcGVyYXRpb24QFRIeChpNYWtl",
-            "RGlyZWN0b3J5UGF0aE9wZXJhdGlvbhAWEhwKGFJlbW92ZURpcmVjdG9yeU9w",
-            "ZXJhdGlvbhAXEiAKHFJlbW92ZURpcmVjdG9yeVBhdGhPcGVyYXRpb24QGBIa",
-            "ChZMaXN0RGlyZWN0b3J5T3BlcmF0aW9uEBlCTgoWY29tLmxpdHRsc3Rhci5w",
-            "cm90b2J1ZkIOQ0ZTTmV0UHJvdG9idWZQAaICBUNGU1BCqgIZTGl0dGxzdGFy",
-            "LkNGU05ldC5Qcm90b2J1ZmIGcHJvdG8z"));
+            "UGF0aBIMCgRwYXRoGAEgASgJIoABCgdSZXF1ZXN0Eg0KBW5vbmNlGAEgASgM",
+            "EiYKBWRyaXZlGAIgASgLMhcubGl0dGxzdGFyLmNmc25ldC5Ecml2ZRIuCglv",
+            "cGVyYXRpb24YAyABKA4yGy5saXR0bHN0YXIuY2ZzbmV0Lk9wZXJhdGlvbhIO",
+            "CgZidWZmZXIYBCABKAwiFwoHUmVzb2x2ZRIMCgRwYXRoGAEgASgJIt0BCghS",
+            "ZXNwb25zZRINCgVub25jZRgBIAEoDBImCgVkcml2ZRgCIAEoCzIXLmxpdHRs",
+            "c3Rhci5jZnNuZXQuRHJpdmUSLgoJb3BlcmF0aW9uGAMgASgOMhsubGl0dGxz",
+            "dGFyLmNmc25ldC5PcGVyYXRpb24SKgoHcmVxdWVzdBgEIAEoCzIZLmxpdHRs",
+            "c3Rhci5jZnNuZXQuUmVxdWVzdBIuCgllcnJvckNvZGUYBSABKA4yGy5saXR0",
+            "bHN0YXIuY2ZzbmV0LkVycm9yQ29kZRIOCgZidWZmZXIYBiABKAwijgEKBFN0",
+            "YXQSDAoEbW9kZRgBIAEoDRILCgN1aWQYAiABKA0SCwoDZ2lkGAMgASgNEgwK",
+            "BHNpemUYBCABKAQSDgoGYmxvY2tzGAUgASgEEg4KBm9mZnNldBgGIAEoBBIS",
+            "CgpieXRlT2Zmc2V0GAcgASgEEg0KBW10aW1lGAggASgEEg0KBWN0aW1lGAkg",
+            "ASgEIhgKCFN0YXRGaWxlEgwKBHBhdGgYASABKAkiGQoJVG91Y2hGaWxlEgwK",
+            "BHBhdGgYASABKAkiGgoKVW5saW5rRmlsZRIMCgRwYXRoGAEgASgJIkUKCVdy",
+            "aXRlRmlsZRIMCgRwYXRoGAEgASgJEg4KBmJ1ZmZlchgCIAEoDBINCgVzdGFy",
+            "dBgDIAEoDRILCgNlbmQYBCABKA0qMgoIRmlsZU1vZGUSCAoERl9PSxAAEggK",
+            "BFhfT0sQARIICgRXX09LEAISCAoEUl9PSxAEKnEKCUVycm9yQ29kZRILCgdO",
+            "b0Vycm9yEAASFgoRQWNjZXNzRGVuaWVkRXJyb3IQkwMSEgoNTm90Rm91bmRF",
+            "cnJvchCUAxIWChFOb3RTdXBwb3J0ZWRFcnJvchCVAxITCg5Ob3RPcGVuZWRF",
+            "cnJvchCaAyrjAwoJT3BlcmF0aW9uEg8KC05vT3BlcmF0aW9uEAASFAoQUmVz",
+            "b2x2ZU9wZXJhdGlvbhABEhEKDU9wZW5PcGVyYXRpb24QAhISCg5DbG9zZU9w",
+            "ZXJhdGlvbhADEhEKDVJlYWRPcGVyYXRpb24QBBISCg5Xcml0ZU9wZXJhdGlv",
+            "bhAFEhUKEVJlYWRGaWxlT3BlcmF0aW9uEAoSFgoSV3JpdGVGaWxlT3BlcmF0",
+            "aW9uEAsSFQoRU3RhdEZpbGVPcGVyYXRpb24QDBIXChNVbmxpbmtGaWxlT3Bl",
+            "cmF0aW9uEA0SFwoTQWNjZXNzRmlsZU9wZXJhdGlvbhAOEhYKElRvdWNoRmls",
+            "ZU9wZXJhdGlvbhAPEhkKFURvd25sb2FkRmlsZU9wZXJhdGlvbhAQEh4KGkRv",
+            "d25sb2FkRGlyZWN0b3J5T3BlcmF0aW9uEBQSGgoWTWFrZURpcmVjdG9yeU9w",
+            "ZXJhdGlvbhAVEh4KGk1ha2VEaXJlY3RvcnlQYXRoT3BlcmF0aW9uEBYSHAoY",
+            "UmVtb3ZlRGlyZWN0b3J5T3BlcmF0aW9uEBcSIAocUmVtb3ZlRGlyZWN0b3J5",
+            "UGF0aE9wZXJhdGlvbhAYEhoKFkxpc3REaXJlY3RvcnlPcGVyYXRpb24QGUJO",
+            "ChZjb20ubGl0dGxzdGFyLnByb3RvYnVmQg5DRlNOZXRQcm90b2J1ZlABogIF",
+            "Q0ZTUEKqAhlMaXR0bHN0YXIuQ0ZTTmV0LlByb3RvYnVmYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Littlstar.CFSNet.Protobuf.FileMode), typeof(global::Littlstar.CFSNet.Protobuf.ErrorCode), typeof(global::Littlstar.CFSNet.Protobuf.Operation), }, new pbr::GeneratedClrTypeInfo[] {
@@ -81,7 +81,7 @@ namespace Littlstar.CFSNet.Protobuf {
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.ReadFile), global::Littlstar.CFSNet.Protobuf.ReadFile.Parser, new[]{ "Path", "Start", "End" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.RemoveDirectory), global::Littlstar.CFSNet.Protobuf.RemoveDirectory.Parser, new[]{ "Path" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.RemoveDirectoryPath), global::Littlstar.CFSNet.Protobuf.RemoveDirectoryPath.Parser, new[]{ "Path" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.Request), global::Littlstar.CFSNet.Protobuf.Request.Parser, new[]{ "Nonce", "Drive", "Operation" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.Request), global::Littlstar.CFSNet.Protobuf.Request.Parser, new[]{ "Nonce", "Drive", "Operation", "Buffer" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.Resolve), global::Littlstar.CFSNet.Protobuf.Resolve.Parser, new[]{ "Path" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.Response), global::Littlstar.CFSNet.Protobuf.Response.Parser, new[]{ "Nonce", "Drive", "Operation", "Request", "ErrorCode", "Buffer" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.Stat), global::Littlstar.CFSNet.Protobuf.Stat.Parser, new[]{ "Mode", "Uid", "Gid", "Size", "Blocks", "Offset", "ByteOffset", "Mtime", "Ctime" }, null, null, null),
@@ -1851,6 +1851,7 @@ namespace Littlstar.CFSNet.Protobuf {
       nonce_ = other.nonce_;
       Drive = other.drive_ != null ? other.Drive.Clone() : null;
       operation_ = other.operation_;
+      buffer_ = other.buffer_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1891,6 +1892,17 @@ namespace Littlstar.CFSNet.Protobuf {
       }
     }
 
+    /// <summary>Field number for the "buffer" field.</summary>
+    public const int BufferFieldNumber = 4;
+    private pb::ByteString buffer_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Buffer {
+      get { return buffer_; }
+      set {
+        buffer_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Request);
@@ -1907,6 +1919,7 @@ namespace Littlstar.CFSNet.Protobuf {
       if (Nonce != other.Nonce) return false;
       if (!object.Equals(Drive, other.Drive)) return false;
       if (Operation != other.Operation) return false;
+      if (Buffer != other.Buffer) return false;
       return true;
     }
 
@@ -1916,6 +1929,7 @@ namespace Littlstar.CFSNet.Protobuf {
       if (Nonce.Length != 0) hash ^= Nonce.GetHashCode();
       if (drive_ != null) hash ^= Drive.GetHashCode();
       if (Operation != 0) hash ^= Operation.GetHashCode();
+      if (Buffer.Length != 0) hash ^= Buffer.GetHashCode();
       return hash;
     }
 
@@ -1938,6 +1952,10 @@ namespace Littlstar.CFSNet.Protobuf {
         output.WriteRawTag(24);
         output.WriteEnum((int) Operation);
       }
+      if (Buffer.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteBytes(Buffer);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1951,6 +1969,9 @@ namespace Littlstar.CFSNet.Protobuf {
       }
       if (Operation != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Operation);
+      }
+      if (Buffer.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Buffer);
       }
       return size;
     }
@@ -1971,6 +1992,9 @@ namespace Littlstar.CFSNet.Protobuf {
       }
       if (other.Operation != 0) {
         Operation = other.Operation;
+      }
+      if (other.Buffer.Length != 0) {
+        Buffer = other.Buffer;
       }
     }
 
@@ -1995,6 +2019,10 @@ namespace Littlstar.CFSNet.Protobuf {
           }
           case 24: {
             operation_ = (global::Littlstar.CFSNet.Protobuf.Operation) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            Buffer = input.ReadBytes();
             break;
           }
         }

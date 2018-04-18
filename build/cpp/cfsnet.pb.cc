@@ -199,6 +199,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Request, nonce_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Request, drive_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Request, operation_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Request, buffer_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Resolve, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -274,13 +275,13 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 72, -1, sizeof(RemoveDirectory)},
   { 78, -1, sizeof(RemoveDirectoryPath)},
   { 84, -1, sizeof(Request)},
-  { 92, -1, sizeof(Resolve)},
-  { 98, -1, sizeof(Response)},
-  { 109, -1, sizeof(Stat)},
-  { 123, -1, sizeof(StatFile)},
-  { 129, -1, sizeof(TouchFile)},
-  { 135, -1, sizeof(UnlinkFile)},
-  { 141, -1, sizeof(WriteFile)},
+  { 93, -1, sizeof(Resolve)},
+  { 99, -1, sizeof(Response)},
+  { 110, -1, sizeof(Stat)},
+  { 124, -1, sizeof(StatFile)},
+  { 130, -1, sizeof(TouchFile)},
+  { 136, -1, sizeof(UnlinkFile)},
+  { 142, -1, sizeof(WriteFile)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -427,45 +428,46 @@ void AddDescriptorsImpl() {
       "\r\022\r\n\005start\030\002 \001(\r\022\013\n\003end\030\003 \001(\r\"4\n\010ReadFil"
       "e\022\014\n\004path\030\001 \001(\t\022\r\n\005start\030\002 \001(\r\022\013\n\003end\030\003 "
       "\001(\r\"\037\n\017RemoveDirectory\022\014\n\004path\030\001 \001(\t\"#\n\023"
-      "RemoveDirectoryPath\022\014\n\004path\030\001 \001(\t\"p\n\007Req"
-      "uest\022\r\n\005nonce\030\001 \001(\014\022&\n\005drive\030\002 \001(\0132\027.lit"
-      "tlstar.cfsnet.Drive\022.\n\toperation\030\003 \001(\0162\033"
-      ".littlstar.cfsnet.Operation\"\027\n\007Resolve\022\014"
-      "\n\004path\030\001 \001(\t\"\335\001\n\010Response\022\r\n\005nonce\030\001 \001(\014"
-      "\022&\n\005drive\030\002 \001(\0132\027.littlstar.cfsnet.Drive"
-      "\022.\n\toperation\030\003 \001(\0162\033.littlstar.cfsnet.O"
-      "peration\022*\n\007request\030\004 \001(\0132\031.littlstar.cf"
-      "snet.Request\022.\n\terrorCode\030\005 \001(\0162\033.littls"
-      "tar.cfsnet.ErrorCode\022\016\n\006buffer\030\006 \001(\014\"\216\001\n"
-      "\004Stat\022\014\n\004mode\030\001 \001(\r\022\013\n\003uid\030\002 \001(\r\022\013\n\003gid\030"
-      "\003 \001(\r\022\014\n\004size\030\004 \001(\004\022\016\n\006blocks\030\005 \001(\004\022\016\n\006o"
-      "ffset\030\006 \001(\004\022\022\n\nbyteOffset\030\007 \001(\004\022\r\n\005mtime"
-      "\030\010 \001(\004\022\r\n\005ctime\030\t \001(\004\"\030\n\010StatFile\022\014\n\004pat"
-      "h\030\001 \001(\t\"\031\n\tTouchFile\022\014\n\004path\030\001 \001(\t\"\032\n\nUn"
-      "linkFile\022\014\n\004path\030\001 \001(\t\"E\n\tWriteFile\022\014\n\004p"
-      "ath\030\001 \001(\t\022\016\n\006buffer\030\002 \001(\014\022\r\n\005start\030\003 \001(\r"
-      "\022\013\n\003end\030\004 \001(\r*2\n\010FileMode\022\010\n\004F_OK\020\000\022\010\n\004X"
-      "_OK\020\001\022\010\n\004W_OK\020\002\022\010\n\004R_OK\020\004*q\n\tErrorCode\022\013"
-      "\n\007NoError\020\000\022\026\n\021AccessDeniedError\020\223\003\022\022\n\rN"
-      "otFoundError\020\224\003\022\026\n\021NotSupportedError\020\225\003\022"
-      "\023\n\016NotOpenedError\020\232\003*\343\003\n\tOperation\022\017\n\013No"
-      "Operation\020\000\022\024\n\020ResolveOperation\020\001\022\021\n\rOpe"
-      "nOperation\020\002\022\022\n\016CloseOperation\020\003\022\021\n\rRead"
-      "Operation\020\004\022\022\n\016WriteOperation\020\005\022\025\n\021ReadF"
-      "ileOperation\020\n\022\026\n\022WriteFileOperation\020\013\022\025"
-      "\n\021StatFileOperation\020\014\022\027\n\023UnlinkFileOpera"
-      "tion\020\r\022\027\n\023AccessFileOperation\020\016\022\026\n\022Touch"
-      "FileOperation\020\017\022\031\n\025DownloadFileOperation"
-      "\020\020\022\036\n\032DownloadDirectoryOperation\020\024\022\032\n\026Ma"
-      "keDirectoryOperation\020\025\022\036\n\032MakeDirectoryP"
-      "athOperation\020\026\022\034\n\030RemoveDirectoryOperati"
-      "on\020\027\022 \n\034RemoveDirectoryPathOperation\020\030\022\032"
-      "\n\026ListDirectoryOperation\020\031BN\n\026com.littls"
-      "tar.protobufB\016CFSNetProtobufP\001\242\002\005CFSPB\252\002"
-      "\031Littlstar.CFSNet.Protobufb\006proto3"
+      "RemoveDirectoryPath\022\014\n\004path\030\001 \001(\t\"\200\001\n\007Re"
+      "quest\022\r\n\005nonce\030\001 \001(\014\022&\n\005drive\030\002 \001(\0132\027.li"
+      "ttlstar.cfsnet.Drive\022.\n\toperation\030\003 \001(\0162"
+      "\033.littlstar.cfsnet.Operation\022\016\n\006buffer\030\004"
+      " \001(\014\"\027\n\007Resolve\022\014\n\004path\030\001 \001(\t\"\335\001\n\010Respon"
+      "se\022\r\n\005nonce\030\001 \001(\014\022&\n\005drive\030\002 \001(\0132\027.littl"
+      "star.cfsnet.Drive\022.\n\toperation\030\003 \001(\0162\033.l"
+      "ittlstar.cfsnet.Operation\022*\n\007request\030\004 \001"
+      "(\0132\031.littlstar.cfsnet.Request\022.\n\terrorCo"
+      "de\030\005 \001(\0162\033.littlstar.cfsnet.ErrorCode\022\016\n"
+      "\006buffer\030\006 \001(\014\"\216\001\n\004Stat\022\014\n\004mode\030\001 \001(\r\022\013\n\003"
+      "uid\030\002 \001(\r\022\013\n\003gid\030\003 \001(\r\022\014\n\004size\030\004 \001(\004\022\016\n\006"
+      "blocks\030\005 \001(\004\022\016\n\006offset\030\006 \001(\004\022\022\n\nbyteOffs"
+      "et\030\007 \001(\004\022\r\n\005mtime\030\010 \001(\004\022\r\n\005ctime\030\t \001(\004\"\030"
+      "\n\010StatFile\022\014\n\004path\030\001 \001(\t\"\031\n\tTouchFile\022\014\n"
+      "\004path\030\001 \001(\t\"\032\n\nUnlinkFile\022\014\n\004path\030\001 \001(\t\""
+      "E\n\tWriteFile\022\014\n\004path\030\001 \001(\t\022\016\n\006buffer\030\002 \001"
+      "(\014\022\r\n\005start\030\003 \001(\r\022\013\n\003end\030\004 \001(\r*2\n\010FileMo"
+      "de\022\010\n\004F_OK\020\000\022\010\n\004X_OK\020\001\022\010\n\004W_OK\020\002\022\010\n\004R_OK"
+      "\020\004*q\n\tErrorCode\022\013\n\007NoError\020\000\022\026\n\021AccessDe"
+      "niedError\020\223\003\022\022\n\rNotFoundError\020\224\003\022\026\n\021NotS"
+      "upportedError\020\225\003\022\023\n\016NotOpenedError\020\232\003*\343\003"
+      "\n\tOperation\022\017\n\013NoOperation\020\000\022\024\n\020ResolveO"
+      "peration\020\001\022\021\n\rOpenOperation\020\002\022\022\n\016CloseOp"
+      "eration\020\003\022\021\n\rReadOperation\020\004\022\022\n\016WriteOpe"
+      "ration\020\005\022\025\n\021ReadFileOperation\020\n\022\026\n\022Write"
+      "FileOperation\020\013\022\025\n\021StatFileOperation\020\014\022\027"
+      "\n\023UnlinkFileOperation\020\r\022\027\n\023AccessFileOpe"
+      "ration\020\016\022\026\n\022TouchFileOperation\020\017\022\031\n\025Down"
+      "loadFileOperation\020\020\022\036\n\032DownloadDirectory"
+      "Operation\020\024\022\032\n\026MakeDirectoryOperation\020\025\022"
+      "\036\n\032MakeDirectoryPathOperation\020\026\022\034\n\030Remov"
+      "eDirectoryOperation\020\027\022 \n\034RemoveDirectory"
+      "PathOperation\020\030\022\032\n\026ListDirectoryOperatio"
+      "n\020\031BN\n\026com.littlstar.protobufB\016CFSNetPro"
+      "tobufP\001\242\002\005CFSPB\252\002\031Littlstar.CFSNet.Proto"
+      "bufb\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 1914);
+      descriptor, 1931);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "cfsnet.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
@@ -4576,6 +4578,7 @@ void RemoveDirectoryPath::set_allocated_path(::std::string* path) {
 const int Request::kNonceFieldNumber;
 const int Request::kDriveFieldNumber;
 const int Request::kOperationFieldNumber;
+const int Request::kBufferFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Request::Request()
@@ -4595,6 +4598,10 @@ Request::Request(const Request& from)
   if (from.nonce().size() > 0) {
     nonce_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.nonce_);
   }
+  buffer_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.buffer().size() > 0) {
+    buffer_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.buffer_);
+  }
   if (from.has_drive()) {
     drive_ = new ::littlstar::cfsnet::Drive(*from.drive_);
   } else {
@@ -4606,6 +4613,7 @@ Request::Request(const Request& from)
 
 void Request::SharedCtor() {
   nonce_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  buffer_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&drive_, 0, reinterpret_cast<char*>(&operation_) -
     reinterpret_cast<char*>(&drive_) + sizeof(operation_));
   _cached_size_ = 0;
@@ -4618,6 +4626,7 @@ Request::~Request() {
 
 void Request::SharedDtor() {
   nonce_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  buffer_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) {
     delete drive_;
   }
@@ -4649,6 +4658,7 @@ Request* Request::New(::google::protobuf::Arena* arena) const {
 void Request::Clear() {
 // @@protoc_insertion_point(message_clear_start:littlstar.cfsnet.Request)
   nonce_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  buffer_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (GetArenaNoVirtual() == NULL && drive_ != NULL) {
     delete drive_;
   }
@@ -4705,6 +4715,18 @@ bool Request::MergePartialFromCodedStream(
         break;
       }
 
+      // bytes buffer = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(34u)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
+                input, this->mutable_buffer()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0 ||
@@ -4750,6 +4772,12 @@ void Request::SerializeWithCachedSizes(
       3, this->operation(), output);
   }
 
+  // bytes buffer = 4;
+  if (this->buffer().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
+      4, this->buffer(), output);
+  }
+
   // @@protoc_insertion_point(serialize_end:littlstar.cfsnet.Request)
 }
 
@@ -4779,6 +4807,13 @@ void Request::SerializeWithCachedSizes(
       3, this->operation(), target);
   }
 
+  // bytes buffer = 4;
+  if (this->buffer().size() > 0) {
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
+        4, this->buffer(), target);
+  }
+
   // @@protoc_insertion_point(serialize_to_array_end:littlstar.cfsnet.Request)
   return target;
 }
@@ -4792,6 +4827,13 @@ size_t Request::ByteSizeLong() const {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::BytesSize(
         this->nonce());
+  }
+
+  // bytes buffer = 4;
+  if (this->buffer().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::BytesSize(
+        this->buffer());
   }
 
   // .littlstar.cfsnet.Drive drive = 2;
@@ -4840,6 +4882,10 @@ void Request::MergeFrom(const Request& from) {
 
     nonce_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.nonce_);
   }
+  if (from.buffer().size() > 0) {
+
+    buffer_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.buffer_);
+  }
   if (from.has_drive()) {
     mutable_drive()->::littlstar::cfsnet::Drive::MergeFrom(from.drive());
   }
@@ -4872,6 +4918,7 @@ void Request::Swap(Request* other) {
 }
 void Request::InternalSwap(Request* other) {
   nonce_.Swap(&other->nonce_);
+  buffer_.Swap(&other->buffer_);
   std::swap(drive_, other->drive_);
   std::swap(operation_, other->operation_);
   std::swap(_cached_size_, other->_cached_size_);
@@ -4989,6 +5036,59 @@ void Request::set_operation(::littlstar::cfsnet::Operation value) {
   
   operation_ = value;
   // @@protoc_insertion_point(field_set:littlstar.cfsnet.Request.operation)
+}
+
+// bytes buffer = 4;
+void Request::clear_buffer() {
+  buffer_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+const ::std::string& Request::buffer() const {
+  // @@protoc_insertion_point(field_get:littlstar.cfsnet.Request.buffer)
+  return buffer_.GetNoArena();
+}
+void Request::set_buffer(const ::std::string& value) {
+  
+  buffer_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:littlstar.cfsnet.Request.buffer)
+}
+#if LANG_CXX11
+void Request::set_buffer(::std::string&& value) {
+  
+  buffer_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:littlstar.cfsnet.Request.buffer)
+}
+#endif
+void Request::set_buffer(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  buffer_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:littlstar.cfsnet.Request.buffer)
+}
+void Request::set_buffer(const void* value, size_t size) {
+  
+  buffer_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:littlstar.cfsnet.Request.buffer)
+}
+::std::string* Request::mutable_buffer() {
+  
+  // @@protoc_insertion_point(field_mutable:littlstar.cfsnet.Request.buffer)
+  return buffer_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* Request::release_buffer() {
+  // @@protoc_insertion_point(field_release:littlstar.cfsnet.Request.buffer)
+  
+  return buffer_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void Request::set_allocated_buffer(::std::string* buffer) {
+  if (buffer != NULL) {
+    
+  } else {
+    
+  }
+  buffer_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), buffer);
+  // @@protoc_insertion_point(field_set_allocated:littlstar.cfsnet.Request.buffer)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

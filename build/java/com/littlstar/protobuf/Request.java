@@ -17,6 +17,7 @@ public  final class Request extends
   private Request() {
     nonce_ = com.google.protobuf.ByteString.EMPTY;
     operation_ = 0;
+    buffer_ = com.google.protobuf.ByteString.EMPTY;
   }
 
   @java.lang.Override
@@ -66,6 +67,11 @@ public  final class Request extends
             int rawValue = input.readEnum();
 
             operation_ = rawValue;
+            break;
+          }
+          case 34: {
+
+            buffer_ = input.readBytes();
             break;
           }
         }
@@ -137,6 +143,15 @@ public  final class Request extends
     return result == null ? com.littlstar.protobuf.Operation.UNRECOGNIZED : result;
   }
 
+  public static final int BUFFER_FIELD_NUMBER = 4;
+  private com.google.protobuf.ByteString buffer_;
+  /**
+   * <code>bytes buffer = 4;</code>
+   */
+  public com.google.protobuf.ByteString getBuffer() {
+    return buffer_;
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -158,6 +173,9 @@ public  final class Request extends
     if (operation_ != com.littlstar.protobuf.Operation.NoOperation.getNumber()) {
       output.writeEnum(3, operation_);
     }
+    if (!buffer_.isEmpty()) {
+      output.writeBytes(4, buffer_);
+    }
   }
 
   public int getSerializedSize() {
@@ -176,6 +194,10 @@ public  final class Request extends
     if (operation_ != com.littlstar.protobuf.Operation.NoOperation.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, operation_);
+    }
+    if (!buffer_.isEmpty()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBytesSize(4, buffer_);
     }
     memoizedSize = size;
     return size;
@@ -201,6 +223,8 @@ public  final class Request extends
           .equals(other.getDrive());
     }
     result = result && operation_ == other.operation_;
+    result = result && getBuffer()
+        .equals(other.getBuffer());
     return result;
   }
 
@@ -219,6 +243,8 @@ public  final class Request extends
     }
     hash = (37 * hash) + OPERATION_FIELD_NUMBER;
     hash = (53 * hash) + operation_;
+    hash = (37 * hash) + BUFFER_FIELD_NUMBER;
+    hash = (53 * hash) + getBuffer().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -358,6 +384,8 @@ public  final class Request extends
       }
       operation_ = 0;
 
+      buffer_ = com.google.protobuf.ByteString.EMPTY;
+
       return this;
     }
 
@@ -387,6 +415,7 @@ public  final class Request extends
         result.drive_ = driveBuilder_.build();
       }
       result.operation_ = operation_;
+      result.buffer_ = buffer_;
       onBuilt();
       return result;
     }
@@ -436,6 +465,9 @@ public  final class Request extends
       }
       if (other.operation_ != 0) {
         setOperationValue(other.getOperationValue());
+      }
+      if (other.getBuffer() != com.google.protobuf.ByteString.EMPTY) {
+        setBuffer(other.getBuffer());
       }
       onChanged();
       return this;
@@ -649,6 +681,35 @@ public  final class Request extends
     public Builder clearOperation() {
       
       operation_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.ByteString buffer_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes buffer = 4;</code>
+     */
+    public com.google.protobuf.ByteString getBuffer() {
+      return buffer_;
+    }
+    /**
+     * <code>bytes buffer = 4;</code>
+     */
+    public Builder setBuffer(com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      buffer_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bytes buffer = 4;</code>
+     */
+    public Builder clearBuffer() {
+      
+      buffer_ = getDefaultInstance().getBuffer();
       onChanged();
       return this;
     }

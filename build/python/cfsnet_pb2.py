@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='cfsnet.proto',
   package='littlstar.cfsnet',
   syntax='proto3',
-  serialized_pb=_b('\n\x0c\x63\x66snet.proto\x12\x10littlstar.cfsnet\"D\n\nAccessFile\x12\x0c\n\x04path\x18\x01 \x01(\t\x12(\n\x04mode\x18\x02 \x01(\x0e\x32\x1a.littlstar.cfsnet.FileMode\"\x13\n\x05\x43lose\x12\n\n\x02\x66\x64\x18\x01 \x01(\r\"!\n\x11\x44ownloadDirectory\x12\x0c\n\x04path\x18\x01 \x01(\t\"\x1c\n\x0c\x44ownloadFile\x12\x0c\n\x04path\x18\x01 \x01(\t\" \n\x05\x44rive\x12\n\n\x02id\x18\x01 \x01(\x0c\x12\x0b\n\x03key\x18\x02 \x01(\x0c\"\x1d\n\rListDirectory\x12\x0c\n\x04path\x18\x01 \x01(\t\"\x1d\n\rMakeDirectory\x12\x0c\n\x04path\x18\x01 \x01(\t\"!\n\x11MakeDirectoryPath\x12\x0c\n\x04path\x18\x01 \x01(\t\"\x14\n\x04Open\x12\x0c\n\x04path\x18\x01 \x01(\t\".\n\x04Read\x12\n\n\x02\x66\x64\x18\x01 \x01(\r\x12\r\n\x05start\x18\x02 \x01(\r\x12\x0b\n\x03\x65nd\x18\x03 \x01(\r\"4\n\x08ReadFile\x12\x0c\n\x04path\x18\x01 \x01(\t\x12\r\n\x05start\x18\x02 \x01(\r\x12\x0b\n\x03\x65nd\x18\x03 \x01(\r\"\x1f\n\x0fRemoveDirectory\x12\x0c\n\x04path\x18\x01 \x01(\t\"#\n\x13RemoveDirectoryPath\x12\x0c\n\x04path\x18\x01 \x01(\t\"p\n\x07Request\x12\r\n\x05nonce\x18\x01 \x01(\x0c\x12&\n\x05\x64rive\x18\x02 \x01(\x0b\x32\x17.littlstar.cfsnet.Drive\x12.\n\toperation\x18\x03 \x01(\x0e\x32\x1b.littlstar.cfsnet.Operation\"\x17\n\x07Resolve\x12\x0c\n\x04path\x18\x01 \x01(\t\"\xdd\x01\n\x08Response\x12\r\n\x05nonce\x18\x01 \x01(\x0c\x12&\n\x05\x64rive\x18\x02 \x01(\x0b\x32\x17.littlstar.cfsnet.Drive\x12.\n\toperation\x18\x03 \x01(\x0e\x32\x1b.littlstar.cfsnet.Operation\x12*\n\x07request\x18\x04 \x01(\x0b\x32\x19.littlstar.cfsnet.Request\x12.\n\terrorCode\x18\x05 \x01(\x0e\x32\x1b.littlstar.cfsnet.ErrorCode\x12\x0e\n\x06\x62uffer\x18\x06 \x01(\x0c\"\x8e\x01\n\x04Stat\x12\x0c\n\x04mode\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0b\n\x03gid\x18\x03 \x01(\r\x12\x0c\n\x04size\x18\x04 \x01(\x04\x12\x0e\n\x06\x62locks\x18\x05 \x01(\x04\x12\x0e\n\x06offset\x18\x06 \x01(\x04\x12\x12\n\nbyteOffset\x18\x07 \x01(\x04\x12\r\n\x05mtime\x18\x08 \x01(\x04\x12\r\n\x05\x63time\x18\t \x01(\x04\"\x18\n\x08StatFile\x12\x0c\n\x04path\x18\x01 \x01(\t\"\x19\n\tTouchFile\x12\x0c\n\x04path\x18\x01 \x01(\t\"\x1a\n\nUnlinkFile\x12\x0c\n\x04path\x18\x01 \x01(\t\"E\n\tWriteFile\x12\x0c\n\x04path\x18\x01 \x01(\t\x12\x0e\n\x06\x62uffer\x18\x02 \x01(\x0c\x12\r\n\x05start\x18\x03 \x01(\r\x12\x0b\n\x03\x65nd\x18\x04 \x01(\r*2\n\x08\x46ileMode\x12\x08\n\x04\x46_OK\x10\x00\x12\x08\n\x04X_OK\x10\x01\x12\x08\n\x04W_OK\x10\x02\x12\x08\n\x04R_OK\x10\x04*q\n\tErrorCode\x12\x0b\n\x07NoError\x10\x00\x12\x16\n\x11\x41\x63\x63\x65ssDeniedError\x10\x93\x03\x12\x12\n\rNotFoundError\x10\x94\x03\x12\x16\n\x11NotSupportedError\x10\x95\x03\x12\x13\n\x0eNotOpenedError\x10\x9a\x03*\xe3\x03\n\tOperation\x12\x0f\n\x0bNoOperation\x10\x00\x12\x14\n\x10ResolveOperation\x10\x01\x12\x11\n\rOpenOperation\x10\x02\x12\x12\n\x0e\x43loseOperation\x10\x03\x12\x11\n\rReadOperation\x10\x04\x12\x12\n\x0eWriteOperation\x10\x05\x12\x15\n\x11ReadFileOperation\x10\n\x12\x16\n\x12WriteFileOperation\x10\x0b\x12\x15\n\x11StatFileOperation\x10\x0c\x12\x17\n\x13UnlinkFileOperation\x10\r\x12\x17\n\x13\x41\x63\x63\x65ssFileOperation\x10\x0e\x12\x16\n\x12TouchFileOperation\x10\x0f\x12\x19\n\x15\x44ownloadFileOperation\x10\x10\x12\x1e\n\x1a\x44ownloadDirectoryOperation\x10\x14\x12\x1a\n\x16MakeDirectoryOperation\x10\x15\x12\x1e\n\x1aMakeDirectoryPathOperation\x10\x16\x12\x1c\n\x18RemoveDirectoryOperation\x10\x17\x12 \n\x1cRemoveDirectoryPathOperation\x10\x18\x12\x1a\n\x16ListDirectoryOperation\x10\x19\x42N\n\x16\x63om.littlstar.protobufB\x0e\x43\x46SNetProtobufP\x01\xa2\x02\x05\x43\x46SPB\xaa\x02\x19Littlstar.CFSNet.Protobufb\x06proto3')
+  serialized_pb=_b('\n\x0c\x63\x66snet.proto\x12\x10littlstar.cfsnet\"D\n\nAccessFile\x12\x0c\n\x04path\x18\x01 \x01(\t\x12(\n\x04mode\x18\x02 \x01(\x0e\x32\x1a.littlstar.cfsnet.FileMode\"\x13\n\x05\x43lose\x12\n\n\x02\x66\x64\x18\x01 \x01(\r\"!\n\x11\x44ownloadDirectory\x12\x0c\n\x04path\x18\x01 \x01(\t\"\x1c\n\x0c\x44ownloadFile\x12\x0c\n\x04path\x18\x01 \x01(\t\" \n\x05\x44rive\x12\n\n\x02id\x18\x01 \x01(\x0c\x12\x0b\n\x03key\x18\x02 \x01(\x0c\"\x1d\n\rListDirectory\x12\x0c\n\x04path\x18\x01 \x01(\t\"\x1d\n\rMakeDirectory\x12\x0c\n\x04path\x18\x01 \x01(\t\"!\n\x11MakeDirectoryPath\x12\x0c\n\x04path\x18\x01 \x01(\t\"\x14\n\x04Open\x12\x0c\n\x04path\x18\x01 \x01(\t\".\n\x04Read\x12\n\n\x02\x66\x64\x18\x01 \x01(\r\x12\r\n\x05start\x18\x02 \x01(\r\x12\x0b\n\x03\x65nd\x18\x03 \x01(\r\"4\n\x08ReadFile\x12\x0c\n\x04path\x18\x01 \x01(\t\x12\r\n\x05start\x18\x02 \x01(\r\x12\x0b\n\x03\x65nd\x18\x03 \x01(\r\"\x1f\n\x0fRemoveDirectory\x12\x0c\n\x04path\x18\x01 \x01(\t\"#\n\x13RemoveDirectoryPath\x12\x0c\n\x04path\x18\x01 \x01(\t\"\x80\x01\n\x07Request\x12\r\n\x05nonce\x18\x01 \x01(\x0c\x12&\n\x05\x64rive\x18\x02 \x01(\x0b\x32\x17.littlstar.cfsnet.Drive\x12.\n\toperation\x18\x03 \x01(\x0e\x32\x1b.littlstar.cfsnet.Operation\x12\x0e\n\x06\x62uffer\x18\x04 \x01(\x0c\"\x17\n\x07Resolve\x12\x0c\n\x04path\x18\x01 \x01(\t\"\xdd\x01\n\x08Response\x12\r\n\x05nonce\x18\x01 \x01(\x0c\x12&\n\x05\x64rive\x18\x02 \x01(\x0b\x32\x17.littlstar.cfsnet.Drive\x12.\n\toperation\x18\x03 \x01(\x0e\x32\x1b.littlstar.cfsnet.Operation\x12*\n\x07request\x18\x04 \x01(\x0b\x32\x19.littlstar.cfsnet.Request\x12.\n\terrorCode\x18\x05 \x01(\x0e\x32\x1b.littlstar.cfsnet.ErrorCode\x12\x0e\n\x06\x62uffer\x18\x06 \x01(\x0c\"\x8e\x01\n\x04Stat\x12\x0c\n\x04mode\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0b\n\x03gid\x18\x03 \x01(\r\x12\x0c\n\x04size\x18\x04 \x01(\x04\x12\x0e\n\x06\x62locks\x18\x05 \x01(\x04\x12\x0e\n\x06offset\x18\x06 \x01(\x04\x12\x12\n\nbyteOffset\x18\x07 \x01(\x04\x12\r\n\x05mtime\x18\x08 \x01(\x04\x12\r\n\x05\x63time\x18\t \x01(\x04\"\x18\n\x08StatFile\x12\x0c\n\x04path\x18\x01 \x01(\t\"\x19\n\tTouchFile\x12\x0c\n\x04path\x18\x01 \x01(\t\"\x1a\n\nUnlinkFile\x12\x0c\n\x04path\x18\x01 \x01(\t\"E\n\tWriteFile\x12\x0c\n\x04path\x18\x01 \x01(\t\x12\x0e\n\x06\x62uffer\x18\x02 \x01(\x0c\x12\r\n\x05start\x18\x03 \x01(\r\x12\x0b\n\x03\x65nd\x18\x04 \x01(\r*2\n\x08\x46ileMode\x12\x08\n\x04\x46_OK\x10\x00\x12\x08\n\x04X_OK\x10\x01\x12\x08\n\x04W_OK\x10\x02\x12\x08\n\x04R_OK\x10\x04*q\n\tErrorCode\x12\x0b\n\x07NoError\x10\x00\x12\x16\n\x11\x41\x63\x63\x65ssDeniedError\x10\x93\x03\x12\x12\n\rNotFoundError\x10\x94\x03\x12\x16\n\x11NotSupportedError\x10\x95\x03\x12\x13\n\x0eNotOpenedError\x10\x9a\x03*\xe3\x03\n\tOperation\x12\x0f\n\x0bNoOperation\x10\x00\x12\x14\n\x10ResolveOperation\x10\x01\x12\x11\n\rOpenOperation\x10\x02\x12\x12\n\x0e\x43loseOperation\x10\x03\x12\x11\n\rReadOperation\x10\x04\x12\x12\n\x0eWriteOperation\x10\x05\x12\x15\n\x11ReadFileOperation\x10\n\x12\x16\n\x12WriteFileOperation\x10\x0b\x12\x15\n\x11StatFileOperation\x10\x0c\x12\x17\n\x13UnlinkFileOperation\x10\r\x12\x17\n\x13\x41\x63\x63\x65ssFileOperation\x10\x0e\x12\x16\n\x12TouchFileOperation\x10\x0f\x12\x19\n\x15\x44ownloadFileOperation\x10\x10\x12\x1e\n\x1a\x44ownloadDirectoryOperation\x10\x14\x12\x1a\n\x16MakeDirectoryOperation\x10\x15\x12\x1e\n\x1aMakeDirectoryPathOperation\x10\x16\x12\x1c\n\x18RemoveDirectoryOperation\x10\x17\x12 \n\x1cRemoveDirectoryPathOperation\x10\x18\x12\x1a\n\x16ListDirectoryOperation\x10\x19\x42N\n\x16\x63om.littlstar.protobufB\x0e\x43\x46SNetProtobufP\x01\xa2\x02\x05\x43\x46SPB\xaa\x02\x19Littlstar.CFSNet.Protobufb\x06proto3')
 )
 
 _FILEMODE = _descriptor.EnumDescriptor(
@@ -48,8 +48,8 @@ _FILEMODE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1175,
-  serialized_end=1225,
+  serialized_start=1192,
+  serialized_end=1242,
 )
 _sym_db.RegisterEnumDescriptor(_FILEMODE)
 
@@ -83,8 +83,8 @@ _ERRORCODE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1227,
-  serialized_end=1340,
+  serialized_start=1244,
+  serialized_end=1357,
 )
 _sym_db.RegisterEnumDescriptor(_ERRORCODE)
 
@@ -174,8 +174,8 @@ _OPERATION = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1343,
-  serialized_end=1826,
+  serialized_start=1360,
+  serialized_end=1843,
 )
 _sym_db.RegisterEnumDescriptor(_OPERATION)
 
@@ -684,6 +684,13 @@ _REQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='buffer', full_name='littlstar.cfsnet.Request.buffer', index=3,
+      number=4, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -696,8 +703,8 @@ _REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=515,
-  serialized_end=627,
+  serialized_start=516,
+  serialized_end=644,
 )
 
 
@@ -727,8 +734,8 @@ _RESOLVE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=629,
-  serialized_end=652,
+  serialized_start=646,
+  serialized_end=669,
 )
 
 
@@ -793,8 +800,8 @@ _RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=655,
-  serialized_end=876,
+  serialized_start=672,
+  serialized_end=893,
 )
 
 
@@ -880,8 +887,8 @@ _STAT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=879,
-  serialized_end=1021,
+  serialized_start=896,
+  serialized_end=1038,
 )
 
 
@@ -911,8 +918,8 @@ _STATFILE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1023,
-  serialized_end=1047,
+  serialized_start=1040,
+  serialized_end=1064,
 )
 
 
@@ -942,8 +949,8 @@ _TOUCHFILE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1049,
-  serialized_end=1074,
+  serialized_start=1066,
+  serialized_end=1091,
 )
 
 
@@ -973,8 +980,8 @@ _UNLINKFILE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1076,
-  serialized_end=1102,
+  serialized_start=1093,
+  serialized_end=1119,
 )
 
 
@@ -1025,8 +1032,8 @@ _WRITEFILE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1104,
-  serialized_end=1173,
+  serialized_start=1121,
+  serialized_end=1190,
 )
 
 _ACCESSFILE.fields_by_name['mode'].enum_type = _FILEMODE

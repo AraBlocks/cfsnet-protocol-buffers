@@ -53,6 +53,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     optional :nonce, :bytes, 1
     optional :drive, :message, 2, "littlstar.cfsnet.Drive"
     optional :operation, :enum, 3, "littlstar.cfsnet.Operation"
+    optional :buffer, :bytes, 4
   end
   add_message "littlstar.cfsnet.Resolve" do
     optional :path, :string, 1

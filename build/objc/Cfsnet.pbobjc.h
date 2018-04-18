@@ -324,6 +324,7 @@ typedef GPB_ENUM(CFSPBRequest_FieldNumber) {
   CFSPBRequest_FieldNumber_Nonce = 1,
   CFSPBRequest_FieldNumber_Drive = 2,
   CFSPBRequest_FieldNumber_Operation = 3,
+  CFSPBRequest_FieldNumber_Buffer = 4,
 };
 
 @interface CFSPBRequest : GPBMessage
@@ -335,6 +336,8 @@ typedef GPB_ENUM(CFSPBRequest_FieldNumber) {
 @property(nonatomic, readwrite) BOOL hasDrive;
 
 @property(nonatomic, readwrite) CFSPBOperation operation;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSData *buffer;
 
 @end
 

@@ -25,6 +25,10 @@ class Request extends \Google\Protobuf\Internal\Message
      * <code>.littlstar.cfsnet.Operation operation = 3;</code>
      */
     private $operation = 0;
+    /**
+     * <code>bytes buffer = 4;</code>
+     */
+    private $buffer = '';
 
     public function __construct() {
         \GPBMetadata\Cfsnet::initOnce();
@@ -80,6 +84,23 @@ class Request extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Littlstar\Cfsnet\Operation::class);
         $this->operation = $var;
+    }
+
+    /**
+     * <code>bytes buffer = 4;</code>
+     */
+    public function getBuffer()
+    {
+        return $this->buffer;
+    }
+
+    /**
+     * <code>bytes buffer = 4;</code>
+     */
+    public function setBuffer($var)
+    {
+        GPBUtil::checkString($var, False);
+        $this->buffer = $var;
     }
 
 }

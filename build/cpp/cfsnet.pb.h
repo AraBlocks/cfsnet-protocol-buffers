@@ -1459,6 +1459,20 @@ class Request : public ::google::protobuf::Message /* @@protoc_insertion_point(c
   ::std::string* release_nonce();
   void set_allocated_nonce(::std::string* nonce);
 
+  // bytes buffer = 4;
+  void clear_buffer();
+  static const int kBufferFieldNumber = 4;
+  const ::std::string& buffer() const;
+  void set_buffer(const ::std::string& value);
+  #if LANG_CXX11
+  void set_buffer(::std::string&& value);
+  #endif
+  void set_buffer(const char* value);
+  void set_buffer(const void* value, size_t size);
+  ::std::string* mutable_buffer();
+  ::std::string* release_buffer();
+  void set_allocated_buffer(::std::string* buffer);
+
   // .littlstar.cfsnet.Drive drive = 2;
   bool has_drive() const;
   void clear_drive();
@@ -1479,6 +1493,7 @@ class Request : public ::google::protobuf::Message /* @@protoc_insertion_point(c
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::ArenaStringPtr nonce_;
+  ::google::protobuf::internal::ArenaStringPtr buffer_;
   ::littlstar::cfsnet::Drive* drive_;
   int operation_;
   mutable int _cached_size_;
@@ -3124,6 +3139,59 @@ inline void Request::set_operation(::littlstar::cfsnet::Operation value) {
   
   operation_ = value;
   // @@protoc_insertion_point(field_set:littlstar.cfsnet.Request.operation)
+}
+
+// bytes buffer = 4;
+inline void Request::clear_buffer() {
+  buffer_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Request::buffer() const {
+  // @@protoc_insertion_point(field_get:littlstar.cfsnet.Request.buffer)
+  return buffer_.GetNoArena();
+}
+inline void Request::set_buffer(const ::std::string& value) {
+  
+  buffer_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:littlstar.cfsnet.Request.buffer)
+}
+#if LANG_CXX11
+inline void Request::set_buffer(::std::string&& value) {
+  
+  buffer_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:littlstar.cfsnet.Request.buffer)
+}
+#endif
+inline void Request::set_buffer(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  buffer_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:littlstar.cfsnet.Request.buffer)
+}
+inline void Request::set_buffer(const void* value, size_t size) {
+  
+  buffer_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:littlstar.cfsnet.Request.buffer)
+}
+inline ::std::string* Request::mutable_buffer() {
+  
+  // @@protoc_insertion_point(field_mutable:littlstar.cfsnet.Request.buffer)
+  return buffer_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Request::release_buffer() {
+  // @@protoc_insertion_point(field_release:littlstar.cfsnet.Request.buffer)
+  
+  return buffer_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Request::set_allocated_buffer(::std::string* buffer) {
+  if (buffer != NULL) {
+    
+  } else {
+    
+  }
+  buffer_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), buffer);
+  // @@protoc_insertion_point(field_set_allocated:littlstar.cfsnet.Request.buffer)
 }
 
 // -------------------------------------------------------------------

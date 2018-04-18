@@ -61,7 +61,8 @@ proto.littlstar.cfsnet.Request.toObject = function(includeInstance, msg) {
   var f, obj = {
     nonce: msg.getNonce_asB64(),
     drive: (f = msg.getDrive()) && proto.littlstar.cfsnet.Drive.toObject(includeInstance, f),
-    operation: jspb.Message.getFieldWithDefault(msg, 3, 0)
+    operation: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    buffer: msg.getBuffer_asB64()
   };
 
   if (includeInstance) {
@@ -111,6 +112,10 @@ proto.littlstar.cfsnet.Request.deserializeBinaryFromReader = function(msg, reade
       var value = /** @type {!proto.littlstar.cfsnet.Operation} */ (reader.readEnum());
       msg.setOperation(value);
       break;
+    case 4:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setBuffer(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -158,6 +163,13 @@ proto.littlstar.cfsnet.Request.serializeBinaryToWriter = function(message, write
   if (f !== 0.0) {
     writer.writeEnum(
       3,
+      f
+    );
+  }
+  f = message.getBuffer_asU8();
+  if (f.length > 0) {
+    writer.writeBytes(
+      4,
       f
     );
   }
@@ -245,6 +257,45 @@ proto.littlstar.cfsnet.Request.prototype.getOperation = function() {
 /** @param {!proto.littlstar.cfsnet.Operation} value */
 proto.littlstar.cfsnet.Request.prototype.setOperation = function(value) {
   jspb.Message.setField(this, 3, value);
+};
+
+
+/**
+ * optional bytes buffer = 4;
+ * @return {string}
+ */
+proto.littlstar.cfsnet.Request.prototype.getBuffer = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/**
+ * optional bytes buffer = 4;
+ * This is a type-conversion wrapper around `getBuffer()`
+ * @return {string}
+ */
+proto.littlstar.cfsnet.Request.prototype.getBuffer_asB64 = function() {
+  return /** @type {string} */ (jspb.Message.bytesAsB64(
+      this.getBuffer()));
+};
+
+
+/**
+ * optional bytes buffer = 4;
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getBuffer()`
+ * @return {!Uint8Array}
+ */
+proto.littlstar.cfsnet.Request.prototype.getBuffer_asU8 = function() {
+  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+      this.getBuffer()));
+};
+
+
+/** @param {!(string|Uint8Array)} value */
+proto.littlstar.cfsnet.Request.prototype.setBuffer = function(value) {
+  jspb.Message.setField(this, 4, value);
 };
 
 

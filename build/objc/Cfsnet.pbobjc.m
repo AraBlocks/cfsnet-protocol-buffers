@@ -847,12 +847,14 @@ typedef struct CFSPBRemoveDirectoryPath__storage_ {
 @dynamic nonce;
 @dynamic hasDrive, drive;
 @dynamic operation;
+@dynamic buffer;
 
 typedef struct CFSPBRequest__storage_ {
   uint32_t _has_storage_[1];
   CFSPBOperation operation;
   NSData *nonce;
   CFSPBDrive *drive;
+  NSData *buffer;
 } CFSPBRequest__storage_;
 
 // This method is threadsafe because it is initially called
@@ -887,6 +889,15 @@ typedef struct CFSPBRequest__storage_ {
         .offset = (uint32_t)offsetof(CFSPBRequest__storage_, operation),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
         .dataType = GPBDataTypeEnum,
+      },
+      {
+        .name = "buffer",
+        .dataTypeSpecific.className = NULL,
+        .number = CFSPBRequest_FieldNumber_Buffer,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(CFSPBRequest__storage_, buffer),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBytes,
       },
     };
     GPBDescriptor *localDescriptor =

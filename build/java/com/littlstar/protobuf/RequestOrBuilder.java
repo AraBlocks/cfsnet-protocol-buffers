@@ -33,4 +33,9 @@ public interface RequestOrBuilder extends
    * <code>.littlstar.cfsnet.Operation operation = 3;</code>
    */
   com.littlstar.protobuf.Operation getOperation();
+
+  /**
+   * <code>bytes buffer = 4;</code>
+   */
+  com.google.protobuf.ByteString getBuffer();
 }
