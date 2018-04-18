@@ -9,6 +9,7 @@
     - [DownloadDirectory](#littlstar.cfsnet.DownloadDirectory)
     - [DownloadFile](#littlstar.cfsnet.DownloadFile)
     - [Drive](#littlstar.cfsnet.Drive)
+    - [Handshake](#littlstar.cfsnet.Handshake)
     - [ListDirectory](#littlstar.cfsnet.ListDirectory)
     - [MakeDirectory](#littlstar.cfsnet.MakeDirectory)
     - [MakeDirectoryPath](#littlstar.cfsnet.MakeDirectoryPath)
@@ -115,6 +116,23 @@
 | ----- | ---- | ----- | ----------- |
 | id | [bytes](#bytes) |  |  |
 | key | [bytes](#bytes) |  |  |
+
+
+
+
+
+
+<a name="littlstar.cfsnet.Handshake"/>
+
+### Handshake
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| nonce | [bytes](#bytes) |  |  |
+| key | [bytes](#bytes) |  |  |
+| ack | [bool](#bool) |  |  |
 
 
 
