@@ -12,6 +12,7 @@ goog.provide('proto.littlstar.cfsnet.ErrorCode');
  */
 proto.littlstar.cfsnet.ErrorCode = {
   NOERROR: 0,
+  BADREQUESTERROR: 400,
   ACCESSDENIEDERROR: 403,
   NOTFOUNDERROR: 404,
   NOTSUPPORTEDERROR: 405,

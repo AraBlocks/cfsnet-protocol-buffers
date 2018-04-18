@@ -106,6 +106,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
   end
   add_enum "littlstar.cfsnet.ErrorCode" do
     value :NoError, 0
+    value :BadRequestError, 400
     value :AccessDeniedError, 403
     value :NotFoundError, 404
     value :NotSupportedError, 405

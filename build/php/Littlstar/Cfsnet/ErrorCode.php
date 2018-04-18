@@ -14,6 +14,10 @@ class ErrorCode
      */
     const NoError = 0;
     /**
+     * <code>BadRequestError = 400;</code>
+     */
+    const BadRequestError = 400;
+    /**
      * <code>AccessDeniedError = 403;</code>
      */
     const AccessDeniedError = 403;

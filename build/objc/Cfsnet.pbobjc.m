@@ -87,11 +87,13 @@ GPBEnumDescriptor *CFSPBErrorCode_EnumDescriptor(void) {
   static GPBEnumDescriptor *descriptor = NULL;
   if (!descriptor) {
     static const char *valueNames =
-        "NoError\000AccessDeniedError\000NotFoundError\000"
-        "NotSupportedError\000NotOpenedError\000Interna"
-        "lError\000NotImplementedError\000";
+        "NoError\000BadRequestError\000AccessDeniedErro"
+        "r\000NotFoundError\000NotSupportedError\000NotOpe"
+        "nedError\000InternalError\000NotImplementedErr"
+        "or\000";
     static const int32_t values[] = {
         CFSPBErrorCode_NoError,
+        CFSPBErrorCode_BadRequestError,
         CFSPBErrorCode_AccessDeniedError,
         CFSPBErrorCode_NotFoundError,
         CFSPBErrorCode_NotSupportedError,
@@ -99,7 +101,7 @@ GPBEnumDescriptor *CFSPBErrorCode_EnumDescriptor(void) {
         CFSPBErrorCode_InternalError,
         CFSPBErrorCode_NotImplementedError,
     };
-    static const char *extraTextFormatInfo = "\007\000\007\000\001\021\000\002\r\000\003\021\000\004\016\000\005\r\000\006\023\000";
+    static const char *extraTextFormatInfo = "\010\000\007\000\001\017\000\002\021\000\003\r\000\004\021\000\005\016\000\006\r\000\007\023\000";
     GPBEnumDescriptor *worker =
         [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(CFSPBErrorCode)
                                        valueNames:valueNames
@@ -117,6 +119,7 @@ GPBEnumDescriptor *CFSPBErrorCode_EnumDescriptor(void) {
 BOOL CFSPBErrorCode_IsValidValue(int32_t value__) {
   switch (value__) {
     case CFSPBErrorCode_NoError:
+    case CFSPBErrorCode_BadRequestError:
     case CFSPBErrorCode_AccessDeniedError:
     case CFSPBErrorCode_NotFoundError:
     case CFSPBErrorCode_NotSupportedError:

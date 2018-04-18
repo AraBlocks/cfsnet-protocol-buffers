@@ -65,6 +65,7 @@ typedef GPB_ENUM(CFSPBErrorCode) {
    **/
   CFSPBErrorCode_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
   CFSPBErrorCode_NoError = 0,
+  CFSPBErrorCode_BadRequestError = 400,
   CFSPBErrorCode_AccessDeniedError = 403,
   CFSPBErrorCode_NotFoundError = 404,
   CFSPBErrorCode_NotSupportedError = 405,

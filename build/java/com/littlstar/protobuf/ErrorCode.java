@@ -13,6 +13,10 @@ public enum ErrorCode
    */
   NoError(0),
   /**
+   * <code>BadRequestError = 400;</code>
+   */
+  BadRequestError(400),
+  /**
    * <code>AccessDeniedError = 403;</code>
    */
   AccessDeniedError(403),
@@ -43,6 +47,10 @@ public enum ErrorCode
    * <code>NoError = 0;</code>
    */
   public static final int NoError_VALUE = 0;
+  /**
+   * <code>BadRequestError = 400;</code>
+   */
+  public static final int BadRequestError_VALUE = 400;
   /**
    * <code>AccessDeniedError = 403;</code>
    */
@@ -88,6 +96,7 @@ public enum ErrorCode
   public static ErrorCode forNumber(int value) {
     switch (value) {
       case 0: return NoError;
+      case 400: return BadRequestError;
       case 403: return AccessDeniedError;
       case 404: return NotFoundError;
       case 405: return NotSupportedError;

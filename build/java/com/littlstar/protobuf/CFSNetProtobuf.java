@@ -165,26 +165,26 @@ public final class CFSNetProtobuf {
       " \001(\t\"\032\n\nUnlinkFile\022\014\n\004path\030\001 \001(\t\"E\n\tWrit",
       "eFile\022\014\n\004path\030\001 \001(\t\022\016\n\006buffer\030\002 \001(\014\022\r\n\005s" +
       "tart\030\003 \001(\r\022\013\n\003end\030\004 \001(\r*2\n\010FileMode\022\010\n\004F" +
-      "_OK\020\000\022\010\n\004X_OK\020\001\022\010\n\004W_OK\020\002\022\010\n\004R_OK\020\004*\237\001\n\t" +
-      "ErrorCode\022\013\n\007NoError\020\000\022\026\n\021AccessDeniedEr" +
-      "ror\020\223\003\022\022\n\rNotFoundError\020\224\003\022\026\n\021NotSupport" +
-      "edError\020\225\003\022\023\n\016NotOpenedError\020\232\003\022\022\n\rInter" +
-      "nalError\020\364\003\022\030\n\023NotImplementedError\020\365\003*\343\003" +
-      "\n\tOperation\022\017\n\013NoOperation\020\000\022\024\n\020ResolveO" +
-      "peration\020\001\022\021\n\rOpenOperation\020\002\022\022\n\016CloseOp" +
-      "eration\020\003\022\021\n\rReadOperation\020\004\022\022\n\016WriteOpe",
-      "ration\020\005\022\025\n\021ReadFileOperation\020\n\022\026\n\022Write" +
-      "FileOperation\020\013\022\025\n\021StatFileOperation\020\014\022\027" +
-      "\n\023UnlinkFileOperation\020\r\022\027\n\023AccessFileOpe" +
-      "ration\020\016\022\026\n\022TouchFileOperation\020\017\022\031\n\025Down" +
-      "loadFileOperation\020\020\022\036\n\032DownloadDirectory" +
-      "Operation\020\024\022\032\n\026MakeDirectoryOperation\020\025\022" +
-      "\036\n\032MakeDirectoryPathOperation\020\026\022\034\n\030Remov" +
-      "eDirectoryOperation\020\027\022 \n\034RemoveDirectory" +
-      "PathOperation\020\030\022\032\n\026ListDirectoryOperatio" +
-      "n\020\031BN\n\026com.littlstar.protobufB\016CFSNetPro",
-      "tobufP\001\242\002\005CFSPB\252\002\031Littlstar.CFSNet.Proto" +
-      "bufb\006proto3"
+      "_OK\020\000\022\010\n\004X_OK\020\001\022\010\n\004W_OK\020\002\022\010\n\004R_OK\020\004*\265\001\n\t" +
+      "ErrorCode\022\013\n\007NoError\020\000\022\024\n\017BadRequestErro" +
+      "r\020\220\003\022\026\n\021AccessDeniedError\020\223\003\022\022\n\rNotFound" +
+      "Error\020\224\003\022\026\n\021NotSupportedError\020\225\003\022\023\n\016NotO" +
+      "penedError\020\232\003\022\022\n\rInternalError\020\364\003\022\030\n\023Not" +
+      "ImplementedError\020\365\003*\343\003\n\tOperation\022\017\n\013NoO" +
+      "peration\020\000\022\024\n\020ResolveOperation\020\001\022\021\n\rOpen" +
+      "Operation\020\002\022\022\n\016CloseOperation\020\003\022\021\n\rReadO",
+      "peration\020\004\022\022\n\016WriteOperation\020\005\022\025\n\021ReadFi" +
+      "leOperation\020\n\022\026\n\022WriteFileOperation\020\013\022\025\n" +
+      "\021StatFileOperation\020\014\022\027\n\023UnlinkFileOperat" +
+      "ion\020\r\022\027\n\023AccessFileOperation\020\016\022\026\n\022TouchF" +
+      "ileOperation\020\017\022\031\n\025DownloadFileOperation\020" +
+      "\020\022\036\n\032DownloadDirectoryOperation\020\024\022\032\n\026Mak" +
+      "eDirectoryOperation\020\025\022\036\n\032MakeDirectoryPa" +
+      "thOperation\020\026\022\034\n\030RemoveDirectoryOperatio" +
+      "n\020\027\022 \n\034RemoveDirectoryPathOperation\020\030\022\032\n" +
+      "\026ListDirectoryOperation\020\031BN\n\026com.littlst",
+      "ar.protobufB\016CFSNetProtobufP\001\242\002\005CFSPB\252\002\031" +
+      "Littlstar.CFSNet.Protobufb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
