@@ -40,6 +40,11 @@ public final class CFSNetProtobuf {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_littlstar_cfsnet_Drive_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_littlstar_cfsnet_Handshake_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_littlstar_cfsnet_Handshake_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_littlstar_cfsnet_ListDirectory_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -133,50 +138,51 @@ public final class CFSNetProtobuf {
       "tlstar.cfsnet.FileMode\"\023\n\005Close\022\n\n\002fd\030\001 " +
       "\001(\r\"!\n\021DownloadDirectory\022\014\n\004path\030\001 \001(\t\"\034" +
       "\n\014DownloadFile\022\014\n\004path\030\001 \001(\t\" \n\005Drive\022\n\n" +
-      "\002id\030\001 \001(\014\022\013\n\003key\030\002 \001(\014\"\035\n\rListDirectory\022" +
-      "\014\n\004path\030\001 \001(\t\"\035\n\rMakeDirectory\022\014\n\004path\030\001" +
-      " \001(\t\"!\n\021MakeDirectoryPath\022\014\n\004path\030\001 \001(\t\"" +
-      "\024\n\004Open\022\014\n\004path\030\001 \001(\t\".\n\004Read\022\n\n\002fd\030\001 \001(" +
-      "\r\022\r\n\005start\030\002 \001(\r\022\013\n\003end\030\003 \001(\r\"4\n\010ReadFil",
-      "e\022\014\n\004path\030\001 \001(\t\022\r\n\005start\030\002 \001(\r\022\013\n\003end\030\003 " +
-      "\001(\r\"\037\n\017RemoveDirectory\022\014\n\004path\030\001 \001(\t\"#\n\023" +
-      "RemoveDirectoryPath\022\014\n\004path\030\001 \001(\t\"\200\001\n\007Re" +
-      "quest\022\r\n\005nonce\030\001 \001(\014\022&\n\005drive\030\002 \001(\0132\027.li" +
-      "ttlstar.cfsnet.Drive\022.\n\toperation\030\003 \001(\0162" +
-      "\033.littlstar.cfsnet.Operation\022\016\n\006buffer\030\004" +
-      " \001(\014\"\027\n\007Resolve\022\014\n\004path\030\001 \001(\t\"\335\001\n\010Respon" +
-      "se\022\r\n\005nonce\030\001 \001(\014\022&\n\005drive\030\002 \001(\0132\027.littl" +
-      "star.cfsnet.Drive\022.\n\toperation\030\003 \001(\0162\033.l" +
-      "ittlstar.cfsnet.Operation\022*\n\007request\030\004 \001",
-      "(\0132\031.littlstar.cfsnet.Request\022.\n\terrorCo" +
-      "de\030\005 \001(\0162\033.littlstar.cfsnet.ErrorCode\022\016\n" +
-      "\006buffer\030\006 \001(\014\"\216\001\n\004Stat\022\014\n\004mode\030\001 \001(\r\022\013\n\003" +
-      "uid\030\002 \001(\r\022\013\n\003gid\030\003 \001(\r\022\014\n\004size\030\004 \001(\004\022\016\n\006" +
-      "blocks\030\005 \001(\004\022\016\n\006offset\030\006 \001(\004\022\022\n\nbyteOffs" +
-      "et\030\007 \001(\004\022\r\n\005mtime\030\010 \001(\004\022\r\n\005ctime\030\t \001(\004\"\030" +
-      "\n\010StatFile\022\014\n\004path\030\001 \001(\t\"\031\n\tTouchFile\022\014\n" +
-      "\004path\030\001 \001(\t\"\032\n\nUnlinkFile\022\014\n\004path\030\001 \001(\t\"" +
-      "E\n\tWriteFile\022\014\n\004path\030\001 \001(\t\022\016\n\006buffer\030\002 \001" +
-      "(\014\022\r\n\005start\030\003 \001(\r\022\013\n\003end\030\004 \001(\r*2\n\010FileMo",
-      "de\022\010\n\004F_OK\020\000\022\010\n\004X_OK\020\001\022\010\n\004W_OK\020\002\022\010\n\004R_OK" +
-      "\020\004*q\n\tErrorCode\022\013\n\007NoError\020\000\022\026\n\021AccessDe" +
-      "niedError\020\223\003\022\022\n\rNotFoundError\020\224\003\022\026\n\021NotS" +
-      "upportedError\020\225\003\022\023\n\016NotOpenedError\020\232\003*\343\003" +
-      "\n\tOperation\022\017\n\013NoOperation\020\000\022\024\n\020ResolveO" +
-      "peration\020\001\022\021\n\rOpenOperation\020\002\022\022\n\016CloseOp" +
-      "eration\020\003\022\021\n\rReadOperation\020\004\022\022\n\016WriteOpe" +
-      "ration\020\005\022\025\n\021ReadFileOperation\020\n\022\026\n\022Write" +
-      "FileOperation\020\013\022\025\n\021StatFileOperation\020\014\022\027" +
-      "\n\023UnlinkFileOperation\020\r\022\027\n\023AccessFileOpe",
-      "ration\020\016\022\026\n\022TouchFileOperation\020\017\022\031\n\025Down" +
-      "loadFileOperation\020\020\022\036\n\032DownloadDirectory" +
-      "Operation\020\024\022\032\n\026MakeDirectoryOperation\020\025\022" +
-      "\036\n\032MakeDirectoryPathOperation\020\026\022\034\n\030Remov" +
-      "eDirectoryOperation\020\027\022 \n\034RemoveDirectory" +
-      "PathOperation\020\030\022\032\n\026ListDirectoryOperatio" +
-      "n\020\031BN\n\026com.littlstar.protobufB\016CFSNetPro" +
-      "tobufP\001\242\002\005CFSPB\252\002\031Littlstar.CFSNet.Proto" +
-      "bufb\006proto3"
+      "\002id\030\001 \001(\014\022\013\n\003key\030\002 \001(\014\"4\n\tHandshake\022\r\n\005n" +
+      "once\030\001 \001(\014\022\013\n\003key\030\002 \001(\014\022\013\n\003ack\030\003 \001(\010\"\035\n\r" +
+      "ListDirectory\022\014\n\004path\030\001 \001(\t\"\035\n\rMakeDirec" +
+      "tory\022\014\n\004path\030\001 \001(\t\"!\n\021MakeDirectoryPath\022" +
+      "\014\n\004path\030\001 \001(\t\"\024\n\004Open\022\014\n\004path\030\001 \001(\t\".\n\004R",
+      "ead\022\n\n\002fd\030\001 \001(\r\022\r\n\005start\030\002 \001(\r\022\013\n\003end\030\003 " +
+      "\001(\r\"4\n\010ReadFile\022\014\n\004path\030\001 \001(\t\022\r\n\005start\030\002" +
+      " \001(\r\022\013\n\003end\030\003 \001(\r\"\037\n\017RemoveDirectory\022\014\n\004" +
+      "path\030\001 \001(\t\"#\n\023RemoveDirectoryPath\022\014\n\004pat" +
+      "h\030\001 \001(\t\"\200\001\n\007Request\022\r\n\005nonce\030\001 \001(\014\022&\n\005dr" +
+      "ive\030\002 \001(\0132\027.littlstar.cfsnet.Drive\022.\n\top" +
+      "eration\030\003 \001(\0162\033.littlstar.cfsnet.Operati" +
+      "on\022\016\n\006buffer\030\004 \001(\014\"\027\n\007Resolve\022\014\n\004path\030\001 " +
+      "\001(\t\"\335\001\n\010Response\022\r\n\005nonce\030\001 \001(\014\022&\n\005drive" +
+      "\030\002 \001(\0132\027.littlstar.cfsnet.Drive\022.\n\topera",
+      "tion\030\003 \001(\0162\033.littlstar.cfsnet.Operation\022" +
+      "*\n\007request\030\004 \001(\0132\031.littlstar.cfsnet.Requ" +
+      "est\022.\n\terrorCode\030\005 \001(\0162\033.littlstar.cfsne" +
+      "t.ErrorCode\022\016\n\006buffer\030\006 \001(\014\"\216\001\n\004Stat\022\014\n\004" +
+      "mode\030\001 \001(\r\022\013\n\003uid\030\002 \001(\r\022\013\n\003gid\030\003 \001(\r\022\014\n\004" +
+      "size\030\004 \001(\004\022\016\n\006blocks\030\005 \001(\004\022\016\n\006offset\030\006 \001" +
+      "(\004\022\022\n\nbyteOffset\030\007 \001(\004\022\r\n\005mtime\030\010 \001(\004\022\r\n" +
+      "\005ctime\030\t \001(\004\"\030\n\010StatFile\022\014\n\004path\030\001 \001(\t\"\031" +
+      "\n\tTouchFile\022\014\n\004path\030\001 \001(\t\"\032\n\nUnlinkFile\022" +
+      "\014\n\004path\030\001 \001(\t\"E\n\tWriteFile\022\014\n\004path\030\001 \001(\t",
+      "\022\016\n\006buffer\030\002 \001(\014\022\r\n\005start\030\003 \001(\r\022\013\n\003end\030\004" +
+      " \001(\r*2\n\010FileMode\022\010\n\004F_OK\020\000\022\010\n\004X_OK\020\001\022\010\n\004" +
+      "W_OK\020\002\022\010\n\004R_OK\020\004*q\n\tErrorCode\022\013\n\007NoError" +
+      "\020\000\022\026\n\021AccessDeniedError\020\223\003\022\022\n\rNotFoundEr" +
+      "ror\020\224\003\022\026\n\021NotSupportedError\020\225\003\022\023\n\016NotOpe" +
+      "nedError\020\232\003*\343\003\n\tOperation\022\017\n\013NoOperation" +
+      "\020\000\022\024\n\020ResolveOperation\020\001\022\021\n\rOpenOperatio" +
+      "n\020\002\022\022\n\016CloseOperation\020\003\022\021\n\rReadOperation" +
+      "\020\004\022\022\n\016WriteOperation\020\005\022\025\n\021ReadFileOperat" +
+      "ion\020\n\022\026\n\022WriteFileOperation\020\013\022\025\n\021StatFil",
+      "eOperation\020\014\022\027\n\023UnlinkFileOperation\020\r\022\027\n" +
+      "\023AccessFileOperation\020\016\022\026\n\022TouchFileOpera" +
+      "tion\020\017\022\031\n\025DownloadFileOperation\020\020\022\036\n\032Dow" +
+      "nloadDirectoryOperation\020\024\022\032\n\026MakeDirecto" +
+      "ryOperation\020\025\022\036\n\032MakeDirectoryPathOperat" +
+      "ion\020\026\022\034\n\030RemoveDirectoryOperation\020\027\022 \n\034R" +
+      "emoveDirectoryPathOperation\020\030\022\032\n\026ListDir" +
+      "ectoryOperation\020\031BN\n\026com.littlstar.proto" +
+      "bufB\016CFSNetProtobufP\001\242\002\005CFSPB\252\002\031Littlsta" +
+      "r.CFSNet.Protobufb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -220,98 +226,104 @@ public final class CFSNetProtobuf {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_littlstar_cfsnet_Drive_descriptor,
         new java.lang.String[] { "Id", "Key", });
-    internal_static_littlstar_cfsnet_ListDirectory_descriptor =
+    internal_static_littlstar_cfsnet_Handshake_descriptor =
       getDescriptor().getMessageTypes().get(5);
+    internal_static_littlstar_cfsnet_Handshake_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_littlstar_cfsnet_Handshake_descriptor,
+        new java.lang.String[] { "Nonce", "Key", "Ack", });
+    internal_static_littlstar_cfsnet_ListDirectory_descriptor =
+      getDescriptor().getMessageTypes().get(6);
     internal_static_littlstar_cfsnet_ListDirectory_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_littlstar_cfsnet_ListDirectory_descriptor,
         new java.lang.String[] { "Path", });
     internal_static_littlstar_cfsnet_MakeDirectory_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_littlstar_cfsnet_MakeDirectory_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_littlstar_cfsnet_MakeDirectory_descriptor,
         new java.lang.String[] { "Path", });
     internal_static_littlstar_cfsnet_MakeDirectoryPath_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_littlstar_cfsnet_MakeDirectoryPath_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_littlstar_cfsnet_MakeDirectoryPath_descriptor,
         new java.lang.String[] { "Path", });
     internal_static_littlstar_cfsnet_Open_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_littlstar_cfsnet_Open_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_littlstar_cfsnet_Open_descriptor,
         new java.lang.String[] { "Path", });
     internal_static_littlstar_cfsnet_Read_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_littlstar_cfsnet_Read_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_littlstar_cfsnet_Read_descriptor,
         new java.lang.String[] { "Fd", "Start", "End", });
     internal_static_littlstar_cfsnet_ReadFile_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_littlstar_cfsnet_ReadFile_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_littlstar_cfsnet_ReadFile_descriptor,
         new java.lang.String[] { "Path", "Start", "End", });
     internal_static_littlstar_cfsnet_RemoveDirectory_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_littlstar_cfsnet_RemoveDirectory_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_littlstar_cfsnet_RemoveDirectory_descriptor,
         new java.lang.String[] { "Path", });
     internal_static_littlstar_cfsnet_RemoveDirectoryPath_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_littlstar_cfsnet_RemoveDirectoryPath_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_littlstar_cfsnet_RemoveDirectoryPath_descriptor,
         new java.lang.String[] { "Path", });
     internal_static_littlstar_cfsnet_Request_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_littlstar_cfsnet_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_littlstar_cfsnet_Request_descriptor,
         new java.lang.String[] { "Nonce", "Drive", "Operation", "Buffer", });
     internal_static_littlstar_cfsnet_Resolve_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_littlstar_cfsnet_Resolve_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_littlstar_cfsnet_Resolve_descriptor,
         new java.lang.String[] { "Path", });
     internal_static_littlstar_cfsnet_Response_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_littlstar_cfsnet_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_littlstar_cfsnet_Response_descriptor,
         new java.lang.String[] { "Nonce", "Drive", "Operation", "Request", "ErrorCode", "Buffer", });
     internal_static_littlstar_cfsnet_Stat_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_littlstar_cfsnet_Stat_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_littlstar_cfsnet_Stat_descriptor,
         new java.lang.String[] { "Mode", "Uid", "Gid", "Size", "Blocks", "Offset", "ByteOffset", "Mtime", "Ctime", });
     internal_static_littlstar_cfsnet_StatFile_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_littlstar_cfsnet_StatFile_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_littlstar_cfsnet_StatFile_descriptor,
         new java.lang.String[] { "Path", });
     internal_static_littlstar_cfsnet_TouchFile_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_littlstar_cfsnet_TouchFile_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_littlstar_cfsnet_TouchFile_descriptor,
         new java.lang.String[] { "Path", });
     internal_static_littlstar_cfsnet_UnlinkFile_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_littlstar_cfsnet_UnlinkFile_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_littlstar_cfsnet_UnlinkFile_descriptor,
         new java.lang.String[] { "Path", });
     internal_static_littlstar_cfsnet_WriteFile_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_littlstar_cfsnet_WriteFile_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_littlstar_cfsnet_WriteFile_descriptor,

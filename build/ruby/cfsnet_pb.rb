@@ -21,6 +21,11 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     optional :id, :bytes, 1
     optional :key, :bytes, 2
   end
+  add_message "littlstar.cfsnet.Handshake" do
+    optional :nonce, :bytes, 1
+    optional :key, :bytes, 2
+    optional :ack, :bool, 3
+  end
   add_message "littlstar.cfsnet.ListDirectory" do
     optional :path, :string, 1
   end
@@ -135,6 +140,7 @@ module Littlstar
     DownloadDirectory = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.DownloadDirectory").msgclass
     DownloadFile = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.DownloadFile").msgclass
     Drive = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.Drive").msgclass
+    Handshake = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.Handshake").msgclass
     ListDirectory = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.ListDirectory").msgclass
     MakeDirectory = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.MakeDirectory").msgclass
     MakeDirectoryPath = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.MakeDirectoryPath").msgclass

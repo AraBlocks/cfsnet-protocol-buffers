@@ -210,6 +210,24 @@ typedef GPB_ENUM(CFSPBDrive_FieldNumber) {
 
 @end
 
+#pragma mark - CFSPBHandshake
+
+typedef GPB_ENUM(CFSPBHandshake_FieldNumber) {
+  CFSPBHandshake_FieldNumber_Nonce = 1,
+  CFSPBHandshake_FieldNumber_Key = 2,
+  CFSPBHandshake_FieldNumber_Ack = 3,
+};
+
+@interface CFSPBHandshake : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSData *nonce;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSData *key;
+
+@property(nonatomic, readwrite) BOOL ack;
+
+@end
+
 #pragma mark - CFSPBListDirectory
 
 typedef GPB_ENUM(CFSPBListDirectory_FieldNumber) {

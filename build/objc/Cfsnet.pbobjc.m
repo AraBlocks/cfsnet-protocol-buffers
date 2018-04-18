@@ -452,6 +452,70 @@ typedef struct CFSPBDrive__storage_ {
 
 @end
 
+#pragma mark - CFSPBHandshake
+
+@implementation CFSPBHandshake
+
+@dynamic nonce;
+@dynamic key;
+@dynamic ack;
+
+typedef struct CFSPBHandshake__storage_ {
+  uint32_t _has_storage_[1];
+  NSData *nonce;
+  NSData *key;
+} CFSPBHandshake__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "nonce",
+        .dataTypeSpecific.className = NULL,
+        .number = CFSPBHandshake_FieldNumber_Nonce,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(CFSPBHandshake__storage_, nonce),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBytes,
+      },
+      {
+        .name = "key",
+        .dataTypeSpecific.className = NULL,
+        .number = CFSPBHandshake_FieldNumber_Key,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(CFSPBHandshake__storage_, key),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBytes,
+      },
+      {
+        .name = "ack",
+        .dataTypeSpecific.className = NULL,
+        .number = CFSPBHandshake_FieldNumber_Ack,
+        .hasIndex = 2,
+        .offset = 3,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[CFSPBHandshake class]
+                                     rootClass:[CFSPBCfsnetRoot class]
+                                          file:CFSPBCfsnetRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(CFSPBHandshake__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    NSAssert(descriptor == nil, @"Startup recursed!");
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
 #pragma mark - CFSPBListDirectory
 
 @implementation CFSPBListDirectory

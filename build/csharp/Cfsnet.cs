@@ -26,45 +26,47 @@ namespace Littlstar.CFSNet.Protobuf {
             "ZRIMCgRwYXRoGAEgASgJEigKBG1vZGUYAiABKA4yGi5saXR0bHN0YXIuY2Zz",
             "bmV0LkZpbGVNb2RlIhMKBUNsb3NlEgoKAmZkGAEgASgNIiEKEURvd25sb2Fk",
             "RGlyZWN0b3J5EgwKBHBhdGgYASABKAkiHAoMRG93bmxvYWRGaWxlEgwKBHBh",
-            "dGgYASABKAkiIAoFRHJpdmUSCgoCaWQYASABKAwSCwoDa2V5GAIgASgMIh0K",
-            "DUxpc3REaXJlY3RvcnkSDAoEcGF0aBgBIAEoCSIdCg1NYWtlRGlyZWN0b3J5",
-            "EgwKBHBhdGgYASABKAkiIQoRTWFrZURpcmVjdG9yeVBhdGgSDAoEcGF0aBgB",
-            "IAEoCSIUCgRPcGVuEgwKBHBhdGgYASABKAkiLgoEUmVhZBIKCgJmZBgBIAEo",
-            "DRINCgVzdGFydBgCIAEoDRILCgNlbmQYAyABKA0iNAoIUmVhZEZpbGUSDAoE",
-            "cGF0aBgBIAEoCRINCgVzdGFydBgCIAEoDRILCgNlbmQYAyABKA0iHwoPUmVt",
-            "b3ZlRGlyZWN0b3J5EgwKBHBhdGgYASABKAkiIwoTUmVtb3ZlRGlyZWN0b3J5",
-            "UGF0aBIMCgRwYXRoGAEgASgJIoABCgdSZXF1ZXN0Eg0KBW5vbmNlGAEgASgM",
-            "EiYKBWRyaXZlGAIgASgLMhcubGl0dGxzdGFyLmNmc25ldC5Ecml2ZRIuCglv",
-            "cGVyYXRpb24YAyABKA4yGy5saXR0bHN0YXIuY2ZzbmV0Lk9wZXJhdGlvbhIO",
-            "CgZidWZmZXIYBCABKAwiFwoHUmVzb2x2ZRIMCgRwYXRoGAEgASgJIt0BCghS",
-            "ZXNwb25zZRINCgVub25jZRgBIAEoDBImCgVkcml2ZRgCIAEoCzIXLmxpdHRs",
-            "c3Rhci5jZnNuZXQuRHJpdmUSLgoJb3BlcmF0aW9uGAMgASgOMhsubGl0dGxz",
-            "dGFyLmNmc25ldC5PcGVyYXRpb24SKgoHcmVxdWVzdBgEIAEoCzIZLmxpdHRs",
-            "c3Rhci5jZnNuZXQuUmVxdWVzdBIuCgllcnJvckNvZGUYBSABKA4yGy5saXR0",
-            "bHN0YXIuY2ZzbmV0LkVycm9yQ29kZRIOCgZidWZmZXIYBiABKAwijgEKBFN0",
-            "YXQSDAoEbW9kZRgBIAEoDRILCgN1aWQYAiABKA0SCwoDZ2lkGAMgASgNEgwK",
-            "BHNpemUYBCABKAQSDgoGYmxvY2tzGAUgASgEEg4KBm9mZnNldBgGIAEoBBIS",
-            "CgpieXRlT2Zmc2V0GAcgASgEEg0KBW10aW1lGAggASgEEg0KBWN0aW1lGAkg",
-            "ASgEIhgKCFN0YXRGaWxlEgwKBHBhdGgYASABKAkiGQoJVG91Y2hGaWxlEgwK",
-            "BHBhdGgYASABKAkiGgoKVW5saW5rRmlsZRIMCgRwYXRoGAEgASgJIkUKCVdy",
-            "aXRlRmlsZRIMCgRwYXRoGAEgASgJEg4KBmJ1ZmZlchgCIAEoDBINCgVzdGFy",
-            "dBgDIAEoDRILCgNlbmQYBCABKA0qMgoIRmlsZU1vZGUSCAoERl9PSxAAEggK",
-            "BFhfT0sQARIICgRXX09LEAISCAoEUl9PSxAEKnEKCUVycm9yQ29kZRILCgdO",
-            "b0Vycm9yEAASFgoRQWNjZXNzRGVuaWVkRXJyb3IQkwMSEgoNTm90Rm91bmRF",
-            "cnJvchCUAxIWChFOb3RTdXBwb3J0ZWRFcnJvchCVAxITCg5Ob3RPcGVuZWRF",
-            "cnJvchCaAyrjAwoJT3BlcmF0aW9uEg8KC05vT3BlcmF0aW9uEAASFAoQUmVz",
-            "b2x2ZU9wZXJhdGlvbhABEhEKDU9wZW5PcGVyYXRpb24QAhISCg5DbG9zZU9w",
-            "ZXJhdGlvbhADEhEKDVJlYWRPcGVyYXRpb24QBBISCg5Xcml0ZU9wZXJhdGlv",
-            "bhAFEhUKEVJlYWRGaWxlT3BlcmF0aW9uEAoSFgoSV3JpdGVGaWxlT3BlcmF0",
-            "aW9uEAsSFQoRU3RhdEZpbGVPcGVyYXRpb24QDBIXChNVbmxpbmtGaWxlT3Bl",
-            "cmF0aW9uEA0SFwoTQWNjZXNzRmlsZU9wZXJhdGlvbhAOEhYKElRvdWNoRmls",
-            "ZU9wZXJhdGlvbhAPEhkKFURvd25sb2FkRmlsZU9wZXJhdGlvbhAQEh4KGkRv",
-            "d25sb2FkRGlyZWN0b3J5T3BlcmF0aW9uEBQSGgoWTWFrZURpcmVjdG9yeU9w",
-            "ZXJhdGlvbhAVEh4KGk1ha2VEaXJlY3RvcnlQYXRoT3BlcmF0aW9uEBYSHAoY",
-            "UmVtb3ZlRGlyZWN0b3J5T3BlcmF0aW9uEBcSIAocUmVtb3ZlRGlyZWN0b3J5",
-            "UGF0aE9wZXJhdGlvbhAYEhoKFkxpc3REaXJlY3RvcnlPcGVyYXRpb24QGUJO",
-            "ChZjb20ubGl0dGxzdGFyLnByb3RvYnVmQg5DRlNOZXRQcm90b2J1ZlABogIF",
-            "Q0ZTUEKqAhlMaXR0bHN0YXIuQ0ZTTmV0LlByb3RvYnVmYgZwcm90bzM="));
+            "dGgYASABKAkiIAoFRHJpdmUSCgoCaWQYASABKAwSCwoDa2V5GAIgASgMIjQK",
+            "CUhhbmRzaGFrZRINCgVub25jZRgBIAEoDBILCgNrZXkYAiABKAwSCwoDYWNr",
+            "GAMgASgIIh0KDUxpc3REaXJlY3RvcnkSDAoEcGF0aBgBIAEoCSIdCg1NYWtl",
+            "RGlyZWN0b3J5EgwKBHBhdGgYASABKAkiIQoRTWFrZURpcmVjdG9yeVBhdGgS",
+            "DAoEcGF0aBgBIAEoCSIUCgRPcGVuEgwKBHBhdGgYASABKAkiLgoEUmVhZBIK",
+            "CgJmZBgBIAEoDRINCgVzdGFydBgCIAEoDRILCgNlbmQYAyABKA0iNAoIUmVh",
+            "ZEZpbGUSDAoEcGF0aBgBIAEoCRINCgVzdGFydBgCIAEoDRILCgNlbmQYAyAB",
+            "KA0iHwoPUmVtb3ZlRGlyZWN0b3J5EgwKBHBhdGgYASABKAkiIwoTUmVtb3Zl",
+            "RGlyZWN0b3J5UGF0aBIMCgRwYXRoGAEgASgJIoABCgdSZXF1ZXN0Eg0KBW5v",
+            "bmNlGAEgASgMEiYKBWRyaXZlGAIgASgLMhcubGl0dGxzdGFyLmNmc25ldC5E",
+            "cml2ZRIuCglvcGVyYXRpb24YAyABKA4yGy5saXR0bHN0YXIuY2ZzbmV0Lk9w",
+            "ZXJhdGlvbhIOCgZidWZmZXIYBCABKAwiFwoHUmVzb2x2ZRIMCgRwYXRoGAEg",
+            "ASgJIt0BCghSZXNwb25zZRINCgVub25jZRgBIAEoDBImCgVkcml2ZRgCIAEo",
+            "CzIXLmxpdHRsc3Rhci5jZnNuZXQuRHJpdmUSLgoJb3BlcmF0aW9uGAMgASgO",
+            "MhsubGl0dGxzdGFyLmNmc25ldC5PcGVyYXRpb24SKgoHcmVxdWVzdBgEIAEo",
+            "CzIZLmxpdHRsc3Rhci5jZnNuZXQuUmVxdWVzdBIuCgllcnJvckNvZGUYBSAB",
+            "KA4yGy5saXR0bHN0YXIuY2ZzbmV0LkVycm9yQ29kZRIOCgZidWZmZXIYBiAB",
+            "KAwijgEKBFN0YXQSDAoEbW9kZRgBIAEoDRILCgN1aWQYAiABKA0SCwoDZ2lk",
+            "GAMgASgNEgwKBHNpemUYBCABKAQSDgoGYmxvY2tzGAUgASgEEg4KBm9mZnNl",
+            "dBgGIAEoBBISCgpieXRlT2Zmc2V0GAcgASgEEg0KBW10aW1lGAggASgEEg0K",
+            "BWN0aW1lGAkgASgEIhgKCFN0YXRGaWxlEgwKBHBhdGgYASABKAkiGQoJVG91",
+            "Y2hGaWxlEgwKBHBhdGgYASABKAkiGgoKVW5saW5rRmlsZRIMCgRwYXRoGAEg",
+            "ASgJIkUKCVdyaXRlRmlsZRIMCgRwYXRoGAEgASgJEg4KBmJ1ZmZlchgCIAEo",
+            "DBINCgVzdGFydBgDIAEoDRILCgNlbmQYBCABKA0qMgoIRmlsZU1vZGUSCAoE",
+            "Rl9PSxAAEggKBFhfT0sQARIICgRXX09LEAISCAoEUl9PSxAEKnEKCUVycm9y",
+            "Q29kZRILCgdOb0Vycm9yEAASFgoRQWNjZXNzRGVuaWVkRXJyb3IQkwMSEgoN",
+            "Tm90Rm91bmRFcnJvchCUAxIWChFOb3RTdXBwb3J0ZWRFcnJvchCVAxITCg5O",
+            "b3RPcGVuZWRFcnJvchCaAyrjAwoJT3BlcmF0aW9uEg8KC05vT3BlcmF0aW9u",
+            "EAASFAoQUmVzb2x2ZU9wZXJhdGlvbhABEhEKDU9wZW5PcGVyYXRpb24QAhIS",
+            "Cg5DbG9zZU9wZXJhdGlvbhADEhEKDVJlYWRPcGVyYXRpb24QBBISCg5Xcml0",
+            "ZU9wZXJhdGlvbhAFEhUKEVJlYWRGaWxlT3BlcmF0aW9uEAoSFgoSV3JpdGVG",
+            "aWxlT3BlcmF0aW9uEAsSFQoRU3RhdEZpbGVPcGVyYXRpb24QDBIXChNVbmxp",
+            "bmtGaWxlT3BlcmF0aW9uEA0SFwoTQWNjZXNzRmlsZU9wZXJhdGlvbhAOEhYK",
+            "ElRvdWNoRmlsZU9wZXJhdGlvbhAPEhkKFURvd25sb2FkRmlsZU9wZXJhdGlv",
+            "bhAQEh4KGkRvd25sb2FkRGlyZWN0b3J5T3BlcmF0aW9uEBQSGgoWTWFrZURp",
+            "cmVjdG9yeU9wZXJhdGlvbhAVEh4KGk1ha2VEaXJlY3RvcnlQYXRoT3BlcmF0",
+            "aW9uEBYSHAoYUmVtb3ZlRGlyZWN0b3J5T3BlcmF0aW9uEBcSIAocUmVtb3Zl",
+            "RGlyZWN0b3J5UGF0aE9wZXJhdGlvbhAYEhoKFkxpc3REaXJlY3RvcnlPcGVy",
+            "YXRpb24QGUJOChZjb20ubGl0dGxzdGFyLnByb3RvYnVmQg5DRlNOZXRQcm90",
+            "b2J1ZlABogIFQ0ZTUEKqAhlMaXR0bHN0YXIuQ0ZTTmV0LlByb3RvYnVmYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Littlstar.CFSNet.Protobuf.FileMode), typeof(global::Littlstar.CFSNet.Protobuf.ErrorCode), typeof(global::Littlstar.CFSNet.Protobuf.Operation), }, new pbr::GeneratedClrTypeInfo[] {
@@ -73,6 +75,7 @@ namespace Littlstar.CFSNet.Protobuf {
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.DownloadDirectory), global::Littlstar.CFSNet.Protobuf.DownloadDirectory.Parser, new[]{ "Path" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.DownloadFile), global::Littlstar.CFSNet.Protobuf.DownloadFile.Parser, new[]{ "Path" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.Drive), global::Littlstar.CFSNet.Protobuf.Drive.Parser, new[]{ "Id", "Key" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.Handshake), global::Littlstar.CFSNet.Protobuf.Handshake.Parser, new[]{ "Nonce", "Key", "Ack" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.ListDirectory), global::Littlstar.CFSNet.Protobuf.ListDirectory.Parser, new[]{ "Path" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.MakeDirectory), global::Littlstar.CFSNet.Protobuf.MakeDirectory.Parser, new[]{ "Path" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.MakeDirectoryPath), global::Littlstar.CFSNet.Protobuf.MakeDirectoryPath.Parser, new[]{ "Path" }, null, null, null),
@@ -776,6 +779,179 @@ namespace Littlstar.CFSNet.Protobuf {
 
   }
 
+  public sealed partial class Handshake : pb::IMessage<Handshake> {
+    private static readonly pb::MessageParser<Handshake> _parser = new pb::MessageParser<Handshake>(() => new Handshake());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Handshake> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Handshake() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Handshake(Handshake other) : this() {
+      nonce_ = other.nonce_;
+      key_ = other.key_;
+      ack_ = other.ack_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Handshake Clone() {
+      return new Handshake(this);
+    }
+
+    /// <summary>Field number for the "nonce" field.</summary>
+    public const int NonceFieldNumber = 1;
+    private pb::ByteString nonce_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Nonce {
+      get { return nonce_; }
+      set {
+        nonce_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "key" field.</summary>
+    public const int KeyFieldNumber = 2;
+    private pb::ByteString key_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Key {
+      get { return key_; }
+      set {
+        key_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ack" field.</summary>
+    public const int AckFieldNumber = 3;
+    private bool ack_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Ack {
+      get { return ack_; }
+      set {
+        ack_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Handshake);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Handshake other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Nonce != other.Nonce) return false;
+      if (Key != other.Key) return false;
+      if (Ack != other.Ack) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Nonce.Length != 0) hash ^= Nonce.GetHashCode();
+      if (Key.Length != 0) hash ^= Key.GetHashCode();
+      if (Ack != false) hash ^= Ack.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Nonce.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Nonce);
+      }
+      if (Key.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteBytes(Key);
+      }
+      if (Ack != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(Ack);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Nonce.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Nonce);
+      }
+      if (Key.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Key);
+      }
+      if (Ack != false) {
+        size += 1 + 1;
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Handshake other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Nonce.Length != 0) {
+        Nonce = other.Nonce;
+      }
+      if (other.Key.Length != 0) {
+        Key = other.Key;
+      }
+      if (other.Ack != false) {
+        Ack = other.Ack;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Nonce = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            Key = input.ReadBytes();
+            break;
+          }
+          case 24: {
+            Ack = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed partial class ListDirectory : pb::IMessage<ListDirectory> {
     private static readonly pb::MessageParser<ListDirectory> _parser = new pb::MessageParser<ListDirectory>(() => new ListDirectory());
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -783,7 +959,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -900,7 +1076,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1017,7 +1193,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1134,7 +1310,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1251,7 +1427,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1424,7 +1600,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1597,7 +1773,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1714,7 +1890,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1831,7 +2007,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2038,7 +2214,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2155,7 +2331,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2424,7 +2600,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2765,7 +2941,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2882,7 +3058,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2999,7 +3175,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3116,7 +3292,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

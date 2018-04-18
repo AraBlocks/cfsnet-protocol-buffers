@@ -48,6 +48,9 @@ extern DownloadFileDefaultTypeInternal _DownloadFile_default_instance_;
 class Drive;
 class DriveDefaultTypeInternal;
 extern DriveDefaultTypeInternal _Drive_default_instance_;
+class Handshake;
+class HandshakeDefaultTypeInternal;
+extern HandshakeDefaultTypeInternal _Handshake_default_instance_;
 class ListDirectory;
 class ListDirectoryDefaultTypeInternal;
 extern ListDirectoryDefaultTypeInternal _ListDirectory_default_instance_;
@@ -657,6 +660,116 @@ class Drive : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
 };
 // -------------------------------------------------------------------
 
+class Handshake : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:littlstar.cfsnet.Handshake) */ {
+ public:
+  Handshake();
+  virtual ~Handshake();
+
+  Handshake(const Handshake& from);
+
+  inline Handshake& operator=(const Handshake& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Handshake& default_instance();
+
+  static inline const Handshake* internal_default_instance() {
+    return reinterpret_cast<const Handshake*>(
+               &_Handshake_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    5;
+
+  void Swap(Handshake* other);
+
+  // implements Message ----------------------------------------------
+
+  inline Handshake* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  Handshake* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const Handshake& from);
+  void MergeFrom(const Handshake& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(Handshake* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // bytes nonce = 1;
+  void clear_nonce();
+  static const int kNonceFieldNumber = 1;
+  const ::std::string& nonce() const;
+  void set_nonce(const ::std::string& value);
+  #if LANG_CXX11
+  void set_nonce(::std::string&& value);
+  #endif
+  void set_nonce(const char* value);
+  void set_nonce(const void* value, size_t size);
+  ::std::string* mutable_nonce();
+  ::std::string* release_nonce();
+  void set_allocated_nonce(::std::string* nonce);
+
+  // bytes key = 2;
+  void clear_key();
+  static const int kKeyFieldNumber = 2;
+  const ::std::string& key() const;
+  void set_key(const ::std::string& value);
+  #if LANG_CXX11
+  void set_key(::std::string&& value);
+  #endif
+  void set_key(const char* value);
+  void set_key(const void* value, size_t size);
+  ::std::string* mutable_key();
+  ::std::string* release_key();
+  void set_allocated_key(::std::string* key);
+
+  // bool ack = 3;
+  void clear_ack();
+  static const int kAckFieldNumber = 3;
+  bool ack() const;
+  void set_ack(bool value);
+
+  // @@protoc_insertion_point(class_scope:littlstar.cfsnet.Handshake)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr nonce_;
+  ::google::protobuf::internal::ArenaStringPtr key_;
+  bool ack_;
+  mutable int _cached_size_;
+  friend struct protobuf_cfsnet_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
 class ListDirectory : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:littlstar.cfsnet.ListDirectory) */ {
  public:
   ListDirectory();
@@ -677,7 +790,7 @@ class ListDirectory : public ::google::protobuf::Message /* @@protoc_insertion_p
                &_ListDirectory_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    5;
+    6;
 
   void Swap(ListDirectory* other);
 
@@ -765,7 +878,7 @@ class MakeDirectory : public ::google::protobuf::Message /* @@protoc_insertion_p
                &_MakeDirectory_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    6;
+    7;
 
   void Swap(MakeDirectory* other);
 
@@ -853,7 +966,7 @@ class MakeDirectoryPath : public ::google::protobuf::Message /* @@protoc_inserti
                &_MakeDirectoryPath_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    7;
+    8;
 
   void Swap(MakeDirectoryPath* other);
 
@@ -941,7 +1054,7 @@ class Open : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
                &_Open_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    8;
+    9;
 
   void Swap(Open* other);
 
@@ -1029,7 +1142,7 @@ class Read : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
                &_Read_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    9;
+    10;
 
   void Swap(Read* other);
 
@@ -1123,7 +1236,7 @@ class ReadFile : public ::google::protobuf::Message /* @@protoc_insertion_point(
                &_ReadFile_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    10;
+    11;
 
   void Swap(ReadFile* other);
 
@@ -1225,7 +1338,7 @@ class RemoveDirectory : public ::google::protobuf::Message /* @@protoc_insertion
                &_RemoveDirectory_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    11;
+    12;
 
   void Swap(RemoveDirectory* other);
 
@@ -1313,7 +1426,7 @@ class RemoveDirectoryPath : public ::google::protobuf::Message /* @@protoc_inser
                &_RemoveDirectoryPath_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    12;
+    13;
 
   void Swap(RemoveDirectoryPath* other);
 
@@ -1401,7 +1514,7 @@ class Request : public ::google::protobuf::Message /* @@protoc_insertion_point(c
                &_Request_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    13;
+    14;
 
   void Swap(Request* other);
 
@@ -1521,7 +1634,7 @@ class Resolve : public ::google::protobuf::Message /* @@protoc_insertion_point(c
                &_Resolve_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    14;
+    15;
 
   void Swap(Resolve* other);
 
@@ -1609,7 +1722,7 @@ class Response : public ::google::protobuf::Message /* @@protoc_insertion_point(
                &_Response_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    15;
+    16;
 
   void Swap(Response* other);
 
@@ -1746,7 +1859,7 @@ class Stat : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
                &_Stat_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    16;
+    17;
 
   void Swap(Stat* other);
 
@@ -1882,7 +1995,7 @@ class StatFile : public ::google::protobuf::Message /* @@protoc_insertion_point(
                &_StatFile_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    17;
+    18;
 
   void Swap(StatFile* other);
 
@@ -1970,7 +2083,7 @@ class TouchFile : public ::google::protobuf::Message /* @@protoc_insertion_point
                &_TouchFile_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    18;
+    19;
 
   void Swap(TouchFile* other);
 
@@ -2058,7 +2171,7 @@ class UnlinkFile : public ::google::protobuf::Message /* @@protoc_insertion_poin
                &_UnlinkFile_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    19;
+    20;
 
   void Swap(UnlinkFile* other);
 
@@ -2146,7 +2259,7 @@ class WriteFile : public ::google::protobuf::Message /* @@protoc_insertion_point
                &_WriteFile_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    20;
+    21;
 
   void Swap(WriteFile* other);
 
@@ -2556,6 +2669,130 @@ inline void Drive::set_allocated_key(::std::string* key) {
   }
   key_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), key);
   // @@protoc_insertion_point(field_set_allocated:littlstar.cfsnet.Drive.key)
+}
+
+// -------------------------------------------------------------------
+
+// Handshake
+
+// bytes nonce = 1;
+inline void Handshake::clear_nonce() {
+  nonce_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Handshake::nonce() const {
+  // @@protoc_insertion_point(field_get:littlstar.cfsnet.Handshake.nonce)
+  return nonce_.GetNoArena();
+}
+inline void Handshake::set_nonce(const ::std::string& value) {
+  
+  nonce_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:littlstar.cfsnet.Handshake.nonce)
+}
+#if LANG_CXX11
+inline void Handshake::set_nonce(::std::string&& value) {
+  
+  nonce_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:littlstar.cfsnet.Handshake.nonce)
+}
+#endif
+inline void Handshake::set_nonce(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  nonce_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:littlstar.cfsnet.Handshake.nonce)
+}
+inline void Handshake::set_nonce(const void* value, size_t size) {
+  
+  nonce_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:littlstar.cfsnet.Handshake.nonce)
+}
+inline ::std::string* Handshake::mutable_nonce() {
+  
+  // @@protoc_insertion_point(field_mutable:littlstar.cfsnet.Handshake.nonce)
+  return nonce_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Handshake::release_nonce() {
+  // @@protoc_insertion_point(field_release:littlstar.cfsnet.Handshake.nonce)
+  
+  return nonce_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Handshake::set_allocated_nonce(::std::string* nonce) {
+  if (nonce != NULL) {
+    
+  } else {
+    
+  }
+  nonce_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), nonce);
+  // @@protoc_insertion_point(field_set_allocated:littlstar.cfsnet.Handshake.nonce)
+}
+
+// bytes key = 2;
+inline void Handshake::clear_key() {
+  key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Handshake::key() const {
+  // @@protoc_insertion_point(field_get:littlstar.cfsnet.Handshake.key)
+  return key_.GetNoArena();
+}
+inline void Handshake::set_key(const ::std::string& value) {
+  
+  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:littlstar.cfsnet.Handshake.key)
+}
+#if LANG_CXX11
+inline void Handshake::set_key(::std::string&& value) {
+  
+  key_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:littlstar.cfsnet.Handshake.key)
+}
+#endif
+inline void Handshake::set_key(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:littlstar.cfsnet.Handshake.key)
+}
+inline void Handshake::set_key(const void* value, size_t size) {
+  
+  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:littlstar.cfsnet.Handshake.key)
+}
+inline ::std::string* Handshake::mutable_key() {
+  
+  // @@protoc_insertion_point(field_mutable:littlstar.cfsnet.Handshake.key)
+  return key_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Handshake::release_key() {
+  // @@protoc_insertion_point(field_release:littlstar.cfsnet.Handshake.key)
+  
+  return key_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Handshake::set_allocated_key(::std::string* key) {
+  if (key != NULL) {
+    
+  } else {
+    
+  }
+  key_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), key);
+  // @@protoc_insertion_point(field_set_allocated:littlstar.cfsnet.Handshake.key)
+}
+
+// bool ack = 3;
+inline void Handshake::clear_ack() {
+  ack_ = false;
+}
+inline bool Handshake::ack() const {
+  // @@protoc_insertion_point(field_get:littlstar.cfsnet.Handshake.ack)
+  return ack_;
+}
+inline void Handshake::set_ack(bool value) {
+  
+  ack_ = value;
+  // @@protoc_insertion_point(field_set:littlstar.cfsnet.Handshake.ack)
 }
 
 // -------------------------------------------------------------------
@@ -3907,6 +4144,8 @@ inline void WriteFile::set_end(::google::protobuf::uint32 value) {
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
