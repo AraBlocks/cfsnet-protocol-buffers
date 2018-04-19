@@ -1,0 +1,11 @@
+/**
+ * Implements `Write(fd, buffer, start, end)` operation.
+ * Send this message to write a range to an open
+ * file descriptor.
+ */
+message Write {
+  uint32 fileDescriptor = 1;
+  bytes buffer = 2;
+  uint32 start = 3;
+  uint32 end = 4;
+}
