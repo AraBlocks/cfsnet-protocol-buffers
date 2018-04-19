@@ -8,9 +8,9 @@ public interface ReadOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>uint32 fd = 1;</code>
+   * <code>uint32 fileDescriptor = 1;</code>
    */
-  int getFd();
+  int getFileDescriptor();
 
   /**
    * <code>uint32 start = 2;</code>

@@ -15,7 +15,7 @@ public  final class Close extends
     super(builder);
   }
   private Close() {
-    fd_ = 0;
+    fileDescriptor_ = 0;
   }
 
   @java.lang.Override
@@ -45,7 +45,7 @@ public  final class Close extends
           }
           case 8: {
 
-            fd_ = input.readUInt32();
+            fileDescriptor_ = input.readUInt32();
             break;
           }
         }
@@ -71,13 +71,13 @@ public  final class Close extends
             com.littlstar.protobuf.Close.class, com.littlstar.protobuf.Close.Builder.class);
   }
 
-  public static final int FD_FIELD_NUMBER = 1;
-  private int fd_;
+  public static final int FILEDESCRIPTOR_FIELD_NUMBER = 1;
+  private int fileDescriptor_;
   /**
-   * <code>uint32 fd = 1;</code>
+   * <code>uint32 fileDescriptor = 1;</code>
    */
-  public int getFd() {
-    return fd_;
+  public int getFileDescriptor() {
+    return fileDescriptor_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -92,8 +92,8 @@ public  final class Close extends
 
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (fd_ != 0) {
-      output.writeUInt32(1, fd_);
+    if (fileDescriptor_ != 0) {
+      output.writeUInt32(1, fileDescriptor_);
     }
   }
 
@@ -102,9 +102,9 @@ public  final class Close extends
     if (size != -1) return size;
 
     size = 0;
-    if (fd_ != 0) {
+    if (fileDescriptor_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(1, fd_);
+        .computeUInt32Size(1, fileDescriptor_);
     }
     memoizedSize = size;
     return size;
@@ -122,8 +122,8 @@ public  final class Close extends
     com.littlstar.protobuf.Close other = (com.littlstar.protobuf.Close) obj;
 
     boolean result = true;
-    result = result && (getFd()
-        == other.getFd());
+    result = result && (getFileDescriptor()
+        == other.getFileDescriptor());
     return result;
   }
 
@@ -134,8 +134,8 @@ public  final class Close extends
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + FD_FIELD_NUMBER;
-    hash = (53 * hash) + getFd();
+    hash = (37 * hash) + FILEDESCRIPTOR_FIELD_NUMBER;
+    hash = (53 * hash) + getFileDescriptor();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -265,7 +265,7 @@ public  final class Close extends
     }
     public Builder clear() {
       super.clear();
-      fd_ = 0;
+      fileDescriptor_ = 0;
 
       return this;
     }
@@ -289,7 +289,7 @@ public  final class Close extends
 
     public com.littlstar.protobuf.Close buildPartial() {
       com.littlstar.protobuf.Close result = new com.littlstar.protobuf.Close(this);
-      result.fd_ = fd_;
+      result.fileDescriptor_ = fileDescriptor_;
       onBuilt();
       return result;
     }
@@ -331,8 +331,8 @@ public  final class Close extends
 
     public Builder mergeFrom(com.littlstar.protobuf.Close other) {
       if (other == com.littlstar.protobuf.Close.getDefaultInstance()) return this;
-      if (other.getFd() != 0) {
-        setFd(other.getFd());
+      if (other.getFileDescriptor() != 0) {
+        setFileDescriptor(other.getFileDescriptor());
       }
       onChanged();
       return this;
@@ -360,28 +360,28 @@ public  final class Close extends
       return this;
     }
 
-    private int fd_ ;
+    private int fileDescriptor_ ;
     /**
-     * <code>uint32 fd = 1;</code>
+     * <code>uint32 fileDescriptor = 1;</code>
      */
-    public int getFd() {
-      return fd_;
+    public int getFileDescriptor() {
+      return fileDescriptor_;
     }
     /**
-     * <code>uint32 fd = 1;</code>
+     * <code>uint32 fileDescriptor = 1;</code>
      */
-    public Builder setFd(int value) {
+    public Builder setFileDescriptor(int value) {
       
-      fd_ = value;
+      fileDescriptor_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>uint32 fd = 1;</code>
+     * <code>uint32 fileDescriptor = 1;</code>
      */
-    public Builder clearFd() {
+    public Builder clearFileDescriptor() {
       
-      fd_ = 0;
+      fileDescriptor_ = 0;
       onChanged();
       return this;
     }

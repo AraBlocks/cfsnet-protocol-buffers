@@ -277,15 +277,100 @@ void SetCFSPBAccessFile_Mode_RawValue(CFSPBAccessFile *message, int32_t value) {
   GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
 }
 
+#pragma mark - CFSPBBoolean
+
+@implementation CFSPBBoolean
+
+@dynamic value;
+
+typedef struct CFSPBBoolean__storage_ {
+  uint32_t _has_storage_[1];
+} CFSPBBoolean__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "value",
+        .dataTypeSpecific.className = NULL,
+        .number = CFSPBBoolean_FieldNumber_Value,
+        .hasIndex = 0,
+        .offset = 1,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[CFSPBBoolean class]
+                                     rootClass:[CFSPBCfsnetRoot class]
+                                          file:CFSPBCfsnetRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(CFSPBBoolean__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    NSAssert(descriptor == nil, @"Startup recursed!");
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - CFSPBBuffer
+
+@implementation CFSPBBuffer
+
+@dynamic value;
+
+typedef struct CFSPBBuffer__storage_ {
+  uint32_t _has_storage_[1];
+  NSData *value;
+} CFSPBBuffer__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "value",
+        .dataTypeSpecific.className = NULL,
+        .number = CFSPBBuffer_FieldNumber_Value,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(CFSPBBuffer__storage_, value),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBytes,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[CFSPBBuffer class]
+                                     rootClass:[CFSPBCfsnetRoot class]
+                                          file:CFSPBCfsnetRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(CFSPBBuffer__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    NSAssert(descriptor == nil, @"Startup recursed!");
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
 #pragma mark - CFSPBClose
 
 @implementation CFSPBClose
 
-@dynamic fd;
+@dynamic fileDescriptor;
 
 typedef struct CFSPBClose__storage_ {
   uint32_t _has_storage_[1];
-  uint32_t fd;
+  uint32_t fileDescriptor;
 } CFSPBClose__storage_;
 
 // This method is threadsafe because it is initially called
@@ -295,12 +380,12 @@ typedef struct CFSPBClose__storage_ {
   if (!descriptor) {
     static GPBMessageFieldDescription fields[] = {
       {
-        .name = "fd",
+        .name = "fileDescriptor",
         .dataTypeSpecific.className = NULL,
-        .number = CFSPBClose_FieldNumber_Fd,
+        .number = CFSPBClose_FieldNumber_FileDescriptor,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(CFSPBClose__storage_, fd),
-        .flags = GPBFieldOptional,
+        .offset = (uint32_t)offsetof(CFSPBClose__storage_, fileDescriptor),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom),
         .dataType = GPBDataTypeUInt32,
       },
     };
@@ -312,6 +397,11 @@ typedef struct CFSPBClose__storage_ {
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(CFSPBClose__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
+#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    static const char *extraTextFormatInfo =
+        "\001\001\016\000";
+    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -540,6 +630,49 @@ typedef struct CFSPBHandshake__storage_ {
 
 @end
 
+#pragma mark - CFSPBList
+
+@implementation CFSPBList
+
+@dynamic valuesArray, valuesArray_Count;
+
+typedef struct CFSPBList__storage_ {
+  uint32_t _has_storage_[1];
+  NSMutableArray *valuesArray;
+} CFSPBList__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "valuesArray",
+        .dataTypeSpecific.className = NULL,
+        .number = CFSPBList_FieldNumber_ValuesArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(CFSPBList__storage_, valuesArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeString,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[CFSPBList class]
+                                     rootClass:[CFSPBCfsnetRoot class]
+                                          file:CFSPBCfsnetRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(CFSPBList__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    NSAssert(descriptor == nil, @"Startup recursed!");
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
 #pragma mark - CFSPBListDirectory
 
 @implementation CFSPBListDirectory
@@ -716,13 +849,13 @@ typedef struct CFSPBOpen__storage_ {
 
 @implementation CFSPBRead
 
-@dynamic fd;
+@dynamic fileDescriptor;
 @dynamic start;
 @dynamic end;
 
 typedef struct CFSPBRead__storage_ {
   uint32_t _has_storage_[1];
-  uint32_t fd;
+  uint32_t fileDescriptor;
   uint32_t start;
   uint32_t end;
 } CFSPBRead__storage_;
@@ -734,12 +867,12 @@ typedef struct CFSPBRead__storage_ {
   if (!descriptor) {
     static GPBMessageFieldDescription fields[] = {
       {
-        .name = "fd",
+        .name = "fileDescriptor",
         .dataTypeSpecific.className = NULL,
-        .number = CFSPBRead_FieldNumber_Fd,
+        .number = CFSPBRead_FieldNumber_FileDescriptor,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(CFSPBRead__storage_, fd),
-        .flags = GPBFieldOptional,
+        .offset = (uint32_t)offsetof(CFSPBRead__storage_, fileDescriptor),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom),
         .dataType = GPBDataTypeUInt32,
       },
       {
@@ -769,6 +902,11 @@ typedef struct CFSPBRead__storage_ {
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(CFSPBRead__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
+#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    static const char *extraTextFormatInfo =
+        "\001\001\016\000";
+    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -1356,6 +1494,49 @@ typedef struct CFSPBStatFile__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(CFSPBStatFile__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    NSAssert(descriptor == nil, @"Startup recursed!");
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - CFSPBString
+
+@implementation CFSPBString
+
+@dynamic value;
+
+typedef struct CFSPBString__storage_ {
+  uint32_t _has_storage_[1];
+  NSString *value;
+} CFSPBString__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "value",
+        .dataTypeSpecific.className = NULL,
+        .number = CFSPBString_FieldNumber_Value,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(CFSPBString__storage_, value),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[CFSPBString class]
+                                     rootClass:[CFSPBCfsnetRoot class]
+                                          file:CFSPBCfsnetRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(CFSPBString__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;

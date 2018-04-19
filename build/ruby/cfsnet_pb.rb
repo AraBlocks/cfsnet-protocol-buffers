@@ -8,8 +8,14 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     optional :path, :string, 1
     optional :mode, :enum, 2, "littlstar.cfsnet.FileMode"
   end
+  add_message "littlstar.cfsnet.Boolean" do
+    optional :value, :bool, 1
+  end
+  add_message "littlstar.cfsnet.Buffer" do
+    optional :value, :bytes, 1
+  end
   add_message "littlstar.cfsnet.Close" do
-    optional :fd, :uint32, 1
+    optional :fileDescriptor, :uint32, 1
   end
   add_message "littlstar.cfsnet.DownloadDirectory" do
     optional :path, :string, 1
@@ -27,6 +33,9 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     optional :key, :bytes, 2
     optional :ack, :bool, 3
   end
+  add_message "littlstar.cfsnet.List" do
+    repeated :values, :string, 1
+  end
   add_message "littlstar.cfsnet.ListDirectory" do
     optional :path, :string, 1
   end
@@ -40,7 +49,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     optional :path, :string, 1
   end
   add_message "littlstar.cfsnet.Read" do
-    optional :fd, :uint32, 1
+    optional :fileDescriptor, :uint32, 1
     optional :start, :uint32, 2
     optional :end, :uint32, 3
   end
@@ -85,6 +94,9 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
   end
   add_message "littlstar.cfsnet.StatFile" do
     optional :path, :string, 1
+  end
+  add_message "littlstar.cfsnet.String" do
+    optional :value, :string, 1
   end
   add_message "littlstar.cfsnet.TouchFile" do
     optional :path, :string, 1
@@ -140,11 +152,14 @@ end
 module Littlstar
   module Cfsnet
     AccessFile = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.AccessFile").msgclass
+    Boolean = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.Boolean").msgclass
+    Buffer = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.Buffer").msgclass
     Close = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.Close").msgclass
     DownloadDirectory = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.DownloadDirectory").msgclass
     DownloadFile = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.DownloadFile").msgclass
     Drive = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.Drive").msgclass
     Handshake = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.Handshake").msgclass
+    List = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.List").msgclass
     ListDirectory = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.ListDirectory").msgclass
     MakeDirectory = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.MakeDirectory").msgclass
     MakeDirectoryPath = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.MakeDirectoryPath").msgclass
@@ -158,6 +173,7 @@ module Littlstar
     Response = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.Response").msgclass
     Stat = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.Stat").msgclass
     StatFile = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.StatFile").msgclass
+    String = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.String").msgclass
     TouchFile = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.TouchFile").msgclass
     UnlinkFile = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.UnlinkFile").msgclass
     WriteFile = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.WriteFile").msgclass

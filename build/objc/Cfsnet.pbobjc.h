@@ -162,15 +162,39 @@ int32_t CFSPBAccessFile_Mode_RawValue(CFSPBAccessFile *message);
  **/
 void SetCFSPBAccessFile_Mode_RawValue(CFSPBAccessFile *message, int32_t value);
 
+#pragma mark - CFSPBBoolean
+
+typedef GPB_ENUM(CFSPBBoolean_FieldNumber) {
+  CFSPBBoolean_FieldNumber_Value = 1,
+};
+
+@interface CFSPBBoolean : GPBMessage
+
+@property(nonatomic, readwrite) BOOL value;
+
+@end
+
+#pragma mark - CFSPBBuffer
+
+typedef GPB_ENUM(CFSPBBuffer_FieldNumber) {
+  CFSPBBuffer_FieldNumber_Value = 1,
+};
+
+@interface CFSPBBuffer : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSData *value;
+
+@end
+
 #pragma mark - CFSPBClose
 
 typedef GPB_ENUM(CFSPBClose_FieldNumber) {
-  CFSPBClose_FieldNumber_Fd = 1,
+  CFSPBClose_FieldNumber_FileDescriptor = 1,
 };
 
 @interface CFSPBClose : GPBMessage
 
-@property(nonatomic, readwrite) uint32_t fd;
+@property(nonatomic, readwrite) uint32_t fileDescriptor;
 
 @end
 
@@ -234,6 +258,20 @@ typedef GPB_ENUM(CFSPBHandshake_FieldNumber) {
 
 @end
 
+#pragma mark - CFSPBList
+
+typedef GPB_ENUM(CFSPBList_FieldNumber) {
+  CFSPBList_FieldNumber_ValuesArray = 1,
+};
+
+@interface CFSPBList : GPBMessage
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<NSString*> *valuesArray;
+/** The number of items in @c valuesArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger valuesArray_Count;
+
+@end
+
 #pragma mark - CFSPBListDirectory
 
 typedef GPB_ENUM(CFSPBListDirectory_FieldNumber) {
@@ -285,14 +323,14 @@ typedef GPB_ENUM(CFSPBOpen_FieldNumber) {
 #pragma mark - CFSPBRead
 
 typedef GPB_ENUM(CFSPBRead_FieldNumber) {
-  CFSPBRead_FieldNumber_Fd = 1,
+  CFSPBRead_FieldNumber_FileDescriptor = 1,
   CFSPBRead_FieldNumber_Start = 2,
   CFSPBRead_FieldNumber_End = 3,
 };
 
 @interface CFSPBRead : GPBMessage
 
-@property(nonatomic, readwrite) uint32_t fd;
+@property(nonatomic, readwrite) uint32_t fileDescriptor;
 
 @property(nonatomic, readwrite) uint32_t start;
 
@@ -489,6 +527,18 @@ typedef GPB_ENUM(CFSPBStatFile_FieldNumber) {
 @interface CFSPBStatFile : GPBMessage
 
 @property(nonatomic, readwrite, copy, null_resettable) NSString *path;
+
+@end
+
+#pragma mark - CFSPBString
+
+typedef GPB_ENUM(CFSPBString_FieldNumber) {
+  CFSPBString_FieldNumber_Value = 1,
+};
+
+@interface CFSPBString : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *value;
 
 @end
 

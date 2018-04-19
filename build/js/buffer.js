@@ -5,7 +5,7 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-goog.provide('proto.littlstar.cfsnet.Close');
+goog.provide('proto.littlstar.cfsnet.Buffer');
 
 goog.require('jspb.Message');
 goog.require('jspb.BinaryReader');
@@ -22,12 +22,12 @@ goog.require('jspb.BinaryWriter');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.littlstar.cfsnet.Close = function(opt_data) {
+proto.littlstar.cfsnet.Buffer = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.littlstar.cfsnet.Close, jspb.Message);
+goog.inherits(proto.littlstar.cfsnet.Buffer, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.littlstar.cfsnet.Close.displayName = 'proto.littlstar.cfsnet.Close';
+  proto.littlstar.cfsnet.Buffer.displayName = 'proto.littlstar.cfsnet.Buffer';
 }
 
 
@@ -42,8 +42,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.littlstar.cfsnet.Close.prototype.toObject = function(opt_includeInstance) {
-  return proto.littlstar.cfsnet.Close.toObject(opt_includeInstance, this);
+proto.littlstar.cfsnet.Buffer.prototype.toObject = function(opt_includeInstance) {
+  return proto.littlstar.cfsnet.Buffer.toObject(opt_includeInstance, this);
 };
 
 
@@ -52,12 +52,12 @@ proto.littlstar.cfsnet.Close.prototype.toObject = function(opt_includeInstance) 
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.littlstar.cfsnet.Close} msg The msg instance to transform.
+ * @param {!proto.littlstar.cfsnet.Buffer} msg The msg instance to transform.
  * @return {!Object}
  */
-proto.littlstar.cfsnet.Close.toObject = function(includeInstance, msg) {
+proto.littlstar.cfsnet.Buffer.toObject = function(includeInstance, msg) {
   var f, obj = {
-    filedescriptor: jspb.Message.getFieldWithDefault(msg, 1, 0)
+    value: msg.getValue_asB64()
   };
 
   if (includeInstance) {
@@ -71,23 +71,23 @@ proto.littlstar.cfsnet.Close.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.littlstar.cfsnet.Close}
+ * @return {!proto.littlstar.cfsnet.Buffer}
  */
-proto.littlstar.cfsnet.Close.deserializeBinary = function(bytes) {
+proto.littlstar.cfsnet.Buffer.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.littlstar.cfsnet.Close;
-  return proto.littlstar.cfsnet.Close.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.littlstar.cfsnet.Buffer;
+  return proto.littlstar.cfsnet.Buffer.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.littlstar.cfsnet.Close} msg The message object to deserialize into.
+ * @param {!proto.littlstar.cfsnet.Buffer} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.littlstar.cfsnet.Close}
+ * @return {!proto.littlstar.cfsnet.Buffer}
  */
-proto.littlstar.cfsnet.Close.deserializeBinaryFromReader = function(msg, reader) {
+proto.littlstar.cfsnet.Buffer.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -95,8 +95,8 @@ proto.littlstar.cfsnet.Close.deserializeBinaryFromReader = function(msg, reader)
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {number} */ (reader.readUint32());
-      msg.setFiledescriptor(value);
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setValue(value);
       break;
     default:
       reader.skipField();
@@ -111,9 +111,9 @@ proto.littlstar.cfsnet.Close.deserializeBinaryFromReader = function(msg, reader)
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.littlstar.cfsnet.Close.prototype.serializeBinary = function() {
+proto.littlstar.cfsnet.Buffer.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.littlstar.cfsnet.Close.serializeBinaryToWriter(this, writer);
+  proto.littlstar.cfsnet.Buffer.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -121,14 +121,14 @@ proto.littlstar.cfsnet.Close.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.littlstar.cfsnet.Close} message
+ * @param {!proto.littlstar.cfsnet.Buffer} message
  * @param {!jspb.BinaryWriter} writer
  */
-proto.littlstar.cfsnet.Close.serializeBinaryToWriter = function(message, writer) {
+proto.littlstar.cfsnet.Buffer.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getFiledescriptor();
-  if (f !== 0) {
-    writer.writeUint32(
+  f = message.getValue_asU8();
+  if (f.length > 0) {
+    writer.writeBytes(
       1,
       f
     );
@@ -137,16 +137,40 @@ proto.littlstar.cfsnet.Close.serializeBinaryToWriter = function(message, writer)
 
 
 /**
- * optional uint32 fileDescriptor = 1;
- * @return {number}
+ * optional bytes value = 1;
+ * @return {string}
  */
-proto.littlstar.cfsnet.Close.prototype.getFiledescriptor = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+proto.littlstar.cfsnet.Buffer.prototype.getValue = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
-/** @param {number} value */
-proto.littlstar.cfsnet.Close.prototype.setFiledescriptor = function(value) {
+/**
+ * optional bytes value = 1;
+ * This is a type-conversion wrapper around `getValue()`
+ * @return {string}
+ */
+proto.littlstar.cfsnet.Buffer.prototype.getValue_asB64 = function() {
+  return /** @type {string} */ (jspb.Message.bytesAsB64(
+      this.getValue()));
+};
+
+
+/**
+ * optional bytes value = 1;
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getValue()`
+ * @return {!Uint8Array}
+ */
+proto.littlstar.cfsnet.Buffer.prototype.getValue_asU8 = function() {
+  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+      this.getValue()));
+};
+
+
+/** @param {!(string|Uint8Array)} value */
+proto.littlstar.cfsnet.Buffer.prototype.setValue = function(value) {
   jspb.Message.setField(this, 1, value);
 };
 

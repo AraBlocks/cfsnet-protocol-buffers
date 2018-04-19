@@ -4,20 +4,18 @@
 package com.littlstar.protobuf;
 
 /**
- * Protobuf type {@code littlstar.cfsnet.Read}
+ * Protobuf type {@code littlstar.cfsnet.String}
  */
-public  final class Read extends
+public  final class String extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:littlstar.cfsnet.Read)
-    ReadOrBuilder {
-  // Use Read.newBuilder() to construct.
-  private Read(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // @@protoc_insertion_point(message_implements:littlstar.cfsnet.String)
+    StringOrBuilder {
+  // Use String.newBuilder() to construct.
+  private String(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private Read() {
-    fileDescriptor_ = 0;
-    start_ = 0;
-    end_ = 0;
+  private String() {
+    value_ = "";
   }
 
   @java.lang.Override
@@ -25,7 +23,7 @@ public  final class Read extends
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
   }
-  private Read(
+  private String(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -45,19 +43,10 @@ public  final class Read extends
             }
             break;
           }
-          case 8: {
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-            fileDescriptor_ = input.readUInt32();
-            break;
-          }
-          case 16: {
-
-            start_ = input.readUInt32();
-            break;
-          }
-          case 24: {
-
-            end_ = input.readUInt32();
+            value_ = s;
             break;
           }
         }
@@ -73,41 +62,48 @@ public  final class Read extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.littlstar.protobuf.CFSNetProtobuf.internal_static_littlstar_cfsnet_Read_descriptor;
+    return com.littlstar.protobuf.CFSNetProtobuf.internal_static_littlstar_cfsnet_String_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.littlstar.protobuf.CFSNetProtobuf.internal_static_littlstar_cfsnet_Read_fieldAccessorTable
+    return com.littlstar.protobuf.CFSNetProtobuf.internal_static_littlstar_cfsnet_String_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.littlstar.protobuf.Read.class, com.littlstar.protobuf.Read.Builder.class);
+            com.littlstar.protobuf.String.class, com.littlstar.protobuf.String.Builder.class);
   }
 
-  public static final int FILEDESCRIPTOR_FIELD_NUMBER = 1;
-  private int fileDescriptor_;
+  public static final int VALUE_FIELD_NUMBER = 1;
+  private volatile java.lang.Object value_;
   /**
-   * <code>uint32 fileDescriptor = 1;</code>
+   * <code>string value = 1;</code>
    */
-  public int getFileDescriptor() {
-    return fileDescriptor_;
+  public java.lang.String getValue() {
+    java.lang.Object ref = value_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      value_ = s;
+      return s;
+    }
   }
-
-  public static final int START_FIELD_NUMBER = 2;
-  private int start_;
   /**
-   * <code>uint32 start = 2;</code>
+   * <code>string value = 1;</code>
    */
-  public int getStart() {
-    return start_;
-  }
-
-  public static final int END_FIELD_NUMBER = 3;
-  private int end_;
-  /**
-   * <code>uint32 end = 3;</code>
-   */
-  public int getEnd() {
-    return end_;
+  public com.google.protobuf.ByteString
+      getValueBytes() {
+    java.lang.Object ref = value_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      value_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   private byte memoizedIsInitialized = -1;
@@ -122,14 +118,8 @@ public  final class Read extends
 
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (fileDescriptor_ != 0) {
-      output.writeUInt32(1, fileDescriptor_);
-    }
-    if (start_ != 0) {
-      output.writeUInt32(2, start_);
-    }
-    if (end_ != 0) {
-      output.writeUInt32(3, end_);
+    if (!getValueBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, value_);
     }
   }
 
@@ -138,17 +128,8 @@ public  final class Read extends
     if (size != -1) return size;
 
     size = 0;
-    if (fileDescriptor_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(1, fileDescriptor_);
-    }
-    if (start_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(2, start_);
-    }
-    if (end_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(3, end_);
+    if (!getValueBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, value_);
     }
     memoizedSize = size;
     return size;
@@ -160,18 +141,14 @@ public  final class Read extends
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.littlstar.protobuf.Read)) {
+    if (!(obj instanceof com.littlstar.protobuf.String)) {
       return super.equals(obj);
     }
-    com.littlstar.protobuf.Read other = (com.littlstar.protobuf.Read) obj;
+    com.littlstar.protobuf.String other = (com.littlstar.protobuf.String) obj;
 
     boolean result = true;
-    result = result && (getFileDescriptor()
-        == other.getFileDescriptor());
-    result = result && (getStart()
-        == other.getStart());
-    result = result && (getEnd()
-        == other.getEnd());
+    result = result && getValue()
+        .equals(other.getValue());
     return result;
   }
 
@@ -182,80 +159,76 @@ public  final class Read extends
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + FILEDESCRIPTOR_FIELD_NUMBER;
-    hash = (53 * hash) + getFileDescriptor();
-    hash = (37 * hash) + START_FIELD_NUMBER;
-    hash = (53 * hash) + getStart();
-    hash = (37 * hash) + END_FIELD_NUMBER;
-    hash = (53 * hash) + getEnd();
+    hash = (37 * hash) + VALUE_FIELD_NUMBER;
+    hash = (53 * hash) + getValue().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.littlstar.protobuf.Read parseFrom(
+  public static com.littlstar.protobuf.String parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.littlstar.protobuf.Read parseFrom(
+  public static com.littlstar.protobuf.String parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.littlstar.protobuf.Read parseFrom(
+  public static com.littlstar.protobuf.String parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.littlstar.protobuf.Read parseFrom(
+  public static com.littlstar.protobuf.String parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.littlstar.protobuf.Read parseFrom(byte[] data)
+  public static com.littlstar.protobuf.String parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.littlstar.protobuf.Read parseFrom(
+  public static com.littlstar.protobuf.String parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.littlstar.protobuf.Read parseFrom(java.io.InputStream input)
+  public static com.littlstar.protobuf.String parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.littlstar.protobuf.Read parseFrom(
+  public static com.littlstar.protobuf.String parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.littlstar.protobuf.Read parseDelimitedFrom(java.io.InputStream input)
+  public static com.littlstar.protobuf.String parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.littlstar.protobuf.Read parseDelimitedFrom(
+  public static com.littlstar.protobuf.String parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.littlstar.protobuf.Read parseFrom(
+  public static com.littlstar.protobuf.String parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.littlstar.protobuf.Read parseFrom(
+  public static com.littlstar.protobuf.String parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -267,7 +240,7 @@ public  final class Read extends
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.littlstar.protobuf.Read prototype) {
+  public static Builder newBuilder(com.littlstar.protobuf.String prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   public Builder toBuilder() {
@@ -282,25 +255,25 @@ public  final class Read extends
     return builder;
   }
   /**
-   * Protobuf type {@code littlstar.cfsnet.Read}
+   * Protobuf type {@code littlstar.cfsnet.String}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:littlstar.cfsnet.Read)
-      com.littlstar.protobuf.ReadOrBuilder {
+      // @@protoc_insertion_point(builder_implements:littlstar.cfsnet.String)
+      com.littlstar.protobuf.StringOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.littlstar.protobuf.CFSNetProtobuf.internal_static_littlstar_cfsnet_Read_descriptor;
+      return com.littlstar.protobuf.CFSNetProtobuf.internal_static_littlstar_cfsnet_String_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.littlstar.protobuf.CFSNetProtobuf.internal_static_littlstar_cfsnet_Read_fieldAccessorTable
+      return com.littlstar.protobuf.CFSNetProtobuf.internal_static_littlstar_cfsnet_String_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.littlstar.protobuf.Read.class, com.littlstar.protobuf.Read.Builder.class);
+              com.littlstar.protobuf.String.class, com.littlstar.protobuf.String.Builder.class);
     }
 
-    // Construct using com.littlstar.protobuf.Read.newBuilder()
+    // Construct using com.littlstar.protobuf.String.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -317,37 +290,31 @@ public  final class Read extends
     }
     public Builder clear() {
       super.clear();
-      fileDescriptor_ = 0;
-
-      start_ = 0;
-
-      end_ = 0;
+      value_ = "";
 
       return this;
     }
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.littlstar.protobuf.CFSNetProtobuf.internal_static_littlstar_cfsnet_Read_descriptor;
+      return com.littlstar.protobuf.CFSNetProtobuf.internal_static_littlstar_cfsnet_String_descriptor;
     }
 
-    public com.littlstar.protobuf.Read getDefaultInstanceForType() {
-      return com.littlstar.protobuf.Read.getDefaultInstance();
+    public com.littlstar.protobuf.String getDefaultInstanceForType() {
+      return com.littlstar.protobuf.String.getDefaultInstance();
     }
 
-    public com.littlstar.protobuf.Read build() {
-      com.littlstar.protobuf.Read result = buildPartial();
+    public com.littlstar.protobuf.String build() {
+      com.littlstar.protobuf.String result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    public com.littlstar.protobuf.Read buildPartial() {
-      com.littlstar.protobuf.Read result = new com.littlstar.protobuf.Read(this);
-      result.fileDescriptor_ = fileDescriptor_;
-      result.start_ = start_;
-      result.end_ = end_;
+    public com.littlstar.protobuf.String buildPartial() {
+      com.littlstar.protobuf.String result = new com.littlstar.protobuf.String(this);
+      result.value_ = value_;
       onBuilt();
       return result;
     }
@@ -379,24 +346,19 @@ public  final class Read extends
       return (Builder) super.addRepeatedField(field, value);
     }
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.littlstar.protobuf.Read) {
-        return mergeFrom((com.littlstar.protobuf.Read)other);
+      if (other instanceof com.littlstar.protobuf.String) {
+        return mergeFrom((com.littlstar.protobuf.String)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.littlstar.protobuf.Read other) {
-      if (other == com.littlstar.protobuf.Read.getDefaultInstance()) return this;
-      if (other.getFileDescriptor() != 0) {
-        setFileDescriptor(other.getFileDescriptor());
-      }
-      if (other.getStart() != 0) {
-        setStart(other.getStart());
-      }
-      if (other.getEnd() != 0) {
-        setEnd(other.getEnd());
+    public Builder mergeFrom(com.littlstar.protobuf.String other) {
+      if (other == com.littlstar.protobuf.String.getDefaultInstance()) return this;
+      if (!other.getValue().isEmpty()) {
+        value_ = other.value_;
+        onChanged();
       }
       onChanged();
       return this;
@@ -410,11 +372,11 @@ public  final class Read extends
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.littlstar.protobuf.Read parsedMessage = null;
+      com.littlstar.protobuf.String parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.littlstar.protobuf.Read) e.getUnfinishedMessage();
+        parsedMessage = (com.littlstar.protobuf.String) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -424,80 +386,71 @@ public  final class Read extends
       return this;
     }
 
-    private int fileDescriptor_ ;
+    private java.lang.Object value_ = "";
     /**
-     * <code>uint32 fileDescriptor = 1;</code>
+     * <code>string value = 1;</code>
      */
-    public int getFileDescriptor() {
-      return fileDescriptor_;
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        value_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
     }
     /**
-     * <code>uint32 fileDescriptor = 1;</code>
+     * <code>string value = 1;</code>
      */
-    public Builder setFileDescriptor(int value) {
-      
-      fileDescriptor_ = value;
+    public com.google.protobuf.ByteString
+        getValueBytes() {
+      java.lang.Object ref = value_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        value_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string value = 1;</code>
+     */
+    public Builder setValue(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      value_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>uint32 fileDescriptor = 1;</code>
+     * <code>string value = 1;</code>
      */
-    public Builder clearFileDescriptor() {
+    public Builder clearValue() {
       
-      fileDescriptor_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private int start_ ;
-    /**
-     * <code>uint32 start = 2;</code>
-     */
-    public int getStart() {
-      return start_;
-    }
-    /**
-     * <code>uint32 start = 2;</code>
-     */
-    public Builder setStart(int value) {
-      
-      start_ = value;
+      value_ = getDefaultInstance().getValue();
       onChanged();
       return this;
     }
     /**
-     * <code>uint32 start = 2;</code>
+     * <code>string value = 1;</code>
      */
-    public Builder clearStart() {
+    public Builder setValueBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
       
-      start_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private int end_ ;
-    /**
-     * <code>uint32 end = 3;</code>
-     */
-    public int getEnd() {
-      return end_;
-    }
-    /**
-     * <code>uint32 end = 3;</code>
-     */
-    public Builder setEnd(int value) {
-      
-      end_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>uint32 end = 3;</code>
-     */
-    public Builder clearEnd() {
-      
-      end_ = 0;
+      value_ = value;
       onChanged();
       return this;
     }
@@ -512,39 +465,39 @@ public  final class Read extends
     }
 
 
-    // @@protoc_insertion_point(builder_scope:littlstar.cfsnet.Read)
+    // @@protoc_insertion_point(builder_scope:littlstar.cfsnet.String)
   }
 
-  // @@protoc_insertion_point(class_scope:littlstar.cfsnet.Read)
-  private static final com.littlstar.protobuf.Read DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:littlstar.cfsnet.String)
+  private static final com.littlstar.protobuf.String DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.littlstar.protobuf.Read();
+    DEFAULT_INSTANCE = new com.littlstar.protobuf.String();
   }
 
-  public static com.littlstar.protobuf.Read getDefaultInstance() {
+  public static com.littlstar.protobuf.String getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Read>
-      PARSER = new com.google.protobuf.AbstractParser<Read>() {
-    public Read parsePartialFrom(
+  private static final com.google.protobuf.Parser<String>
+      PARSER = new com.google.protobuf.AbstractParser<String>() {
+    public String parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Read(input, extensionRegistry);
+        return new String(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<Read> parser() {
+  public static com.google.protobuf.Parser<String> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<Read> getParserForType() {
+  public com.google.protobuf.Parser<String> getParserForType() {
     return PARSER;
   }
 
-  public com.littlstar.protobuf.Read getDefaultInstanceForType() {
+  public com.littlstar.protobuf.String getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

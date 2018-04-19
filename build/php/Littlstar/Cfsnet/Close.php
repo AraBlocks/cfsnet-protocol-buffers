@@ -14,9 +14,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class Close extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>uint32 fd = 1;</code>
+     * <code>uint32 fileDescriptor = 1;</code>
      */
-    private $fd = 0;
+    private $fileDescriptor = 0;
 
     public function __construct() {
         \GPBMetadata\Cfsnet::initOnce();
@@ -24,20 +24,20 @@ class Close extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>uint32 fd = 1;</code>
+     * <code>uint32 fileDescriptor = 1;</code>
      */
-    public function getFd()
+    public function getFileDescriptor()
     {
-        return $this->fd;
+        return $this->fileDescriptor;
     }
 
     /**
-     * <code>uint32 fd = 1;</code>
+     * <code>uint32 fileDescriptor = 1;</code>
      */
-    public function setFd($var)
+    public function setFileDescriptor($var)
     {
         GPBUtil::checkUint32($var);
-        $this->fd = $var;
+        $this->fileDescriptor = $var;
     }
 
 }

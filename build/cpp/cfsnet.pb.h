@@ -36,6 +36,12 @@ namespace cfsnet {
 class AccessFile;
 class AccessFileDefaultTypeInternal;
 extern AccessFileDefaultTypeInternal _AccessFile_default_instance_;
+class Boolean;
+class BooleanDefaultTypeInternal;
+extern BooleanDefaultTypeInternal _Boolean_default_instance_;
+class Buffer;
+class BufferDefaultTypeInternal;
+extern BufferDefaultTypeInternal _Buffer_default_instance_;
 class Close;
 class CloseDefaultTypeInternal;
 extern CloseDefaultTypeInternal _Close_default_instance_;
@@ -51,6 +57,9 @@ extern DriveDefaultTypeInternal _Drive_default_instance_;
 class Handshake;
 class HandshakeDefaultTypeInternal;
 extern HandshakeDefaultTypeInternal _Handshake_default_instance_;
+class List;
+class ListDefaultTypeInternal;
+extern ListDefaultTypeInternal _List_default_instance_;
 class ListDirectory;
 class ListDirectoryDefaultTypeInternal;
 extern ListDirectoryDefaultTypeInternal _ListDirectory_default_instance_;
@@ -90,6 +99,9 @@ extern StatDefaultTypeInternal _Stat_default_instance_;
 class StatFile;
 class StatFileDefaultTypeInternal;
 extern StatFileDefaultTypeInternal _StatFile_default_instance_;
+class String;
+class StringDefaultTypeInternal;
+extern StringDefaultTypeInternal _String_default_instance_;
 class TouchFile;
 class TouchFileDefaultTypeInternal;
 extern TouchFileDefaultTypeInternal _TouchFile_default_instance_;
@@ -304,6 +316,174 @@ class AccessFile : public ::google::protobuf::Message /* @@protoc_insertion_poin
 };
 // -------------------------------------------------------------------
 
+class Boolean : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:littlstar.cfsnet.Boolean) */ {
+ public:
+  Boolean();
+  virtual ~Boolean();
+
+  Boolean(const Boolean& from);
+
+  inline Boolean& operator=(const Boolean& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Boolean& default_instance();
+
+  static inline const Boolean* internal_default_instance() {
+    return reinterpret_cast<const Boolean*>(
+               &_Boolean_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    1;
+
+  void Swap(Boolean* other);
+
+  // implements Message ----------------------------------------------
+
+  inline Boolean* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  Boolean* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const Boolean& from);
+  void MergeFrom(const Boolean& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(Boolean* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // bool value = 1;
+  void clear_value();
+  static const int kValueFieldNumber = 1;
+  bool value() const;
+  void set_value(bool value);
+
+  // @@protoc_insertion_point(class_scope:littlstar.cfsnet.Boolean)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool value_;
+  mutable int _cached_size_;
+  friend struct protobuf_cfsnet_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Buffer : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:littlstar.cfsnet.Buffer) */ {
+ public:
+  Buffer();
+  virtual ~Buffer();
+
+  Buffer(const Buffer& from);
+
+  inline Buffer& operator=(const Buffer& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Buffer& default_instance();
+
+  static inline const Buffer* internal_default_instance() {
+    return reinterpret_cast<const Buffer*>(
+               &_Buffer_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    2;
+
+  void Swap(Buffer* other);
+
+  // implements Message ----------------------------------------------
+
+  inline Buffer* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  Buffer* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const Buffer& from);
+  void MergeFrom(const Buffer& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(Buffer* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // bytes value = 1;
+  void clear_value();
+  static const int kValueFieldNumber = 1;
+  const ::std::string& value() const;
+  void set_value(const ::std::string& value);
+  #if LANG_CXX11
+  void set_value(::std::string&& value);
+  #endif
+  void set_value(const char* value);
+  void set_value(const void* value, size_t size);
+  ::std::string* mutable_value();
+  ::std::string* release_value();
+  void set_allocated_value(::std::string* value);
+
+  // @@protoc_insertion_point(class_scope:littlstar.cfsnet.Buffer)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr value_;
+  mutable int _cached_size_;
+  friend struct protobuf_cfsnet_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
 class Close : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:littlstar.cfsnet.Close) */ {
  public:
   Close();
@@ -324,7 +504,7 @@ class Close : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
                &_Close_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    1;
+    3;
 
   void Swap(Close* other);
 
@@ -368,17 +548,17 @@ class Close : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
 
   // accessors -------------------------------------------------------
 
-  // uint32 fd = 1;
-  void clear_fd();
-  static const int kFdFieldNumber = 1;
-  ::google::protobuf::uint32 fd() const;
-  void set_fd(::google::protobuf::uint32 value);
+  // uint32 fileDescriptor = 1;
+  void clear_filedescriptor();
+  static const int kFileDescriptorFieldNumber = 1;
+  ::google::protobuf::uint32 filedescriptor() const;
+  void set_filedescriptor(::google::protobuf::uint32 value);
 
   // @@protoc_insertion_point(class_scope:littlstar.cfsnet.Close)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::uint32 fd_;
+  ::google::protobuf::uint32 filedescriptor_;
   mutable int _cached_size_;
   friend struct protobuf_cfsnet_2eproto::TableStruct;
 };
@@ -404,7 +584,7 @@ class DownloadDirectory : public ::google::protobuf::Message /* @@protoc_inserti
                &_DownloadDirectory_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    2;
+    4;
 
   void Swap(DownloadDirectory* other);
 
@@ -492,7 +672,7 @@ class DownloadFile : public ::google::protobuf::Message /* @@protoc_insertion_po
                &_DownloadFile_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    3;
+    5;
 
   void Swap(DownloadFile* other);
 
@@ -580,7 +760,7 @@ class Drive : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
                &_Drive_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    4;
+    6;
 
   void Swap(Drive* other);
 
@@ -698,7 +878,7 @@ class Handshake : public ::google::protobuf::Message /* @@protoc_insertion_point
                &_Handshake_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    5;
+    7;
 
   void Swap(Handshake* other);
 
@@ -788,6 +968,102 @@ class Handshake : public ::google::protobuf::Message /* @@protoc_insertion_point
 };
 // -------------------------------------------------------------------
 
+class List : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:littlstar.cfsnet.List) */ {
+ public:
+  List();
+  virtual ~List();
+
+  List(const List& from);
+
+  inline List& operator=(const List& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const List& default_instance();
+
+  static inline const List* internal_default_instance() {
+    return reinterpret_cast<const List*>(
+               &_List_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    8;
+
+  void Swap(List* other);
+
+  // implements Message ----------------------------------------------
+
+  inline List* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  List* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const List& from);
+  void MergeFrom(const List& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(List* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // repeated string values = 1;
+  int values_size() const;
+  void clear_values();
+  static const int kValuesFieldNumber = 1;
+  const ::std::string& values(int index) const;
+  ::std::string* mutable_values(int index);
+  void set_values(int index, const ::std::string& value);
+  #if LANG_CXX11
+  void set_values(int index, ::std::string&& value);
+  #endif
+  void set_values(int index, const char* value);
+  void set_values(int index, const char* value, size_t size);
+  ::std::string* add_values();
+  void add_values(const ::std::string& value);
+  #if LANG_CXX11
+  void add_values(::std::string&& value);
+  #endif
+  void add_values(const char* value);
+  void add_values(const char* value, size_t size);
+  const ::google::protobuf::RepeatedPtrField< ::std::string>& values() const;
+  ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_values();
+
+  // @@protoc_insertion_point(class_scope:littlstar.cfsnet.List)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::RepeatedPtrField< ::std::string> values_;
+  mutable int _cached_size_;
+  friend struct protobuf_cfsnet_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
 class ListDirectory : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:littlstar.cfsnet.ListDirectory) */ {
  public:
   ListDirectory();
@@ -808,7 +1084,7 @@ class ListDirectory : public ::google::protobuf::Message /* @@protoc_insertion_p
                &_ListDirectory_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    6;
+    9;
 
   void Swap(ListDirectory* other);
 
@@ -896,7 +1172,7 @@ class MakeDirectory : public ::google::protobuf::Message /* @@protoc_insertion_p
                &_MakeDirectory_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    7;
+    10;
 
   void Swap(MakeDirectory* other);
 
@@ -984,7 +1260,7 @@ class MakeDirectoryPath : public ::google::protobuf::Message /* @@protoc_inserti
                &_MakeDirectoryPath_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    8;
+    11;
 
   void Swap(MakeDirectoryPath* other);
 
@@ -1072,7 +1348,7 @@ class Open : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
                &_Open_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    9;
+    12;
 
   void Swap(Open* other);
 
@@ -1160,7 +1436,7 @@ class Read : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
                &_Read_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    10;
+    13;
 
   void Swap(Read* other);
 
@@ -1204,11 +1480,11 @@ class Read : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
 
   // accessors -------------------------------------------------------
 
-  // uint32 fd = 1;
-  void clear_fd();
-  static const int kFdFieldNumber = 1;
-  ::google::protobuf::uint32 fd() const;
-  void set_fd(::google::protobuf::uint32 value);
+  // uint32 fileDescriptor = 1;
+  void clear_filedescriptor();
+  static const int kFileDescriptorFieldNumber = 1;
+  ::google::protobuf::uint32 filedescriptor() const;
+  void set_filedescriptor(::google::protobuf::uint32 value);
 
   // uint32 start = 2;
   void clear_start();
@@ -1226,7 +1502,7 @@ class Read : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::uint32 fd_;
+  ::google::protobuf::uint32 filedescriptor_;
   ::google::protobuf::uint32 start_;
   ::google::protobuf::uint32 end_;
   mutable int _cached_size_;
@@ -1254,7 +1530,7 @@ class ReadFile : public ::google::protobuf::Message /* @@protoc_insertion_point(
                &_ReadFile_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    11;
+    14;
 
   void Swap(ReadFile* other);
 
@@ -1356,7 +1632,7 @@ class RemoveDirectory : public ::google::protobuf::Message /* @@protoc_insertion
                &_RemoveDirectory_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    12;
+    15;
 
   void Swap(RemoveDirectory* other);
 
@@ -1444,7 +1720,7 @@ class RemoveDirectoryPath : public ::google::protobuf::Message /* @@protoc_inser
                &_RemoveDirectoryPath_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    13;
+    16;
 
   void Swap(RemoveDirectoryPath* other);
 
@@ -1532,7 +1808,7 @@ class Request : public ::google::protobuf::Message /* @@protoc_insertion_point(c
                &_Request_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    14;
+    17;
 
   void Swap(Request* other);
 
@@ -1652,7 +1928,7 @@ class Resolve : public ::google::protobuf::Message /* @@protoc_insertion_point(c
                &_Resolve_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    15;
+    18;
 
   void Swap(Resolve* other);
 
@@ -1740,7 +2016,7 @@ class Response : public ::google::protobuf::Message /* @@protoc_insertion_point(
                &_Response_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    16;
+    19;
 
   void Swap(Response* other);
 
@@ -1877,7 +2153,7 @@ class Stat : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
                &_Stat_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    17;
+    20;
 
   void Swap(Stat* other);
 
@@ -2013,7 +2289,7 @@ class StatFile : public ::google::protobuf::Message /* @@protoc_insertion_point(
                &_StatFile_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    18;
+    21;
 
   void Swap(StatFile* other);
 
@@ -2081,6 +2357,94 @@ class StatFile : public ::google::protobuf::Message /* @@protoc_insertion_point(
 };
 // -------------------------------------------------------------------
 
+class String : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:littlstar.cfsnet.String) */ {
+ public:
+  String();
+  virtual ~String();
+
+  String(const String& from);
+
+  inline String& operator=(const String& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const String& default_instance();
+
+  static inline const String* internal_default_instance() {
+    return reinterpret_cast<const String*>(
+               &_String_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    22;
+
+  void Swap(String* other);
+
+  // implements Message ----------------------------------------------
+
+  inline String* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  String* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const String& from);
+  void MergeFrom(const String& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(String* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // string value = 1;
+  void clear_value();
+  static const int kValueFieldNumber = 1;
+  const ::std::string& value() const;
+  void set_value(const ::std::string& value);
+  #if LANG_CXX11
+  void set_value(::std::string&& value);
+  #endif
+  void set_value(const char* value);
+  void set_value(const char* value, size_t size);
+  ::std::string* mutable_value();
+  ::std::string* release_value();
+  void set_allocated_value(::std::string* value);
+
+  // @@protoc_insertion_point(class_scope:littlstar.cfsnet.String)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr value_;
+  mutable int _cached_size_;
+  friend struct protobuf_cfsnet_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
 class TouchFile : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:littlstar.cfsnet.TouchFile) */ {
  public:
   TouchFile();
@@ -2101,7 +2465,7 @@ class TouchFile : public ::google::protobuf::Message /* @@protoc_insertion_point
                &_TouchFile_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    19;
+    23;
 
   void Swap(TouchFile* other);
 
@@ -2189,7 +2553,7 @@ class UnlinkFile : public ::google::protobuf::Message /* @@protoc_insertion_poin
                &_UnlinkFile_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    20;
+    24;
 
   void Swap(UnlinkFile* other);
 
@@ -2277,7 +2641,7 @@ class WriteFile : public ::google::protobuf::Message /* @@protoc_insertion_point
                &_WriteFile_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    21;
+    25;
 
   void Swap(WriteFile* other);
 
@@ -2449,20 +2813,95 @@ inline void AccessFile::set_mode(::littlstar::cfsnet::FileMode value) {
 
 // -------------------------------------------------------------------
 
+// Boolean
+
+// bool value = 1;
+inline void Boolean::clear_value() {
+  value_ = false;
+}
+inline bool Boolean::value() const {
+  // @@protoc_insertion_point(field_get:littlstar.cfsnet.Boolean.value)
+  return value_;
+}
+inline void Boolean::set_value(bool value) {
+  
+  value_ = value;
+  // @@protoc_insertion_point(field_set:littlstar.cfsnet.Boolean.value)
+}
+
+// -------------------------------------------------------------------
+
+// Buffer
+
+// bytes value = 1;
+inline void Buffer::clear_value() {
+  value_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Buffer::value() const {
+  // @@protoc_insertion_point(field_get:littlstar.cfsnet.Buffer.value)
+  return value_.GetNoArena();
+}
+inline void Buffer::set_value(const ::std::string& value) {
+  
+  value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:littlstar.cfsnet.Buffer.value)
+}
+#if LANG_CXX11
+inline void Buffer::set_value(::std::string&& value) {
+  
+  value_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:littlstar.cfsnet.Buffer.value)
+}
+#endif
+inline void Buffer::set_value(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:littlstar.cfsnet.Buffer.value)
+}
+inline void Buffer::set_value(const void* value, size_t size) {
+  
+  value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:littlstar.cfsnet.Buffer.value)
+}
+inline ::std::string* Buffer::mutable_value() {
+  
+  // @@protoc_insertion_point(field_mutable:littlstar.cfsnet.Buffer.value)
+  return value_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Buffer::release_value() {
+  // @@protoc_insertion_point(field_release:littlstar.cfsnet.Buffer.value)
+  
+  return value_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Buffer::set_allocated_value(::std::string* value) {
+  if (value != NULL) {
+    
+  } else {
+    
+  }
+  value_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set_allocated:littlstar.cfsnet.Buffer.value)
+}
+
+// -------------------------------------------------------------------
+
 // Close
 
-// uint32 fd = 1;
-inline void Close::clear_fd() {
-  fd_ = 0u;
+// uint32 fileDescriptor = 1;
+inline void Close::clear_filedescriptor() {
+  filedescriptor_ = 0u;
 }
-inline ::google::protobuf::uint32 Close::fd() const {
-  // @@protoc_insertion_point(field_get:littlstar.cfsnet.Close.fd)
-  return fd_;
+inline ::google::protobuf::uint32 Close::filedescriptor() const {
+  // @@protoc_insertion_point(field_get:littlstar.cfsnet.Close.fileDescriptor)
+  return filedescriptor_;
 }
-inline void Close::set_fd(::google::protobuf::uint32 value) {
+inline void Close::set_filedescriptor(::google::protobuf::uint32 value) {
   
-  fd_ = value;
-  // @@protoc_insertion_point(field_set:littlstar.cfsnet.Close.fd)
+  filedescriptor_ = value;
+  // @@protoc_insertion_point(field_set:littlstar.cfsnet.Close.fileDescriptor)
 }
 
 // -------------------------------------------------------------------
@@ -2868,6 +3307,79 @@ inline void Handshake::set_ack(bool value) {
 
 // -------------------------------------------------------------------
 
+// List
+
+// repeated string values = 1;
+inline int List::values_size() const {
+  return values_.size();
+}
+inline void List::clear_values() {
+  values_.Clear();
+}
+inline const ::std::string& List::values(int index) const {
+  // @@protoc_insertion_point(field_get:littlstar.cfsnet.List.values)
+  return values_.Get(index);
+}
+inline ::std::string* List::mutable_values(int index) {
+  // @@protoc_insertion_point(field_mutable:littlstar.cfsnet.List.values)
+  return values_.Mutable(index);
+}
+inline void List::set_values(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:littlstar.cfsnet.List.values)
+  values_.Mutable(index)->assign(value);
+}
+#if LANG_CXX11
+inline void List::set_values(int index, ::std::string&& value) {
+  // @@protoc_insertion_point(field_set:littlstar.cfsnet.List.values)
+  values_.Mutable(index)->assign(std::move(value));
+}
+#endif
+inline void List::set_values(int index, const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  values_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:littlstar.cfsnet.List.values)
+}
+inline void List::set_values(int index, const char* value, size_t size) {
+  values_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:littlstar.cfsnet.List.values)
+}
+inline ::std::string* List::add_values() {
+  // @@protoc_insertion_point(field_add_mutable:littlstar.cfsnet.List.values)
+  return values_.Add();
+}
+inline void List::add_values(const ::std::string& value) {
+  values_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:littlstar.cfsnet.List.values)
+}
+#if LANG_CXX11
+inline void List::add_values(::std::string&& value) {
+  values_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:littlstar.cfsnet.List.values)
+}
+#endif
+inline void List::add_values(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  values_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:littlstar.cfsnet.List.values)
+}
+inline void List::add_values(const char* value, size_t size) {
+  values_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:littlstar.cfsnet.List.values)
+}
+inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
+List::values() const {
+  // @@protoc_insertion_point(field_list:littlstar.cfsnet.List.values)
+  return values_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::std::string>*
+List::mutable_values() {
+  // @@protoc_insertion_point(field_mutable_list:littlstar.cfsnet.List.values)
+  return &values_;
+}
+
+// -------------------------------------------------------------------
+
 // ListDirectory
 
 // string path = 1;
@@ -3098,18 +3610,18 @@ inline void Open::set_allocated_path(::std::string* path) {
 
 // Read
 
-// uint32 fd = 1;
-inline void Read::clear_fd() {
-  fd_ = 0u;
+// uint32 fileDescriptor = 1;
+inline void Read::clear_filedescriptor() {
+  filedescriptor_ = 0u;
 }
-inline ::google::protobuf::uint32 Read::fd() const {
-  // @@protoc_insertion_point(field_get:littlstar.cfsnet.Read.fd)
-  return fd_;
+inline ::google::protobuf::uint32 Read::filedescriptor() const {
+  // @@protoc_insertion_point(field_get:littlstar.cfsnet.Read.fileDescriptor)
+  return filedescriptor_;
 }
-inline void Read::set_fd(::google::protobuf::uint32 value) {
+inline void Read::set_filedescriptor(::google::protobuf::uint32 value) {
   
-  fd_ = value;
-  // @@protoc_insertion_point(field_set:littlstar.cfsnet.Read.fd)
+  filedescriptor_ = value;
+  // @@protoc_insertion_point(field_set:littlstar.cfsnet.Read.fileDescriptor)
 }
 
 // uint32 start = 2;
@@ -3964,6 +4476,63 @@ inline void StatFile::set_allocated_path(::std::string* path) {
 
 // -------------------------------------------------------------------
 
+// String
+
+// string value = 1;
+inline void String::clear_value() {
+  value_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& String::value() const {
+  // @@protoc_insertion_point(field_get:littlstar.cfsnet.String.value)
+  return value_.GetNoArena();
+}
+inline void String::set_value(const ::std::string& value) {
+  
+  value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:littlstar.cfsnet.String.value)
+}
+#if LANG_CXX11
+inline void String::set_value(::std::string&& value) {
+  
+  value_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:littlstar.cfsnet.String.value)
+}
+#endif
+inline void String::set_value(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:littlstar.cfsnet.String.value)
+}
+inline void String::set_value(const char* value, size_t size) {
+  
+  value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:littlstar.cfsnet.String.value)
+}
+inline ::std::string* String::mutable_value() {
+  
+  // @@protoc_insertion_point(field_mutable:littlstar.cfsnet.String.value)
+  return value_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* String::release_value() {
+  // @@protoc_insertion_point(field_release:littlstar.cfsnet.String.value)
+  
+  return value_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void String::set_allocated_value(::std::string* value) {
+  if (value != NULL) {
+    
+  } else {
+    
+  }
+  value_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set_allocated:littlstar.cfsnet.String.value)
+}
+
+// -------------------------------------------------------------------
+
 // TouchFile
 
 // string path = 1;
@@ -4215,6 +4784,14 @@ inline void WriteFile::set_end(::google::protobuf::uint32 value) {
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

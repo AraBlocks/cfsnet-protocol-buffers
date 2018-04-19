@@ -57,7 +57,7 @@ proto.littlstar.cfsnet.Read.prototype.toObject = function(opt_includeInstance) {
  */
 proto.littlstar.cfsnet.Read.toObject = function(includeInstance, msg) {
   var f, obj = {
-    fd: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    filedescriptor: jspb.Message.getFieldWithDefault(msg, 1, 0),
     start: jspb.Message.getFieldWithDefault(msg, 2, 0),
     end: jspb.Message.getFieldWithDefault(msg, 3, 0)
   };
@@ -98,7 +98,7 @@ proto.littlstar.cfsnet.Read.deserializeBinaryFromReader = function(msg, reader) 
     switch (field) {
     case 1:
       var value = /** @type {number} */ (reader.readUint32());
-      msg.setFd(value);
+      msg.setFiledescriptor(value);
       break;
     case 2:
       var value = /** @type {number} */ (reader.readUint32());
@@ -136,7 +136,7 @@ proto.littlstar.cfsnet.Read.prototype.serializeBinary = function() {
  */
 proto.littlstar.cfsnet.Read.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getFd();
+  f = message.getFiledescriptor();
   if (f !== 0) {
     writer.writeUint32(
       1,
@@ -161,16 +161,16 @@ proto.littlstar.cfsnet.Read.serializeBinaryToWriter = function(message, writer) 
 
 
 /**
- * optional uint32 fd = 1;
+ * optional uint32 fileDescriptor = 1;
  * @return {number}
  */
-proto.littlstar.cfsnet.Read.prototype.getFd = function() {
+proto.littlstar.cfsnet.Read.prototype.getFiledescriptor = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /** @param {number} value */
-proto.littlstar.cfsnet.Read.prototype.setFd = function(value) {
+proto.littlstar.cfsnet.Read.prototype.setFiledescriptor = function(value) {
   jspb.Message.setField(this, 1, value);
 };
 

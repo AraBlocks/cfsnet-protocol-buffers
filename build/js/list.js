@@ -5,7 +5,7 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-goog.provide('proto.littlstar.cfsnet.Close');
+goog.provide('proto.littlstar.cfsnet.List');
 
 goog.require('jspb.Message');
 goog.require('jspb.BinaryReader');
@@ -22,13 +22,20 @@ goog.require('jspb.BinaryWriter');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.littlstar.cfsnet.Close = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+proto.littlstar.cfsnet.List = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.littlstar.cfsnet.List.repeatedFields_, null);
 };
-goog.inherits(proto.littlstar.cfsnet.Close, jspb.Message);
+goog.inherits(proto.littlstar.cfsnet.List, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.littlstar.cfsnet.Close.displayName = 'proto.littlstar.cfsnet.Close';
+  proto.littlstar.cfsnet.List.displayName = 'proto.littlstar.cfsnet.List';
 }
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.littlstar.cfsnet.List.repeatedFields_ = [1];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -42,8 +49,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.littlstar.cfsnet.Close.prototype.toObject = function(opt_includeInstance) {
-  return proto.littlstar.cfsnet.Close.toObject(opt_includeInstance, this);
+proto.littlstar.cfsnet.List.prototype.toObject = function(opt_includeInstance) {
+  return proto.littlstar.cfsnet.List.toObject(opt_includeInstance, this);
 };
 
 
@@ -52,12 +59,12 @@ proto.littlstar.cfsnet.Close.prototype.toObject = function(opt_includeInstance) 
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.littlstar.cfsnet.Close} msg The msg instance to transform.
+ * @param {!proto.littlstar.cfsnet.List} msg The msg instance to transform.
  * @return {!Object}
  */
-proto.littlstar.cfsnet.Close.toObject = function(includeInstance, msg) {
+proto.littlstar.cfsnet.List.toObject = function(includeInstance, msg) {
   var f, obj = {
-    filedescriptor: jspb.Message.getFieldWithDefault(msg, 1, 0)
+    valuesList: jspb.Message.getField(msg, 1)
   };
 
   if (includeInstance) {
@@ -71,23 +78,23 @@ proto.littlstar.cfsnet.Close.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.littlstar.cfsnet.Close}
+ * @return {!proto.littlstar.cfsnet.List}
  */
-proto.littlstar.cfsnet.Close.deserializeBinary = function(bytes) {
+proto.littlstar.cfsnet.List.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.littlstar.cfsnet.Close;
-  return proto.littlstar.cfsnet.Close.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.littlstar.cfsnet.List;
+  return proto.littlstar.cfsnet.List.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.littlstar.cfsnet.Close} msg The message object to deserialize into.
+ * @param {!proto.littlstar.cfsnet.List} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.littlstar.cfsnet.Close}
+ * @return {!proto.littlstar.cfsnet.List}
  */
-proto.littlstar.cfsnet.Close.deserializeBinaryFromReader = function(msg, reader) {
+proto.littlstar.cfsnet.List.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -95,8 +102,8 @@ proto.littlstar.cfsnet.Close.deserializeBinaryFromReader = function(msg, reader)
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {number} */ (reader.readUint32());
-      msg.setFiledescriptor(value);
+      var value = /** @type {string} */ (reader.readString());
+      msg.addValues(value);
       break;
     default:
       reader.skipField();
@@ -111,9 +118,9 @@ proto.littlstar.cfsnet.Close.deserializeBinaryFromReader = function(msg, reader)
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.littlstar.cfsnet.Close.prototype.serializeBinary = function() {
+proto.littlstar.cfsnet.List.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.littlstar.cfsnet.Close.serializeBinaryToWriter(this, writer);
+  proto.littlstar.cfsnet.List.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -121,14 +128,14 @@ proto.littlstar.cfsnet.Close.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.littlstar.cfsnet.Close} message
+ * @param {!proto.littlstar.cfsnet.List} message
  * @param {!jspb.BinaryWriter} writer
  */
-proto.littlstar.cfsnet.Close.serializeBinaryToWriter = function(message, writer) {
+proto.littlstar.cfsnet.List.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getFiledescriptor();
-  if (f !== 0) {
-    writer.writeUint32(
+  f = message.getValuesList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
       1,
       f
     );
@@ -137,17 +144,33 @@ proto.littlstar.cfsnet.Close.serializeBinaryToWriter = function(message, writer)
 
 
 /**
- * optional uint32 fileDescriptor = 1;
- * @return {number}
+ * repeated string values = 1;
+ * If you change this array by adding, removing or replacing elements, or if you
+ * replace the array itself, then you must call the setter to update it.
+ * @return {!Array.<string>}
  */
-proto.littlstar.cfsnet.Close.prototype.getFiledescriptor = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+proto.littlstar.cfsnet.List.prototype.getValuesList = function() {
+  return /** @type {!Array.<string>} */ (jspb.Message.getField(this, 1));
 };
 
 
-/** @param {number} value */
-proto.littlstar.cfsnet.Close.prototype.setFiledescriptor = function(value) {
-  jspb.Message.setField(this, 1, value);
+/** @param {!Array.<string>} value */
+proto.littlstar.cfsnet.List.prototype.setValuesList = function(value) {
+  jspb.Message.setField(this, 1, value || []);
+};
+
+
+/**
+ * @param {!string} value
+ * @param {number=} opt_index
+ */
+proto.littlstar.cfsnet.List.prototype.addValues = function(value, opt_index) {
+  jspb.Message.addToRepeatedField(this, 1, value, opt_index);
+};
+
+
+proto.littlstar.cfsnet.List.prototype.clearValuesList = function() {
+  this.setValuesList([]);
 };
 
 

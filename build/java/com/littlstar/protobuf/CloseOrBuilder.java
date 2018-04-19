@@ -8,7 +8,7 @@ public interface CloseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>uint32 fd = 1;</code>
+   * <code>uint32 fileDescriptor = 1;</code>
    */
-  int getFd();
+  int getFileDescriptor();
 }
