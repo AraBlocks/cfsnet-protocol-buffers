@@ -5,11 +5,14 @@
 
 - [cfsnet.proto](#cfsnet.proto)
     - [AccessFile](#littlstar.cfsnet.AccessFile)
+    - [Boolean](#littlstar.cfsnet.Boolean)
+    - [Buffer](#littlstar.cfsnet.Buffer)
     - [Close](#littlstar.cfsnet.Close)
     - [DownloadDirectory](#littlstar.cfsnet.DownloadDirectory)
     - [DownloadFile](#littlstar.cfsnet.DownloadFile)
     - [Drive](#littlstar.cfsnet.Drive)
     - [Handshake](#littlstar.cfsnet.Handshake)
+    - [List](#littlstar.cfsnet.List)
     - [ListDirectory](#littlstar.cfsnet.ListDirectory)
     - [MakeDirectory](#littlstar.cfsnet.MakeDirectory)
     - [MakeDirectoryPath](#littlstar.cfsnet.MakeDirectoryPath)
@@ -23,6 +26,7 @@
     - [Response](#littlstar.cfsnet.Response)
     - [Stat](#littlstar.cfsnet.Stat)
     - [StatFile](#littlstar.cfsnet.StatFile)
+    - [String](#littlstar.cfsnet.String)
     - [TouchFile](#littlstar.cfsnet.TouchFile)
     - [UnlinkFile](#littlstar.cfsnet.UnlinkFile)
     - [WriteFile](#littlstar.cfsnet.WriteFile)
@@ -61,6 +65,36 @@
 
 
 
+<a name="littlstar.cfsnet.Boolean"/>
+
+### Boolean
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| value | [bool](#bool) |  |  |
+
+
+
+
+
+
+<a name="littlstar.cfsnet.Buffer"/>
+
+### Buffer
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| value | [bytes](#bytes) |  |  |
+
+
+
+
+
+
 <a name="littlstar.cfsnet.Close"/>
 
 ### Close
@@ -69,7 +103,7 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| fd | [uint32](#uint32) |  |  |
+| fileDescriptor | [uint32](#uint32) |  |  |
 
 
 
@@ -134,6 +168,21 @@
 | nonce | [bytes](#bytes) |  |  |
 | key | [bytes](#bytes) |  |  |
 | ack | [bool](#bool) |  |  |
+
+
+
+
+
+
+<a name="littlstar.cfsnet.List"/>
+
+### List
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| values | [string](#string) | repeated |  |
 
 
 
@@ -208,7 +257,7 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| fd | [uint32](#uint32) |  |  |
+| fileDescriptor | [uint32](#uint32) |  |  |
 | start | [uint32](#uint32) |  |  |
 | end | [uint32](#uint32) |  |  |
 
@@ -349,6 +398,21 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | path | [string](#string) |  |  |
+
+
+
+
+
+
+<a name="littlstar.cfsnet.String"/>
+
+### String
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| value | [string](#string) |  |  |
 
 
 
