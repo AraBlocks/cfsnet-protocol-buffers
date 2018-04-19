@@ -1,6 +1,8 @@
 package littlstar.cfsnet;
 
 import "cfsnet/AccessFile";
+import "cfsnet/Boolean";
+import "cfsnet/Buffer";
 import "cfsnet/Close";
 import "cfsnet/DownloadDirectory";
 import "cfsnet/DownloadFile";
@@ -8,6 +10,7 @@ import "cfsnet/Drive";
 import "cfsnet/ErrorCode";
 import "cfsnet/FileMode";
 import "cfsnet/Handshake";
+import "cfsnet/List";
 import "cfsnet/ListDirectory";
 import "cfsnet/MakeDirectory";
 import "cfsnet/MakeDirectoryPath";
@@ -22,6 +25,7 @@ import "cfsnet/Resolve";
 import "cfsnet/Response";
 import "cfsnet/Stat";
 import "cfsnet/StatFile";
+import "cfsnet/String";
 import "cfsnet/TouchFile";
 import "cfsnet/UnlinkFile";
 import "cfsnet/WriteFile";
