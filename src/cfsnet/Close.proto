@@ -4,5 +4,5 @@
  * a file descriptor
  */
 message Close {
-  uint32 fd = 1;
+  uint32 fileDescriptor = 1;
 }

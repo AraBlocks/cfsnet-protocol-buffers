@@ -4,7 +4,7 @@
  * file descriptor.
  */
 message Read {
-  uint32 fd = 1;
+  uint32 fileDescriptor = 1;
   uint32 start = 2;
   uint32 end = 3;
 }
