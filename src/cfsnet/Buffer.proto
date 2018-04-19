@@ -1,0 +1,3 @@
+message Buffer {
+  bytes value = 1;
+}
