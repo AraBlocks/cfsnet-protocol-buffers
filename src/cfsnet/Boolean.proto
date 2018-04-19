@@ -1,0 +1,3 @@
+message Boolean {
+  bool value = 1;
+}
