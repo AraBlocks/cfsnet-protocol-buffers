@@ -10,6 +10,7 @@ import "cfsnet/Drive";
 import "cfsnet/ErrorCode";
 import "cfsnet/FileMode";
 import "cfsnet/Handshake";
+import "cfsnet/KeyPair";
 import "cfsnet/List";
 import "cfsnet/ListDirectory";
 import "cfsnet/MakeDirectory";
