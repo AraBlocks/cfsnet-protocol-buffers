@@ -1,0 +1,5 @@
+message KeyPair {
+  bytes seed = 1;
+  bytes publicKey = 2;
+  bytes secretKey = 3;
+}
