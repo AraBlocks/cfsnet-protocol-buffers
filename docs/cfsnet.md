@@ -12,6 +12,7 @@
     - [DownloadFile](#littlstar.cfsnet.DownloadFile)
     - [Drive](#littlstar.cfsnet.Drive)
     - [Handshake](#littlstar.cfsnet.Handshake)
+    - [KeyPair](#littlstar.cfsnet.KeyPair)
     - [List](#littlstar.cfsnet.List)
     - [ListDirectory](#littlstar.cfsnet.ListDirectory)
     - [MakeDirectory](#littlstar.cfsnet.MakeDirectory)
@@ -170,6 +171,23 @@
 | nonce | [bytes](#bytes) |  |  |
 | key | [bytes](#bytes) |  |  |
 | ack | [bool](#bool) |  |  |
+
+
+
+
+
+
+<a name="littlstar.cfsnet.KeyPair"/>
+
+### KeyPair
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| seed | [bytes](#bytes) |  |  |
+| publicKey | [bytes](#bytes) |  |  |
+| secretKey | [bytes](#bytes) |  |  |
 
 
 
@@ -528,23 +546,24 @@
 | ---- | ------ | ----------- |
 | NoOperation | 0 |  |
 | ResolveOperation | 1 |  |
-| OpenOperation | 2 |  |
-| CloseOperation | 3 |  |
-| ReadOperation | 4 |  |
-| WriteOperation | 5 |  |
-| ReadFileOperation | 10 |  |
-| WriteFileOperation | 11 |  |
-| StatFileOperation | 12 |  |
-| UnlinkFileOperation | 13 |  |
-| AccessFileOperation | 14 |  |
-| TouchFileOperation | 15 |  |
-| DownloadFileOperation | 16 |  |
-| DownloadDirectoryOperation | 20 |  |
-| MakeDirectoryOperation | 21 |  |
-| MakeDirectoryPathOperation | 22 |  |
-| RemoveDirectoryOperation | 23 |  |
-| RemoveDirectoryPathOperation | 24 |  |
-| ListDirectoryOperation | 25 |  |
+| KeyPairOperation | 2 |  |
+| OpenOperation | 10 |  |
+| CloseOperation | 11 |  |
+| ReadOperation | 12 |  |
+| WriteOperation | 13 |  |
+| ReadFileOperation | 20 |  |
+| WriteFileOperation | 21 |  |
+| StatFileOperation | 22 |  |
+| UnlinkFileOperation | 23 |  |
+| AccessFileOperation | 24 |  |
+| TouchFileOperation | 25 |  |
+| DownloadFileOperation | 26 |  |
+| DownloadDirectoryOperation | 30 |  |
+| MakeDirectoryOperation | 31 |  |
+| MakeDirectoryPathOperation | 32 |  |
+| RemoveDirectoryOperation | 33 |  |
+| RemoveDirectoryPathOperation | 34 |  |
+| ListDirectoryOperation | 35 |  |
 
 
  
