@@ -16,6 +16,7 @@
     - [ListDirectory](#littlstar.cfsnet.ListDirectory)
     - [MakeDirectory](#littlstar.cfsnet.MakeDirectory)
     - [MakeDirectoryPath](#littlstar.cfsnet.MakeDirectoryPath)
+    - [Number](#littlstar.cfsnet.Number)
     - [Open](#littlstar.cfsnet.Open)
     - [Read](#littlstar.cfsnet.Read)
     - [ReadFile](#littlstar.cfsnet.ReadFile)
@@ -89,6 +90,7 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | value | [bytes](#bytes) |  |  |
+| length | [uint64](#uint64) |  |  |
 
 
 
@@ -182,7 +184,8 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| values | [string](#string) | repeated |  |
+| values | [bytes](#bytes) | repeated |  |
+| length | [uint64](#uint64) |  |  |
 
 
 
@@ -234,6 +237,21 @@
 
 
 
+<a name="littlstar.cfsnet.Number"/>
+
+### Number
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| value | [double](#double) |  |  |
+
+
+
+
+
+
 <a name="littlstar.cfsnet.Open"/>
 
 ### Open
@@ -243,6 +261,7 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | path | [string](#string) |  |  |
+| flags | [string](#string) |  |  |
 
 
 
@@ -374,15 +393,14 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| mode | [uint32](#uint32) |  |  |
 | uid | [uint32](#uint32) |  |  |
 | gid | [uint32](#uint32) |  |  |
+| mode | [uint32](#uint32) |  |  |
 | size | [uint64](#uint64) |  |  |
-| blocks | [uint64](#uint64) |  |  |
-| offset | [uint64](#uint64) |  |  |
-| byteOffset | [uint64](#uint64) |  |  |
-| mtime | [uint64](#uint64) |  |  |
+| atime | [uint64](#uint64) |  |  |
 | ctime | [uint64](#uint64) |  |  |
+| mtime | [uint64](#uint64) |  |  |
+| blocks | [uint64](#uint64) |  |  |
 
 
 
