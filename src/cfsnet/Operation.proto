@@ -1,27 +1,28 @@
 enum Operation {
   NoOperation = 0;
   ResolveOperation = 1;
+  KeyPairOperation = 2;
 
   // Operations on file descriptors
-  OpenOperation = 2;
-  CloseOperation = 3;
-  ReadOperation = 4;
-  WriteOperation = 5;
+  OpenOperation = 10;
+  CloseOperation = 11;
+  ReadOperation = 12;
+  WriteOperation = 13;
 
   // Operations on file paths
-  ReadFileOperation = 10;
-  WriteFileOperation = 11;
-  StatFileOperation = 12;
-  UnlinkFileOperation = 13;
-  AccessFileOperation = 14;
-  TouchFileOperation = 15;
-  DownloadFileOperation = 16;
+  ReadFileOperation = 20;
+  WriteFileOperation = 21;
+  StatFileOperation = 22;
+  UnlinkFileOperation = 23;
+  AccessFileOperation = 24;
+  TouchFileOperation = 25;
+  DownloadFileOperation = 26;
 
   // Operations on directory paths
-  DownloadDirectoryOperation = 20;
-  MakeDirectoryOperation = 21;
-  MakeDirectoryPathOperation = 22;
-  RemoveDirectoryOperation = 23;
-  RemoveDirectoryPathOperation = 24;
-  ListDirectoryOperation = 25;
+  DownloadDirectoryOperation = 30;
+  MakeDirectoryOperation = 31;
+  MakeDirectoryPathOperation = 32;
+  RemoveDirectoryOperation = 33;
+  RemoveDirectoryPathOperation = 34;
+  ListDirectoryOperation = 35;
 }
