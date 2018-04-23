@@ -1,3 +1,4 @@
 message Buffer {
   bytes value = 1;
+  uint64 length = 2;
 }
