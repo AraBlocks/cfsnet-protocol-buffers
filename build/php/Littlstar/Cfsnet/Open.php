@@ -17,6 +17,10 @@ class Open extends \Google\Protobuf\Internal\Message
      * <code>string path = 1;</code>
      */
     private $path = '';
+    /**
+     * <code>string flags = 2;</code>
+     */
+    private $flags = '';
 
     public function __construct() {
         \GPBMetadata\Cfsnet::initOnce();
@@ -38,6 +42,23 @@ class Open extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->path = $var;
+    }
+
+    /**
+     * <code>string flags = 2;</code>
+     */
+    public function getFlags()
+    {
+        return $this->flags;
+    }
+
+    /**
+     * <code>string flags = 2;</code>
+     */
+    public function setFlags($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->flags = $var;
     }
 
 }

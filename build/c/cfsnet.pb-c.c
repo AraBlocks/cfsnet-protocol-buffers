@@ -367,6 +367,51 @@ void   littlstar__cfsnet__handshake__free_unpacked
   assert(message->base.descriptor == &littlstar__cfsnet__handshake__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
+void   littlstar__cfsnet__key_pair__init
+                     (Littlstar__Cfsnet__KeyPair         *message)
+{
+  static const Littlstar__Cfsnet__KeyPair init_value = LITTLSTAR__CFSNET__KEY_PAIR__INIT;
+  *message = init_value;
+}
+size_t littlstar__cfsnet__key_pair__get_packed_size
+                     (const Littlstar__Cfsnet__KeyPair *message)
+{
+  assert(message->base.descriptor == &littlstar__cfsnet__key_pair__descriptor);
+  return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
+}
+size_t littlstar__cfsnet__key_pair__pack
+                     (const Littlstar__Cfsnet__KeyPair *message,
+                      uint8_t       *out)
+{
+  assert(message->base.descriptor == &littlstar__cfsnet__key_pair__descriptor);
+  return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
+}
+size_t littlstar__cfsnet__key_pair__pack_to_buffer
+                     (const Littlstar__Cfsnet__KeyPair *message,
+                      ProtobufCBuffer *buffer)
+{
+  assert(message->base.descriptor == &littlstar__cfsnet__key_pair__descriptor);
+  return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
+}
+Littlstar__Cfsnet__KeyPair *
+       littlstar__cfsnet__key_pair__unpack
+                     (ProtobufCAllocator  *allocator,
+                      size_t               len,
+                      const uint8_t       *data)
+{
+  return (Littlstar__Cfsnet__KeyPair *)
+     protobuf_c_message_unpack (&littlstar__cfsnet__key_pair__descriptor,
+                                allocator, len, data);
+}
+void   littlstar__cfsnet__key_pair__free_unpacked
+                     (Littlstar__Cfsnet__KeyPair *message,
+                      ProtobufCAllocator *allocator)
+{
+  if(!message)
+    return;
+  assert(message->base.descriptor == &littlstar__cfsnet__key_pair__descriptor);
+  protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
+}
 void   littlstar__cfsnet__list__init
                      (Littlstar__Cfsnet__List         *message)
 {
@@ -1604,6 +1649,70 @@ const ProtobufCMessageDescriptor littlstar__cfsnet__handshake__descriptor =
   (ProtobufCMessageInit) littlstar__cfsnet__handshake__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
+static const ProtobufCFieldDescriptor littlstar__cfsnet__key_pair__field_descriptors[3] =
+{
+  {
+    "seed",
+    1,
+    PROTOBUF_C_LABEL_NONE,
+    PROTOBUF_C_TYPE_BYTES,
+    0,   /* quantifier_offset */
+    offsetof(Littlstar__Cfsnet__KeyPair, seed),
+    NULL,
+    NULL,
+    0,             /* flags */
+    0,NULL,NULL    /* reserved1,reserved2, etc */
+  },
+  {
+    "publicKey",
+    2,
+    PROTOBUF_C_LABEL_NONE,
+    PROTOBUF_C_TYPE_BYTES,
+    0,   /* quantifier_offset */
+    offsetof(Littlstar__Cfsnet__KeyPair, publickey),
+    NULL,
+    NULL,
+    0,             /* flags */
+    0,NULL,NULL    /* reserved1,reserved2, etc */
+  },
+  {
+    "secretKey",
+    3,
+    PROTOBUF_C_LABEL_NONE,
+    PROTOBUF_C_TYPE_BYTES,
+    0,   /* quantifier_offset */
+    offsetof(Littlstar__Cfsnet__KeyPair, secretkey),
+    NULL,
+    NULL,
+    0,             /* flags */
+    0,NULL,NULL    /* reserved1,reserved2, etc */
+  },
+};
+static const unsigned littlstar__cfsnet__key_pair__field_indices_by_name[] = {
+  1,   /* field[1] = publicKey */
+  2,   /* field[2] = secretKey */
+  0,   /* field[0] = seed */
+};
+static const ProtobufCIntRange littlstar__cfsnet__key_pair__number_ranges[1 + 1] =
+{
+  { 1, 0 },
+  { 0, 3 }
+};
+const ProtobufCMessageDescriptor littlstar__cfsnet__key_pair__descriptor =
+{
+  PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
+  "littlstar.cfsnet.KeyPair",
+  "KeyPair",
+  "Littlstar__Cfsnet__KeyPair",
+  "littlstar.cfsnet",
+  sizeof(Littlstar__Cfsnet__KeyPair),
+  3,
+  littlstar__cfsnet__key_pair__field_descriptors,
+  littlstar__cfsnet__key_pair__field_indices_by_name,
+  1,  littlstar__cfsnet__key_pair__number_ranges,
+  (ProtobufCMessageInit) littlstar__cfsnet__key_pair__init,
+  NULL,NULL,NULL    /* reserved[123] */
+};
 static const ProtobufCFieldDescriptor littlstar__cfsnet__list__field_descriptors[2] =
 {
   {
@@ -2710,52 +2819,54 @@ const ProtobufCEnumDescriptor littlstar__cfsnet__error_code__descriptor =
   littlstar__cfsnet__error_code__value_ranges,
   NULL,NULL,NULL,NULL   /* reserved[1234] */
 };
-static const ProtobufCEnumValue littlstar__cfsnet__operation__enum_values_by_number[19] =
+static const ProtobufCEnumValue littlstar__cfsnet__operation__enum_values_by_number[20] =
 {
   { "NoOperation", "LITTLSTAR__CFSNET__OPERATION__NoOperation", 0 },
   { "ResolveOperation", "LITTLSTAR__CFSNET__OPERATION__ResolveOperation", 1 },
-  { "OpenOperation", "LITTLSTAR__CFSNET__OPERATION__OpenOperation", 2 },
-  { "CloseOperation", "LITTLSTAR__CFSNET__OPERATION__CloseOperation", 3 },
-  { "ReadOperation", "LITTLSTAR__CFSNET__OPERATION__ReadOperation", 4 },
-  { "WriteOperation", "LITTLSTAR__CFSNET__OPERATION__WriteOperation", 5 },
-  { "ReadFileOperation", "LITTLSTAR__CFSNET__OPERATION__ReadFileOperation", 10 },
-  { "WriteFileOperation", "LITTLSTAR__CFSNET__OPERATION__WriteFileOperation", 11 },
-  { "StatFileOperation", "LITTLSTAR__CFSNET__OPERATION__StatFileOperation", 12 },
-  { "UnlinkFileOperation", "LITTLSTAR__CFSNET__OPERATION__UnlinkFileOperation", 13 },
-  { "AccessFileOperation", "LITTLSTAR__CFSNET__OPERATION__AccessFileOperation", 14 },
-  { "TouchFileOperation", "LITTLSTAR__CFSNET__OPERATION__TouchFileOperation", 15 },
-  { "DownloadFileOperation", "LITTLSTAR__CFSNET__OPERATION__DownloadFileOperation", 16 },
-  { "DownloadDirectoryOperation", "LITTLSTAR__CFSNET__OPERATION__DownloadDirectoryOperation", 20 },
-  { "MakeDirectoryOperation", "LITTLSTAR__CFSNET__OPERATION__MakeDirectoryOperation", 21 },
-  { "MakeDirectoryPathOperation", "LITTLSTAR__CFSNET__OPERATION__MakeDirectoryPathOperation", 22 },
-  { "RemoveDirectoryOperation", "LITTLSTAR__CFSNET__OPERATION__RemoveDirectoryOperation", 23 },
-  { "RemoveDirectoryPathOperation", "LITTLSTAR__CFSNET__OPERATION__RemoveDirectoryPathOperation", 24 },
-  { "ListDirectoryOperation", "LITTLSTAR__CFSNET__OPERATION__ListDirectoryOperation", 25 },
+  { "KeyPairOperation", "LITTLSTAR__CFSNET__OPERATION__KeyPairOperation", 2 },
+  { "OpenOperation", "LITTLSTAR__CFSNET__OPERATION__OpenOperation", 10 },
+  { "CloseOperation", "LITTLSTAR__CFSNET__OPERATION__CloseOperation", 11 },
+  { "ReadOperation", "LITTLSTAR__CFSNET__OPERATION__ReadOperation", 12 },
+  { "WriteOperation", "LITTLSTAR__CFSNET__OPERATION__WriteOperation", 13 },
+  { "ReadFileOperation", "LITTLSTAR__CFSNET__OPERATION__ReadFileOperation", 20 },
+  { "WriteFileOperation", "LITTLSTAR__CFSNET__OPERATION__WriteFileOperation", 21 },
+  { "StatFileOperation", "LITTLSTAR__CFSNET__OPERATION__StatFileOperation", 22 },
+  { "UnlinkFileOperation", "LITTLSTAR__CFSNET__OPERATION__UnlinkFileOperation", 23 },
+  { "AccessFileOperation", "LITTLSTAR__CFSNET__OPERATION__AccessFileOperation", 24 },
+  { "TouchFileOperation", "LITTLSTAR__CFSNET__OPERATION__TouchFileOperation", 25 },
+  { "DownloadFileOperation", "LITTLSTAR__CFSNET__OPERATION__DownloadFileOperation", 26 },
+  { "DownloadDirectoryOperation", "LITTLSTAR__CFSNET__OPERATION__DownloadDirectoryOperation", 30 },
+  { "MakeDirectoryOperation", "LITTLSTAR__CFSNET__OPERATION__MakeDirectoryOperation", 31 },
+  { "MakeDirectoryPathOperation", "LITTLSTAR__CFSNET__OPERATION__MakeDirectoryPathOperation", 32 },
+  { "RemoveDirectoryOperation", "LITTLSTAR__CFSNET__OPERATION__RemoveDirectoryOperation", 33 },
+  { "RemoveDirectoryPathOperation", "LITTLSTAR__CFSNET__OPERATION__RemoveDirectoryPathOperation", 34 },
+  { "ListDirectoryOperation", "LITTLSTAR__CFSNET__OPERATION__ListDirectoryOperation", 35 },
 };
 static const ProtobufCIntRange littlstar__cfsnet__operation__value_ranges[] = {
-{0, 0},{10, 6},{20, 13},{0, 19}
+{0, 0},{10, 3},{20, 7},{30, 14},{0, 20}
 };
-static const ProtobufCEnumValueIndex littlstar__cfsnet__operation__enum_values_by_name[19] =
+static const ProtobufCEnumValueIndex littlstar__cfsnet__operation__enum_values_by_name[20] =
 {
-  { "AccessFileOperation", 10 },
-  { "CloseOperation", 3 },
-  { "DownloadDirectoryOperation", 13 },
-  { "DownloadFileOperation", 12 },
-  { "ListDirectoryOperation", 18 },
-  { "MakeDirectoryOperation", 14 },
-  { "MakeDirectoryPathOperation", 15 },
+  { "AccessFileOperation", 11 },
+  { "CloseOperation", 4 },
+  { "DownloadDirectoryOperation", 14 },
+  { "DownloadFileOperation", 13 },
+  { "KeyPairOperation", 2 },
+  { "ListDirectoryOperation", 19 },
+  { "MakeDirectoryOperation", 15 },
+  { "MakeDirectoryPathOperation", 16 },
   { "NoOperation", 0 },
-  { "OpenOperation", 2 },
-  { "ReadFileOperation", 6 },
-  { "ReadOperation", 4 },
-  { "RemoveDirectoryOperation", 16 },
-  { "RemoveDirectoryPathOperation", 17 },
+  { "OpenOperation", 3 },
+  { "ReadFileOperation", 7 },
+  { "ReadOperation", 5 },
+  { "RemoveDirectoryOperation", 17 },
+  { "RemoveDirectoryPathOperation", 18 },
   { "ResolveOperation", 1 },
-  { "StatFileOperation", 8 },
-  { "TouchFileOperation", 11 },
-  { "UnlinkFileOperation", 9 },
-  { "WriteFileOperation", 7 },
-  { "WriteOperation", 5 },
+  { "StatFileOperation", 9 },
+  { "TouchFileOperation", 12 },
+  { "UnlinkFileOperation", 10 },
+  { "WriteFileOperation", 8 },
+  { "WriteOperation", 6 },
 };
 const ProtobufCEnumDescriptor littlstar__cfsnet__operation__descriptor =
 {
@@ -2764,11 +2875,11 @@ const ProtobufCEnumDescriptor littlstar__cfsnet__operation__descriptor =
   "Operation",
   "Littlstar__Cfsnet__Operation",
   "littlstar.cfsnet",
-  19,
+  20,
   littlstar__cfsnet__operation__enum_values_by_number,
-  19,
+  20,
   littlstar__cfsnet__operation__enum_values_by_name,
-  3,
+  4,
   littlstar__cfsnet__operation__value_ranges,
   NULL,NULL,NULL,NULL   /* reserved[1234] */
 };

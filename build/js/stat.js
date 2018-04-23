@@ -57,15 +57,14 @@ proto.littlstar.cfsnet.Stat.prototype.toObject = function(opt_includeInstance) {
  */
 proto.littlstar.cfsnet.Stat.toObject = function(includeInstance, msg) {
   var f, obj = {
-    mode: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    uid: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    gid: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    uid: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    gid: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    mode: jspb.Message.getFieldWithDefault(msg, 3, 0),
     size: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    blocks: jspb.Message.getFieldWithDefault(msg, 5, 0),
-    offset: jspb.Message.getFieldWithDefault(msg, 6, 0),
-    byteoffset: jspb.Message.getFieldWithDefault(msg, 7, 0),
-    mtime: jspb.Message.getFieldWithDefault(msg, 8, 0),
-    ctime: jspb.Message.getFieldWithDefault(msg, 9, 0)
+    atime: jspb.Message.getFieldWithDefault(msg, 5, 0),
+    ctime: jspb.Message.getFieldWithDefault(msg, 6, 0),
+    mtime: jspb.Message.getFieldWithDefault(msg, 7, 0),
+    blocks: jspb.Message.getFieldWithDefault(msg, 8, 0)
   };
 
   if (includeInstance) {
@@ -104,15 +103,15 @@ proto.littlstar.cfsnet.Stat.deserializeBinaryFromReader = function(msg, reader) 
     switch (field) {
     case 1:
       var value = /** @type {number} */ (reader.readUint32());
-      msg.setMode(value);
+      msg.setUid(value);
       break;
     case 2:
       var value = /** @type {number} */ (reader.readUint32());
-      msg.setUid(value);
+      msg.setGid(value);
       break;
     case 3:
       var value = /** @type {number} */ (reader.readUint32());
-      msg.setGid(value);
+      msg.setMode(value);
       break;
     case 4:
       var value = /** @type {number} */ (reader.readUint64());
@@ -120,23 +119,19 @@ proto.littlstar.cfsnet.Stat.deserializeBinaryFromReader = function(msg, reader) 
       break;
     case 5:
       var value = /** @type {number} */ (reader.readUint64());
-      msg.setBlocks(value);
+      msg.setAtime(value);
       break;
     case 6:
       var value = /** @type {number} */ (reader.readUint64());
-      msg.setOffset(value);
+      msg.setCtime(value);
       break;
     case 7:
       var value = /** @type {number} */ (reader.readUint64());
-      msg.setByteoffset(value);
+      msg.setMtime(value);
       break;
     case 8:
       var value = /** @type {number} */ (reader.readUint64());
-      msg.setMtime(value);
-      break;
-    case 9:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setCtime(value);
+      msg.setBlocks(value);
       break;
     default:
       reader.skipField();
@@ -166,21 +161,21 @@ proto.littlstar.cfsnet.Stat.prototype.serializeBinary = function() {
  */
 proto.littlstar.cfsnet.Stat.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getMode();
+  f = message.getUid();
   if (f !== 0) {
     writer.writeUint32(
       1,
       f
     );
   }
-  f = message.getUid();
+  f = message.getGid();
   if (f !== 0) {
     writer.writeUint32(
       2,
       f
     );
   }
-  f = message.getGid();
+  f = message.getMode();
   if (f !== 0) {
     writer.writeUint32(
       3,
@@ -194,85 +189,78 @@ proto.littlstar.cfsnet.Stat.serializeBinaryToWriter = function(message, writer) 
       f
     );
   }
-  f = message.getBlocks();
+  f = message.getAtime();
   if (f !== 0) {
     writer.writeUint64(
       5,
       f
     );
   }
-  f = message.getOffset();
+  f = message.getCtime();
   if (f !== 0) {
     writer.writeUint64(
       6,
       f
     );
   }
-  f = message.getByteoffset();
+  f = message.getMtime();
   if (f !== 0) {
     writer.writeUint64(
       7,
       f
     );
   }
-  f = message.getMtime();
+  f = message.getBlocks();
   if (f !== 0) {
     writer.writeUint64(
       8,
       f
     );
   }
-  f = message.getCtime();
-  if (f !== 0) {
-    writer.writeUint64(
-      9,
-      f
-    );
-  }
 };
 
 
 /**
- * optional uint32 mode = 1;
+ * optional uint32 uid = 1;
  * @return {number}
  */
-proto.littlstar.cfsnet.Stat.prototype.getMode = function() {
+proto.littlstar.cfsnet.Stat.prototype.getUid = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /** @param {number} value */
-proto.littlstar.cfsnet.Stat.prototype.setMode = function(value) {
+proto.littlstar.cfsnet.Stat.prototype.setUid = function(value) {
   jspb.Message.setField(this, 1, value);
 };
 
 
 /**
- * optional uint32 uid = 2;
+ * optional uint32 gid = 2;
  * @return {number}
  */
-proto.littlstar.cfsnet.Stat.prototype.getUid = function() {
+proto.littlstar.cfsnet.Stat.prototype.getGid = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /** @param {number} value */
-proto.littlstar.cfsnet.Stat.prototype.setUid = function(value) {
+proto.littlstar.cfsnet.Stat.prototype.setGid = function(value) {
   jspb.Message.setField(this, 2, value);
 };
 
 
 /**
- * optional uint32 gid = 3;
+ * optional uint32 mode = 3;
  * @return {number}
  */
-proto.littlstar.cfsnet.Stat.prototype.getGid = function() {
+proto.littlstar.cfsnet.Stat.prototype.getMode = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
 /** @param {number} value */
-proto.littlstar.cfsnet.Stat.prototype.setGid = function(value) {
+proto.littlstar.cfsnet.Stat.prototype.setMode = function(value) {
   jspb.Message.setField(this, 3, value);
 };
 
@@ -293,77 +281,62 @@ proto.littlstar.cfsnet.Stat.prototype.setSize = function(value) {
 
 
 /**
- * optional uint64 blocks = 5;
+ * optional uint64 atime = 5;
  * @return {number}
  */
-proto.littlstar.cfsnet.Stat.prototype.getBlocks = function() {
+proto.littlstar.cfsnet.Stat.prototype.getAtime = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
 };
 
 
 /** @param {number} value */
-proto.littlstar.cfsnet.Stat.prototype.setBlocks = function(value) {
+proto.littlstar.cfsnet.Stat.prototype.setAtime = function(value) {
   jspb.Message.setField(this, 5, value);
 };
 
 
 /**
- * optional uint64 offset = 6;
+ * optional uint64 ctime = 6;
  * @return {number}
  */
-proto.littlstar.cfsnet.Stat.prototype.getOffset = function() {
+proto.littlstar.cfsnet.Stat.prototype.getCtime = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
 };
 
 
 /** @param {number} value */
-proto.littlstar.cfsnet.Stat.prototype.setOffset = function(value) {
+proto.littlstar.cfsnet.Stat.prototype.setCtime = function(value) {
   jspb.Message.setField(this, 6, value);
 };
 
 
 /**
- * optional uint64 byteOffset = 7;
+ * optional uint64 mtime = 7;
  * @return {number}
  */
-proto.littlstar.cfsnet.Stat.prototype.getByteoffset = function() {
+proto.littlstar.cfsnet.Stat.prototype.getMtime = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 7, 0));
 };
 
 
 /** @param {number} value */
-proto.littlstar.cfsnet.Stat.prototype.setByteoffset = function(value) {
+proto.littlstar.cfsnet.Stat.prototype.setMtime = function(value) {
   jspb.Message.setField(this, 7, value);
 };
 
 
 /**
- * optional uint64 mtime = 8;
+ * optional uint64 blocks = 8;
  * @return {number}
  */
-proto.littlstar.cfsnet.Stat.prototype.getMtime = function() {
+proto.littlstar.cfsnet.Stat.prototype.getBlocks = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 8, 0));
 };
 
 
 /** @param {number} value */
-proto.littlstar.cfsnet.Stat.prototype.setMtime = function(value) {
+proto.littlstar.cfsnet.Stat.prototype.setBlocks = function(value) {
   jspb.Message.setField(this, 8, value);
-};
-
-
-/**
- * optional uint64 ctime = 9;
- * @return {number}
- */
-proto.littlstar.cfsnet.Stat.prototype.getCtime = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 9, 0));
-};
-
-
-/** @param {number} value */
-proto.littlstar.cfsnet.Stat.prototype.setCtime = function(value) {
-  jspb.Message.setField(this, 9, value);
 };
 
 

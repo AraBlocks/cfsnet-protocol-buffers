@@ -17,73 +17,77 @@ public enum Operation
    */
   ResolveOperation(1),
   /**
-   * <code>OpenOperation = 2;</code>
+   * <code>KeyPairOperation = 2;</code>
    */
-  OpenOperation(2),
+  KeyPairOperation(2),
   /**
-   * <code>CloseOperation = 3;</code>
+   * <code>OpenOperation = 10;</code>
    */
-  CloseOperation(3),
+  OpenOperation(10),
   /**
-   * <code>ReadOperation = 4;</code>
+   * <code>CloseOperation = 11;</code>
    */
-  ReadOperation(4),
+  CloseOperation(11),
   /**
-   * <code>WriteOperation = 5;</code>
+   * <code>ReadOperation = 12;</code>
    */
-  WriteOperation(5),
+  ReadOperation(12),
   /**
-   * <code>ReadFileOperation = 10;</code>
+   * <code>WriteOperation = 13;</code>
    */
-  ReadFileOperation(10),
+  WriteOperation(13),
   /**
-   * <code>WriteFileOperation = 11;</code>
+   * <code>ReadFileOperation = 20;</code>
    */
-  WriteFileOperation(11),
+  ReadFileOperation(20),
   /**
-   * <code>StatFileOperation = 12;</code>
+   * <code>WriteFileOperation = 21;</code>
    */
-  StatFileOperation(12),
+  WriteFileOperation(21),
   /**
-   * <code>UnlinkFileOperation = 13;</code>
+   * <code>StatFileOperation = 22;</code>
    */
-  UnlinkFileOperation(13),
+  StatFileOperation(22),
   /**
-   * <code>AccessFileOperation = 14;</code>
+   * <code>UnlinkFileOperation = 23;</code>
    */
-  AccessFileOperation(14),
+  UnlinkFileOperation(23),
   /**
-   * <code>TouchFileOperation = 15;</code>
+   * <code>AccessFileOperation = 24;</code>
    */
-  TouchFileOperation(15),
+  AccessFileOperation(24),
   /**
-   * <code>DownloadFileOperation = 16;</code>
+   * <code>TouchFileOperation = 25;</code>
    */
-  DownloadFileOperation(16),
+  TouchFileOperation(25),
   /**
-   * <code>DownloadDirectoryOperation = 20;</code>
+   * <code>DownloadFileOperation = 26;</code>
    */
-  DownloadDirectoryOperation(20),
+  DownloadFileOperation(26),
   /**
-   * <code>MakeDirectoryOperation = 21;</code>
+   * <code>DownloadDirectoryOperation = 30;</code>
    */
-  MakeDirectoryOperation(21),
+  DownloadDirectoryOperation(30),
   /**
-   * <code>MakeDirectoryPathOperation = 22;</code>
+   * <code>MakeDirectoryOperation = 31;</code>
    */
-  MakeDirectoryPathOperation(22),
+  MakeDirectoryOperation(31),
   /**
-   * <code>RemoveDirectoryOperation = 23;</code>
+   * <code>MakeDirectoryPathOperation = 32;</code>
    */
-  RemoveDirectoryOperation(23),
+  MakeDirectoryPathOperation(32),
   /**
-   * <code>RemoveDirectoryPathOperation = 24;</code>
+   * <code>RemoveDirectoryOperation = 33;</code>
    */
-  RemoveDirectoryPathOperation(24),
+  RemoveDirectoryOperation(33),
   /**
-   * <code>ListDirectoryOperation = 25;</code>
+   * <code>RemoveDirectoryPathOperation = 34;</code>
    */
-  ListDirectoryOperation(25),
+  RemoveDirectoryPathOperation(34),
+  /**
+   * <code>ListDirectoryOperation = 35;</code>
+   */
+  ListDirectoryOperation(35),
   UNRECOGNIZED(-1),
   ;
 
@@ -96,73 +100,77 @@ public enum Operation
    */
   public static final int ResolveOperation_VALUE = 1;
   /**
-   * <code>OpenOperation = 2;</code>
+   * <code>KeyPairOperation = 2;</code>
    */
-  public static final int OpenOperation_VALUE = 2;
+  public static final int KeyPairOperation_VALUE = 2;
   /**
-   * <code>CloseOperation = 3;</code>
+   * <code>OpenOperation = 10;</code>
    */
-  public static final int CloseOperation_VALUE = 3;
+  public static final int OpenOperation_VALUE = 10;
   /**
-   * <code>ReadOperation = 4;</code>
+   * <code>CloseOperation = 11;</code>
    */
-  public static final int ReadOperation_VALUE = 4;
+  public static final int CloseOperation_VALUE = 11;
   /**
-   * <code>WriteOperation = 5;</code>
+   * <code>ReadOperation = 12;</code>
    */
-  public static final int WriteOperation_VALUE = 5;
+  public static final int ReadOperation_VALUE = 12;
   /**
-   * <code>ReadFileOperation = 10;</code>
+   * <code>WriteOperation = 13;</code>
    */
-  public static final int ReadFileOperation_VALUE = 10;
+  public static final int WriteOperation_VALUE = 13;
   /**
-   * <code>WriteFileOperation = 11;</code>
+   * <code>ReadFileOperation = 20;</code>
    */
-  public static final int WriteFileOperation_VALUE = 11;
+  public static final int ReadFileOperation_VALUE = 20;
   /**
-   * <code>StatFileOperation = 12;</code>
+   * <code>WriteFileOperation = 21;</code>
    */
-  public static final int StatFileOperation_VALUE = 12;
+  public static final int WriteFileOperation_VALUE = 21;
   /**
-   * <code>UnlinkFileOperation = 13;</code>
+   * <code>StatFileOperation = 22;</code>
    */
-  public static final int UnlinkFileOperation_VALUE = 13;
+  public static final int StatFileOperation_VALUE = 22;
   /**
-   * <code>AccessFileOperation = 14;</code>
+   * <code>UnlinkFileOperation = 23;</code>
    */
-  public static final int AccessFileOperation_VALUE = 14;
+  public static final int UnlinkFileOperation_VALUE = 23;
   /**
-   * <code>TouchFileOperation = 15;</code>
+   * <code>AccessFileOperation = 24;</code>
    */
-  public static final int TouchFileOperation_VALUE = 15;
+  public static final int AccessFileOperation_VALUE = 24;
   /**
-   * <code>DownloadFileOperation = 16;</code>
+   * <code>TouchFileOperation = 25;</code>
    */
-  public static final int DownloadFileOperation_VALUE = 16;
+  public static final int TouchFileOperation_VALUE = 25;
   /**
-   * <code>DownloadDirectoryOperation = 20;</code>
+   * <code>DownloadFileOperation = 26;</code>
    */
-  public static final int DownloadDirectoryOperation_VALUE = 20;
+  public static final int DownloadFileOperation_VALUE = 26;
   /**
-   * <code>MakeDirectoryOperation = 21;</code>
+   * <code>DownloadDirectoryOperation = 30;</code>
    */
-  public static final int MakeDirectoryOperation_VALUE = 21;
+  public static final int DownloadDirectoryOperation_VALUE = 30;
   /**
-   * <code>MakeDirectoryPathOperation = 22;</code>
+   * <code>MakeDirectoryOperation = 31;</code>
    */
-  public static final int MakeDirectoryPathOperation_VALUE = 22;
+  public static final int MakeDirectoryOperation_VALUE = 31;
   /**
-   * <code>RemoveDirectoryOperation = 23;</code>
+   * <code>MakeDirectoryPathOperation = 32;</code>
    */
-  public static final int RemoveDirectoryOperation_VALUE = 23;
+  public static final int MakeDirectoryPathOperation_VALUE = 32;
   /**
-   * <code>RemoveDirectoryPathOperation = 24;</code>
+   * <code>RemoveDirectoryOperation = 33;</code>
    */
-  public static final int RemoveDirectoryPathOperation_VALUE = 24;
+  public static final int RemoveDirectoryOperation_VALUE = 33;
   /**
-   * <code>ListDirectoryOperation = 25;</code>
+   * <code>RemoveDirectoryPathOperation = 34;</code>
    */
-  public static final int ListDirectoryOperation_VALUE = 25;
+  public static final int RemoveDirectoryPathOperation_VALUE = 34;
+  /**
+   * <code>ListDirectoryOperation = 35;</code>
+   */
+  public static final int ListDirectoryOperation_VALUE = 35;
 
 
   public final int getNumber() {
@@ -185,23 +193,24 @@ public enum Operation
     switch (value) {
       case 0: return NoOperation;
       case 1: return ResolveOperation;
-      case 2: return OpenOperation;
-      case 3: return CloseOperation;
-      case 4: return ReadOperation;
-      case 5: return WriteOperation;
-      case 10: return ReadFileOperation;
-      case 11: return WriteFileOperation;
-      case 12: return StatFileOperation;
-      case 13: return UnlinkFileOperation;
-      case 14: return AccessFileOperation;
-      case 15: return TouchFileOperation;
-      case 16: return DownloadFileOperation;
-      case 20: return DownloadDirectoryOperation;
-      case 21: return MakeDirectoryOperation;
-      case 22: return MakeDirectoryPathOperation;
-      case 23: return RemoveDirectoryOperation;
-      case 24: return RemoveDirectoryPathOperation;
-      case 25: return ListDirectoryOperation;
+      case 2: return KeyPairOperation;
+      case 10: return OpenOperation;
+      case 11: return CloseOperation;
+      case 12: return ReadOperation;
+      case 13: return WriteOperation;
+      case 20: return ReadFileOperation;
+      case 21: return WriteFileOperation;
+      case 22: return StatFileOperation;
+      case 23: return UnlinkFileOperation;
+      case 24: return AccessFileOperation;
+      case 25: return TouchFileOperation;
+      case 26: return DownloadFileOperation;
+      case 30: return DownloadDirectoryOperation;
+      case 31: return MakeDirectoryOperation;
+      case 32: return MakeDirectoryPathOperation;
+      case 33: return RemoveDirectoryOperation;
+      case 34: return RemoveDirectoryPathOperation;
+      case 35: return ListDirectoryOperation;
       default: return null;
     }
   }

@@ -8,7 +8,7 @@ public interface NumberOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 value = 1;</code>
+   * <code>double value = 1;</code>
    */
-  long getValue();
+  double getValue();
 }

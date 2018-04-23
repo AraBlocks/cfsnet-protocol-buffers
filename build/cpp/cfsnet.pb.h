@@ -57,6 +57,9 @@ extern DriveDefaultTypeInternal _Drive_default_instance_;
 class Handshake;
 class HandshakeDefaultTypeInternal;
 extern HandshakeDefaultTypeInternal _Handshake_default_instance_;
+class KeyPair;
+class KeyPairDefaultTypeInternal;
+extern KeyPairDefaultTypeInternal _KeyPair_default_instance_;
 class List;
 class ListDefaultTypeInternal;
 extern ListDefaultTypeInternal _List_default_instance_;
@@ -69,6 +72,9 @@ extern MakeDirectoryDefaultTypeInternal _MakeDirectory_default_instance_;
 class MakeDirectoryPath;
 class MakeDirectoryPathDefaultTypeInternal;
 extern MakeDirectoryPathDefaultTypeInternal _MakeDirectoryPath_default_instance_;
+class Number;
+class NumberDefaultTypeInternal;
+extern NumberDefaultTypeInternal _Number_default_instance_;
 class Open;
 class OpenDefaultTypeInternal;
 extern OpenDefaultTypeInternal _Open_default_instance_;
@@ -184,23 +190,24 @@ inline bool ErrorCode_Parse(
 enum Operation {
   NoOperation = 0,
   ResolveOperation = 1,
-  OpenOperation = 2,
-  CloseOperation = 3,
-  ReadOperation = 4,
-  WriteOperation = 5,
-  ReadFileOperation = 10,
-  WriteFileOperation = 11,
-  StatFileOperation = 12,
-  UnlinkFileOperation = 13,
-  AccessFileOperation = 14,
-  TouchFileOperation = 15,
-  DownloadFileOperation = 16,
-  DownloadDirectoryOperation = 20,
-  MakeDirectoryOperation = 21,
-  MakeDirectoryPathOperation = 22,
-  RemoveDirectoryOperation = 23,
-  RemoveDirectoryPathOperation = 24,
-  ListDirectoryOperation = 25,
+  KeyPairOperation = 2,
+  OpenOperation = 10,
+  CloseOperation = 11,
+  ReadOperation = 12,
+  WriteOperation = 13,
+  ReadFileOperation = 20,
+  WriteFileOperation = 21,
+  StatFileOperation = 22,
+  UnlinkFileOperation = 23,
+  AccessFileOperation = 24,
+  TouchFileOperation = 25,
+  DownloadFileOperation = 26,
+  DownloadDirectoryOperation = 30,
+  MakeDirectoryOperation = 31,
+  MakeDirectoryPathOperation = 32,
+  RemoveDirectoryOperation = 33,
+  RemoveDirectoryPathOperation = 34,
+  ListDirectoryOperation = 35,
   Operation_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
   Operation_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
 };
@@ -474,11 +481,18 @@ class Buffer : public ::google::protobuf::Message /* @@protoc_insertion_point(cl
   ::std::string* release_value();
   void set_allocated_value(::std::string* value);
 
+  // uint64 length = 2;
+  void clear_length();
+  static const int kLengthFieldNumber = 2;
+  ::google::protobuf::uint64 length() const;
+  void set_length(::google::protobuf::uint64 value);
+
   // @@protoc_insertion_point(class_scope:littlstar.cfsnet.Buffer)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::ArenaStringPtr value_;
+  ::google::protobuf::uint64 length_;
   mutable int _cached_size_;
   friend struct protobuf_cfsnet_2eproto::TableStruct;
 };
@@ -968,6 +982,124 @@ class Handshake : public ::google::protobuf::Message /* @@protoc_insertion_point
 };
 // -------------------------------------------------------------------
 
+class KeyPair : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:littlstar.cfsnet.KeyPair) */ {
+ public:
+  KeyPair();
+  virtual ~KeyPair();
+
+  KeyPair(const KeyPair& from);
+
+  inline KeyPair& operator=(const KeyPair& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const KeyPair& default_instance();
+
+  static inline const KeyPair* internal_default_instance() {
+    return reinterpret_cast<const KeyPair*>(
+               &_KeyPair_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    8;
+
+  void Swap(KeyPair* other);
+
+  // implements Message ----------------------------------------------
+
+  inline KeyPair* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  KeyPair* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const KeyPair& from);
+  void MergeFrom(const KeyPair& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(KeyPair* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // bytes seed = 1;
+  void clear_seed();
+  static const int kSeedFieldNumber = 1;
+  const ::std::string& seed() const;
+  void set_seed(const ::std::string& value);
+  #if LANG_CXX11
+  void set_seed(::std::string&& value);
+  #endif
+  void set_seed(const char* value);
+  void set_seed(const void* value, size_t size);
+  ::std::string* mutable_seed();
+  ::std::string* release_seed();
+  void set_allocated_seed(::std::string* seed);
+
+  // bytes publicKey = 2;
+  void clear_publickey();
+  static const int kPublicKeyFieldNumber = 2;
+  const ::std::string& publickey() const;
+  void set_publickey(const ::std::string& value);
+  #if LANG_CXX11
+  void set_publickey(::std::string&& value);
+  #endif
+  void set_publickey(const char* value);
+  void set_publickey(const void* value, size_t size);
+  ::std::string* mutable_publickey();
+  ::std::string* release_publickey();
+  void set_allocated_publickey(::std::string* publickey);
+
+  // bytes secretKey = 3;
+  void clear_secretkey();
+  static const int kSecretKeyFieldNumber = 3;
+  const ::std::string& secretkey() const;
+  void set_secretkey(const ::std::string& value);
+  #if LANG_CXX11
+  void set_secretkey(::std::string&& value);
+  #endif
+  void set_secretkey(const char* value);
+  void set_secretkey(const void* value, size_t size);
+  ::std::string* mutable_secretkey();
+  ::std::string* release_secretkey();
+  void set_allocated_secretkey(::std::string* secretkey);
+
+  // @@protoc_insertion_point(class_scope:littlstar.cfsnet.KeyPair)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr seed_;
+  ::google::protobuf::internal::ArenaStringPtr publickey_;
+  ::google::protobuf::internal::ArenaStringPtr secretkey_;
+  mutable int _cached_size_;
+  friend struct protobuf_cfsnet_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
 class List : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:littlstar.cfsnet.List) */ {
  public:
   List();
@@ -988,7 +1120,7 @@ class List : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
                &_List_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    8;
+    9;
 
   void Swap(List* other);
 
@@ -1032,7 +1164,7 @@ class List : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
 
   // accessors -------------------------------------------------------
 
-  // repeated string values = 1;
+  // repeated bytes values = 1;
   int values_size() const;
   void clear_values();
   static const int kValuesFieldNumber = 1;
@@ -1043,22 +1175,29 @@ class List : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
   void set_values(int index, ::std::string&& value);
   #endif
   void set_values(int index, const char* value);
-  void set_values(int index, const char* value, size_t size);
+  void set_values(int index, const void* value, size_t size);
   ::std::string* add_values();
   void add_values(const ::std::string& value);
   #if LANG_CXX11
   void add_values(::std::string&& value);
   #endif
   void add_values(const char* value);
-  void add_values(const char* value, size_t size);
+  void add_values(const void* value, size_t size);
   const ::google::protobuf::RepeatedPtrField< ::std::string>& values() const;
   ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_values();
+
+  // uint64 length = 2;
+  void clear_length();
+  static const int kLengthFieldNumber = 2;
+  ::google::protobuf::uint64 length() const;
+  void set_length(::google::protobuf::uint64 value);
 
   // @@protoc_insertion_point(class_scope:littlstar.cfsnet.List)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::RepeatedPtrField< ::std::string> values_;
+  ::google::protobuf::uint64 length_;
   mutable int _cached_size_;
   friend struct protobuf_cfsnet_2eproto::TableStruct;
 };
@@ -1084,7 +1223,7 @@ class ListDirectory : public ::google::protobuf::Message /* @@protoc_insertion_p
                &_ListDirectory_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    9;
+    10;
 
   void Swap(ListDirectory* other);
 
@@ -1172,7 +1311,7 @@ class MakeDirectory : public ::google::protobuf::Message /* @@protoc_insertion_p
                &_MakeDirectory_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    10;
+    11;
 
   void Swap(MakeDirectory* other);
 
@@ -1260,7 +1399,7 @@ class MakeDirectoryPath : public ::google::protobuf::Message /* @@protoc_inserti
                &_MakeDirectoryPath_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    11;
+    12;
 
   void Swap(MakeDirectoryPath* other);
 
@@ -1328,6 +1467,86 @@ class MakeDirectoryPath : public ::google::protobuf::Message /* @@protoc_inserti
 };
 // -------------------------------------------------------------------
 
+class Number : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:littlstar.cfsnet.Number) */ {
+ public:
+  Number();
+  virtual ~Number();
+
+  Number(const Number& from);
+
+  inline Number& operator=(const Number& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Number& default_instance();
+
+  static inline const Number* internal_default_instance() {
+    return reinterpret_cast<const Number*>(
+               &_Number_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    13;
+
+  void Swap(Number* other);
+
+  // implements Message ----------------------------------------------
+
+  inline Number* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  Number* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const Number& from);
+  void MergeFrom(const Number& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(Number* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // double value = 1;
+  void clear_value();
+  static const int kValueFieldNumber = 1;
+  double value() const;
+  void set_value(double value);
+
+  // @@protoc_insertion_point(class_scope:littlstar.cfsnet.Number)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  double value_;
+  mutable int _cached_size_;
+  friend struct protobuf_cfsnet_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
 class Open : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:littlstar.cfsnet.Open) */ {
  public:
   Open();
@@ -1348,7 +1567,7 @@ class Open : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
                &_Open_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    12;
+    14;
 
   void Swap(Open* other);
 
@@ -1406,11 +1625,26 @@ class Open : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
   ::std::string* release_path();
   void set_allocated_path(::std::string* path);
 
+  // string flags = 2;
+  void clear_flags();
+  static const int kFlagsFieldNumber = 2;
+  const ::std::string& flags() const;
+  void set_flags(const ::std::string& value);
+  #if LANG_CXX11
+  void set_flags(::std::string&& value);
+  #endif
+  void set_flags(const char* value);
+  void set_flags(const char* value, size_t size);
+  ::std::string* mutable_flags();
+  ::std::string* release_flags();
+  void set_allocated_flags(::std::string* flags);
+
   // @@protoc_insertion_point(class_scope:littlstar.cfsnet.Open)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::ArenaStringPtr path_;
+  ::google::protobuf::internal::ArenaStringPtr flags_;
   mutable int _cached_size_;
   friend struct protobuf_cfsnet_2eproto::TableStruct;
 };
@@ -1436,7 +1670,7 @@ class Read : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
                &_Read_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    13;
+    15;
 
   void Swap(Read* other);
 
@@ -1530,7 +1764,7 @@ class ReadFile : public ::google::protobuf::Message /* @@protoc_insertion_point(
                &_ReadFile_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    14;
+    16;
 
   void Swap(ReadFile* other);
 
@@ -1632,7 +1866,7 @@ class RemoveDirectory : public ::google::protobuf::Message /* @@protoc_insertion
                &_RemoveDirectory_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    15;
+    17;
 
   void Swap(RemoveDirectory* other);
 
@@ -1720,7 +1954,7 @@ class RemoveDirectoryPath : public ::google::protobuf::Message /* @@protoc_inser
                &_RemoveDirectoryPath_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    16;
+    18;
 
   void Swap(RemoveDirectoryPath* other);
 
@@ -1808,7 +2042,7 @@ class Request : public ::google::protobuf::Message /* @@protoc_insertion_point(c
                &_Request_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    17;
+    19;
 
   void Swap(Request* other);
 
@@ -1928,7 +2162,7 @@ class Resolve : public ::google::protobuf::Message /* @@protoc_insertion_point(c
                &_Resolve_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    18;
+    20;
 
   void Swap(Resolve* other);
 
@@ -2016,7 +2250,7 @@ class Response : public ::google::protobuf::Message /* @@protoc_insertion_point(
                &_Response_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    19;
+    21;
 
   void Swap(Response* other);
 
@@ -2153,7 +2387,7 @@ class Stat : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
                &_Stat_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    20;
+    22;
 
   void Swap(Stat* other);
 
@@ -2197,17 +2431,17 @@ class Stat : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
 
   // accessors -------------------------------------------------------
 
-  // uint32 mode = 1;
-  void clear_mode();
-  static const int kModeFieldNumber = 1;
-  ::google::protobuf::uint32 mode() const;
-  void set_mode(::google::protobuf::uint32 value);
-
-  // uint32 uid = 2;
+  // uint32 uid = 1;
   void clear_uid();
-  static const int kUidFieldNumber = 2;
+  static const int kUidFieldNumber = 1;
   ::google::protobuf::uint32 uid() const;
   void set_uid(::google::protobuf::uint32 value);
+
+  // uint32 gid = 2;
+  void clear_gid();
+  static const int kGidFieldNumber = 2;
+  ::google::protobuf::uint32 gid() const;
+  void set_gid(::google::protobuf::uint32 value);
 
   // uint64 size = 4;
   void clear_size();
@@ -2215,55 +2449,48 @@ class Stat : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
   ::google::protobuf::uint64 size() const;
   void set_size(::google::protobuf::uint64 value);
 
-  // uint64 blocks = 5;
-  void clear_blocks();
-  static const int kBlocksFieldNumber = 5;
-  ::google::protobuf::uint64 blocks() const;
-  void set_blocks(::google::protobuf::uint64 value);
+  // uint64 atime = 5;
+  void clear_atime();
+  static const int kAtimeFieldNumber = 5;
+  ::google::protobuf::uint64 atime() const;
+  void set_atime(::google::protobuf::uint64 value);
 
-  // uint64 offset = 6;
-  void clear_offset();
-  static const int kOffsetFieldNumber = 6;
-  ::google::protobuf::uint64 offset() const;
-  void set_offset(::google::protobuf::uint64 value);
-
-  // uint64 byteOffset = 7;
-  void clear_byteoffset();
-  static const int kByteOffsetFieldNumber = 7;
-  ::google::protobuf::uint64 byteoffset() const;
-  void set_byteoffset(::google::protobuf::uint64 value);
-
-  // uint64 mtime = 8;
-  void clear_mtime();
-  static const int kMtimeFieldNumber = 8;
-  ::google::protobuf::uint64 mtime() const;
-  void set_mtime(::google::protobuf::uint64 value);
-
-  // uint64 ctime = 9;
+  // uint64 ctime = 6;
   void clear_ctime();
-  static const int kCtimeFieldNumber = 9;
+  static const int kCtimeFieldNumber = 6;
   ::google::protobuf::uint64 ctime() const;
   void set_ctime(::google::protobuf::uint64 value);
 
-  // uint32 gid = 3;
-  void clear_gid();
-  static const int kGidFieldNumber = 3;
-  ::google::protobuf::uint32 gid() const;
-  void set_gid(::google::protobuf::uint32 value);
+  // uint64 mtime = 7;
+  void clear_mtime();
+  static const int kMtimeFieldNumber = 7;
+  ::google::protobuf::uint64 mtime() const;
+  void set_mtime(::google::protobuf::uint64 value);
+
+  // uint64 blocks = 8;
+  void clear_blocks();
+  static const int kBlocksFieldNumber = 8;
+  ::google::protobuf::uint64 blocks() const;
+  void set_blocks(::google::protobuf::uint64 value);
+
+  // uint32 mode = 3;
+  void clear_mode();
+  static const int kModeFieldNumber = 3;
+  ::google::protobuf::uint32 mode() const;
+  void set_mode(::google::protobuf::uint32 value);
 
   // @@protoc_insertion_point(class_scope:littlstar.cfsnet.Stat)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::uint32 mode_;
   ::google::protobuf::uint32 uid_;
-  ::google::protobuf::uint64 size_;
-  ::google::protobuf::uint64 blocks_;
-  ::google::protobuf::uint64 offset_;
-  ::google::protobuf::uint64 byteoffset_;
-  ::google::protobuf::uint64 mtime_;
-  ::google::protobuf::uint64 ctime_;
   ::google::protobuf::uint32 gid_;
+  ::google::protobuf::uint64 size_;
+  ::google::protobuf::uint64 atime_;
+  ::google::protobuf::uint64 ctime_;
+  ::google::protobuf::uint64 mtime_;
+  ::google::protobuf::uint64 blocks_;
+  ::google::protobuf::uint32 mode_;
   mutable int _cached_size_;
   friend struct protobuf_cfsnet_2eproto::TableStruct;
 };
@@ -2289,7 +2516,7 @@ class StatFile : public ::google::protobuf::Message /* @@protoc_insertion_point(
                &_StatFile_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    21;
+    23;
 
   void Swap(StatFile* other);
 
@@ -2377,7 +2604,7 @@ class String : public ::google::protobuf::Message /* @@protoc_insertion_point(cl
                &_String_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    22;
+    24;
 
   void Swap(String* other);
 
@@ -2465,7 +2692,7 @@ class TouchFile : public ::google::protobuf::Message /* @@protoc_insertion_point
                &_TouchFile_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    23;
+    25;
 
   void Swap(TouchFile* other);
 
@@ -2553,7 +2780,7 @@ class UnlinkFile : public ::google::protobuf::Message /* @@protoc_insertion_poin
                &_UnlinkFile_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    24;
+    26;
 
   void Swap(UnlinkFile* other);
 
@@ -2641,7 +2868,7 @@ class WriteFile : public ::google::protobuf::Message /* @@protoc_insertion_point
                &_WriteFile_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    25;
+    27;
 
   void Swap(WriteFile* other);
 
@@ -2884,6 +3111,20 @@ inline void Buffer::set_allocated_value(::std::string* value) {
   }
   value_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set_allocated:littlstar.cfsnet.Buffer.value)
+}
+
+// uint64 length = 2;
+inline void Buffer::clear_length() {
+  length_ = GOOGLE_ULONGLONG(0);
+}
+inline ::google::protobuf::uint64 Buffer::length() const {
+  // @@protoc_insertion_point(field_get:littlstar.cfsnet.Buffer.length)
+  return length_;
+}
+inline void Buffer::set_length(::google::protobuf::uint64 value) {
+  
+  length_ = value;
+  // @@protoc_insertion_point(field_set:littlstar.cfsnet.Buffer.length)
 }
 
 // -------------------------------------------------------------------
@@ -3307,9 +3548,172 @@ inline void Handshake::set_ack(bool value) {
 
 // -------------------------------------------------------------------
 
+// KeyPair
+
+// bytes seed = 1;
+inline void KeyPair::clear_seed() {
+  seed_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& KeyPair::seed() const {
+  // @@protoc_insertion_point(field_get:littlstar.cfsnet.KeyPair.seed)
+  return seed_.GetNoArena();
+}
+inline void KeyPair::set_seed(const ::std::string& value) {
+  
+  seed_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:littlstar.cfsnet.KeyPair.seed)
+}
+#if LANG_CXX11
+inline void KeyPair::set_seed(::std::string&& value) {
+  
+  seed_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:littlstar.cfsnet.KeyPair.seed)
+}
+#endif
+inline void KeyPair::set_seed(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  seed_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:littlstar.cfsnet.KeyPair.seed)
+}
+inline void KeyPair::set_seed(const void* value, size_t size) {
+  
+  seed_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:littlstar.cfsnet.KeyPair.seed)
+}
+inline ::std::string* KeyPair::mutable_seed() {
+  
+  // @@protoc_insertion_point(field_mutable:littlstar.cfsnet.KeyPair.seed)
+  return seed_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* KeyPair::release_seed() {
+  // @@protoc_insertion_point(field_release:littlstar.cfsnet.KeyPair.seed)
+  
+  return seed_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void KeyPair::set_allocated_seed(::std::string* seed) {
+  if (seed != NULL) {
+    
+  } else {
+    
+  }
+  seed_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), seed);
+  // @@protoc_insertion_point(field_set_allocated:littlstar.cfsnet.KeyPair.seed)
+}
+
+// bytes publicKey = 2;
+inline void KeyPair::clear_publickey() {
+  publickey_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& KeyPair::publickey() const {
+  // @@protoc_insertion_point(field_get:littlstar.cfsnet.KeyPair.publicKey)
+  return publickey_.GetNoArena();
+}
+inline void KeyPair::set_publickey(const ::std::string& value) {
+  
+  publickey_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:littlstar.cfsnet.KeyPair.publicKey)
+}
+#if LANG_CXX11
+inline void KeyPair::set_publickey(::std::string&& value) {
+  
+  publickey_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:littlstar.cfsnet.KeyPair.publicKey)
+}
+#endif
+inline void KeyPair::set_publickey(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  publickey_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:littlstar.cfsnet.KeyPair.publicKey)
+}
+inline void KeyPair::set_publickey(const void* value, size_t size) {
+  
+  publickey_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:littlstar.cfsnet.KeyPair.publicKey)
+}
+inline ::std::string* KeyPair::mutable_publickey() {
+  
+  // @@protoc_insertion_point(field_mutable:littlstar.cfsnet.KeyPair.publicKey)
+  return publickey_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* KeyPair::release_publickey() {
+  // @@protoc_insertion_point(field_release:littlstar.cfsnet.KeyPair.publicKey)
+  
+  return publickey_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void KeyPair::set_allocated_publickey(::std::string* publickey) {
+  if (publickey != NULL) {
+    
+  } else {
+    
+  }
+  publickey_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), publickey);
+  // @@protoc_insertion_point(field_set_allocated:littlstar.cfsnet.KeyPair.publicKey)
+}
+
+// bytes secretKey = 3;
+inline void KeyPair::clear_secretkey() {
+  secretkey_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& KeyPair::secretkey() const {
+  // @@protoc_insertion_point(field_get:littlstar.cfsnet.KeyPair.secretKey)
+  return secretkey_.GetNoArena();
+}
+inline void KeyPair::set_secretkey(const ::std::string& value) {
+  
+  secretkey_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:littlstar.cfsnet.KeyPair.secretKey)
+}
+#if LANG_CXX11
+inline void KeyPair::set_secretkey(::std::string&& value) {
+  
+  secretkey_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:littlstar.cfsnet.KeyPair.secretKey)
+}
+#endif
+inline void KeyPair::set_secretkey(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  secretkey_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:littlstar.cfsnet.KeyPair.secretKey)
+}
+inline void KeyPair::set_secretkey(const void* value, size_t size) {
+  
+  secretkey_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:littlstar.cfsnet.KeyPair.secretKey)
+}
+inline ::std::string* KeyPair::mutable_secretkey() {
+  
+  // @@protoc_insertion_point(field_mutable:littlstar.cfsnet.KeyPair.secretKey)
+  return secretkey_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* KeyPair::release_secretkey() {
+  // @@protoc_insertion_point(field_release:littlstar.cfsnet.KeyPair.secretKey)
+  
+  return secretkey_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void KeyPair::set_allocated_secretkey(::std::string* secretkey) {
+  if (secretkey != NULL) {
+    
+  } else {
+    
+  }
+  secretkey_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), secretkey);
+  // @@protoc_insertion_point(field_set_allocated:littlstar.cfsnet.KeyPair.secretKey)
+}
+
+// -------------------------------------------------------------------
+
 // List
 
-// repeated string values = 1;
+// repeated bytes values = 1;
 inline int List::values_size() const {
   return values_.size();
 }
@@ -3339,7 +3743,7 @@ inline void List::set_values(int index, const char* value) {
   values_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:littlstar.cfsnet.List.values)
 }
-inline void List::set_values(int index, const char* value, size_t size) {
+inline void List::set_values(int index, const void* value, size_t size) {
   values_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:littlstar.cfsnet.List.values)
@@ -3363,7 +3767,7 @@ inline void List::add_values(const char* value) {
   values_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:littlstar.cfsnet.List.values)
 }
-inline void List::add_values(const char* value, size_t size) {
+inline void List::add_values(const void* value, size_t size) {
   values_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:littlstar.cfsnet.List.values)
 }
@@ -3376,6 +3780,20 @@ inline ::google::protobuf::RepeatedPtrField< ::std::string>*
 List::mutable_values() {
   // @@protoc_insertion_point(field_mutable_list:littlstar.cfsnet.List.values)
   return &values_;
+}
+
+// uint64 length = 2;
+inline void List::clear_length() {
+  length_ = GOOGLE_ULONGLONG(0);
+}
+inline ::google::protobuf::uint64 List::length() const {
+  // @@protoc_insertion_point(field_get:littlstar.cfsnet.List.length)
+  return length_;
+}
+inline void List::set_length(::google::protobuf::uint64 value) {
+  
+  length_ = value;
+  // @@protoc_insertion_point(field_set:littlstar.cfsnet.List.length)
 }
 
 // -------------------------------------------------------------------
@@ -3551,6 +3969,24 @@ inline void MakeDirectoryPath::set_allocated_path(::std::string* path) {
 
 // -------------------------------------------------------------------
 
+// Number
+
+// double value = 1;
+inline void Number::clear_value() {
+  value_ = 0;
+}
+inline double Number::value() const {
+  // @@protoc_insertion_point(field_get:littlstar.cfsnet.Number.value)
+  return value_;
+}
+inline void Number::set_value(double value) {
+  
+  value_ = value;
+  // @@protoc_insertion_point(field_set:littlstar.cfsnet.Number.value)
+}
+
+// -------------------------------------------------------------------
+
 // Open
 
 // string path = 1;
@@ -3604,6 +4040,59 @@ inline void Open::set_allocated_path(::std::string* path) {
   }
   path_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), path);
   // @@protoc_insertion_point(field_set_allocated:littlstar.cfsnet.Open.path)
+}
+
+// string flags = 2;
+inline void Open::clear_flags() {
+  flags_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Open::flags() const {
+  // @@protoc_insertion_point(field_get:littlstar.cfsnet.Open.flags)
+  return flags_.GetNoArena();
+}
+inline void Open::set_flags(const ::std::string& value) {
+  
+  flags_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:littlstar.cfsnet.Open.flags)
+}
+#if LANG_CXX11
+inline void Open::set_flags(::std::string&& value) {
+  
+  flags_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:littlstar.cfsnet.Open.flags)
+}
+#endif
+inline void Open::set_flags(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  flags_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:littlstar.cfsnet.Open.flags)
+}
+inline void Open::set_flags(const char* value, size_t size) {
+  
+  flags_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:littlstar.cfsnet.Open.flags)
+}
+inline ::std::string* Open::mutable_flags() {
+  
+  // @@protoc_insertion_point(field_mutable:littlstar.cfsnet.Open.flags)
+  return flags_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Open::release_flags() {
+  // @@protoc_insertion_point(field_release:littlstar.cfsnet.Open.flags)
+  
+  return flags_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Open::set_allocated_flags(::std::string* flags) {
+  if (flags != NULL) {
+    
+  } else {
+    
+  }
+  flags_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), flags);
+  // @@protoc_insertion_point(field_set_allocated:littlstar.cfsnet.Open.flags)
 }
 
 // -------------------------------------------------------------------
@@ -4291,21 +4780,7 @@ inline void Response::set_allocated_buffer(::std::string* buffer) {
 
 // Stat
 
-// uint32 mode = 1;
-inline void Stat::clear_mode() {
-  mode_ = 0u;
-}
-inline ::google::protobuf::uint32 Stat::mode() const {
-  // @@protoc_insertion_point(field_get:littlstar.cfsnet.Stat.mode)
-  return mode_;
-}
-inline void Stat::set_mode(::google::protobuf::uint32 value) {
-  
-  mode_ = value;
-  // @@protoc_insertion_point(field_set:littlstar.cfsnet.Stat.mode)
-}
-
-// uint32 uid = 2;
+// uint32 uid = 1;
 inline void Stat::clear_uid() {
   uid_ = 0u;
 }
@@ -4319,7 +4794,7 @@ inline void Stat::set_uid(::google::protobuf::uint32 value) {
   // @@protoc_insertion_point(field_set:littlstar.cfsnet.Stat.uid)
 }
 
-// uint32 gid = 3;
+// uint32 gid = 2;
 inline void Stat::clear_gid() {
   gid_ = 0u;
 }
@@ -4331,6 +4806,20 @@ inline void Stat::set_gid(::google::protobuf::uint32 value) {
   
   gid_ = value;
   // @@protoc_insertion_point(field_set:littlstar.cfsnet.Stat.gid)
+}
+
+// uint32 mode = 3;
+inline void Stat::clear_mode() {
+  mode_ = 0u;
+}
+inline ::google::protobuf::uint32 Stat::mode() const {
+  // @@protoc_insertion_point(field_get:littlstar.cfsnet.Stat.mode)
+  return mode_;
+}
+inline void Stat::set_mode(::google::protobuf::uint32 value) {
+  
+  mode_ = value;
+  // @@protoc_insertion_point(field_set:littlstar.cfsnet.Stat.mode)
 }
 
 // uint64 size = 4;
@@ -4347,49 +4836,35 @@ inline void Stat::set_size(::google::protobuf::uint64 value) {
   // @@protoc_insertion_point(field_set:littlstar.cfsnet.Stat.size)
 }
 
-// uint64 blocks = 5;
-inline void Stat::clear_blocks() {
-  blocks_ = GOOGLE_ULONGLONG(0);
+// uint64 atime = 5;
+inline void Stat::clear_atime() {
+  atime_ = GOOGLE_ULONGLONG(0);
 }
-inline ::google::protobuf::uint64 Stat::blocks() const {
-  // @@protoc_insertion_point(field_get:littlstar.cfsnet.Stat.blocks)
-  return blocks_;
+inline ::google::protobuf::uint64 Stat::atime() const {
+  // @@protoc_insertion_point(field_get:littlstar.cfsnet.Stat.atime)
+  return atime_;
 }
-inline void Stat::set_blocks(::google::protobuf::uint64 value) {
+inline void Stat::set_atime(::google::protobuf::uint64 value) {
   
-  blocks_ = value;
-  // @@protoc_insertion_point(field_set:littlstar.cfsnet.Stat.blocks)
+  atime_ = value;
+  // @@protoc_insertion_point(field_set:littlstar.cfsnet.Stat.atime)
 }
 
-// uint64 offset = 6;
-inline void Stat::clear_offset() {
-  offset_ = GOOGLE_ULONGLONG(0);
+// uint64 ctime = 6;
+inline void Stat::clear_ctime() {
+  ctime_ = GOOGLE_ULONGLONG(0);
 }
-inline ::google::protobuf::uint64 Stat::offset() const {
-  // @@protoc_insertion_point(field_get:littlstar.cfsnet.Stat.offset)
-  return offset_;
+inline ::google::protobuf::uint64 Stat::ctime() const {
+  // @@protoc_insertion_point(field_get:littlstar.cfsnet.Stat.ctime)
+  return ctime_;
 }
-inline void Stat::set_offset(::google::protobuf::uint64 value) {
+inline void Stat::set_ctime(::google::protobuf::uint64 value) {
   
-  offset_ = value;
-  // @@protoc_insertion_point(field_set:littlstar.cfsnet.Stat.offset)
+  ctime_ = value;
+  // @@protoc_insertion_point(field_set:littlstar.cfsnet.Stat.ctime)
 }
 
-// uint64 byteOffset = 7;
-inline void Stat::clear_byteoffset() {
-  byteoffset_ = GOOGLE_ULONGLONG(0);
-}
-inline ::google::protobuf::uint64 Stat::byteoffset() const {
-  // @@protoc_insertion_point(field_get:littlstar.cfsnet.Stat.byteOffset)
-  return byteoffset_;
-}
-inline void Stat::set_byteoffset(::google::protobuf::uint64 value) {
-  
-  byteoffset_ = value;
-  // @@protoc_insertion_point(field_set:littlstar.cfsnet.Stat.byteOffset)
-}
-
-// uint64 mtime = 8;
+// uint64 mtime = 7;
 inline void Stat::clear_mtime() {
   mtime_ = GOOGLE_ULONGLONG(0);
 }
@@ -4403,18 +4878,18 @@ inline void Stat::set_mtime(::google::protobuf::uint64 value) {
   // @@protoc_insertion_point(field_set:littlstar.cfsnet.Stat.mtime)
 }
 
-// uint64 ctime = 9;
-inline void Stat::clear_ctime() {
-  ctime_ = GOOGLE_ULONGLONG(0);
+// uint64 blocks = 8;
+inline void Stat::clear_blocks() {
+  blocks_ = GOOGLE_ULONGLONG(0);
 }
-inline ::google::protobuf::uint64 Stat::ctime() const {
-  // @@protoc_insertion_point(field_get:littlstar.cfsnet.Stat.ctime)
-  return ctime_;
+inline ::google::protobuf::uint64 Stat::blocks() const {
+  // @@protoc_insertion_point(field_get:littlstar.cfsnet.Stat.blocks)
+  return blocks_;
 }
-inline void Stat::set_ctime(::google::protobuf::uint64 value) {
+inline void Stat::set_blocks(::google::protobuf::uint64 value) {
   
-  ctime_ = value;
-  // @@protoc_insertion_point(field_set:littlstar.cfsnet.Stat.ctime)
+  blocks_ = value;
+  // @@protoc_insertion_point(field_set:littlstar.cfsnet.Stat.blocks)
 }
 
 // -------------------------------------------------------------------
@@ -4784,6 +5259,10 @@ inline void WriteFile::set_end(::google::protobuf::uint32 value) {
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

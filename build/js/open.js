@@ -57,7 +57,8 @@ proto.littlstar.cfsnet.Open.prototype.toObject = function(opt_includeInstance) {
  */
 proto.littlstar.cfsnet.Open.toObject = function(includeInstance, msg) {
   var f, obj = {
-    path: jspb.Message.getFieldWithDefault(msg, 1, "")
+    path: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    flags: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {
@@ -98,6 +99,10 @@ proto.littlstar.cfsnet.Open.deserializeBinaryFromReader = function(msg, reader) 
       var value = /** @type {string} */ (reader.readString());
       msg.setPath(value);
       break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setFlags(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -133,6 +138,13 @@ proto.littlstar.cfsnet.Open.serializeBinaryToWriter = function(message, writer) 
       f
     );
   }
+  f = message.getFlags();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
 };
 
 
@@ -148,6 +160,21 @@ proto.littlstar.cfsnet.Open.prototype.getPath = function() {
 /** @param {string} value */
 proto.littlstar.cfsnet.Open.prototype.setPath = function(value) {
   jspb.Message.setField(this, 1, value);
+};
+
+
+/**
+ * optional string flags = 2;
+ * @return {string}
+ */
+proto.littlstar.cfsnet.Open.prototype.getFlags = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/** @param {string} value */
+proto.littlstar.cfsnet.Open.prototype.setFlags = function(value) {
+  jspb.Message.setField(this, 2, value);
 };
 
 

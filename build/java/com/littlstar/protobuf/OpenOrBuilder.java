@@ -16,4 +16,14 @@ public interface OpenOrBuilder extends
    */
   com.google.protobuf.ByteString
       getPathBytes();
+
+  /**
+   * <code>string flags = 2;</code>
+   */
+  java.lang.String getFlags();
+  /**
+   * <code>string flags = 2;</code>
+   */
+  com.google.protobuf.ByteString
+      getFlagsBytes();
 }

@@ -24,16 +24,19 @@ namespace Littlstar.CFSNet.Protobuf {
           string.Concat(
             "CgxjZnNuZXQucHJvdG8SEGxpdHRsc3Rhci5jZnNuZXQiRAoKQWNjZXNzRmls",
             "ZRIMCgRwYXRoGAEgASgJEigKBG1vZGUYAiABKA4yGi5saXR0bHN0YXIuY2Zz",
-            "bmV0LkZpbGVNb2RlIhgKB0Jvb2xlYW4SDQoFdmFsdWUYASABKAgiFwoGQnVm",
-            "ZmVyEg0KBXZhbHVlGAEgASgMIh8KBUNsb3NlEhYKDmZpbGVEZXNjcmlwdG9y",
-            "GAEgASgNIiEKEURvd25sb2FkRGlyZWN0b3J5EgwKBHBhdGgYASABKAkiHAoM",
-            "RG93bmxvYWRGaWxlEgwKBHBhdGgYASABKAkiMwoFRHJpdmUSCgoCaWQYASAB",
-            "KAwSCwoDa2V5GAIgASgMEhEKCXNlY3JldEtleRgDIAEoDCI0CglIYW5kc2hh",
-            "a2USDQoFbm9uY2UYASABKAwSCwoDa2V5GAIgASgMEgsKA2FjaxgDIAEoCCIW",
-            "CgRMaXN0Eg4KBnZhbHVlcxgBIAMoCSIdCg1MaXN0RGlyZWN0b3J5EgwKBHBh",
-            "dGgYASABKAkiHQoNTWFrZURpcmVjdG9yeRIMCgRwYXRoGAEgASgJIiEKEU1h",
-            "a2VEaXJlY3RvcnlQYXRoEgwKBHBhdGgYASABKAkiFAoET3BlbhIMCgRwYXRo",
-            "GAEgASgJIjoKBFJlYWQSFgoOZmlsZURlc2NyaXB0b3IYASABKA0SDQoFc3Rh",
+            "bmV0LkZpbGVNb2RlIhgKB0Jvb2xlYW4SDQoFdmFsdWUYASABKAgiJwoGQnVm",
+            "ZmVyEg0KBXZhbHVlGAEgASgMEg4KBmxlbmd0aBgCIAEoBCIfCgVDbG9zZRIW",
+            "Cg5maWxlRGVzY3JpcHRvchgBIAEoDSIhChFEb3dubG9hZERpcmVjdG9yeRIM",
+            "CgRwYXRoGAEgASgJIhwKDERvd25sb2FkRmlsZRIMCgRwYXRoGAEgASgJIjMK",
+            "BURyaXZlEgoKAmlkGAEgASgMEgsKA2tleRgCIAEoDBIRCglzZWNyZXRLZXkY",
+            "AyABKAwiNAoJSGFuZHNoYWtlEg0KBW5vbmNlGAEgASgMEgsKA2tleRgCIAEo",
+            "DBILCgNhY2sYAyABKAgiPQoHS2V5UGFpchIMCgRzZWVkGAEgASgMEhEKCXB1",
+            "YmxpY0tleRgCIAEoDBIRCglzZWNyZXRLZXkYAyABKAwiJgoETGlzdBIOCgZ2",
+            "YWx1ZXMYASADKAwSDgoGbGVuZ3RoGAIgASgEIh0KDUxpc3REaXJlY3RvcnkS",
+            "DAoEcGF0aBgBIAEoCSIdCg1NYWtlRGlyZWN0b3J5EgwKBHBhdGgYASABKAki",
+            "IQoRTWFrZURpcmVjdG9yeVBhdGgSDAoEcGF0aBgBIAEoCSIXCgZOdW1iZXIS",
+            "DQoFdmFsdWUYASABKAEiIwoET3BlbhIMCgRwYXRoGAEgASgJEg0KBWZsYWdz",
+            "GAIgASgJIjoKBFJlYWQSFgoOZmlsZURlc2NyaXB0b3IYASABKA0SDQoFc3Rh",
             "cnQYAiABKA0SCwoDZW5kGAMgASgNIjQKCFJlYWRGaWxlEgwKBHBhdGgYASAB",
             "KAkSDQoFc3RhcnQYAiABKA0SCwoDZW5kGAMgASgNIh8KD1JlbW92ZURpcmVj",
             "dG9yeRIMCgRwYXRoGAEgASgJIiMKE1JlbW92ZURpcmVjdG9yeVBhdGgSDAoE",
@@ -45,30 +48,30 @@ namespace Littlstar.CFSNet.Protobuf {
             "bmV0LkRyaXZlEi4KCW9wZXJhdGlvbhgDIAEoDjIbLmxpdHRsc3Rhci5jZnNu",
             "ZXQuT3BlcmF0aW9uEioKB3JlcXVlc3QYBCABKAsyGS5saXR0bHN0YXIuY2Zz",
             "bmV0LlJlcXVlc3QSLgoJZXJyb3JDb2RlGAUgASgOMhsubGl0dGxzdGFyLmNm",
-            "c25ldC5FcnJvckNvZGUSDgoGYnVmZmVyGAYgASgMIo4BCgRTdGF0EgwKBG1v",
-            "ZGUYASABKA0SCwoDdWlkGAIgASgNEgsKA2dpZBgDIAEoDRIMCgRzaXplGAQg",
-            "ASgEEg4KBmJsb2NrcxgFIAEoBBIOCgZvZmZzZXQYBiABKAQSEgoKYnl0ZU9m",
-            "ZnNldBgHIAEoBBINCgVtdGltZRgIIAEoBBINCgVjdGltZRgJIAEoBCIYCghT",
-            "dGF0RmlsZRIMCgRwYXRoGAEgASgJIhcKBlN0cmluZxINCgV2YWx1ZRgBIAEo",
-            "CSIZCglUb3VjaEZpbGUSDAoEcGF0aBgBIAEoCSIaCgpVbmxpbmtGaWxlEgwK",
-            "BHBhdGgYASABKAkiRQoJV3JpdGVGaWxlEgwKBHBhdGgYASABKAkSDgoGYnVm",
-            "ZmVyGAIgASgMEg0KBXN0YXJ0GAMgASgNEgsKA2VuZBgEIAEoDSoyCghGaWxl",
-            "TW9kZRIICgRGX09LEAASCAoEWF9PSxABEggKBFdfT0sQAhIICgRSX09LEAQq",
-            "tQEKCUVycm9yQ29kZRILCgdOb0Vycm9yEAASFAoPQmFkUmVxdWVzdEVycm9y",
-            "EJADEhYKEUFjY2Vzc0RlbmllZEVycm9yEJMDEhIKDU5vdEZvdW5kRXJyb3IQ",
-            "lAMSFgoRTm90U3VwcG9ydGVkRXJyb3IQlQMSEwoOTm90T3BlbmVkRXJyb3IQ",
-            "mgMSEgoNSW50ZXJuYWxFcnJvchD0AxIYChNOb3RJbXBsZW1lbnRlZEVycm9y",
-            "EPUDKuMDCglPcGVyYXRpb24SDwoLTm9PcGVyYXRpb24QABIUChBSZXNvbHZl",
-            "T3BlcmF0aW9uEAESEQoNT3Blbk9wZXJhdGlvbhACEhIKDkNsb3NlT3BlcmF0",
-            "aW9uEAMSEQoNUmVhZE9wZXJhdGlvbhAEEhIKDldyaXRlT3BlcmF0aW9uEAUS",
-            "FQoRUmVhZEZpbGVPcGVyYXRpb24QChIWChJXcml0ZUZpbGVPcGVyYXRpb24Q",
-            "CxIVChFTdGF0RmlsZU9wZXJhdGlvbhAMEhcKE1VubGlua0ZpbGVPcGVyYXRp",
-            "b24QDRIXChNBY2Nlc3NGaWxlT3BlcmF0aW9uEA4SFgoSVG91Y2hGaWxlT3Bl",
-            "cmF0aW9uEA8SGQoVRG93bmxvYWRGaWxlT3BlcmF0aW9uEBASHgoaRG93bmxv",
-            "YWREaXJlY3RvcnlPcGVyYXRpb24QFBIaChZNYWtlRGlyZWN0b3J5T3BlcmF0",
-            "aW9uEBUSHgoaTWFrZURpcmVjdG9yeVBhdGhPcGVyYXRpb24QFhIcChhSZW1v",
-            "dmVEaXJlY3RvcnlPcGVyYXRpb24QFxIgChxSZW1vdmVEaXJlY3RvcnlQYXRo",
-            "T3BlcmF0aW9uEBgSGgoWTGlzdERpcmVjdG9yeU9wZXJhdGlvbhAZQk4KFmNv",
+            "c25ldC5FcnJvckNvZGUSDgoGYnVmZmVyGAYgASgMInkKBFN0YXQSCwoDdWlk",
+            "GAEgASgNEgsKA2dpZBgCIAEoDRIMCgRtb2RlGAMgASgNEgwKBHNpemUYBCAB",
+            "KAQSDQoFYXRpbWUYBSABKAQSDQoFY3RpbWUYBiABKAQSDQoFbXRpbWUYByAB",
+            "KAQSDgoGYmxvY2tzGAggASgEIhgKCFN0YXRGaWxlEgwKBHBhdGgYASABKAki",
+            "FwoGU3RyaW5nEg0KBXZhbHVlGAEgASgJIhkKCVRvdWNoRmlsZRIMCgRwYXRo",
+            "GAEgASgJIhoKClVubGlua0ZpbGUSDAoEcGF0aBgBIAEoCSJFCglXcml0ZUZp",
+            "bGUSDAoEcGF0aBgBIAEoCRIOCgZidWZmZXIYAiABKAwSDQoFc3RhcnQYAyAB",
+            "KA0SCwoDZW5kGAQgASgNKjIKCEZpbGVNb2RlEggKBEZfT0sQABIICgRYX09L",
+            "EAESCAoEV19PSxACEggKBFJfT0sQBCq1AQoJRXJyb3JDb2RlEgsKB05vRXJy",
+            "b3IQABIUCg9CYWRSZXF1ZXN0RXJyb3IQkAMSFgoRQWNjZXNzRGVuaWVkRXJy",
+            "b3IQkwMSEgoNTm90Rm91bmRFcnJvchCUAxIWChFOb3RTdXBwb3J0ZWRFcnJv",
+            "chCVAxITCg5Ob3RPcGVuZWRFcnJvchCaAxISCg1JbnRlcm5hbEVycm9yEPQD",
+            "EhgKE05vdEltcGxlbWVudGVkRXJyb3IQ9QMq+QMKCU9wZXJhdGlvbhIPCgtO",
+            "b09wZXJhdGlvbhAAEhQKEFJlc29sdmVPcGVyYXRpb24QARIUChBLZXlQYWly",
+            "T3BlcmF0aW9uEAISEQoNT3Blbk9wZXJhdGlvbhAKEhIKDkNsb3NlT3BlcmF0",
+            "aW9uEAsSEQoNUmVhZE9wZXJhdGlvbhAMEhIKDldyaXRlT3BlcmF0aW9uEA0S",
+            "FQoRUmVhZEZpbGVPcGVyYXRpb24QFBIWChJXcml0ZUZpbGVPcGVyYXRpb24Q",
+            "FRIVChFTdGF0RmlsZU9wZXJhdGlvbhAWEhcKE1VubGlua0ZpbGVPcGVyYXRp",
+            "b24QFxIXChNBY2Nlc3NGaWxlT3BlcmF0aW9uEBgSFgoSVG91Y2hGaWxlT3Bl",
+            "cmF0aW9uEBkSGQoVRG93bmxvYWRGaWxlT3BlcmF0aW9uEBoSHgoaRG93bmxv",
+            "YWREaXJlY3RvcnlPcGVyYXRpb24QHhIaChZNYWtlRGlyZWN0b3J5T3BlcmF0",
+            "aW9uEB8SHgoaTWFrZURpcmVjdG9yeVBhdGhPcGVyYXRpb24QIBIcChhSZW1v",
+            "dmVEaXJlY3RvcnlPcGVyYXRpb24QIRIgChxSZW1vdmVEaXJlY3RvcnlQYXRo",
+            "T3BlcmF0aW9uECISGgoWTGlzdERpcmVjdG9yeU9wZXJhdGlvbhAjQk4KFmNv",
             "bS5saXR0bHN0YXIucHJvdG9idWZCDkNGU05ldFByb3RvYnVmUAGiAgVDRlNQ",
             "QqoCGUxpdHRsc3Rhci5DRlNOZXQuUHJvdG9idWZiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -76,17 +79,19 @@ namespace Littlstar.CFSNet.Protobuf {
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Littlstar.CFSNet.Protobuf.FileMode), typeof(global::Littlstar.CFSNet.Protobuf.ErrorCode), typeof(global::Littlstar.CFSNet.Protobuf.Operation), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.AccessFile), global::Littlstar.CFSNet.Protobuf.AccessFile.Parser, new[]{ "Path", "Mode" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.Boolean), global::Littlstar.CFSNet.Protobuf.Boolean.Parser, new[]{ "Value" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.Buffer), global::Littlstar.CFSNet.Protobuf.Buffer.Parser, new[]{ "Value" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.Buffer), global::Littlstar.CFSNet.Protobuf.Buffer.Parser, new[]{ "Value", "Length" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.Close), global::Littlstar.CFSNet.Protobuf.Close.Parser, new[]{ "FileDescriptor" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.DownloadDirectory), global::Littlstar.CFSNet.Protobuf.DownloadDirectory.Parser, new[]{ "Path" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.DownloadFile), global::Littlstar.CFSNet.Protobuf.DownloadFile.Parser, new[]{ "Path" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.Drive), global::Littlstar.CFSNet.Protobuf.Drive.Parser, new[]{ "Id", "Key", "SecretKey" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.Handshake), global::Littlstar.CFSNet.Protobuf.Handshake.Parser, new[]{ "Nonce", "Key", "Ack" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.List), global::Littlstar.CFSNet.Protobuf.List.Parser, new[]{ "Values" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.KeyPair), global::Littlstar.CFSNet.Protobuf.KeyPair.Parser, new[]{ "Seed", "PublicKey", "SecretKey" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.List), global::Littlstar.CFSNet.Protobuf.List.Parser, new[]{ "Values", "Length" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.ListDirectory), global::Littlstar.CFSNet.Protobuf.ListDirectory.Parser, new[]{ "Path" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.MakeDirectory), global::Littlstar.CFSNet.Protobuf.MakeDirectory.Parser, new[]{ "Path" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.MakeDirectoryPath), global::Littlstar.CFSNet.Protobuf.MakeDirectoryPath.Parser, new[]{ "Path" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.Open), global::Littlstar.CFSNet.Protobuf.Open.Parser, new[]{ "Path" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.Number), global::Littlstar.CFSNet.Protobuf.Number.Parser, new[]{ "Value" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.Open), global::Littlstar.CFSNet.Protobuf.Open.Parser, new[]{ "Path", "Flags" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.Read), global::Littlstar.CFSNet.Protobuf.Read.Parser, new[]{ "FileDescriptor", "Start", "End" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.ReadFile), global::Littlstar.CFSNet.Protobuf.ReadFile.Parser, new[]{ "Path", "Start", "End" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.RemoveDirectory), global::Littlstar.CFSNet.Protobuf.RemoveDirectory.Parser, new[]{ "Path" }, null, null, null),
@@ -94,7 +99,7 @@ namespace Littlstar.CFSNet.Protobuf {
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.Request), global::Littlstar.CFSNet.Protobuf.Request.Parser, new[]{ "Nonce", "Drive", "Operation", "Buffer" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.Resolve), global::Littlstar.CFSNet.Protobuf.Resolve.Parser, new[]{ "Path" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.Response), global::Littlstar.CFSNet.Protobuf.Response.Parser, new[]{ "Nonce", "Drive", "Operation", "Request", "ErrorCode", "Buffer" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.Stat), global::Littlstar.CFSNet.Protobuf.Stat.Parser, new[]{ "Mode", "Uid", "Gid", "Size", "Blocks", "Offset", "ByteOffset", "Mtime", "Ctime" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.Stat), global::Littlstar.CFSNet.Protobuf.Stat.Parser, new[]{ "Uid", "Gid", "Mode", "Size", "Atime", "Ctime", "Mtime", "Blocks" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.StatFile), global::Littlstar.CFSNet.Protobuf.StatFile.Parser, new[]{ "Path" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.String), global::Littlstar.CFSNet.Protobuf.String.Parser, new[]{ "Value" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Littlstar.CFSNet.Protobuf.TouchFile), global::Littlstar.CFSNet.Protobuf.TouchFile.Parser, new[]{ "Path" }, null, null, null),
@@ -127,23 +132,24 @@ namespace Littlstar.CFSNet.Protobuf {
   public enum Operation {
     [pbr::OriginalName("NoOperation")] NoOperation = 0,
     [pbr::OriginalName("ResolveOperation")] ResolveOperation = 1,
-    [pbr::OriginalName("OpenOperation")] OpenOperation = 2,
-    [pbr::OriginalName("CloseOperation")] CloseOperation = 3,
-    [pbr::OriginalName("ReadOperation")] ReadOperation = 4,
-    [pbr::OriginalName("WriteOperation")] WriteOperation = 5,
-    [pbr::OriginalName("ReadFileOperation")] ReadFileOperation = 10,
-    [pbr::OriginalName("WriteFileOperation")] WriteFileOperation = 11,
-    [pbr::OriginalName("StatFileOperation")] StatFileOperation = 12,
-    [pbr::OriginalName("UnlinkFileOperation")] UnlinkFileOperation = 13,
-    [pbr::OriginalName("AccessFileOperation")] AccessFileOperation = 14,
-    [pbr::OriginalName("TouchFileOperation")] TouchFileOperation = 15,
-    [pbr::OriginalName("DownloadFileOperation")] DownloadFileOperation = 16,
-    [pbr::OriginalName("DownloadDirectoryOperation")] DownloadDirectoryOperation = 20,
-    [pbr::OriginalName("MakeDirectoryOperation")] MakeDirectoryOperation = 21,
-    [pbr::OriginalName("MakeDirectoryPathOperation")] MakeDirectoryPathOperation = 22,
-    [pbr::OriginalName("RemoveDirectoryOperation")] RemoveDirectoryOperation = 23,
-    [pbr::OriginalName("RemoveDirectoryPathOperation")] RemoveDirectoryPathOperation = 24,
-    [pbr::OriginalName("ListDirectoryOperation")] ListDirectoryOperation = 25,
+    [pbr::OriginalName("KeyPairOperation")] KeyPairOperation = 2,
+    [pbr::OriginalName("OpenOperation")] OpenOperation = 10,
+    [pbr::OriginalName("CloseOperation")] CloseOperation = 11,
+    [pbr::OriginalName("ReadOperation")] ReadOperation = 12,
+    [pbr::OriginalName("WriteOperation")] WriteOperation = 13,
+    [pbr::OriginalName("ReadFileOperation")] ReadFileOperation = 20,
+    [pbr::OriginalName("WriteFileOperation")] WriteFileOperation = 21,
+    [pbr::OriginalName("StatFileOperation")] StatFileOperation = 22,
+    [pbr::OriginalName("UnlinkFileOperation")] UnlinkFileOperation = 23,
+    [pbr::OriginalName("AccessFileOperation")] AccessFileOperation = 24,
+    [pbr::OriginalName("TouchFileOperation")] TouchFileOperation = 25,
+    [pbr::OriginalName("DownloadFileOperation")] DownloadFileOperation = 26,
+    [pbr::OriginalName("DownloadDirectoryOperation")] DownloadDirectoryOperation = 30,
+    [pbr::OriginalName("MakeDirectoryOperation")] MakeDirectoryOperation = 31,
+    [pbr::OriginalName("MakeDirectoryPathOperation")] MakeDirectoryPathOperation = 32,
+    [pbr::OriginalName("RemoveDirectoryOperation")] RemoveDirectoryOperation = 33,
+    [pbr::OriginalName("RemoveDirectoryPathOperation")] RemoveDirectoryPathOperation = 34,
+    [pbr::OriginalName("ListDirectoryOperation")] ListDirectoryOperation = 35,
   }
 
   #endregion
@@ -436,6 +442,7 @@ namespace Littlstar.CFSNet.Protobuf {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Buffer(Buffer other) : this() {
       value_ = other.value_;
+      length_ = other.length_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -454,6 +461,17 @@ namespace Littlstar.CFSNet.Protobuf {
       }
     }
 
+    /// <summary>Field number for the "length" field.</summary>
+    public const int LengthFieldNumber = 2;
+    private ulong length_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ulong Length {
+      get { return length_; }
+      set {
+        length_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Buffer);
@@ -468,6 +486,7 @@ namespace Littlstar.CFSNet.Protobuf {
         return true;
       }
       if (Value != other.Value) return false;
+      if (Length != other.Length) return false;
       return true;
     }
 
@@ -475,6 +494,7 @@ namespace Littlstar.CFSNet.Protobuf {
     public override int GetHashCode() {
       int hash = 1;
       if (Value.Length != 0) hash ^= Value.GetHashCode();
+      if (Length != 0UL) hash ^= Length.GetHashCode();
       return hash;
     }
 
@@ -489,6 +509,10 @@ namespace Littlstar.CFSNet.Protobuf {
         output.WriteRawTag(10);
         output.WriteBytes(Value);
       }
+      if (Length != 0UL) {
+        output.WriteRawTag(16);
+        output.WriteUInt64(Length);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -496,6 +520,9 @@ namespace Littlstar.CFSNet.Protobuf {
       int size = 0;
       if (Value.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Value);
+      }
+      if (Length != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Length);
       }
       return size;
     }
@@ -507,6 +534,9 @@ namespace Littlstar.CFSNet.Protobuf {
       }
       if (other.Value.Length != 0) {
         Value = other.Value;
+      }
+      if (other.Length != 0UL) {
+        Length = other.Length;
       }
     }
 
@@ -520,6 +550,10 @@ namespace Littlstar.CFSNet.Protobuf {
             break;
           case 10: {
             Value = input.ReadBytes();
+            break;
+          }
+          case 16: {
+            Length = input.ReadUInt64();
             break;
           }
         }
@@ -1225,6 +1259,179 @@ namespace Littlstar.CFSNet.Protobuf {
 
   }
 
+  public sealed partial class KeyPair : pb::IMessage<KeyPair> {
+    private static readonly pb::MessageParser<KeyPair> _parser = new pb::MessageParser<KeyPair>(() => new KeyPair());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<KeyPair> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public KeyPair() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public KeyPair(KeyPair other) : this() {
+      seed_ = other.seed_;
+      publicKey_ = other.publicKey_;
+      secretKey_ = other.secretKey_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public KeyPair Clone() {
+      return new KeyPair(this);
+    }
+
+    /// <summary>Field number for the "seed" field.</summary>
+    public const int SeedFieldNumber = 1;
+    private pb::ByteString seed_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Seed {
+      get { return seed_; }
+      set {
+        seed_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "publicKey" field.</summary>
+    public const int PublicKeyFieldNumber = 2;
+    private pb::ByteString publicKey_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString PublicKey {
+      get { return publicKey_; }
+      set {
+        publicKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "secretKey" field.</summary>
+    public const int SecretKeyFieldNumber = 3;
+    private pb::ByteString secretKey_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString SecretKey {
+      get { return secretKey_; }
+      set {
+        secretKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as KeyPair);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(KeyPair other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Seed != other.Seed) return false;
+      if (PublicKey != other.PublicKey) return false;
+      if (SecretKey != other.SecretKey) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Seed.Length != 0) hash ^= Seed.GetHashCode();
+      if (PublicKey.Length != 0) hash ^= PublicKey.GetHashCode();
+      if (SecretKey.Length != 0) hash ^= SecretKey.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Seed.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Seed);
+      }
+      if (PublicKey.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteBytes(PublicKey);
+      }
+      if (SecretKey.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(SecretKey);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Seed.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Seed);
+      }
+      if (PublicKey.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(PublicKey);
+      }
+      if (SecretKey.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(SecretKey);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(KeyPair other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Seed.Length != 0) {
+        Seed = other.Seed;
+      }
+      if (other.PublicKey.Length != 0) {
+        PublicKey = other.PublicKey;
+      }
+      if (other.SecretKey.Length != 0) {
+        SecretKey = other.SecretKey;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Seed = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            PublicKey = input.ReadBytes();
+            break;
+          }
+          case 26: {
+            SecretKey = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed partial class List : pb::IMessage<List> {
     private static readonly pb::MessageParser<List> _parser = new pb::MessageParser<List>(() => new List());
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1232,7 +1439,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1250,6 +1457,7 @@ namespace Littlstar.CFSNet.Protobuf {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public List(List other) : this() {
       values_ = other.values_.Clone();
+      length_ = other.length_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1259,12 +1467,23 @@ namespace Littlstar.CFSNet.Protobuf {
 
     /// <summary>Field number for the "values" field.</summary>
     public const int ValuesFieldNumber = 1;
-    private static readonly pb::FieldCodec<string> _repeated_values_codec
-        = pb::FieldCodec.ForString(10);
-    private readonly pbc::RepeatedField<string> values_ = new pbc::RepeatedField<string>();
+    private static readonly pb::FieldCodec<pb::ByteString> _repeated_values_codec
+        = pb::FieldCodec.ForBytes(10);
+    private readonly pbc::RepeatedField<pb::ByteString> values_ = new pbc::RepeatedField<pb::ByteString>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<string> Values {
+    public pbc::RepeatedField<pb::ByteString> Values {
       get { return values_; }
+    }
+
+    /// <summary>Field number for the "length" field.</summary>
+    public const int LengthFieldNumber = 2;
+    private ulong length_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ulong Length {
+      get { return length_; }
+      set {
+        length_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1281,6 +1500,7 @@ namespace Littlstar.CFSNet.Protobuf {
         return true;
       }
       if(!values_.Equals(other.values_)) return false;
+      if (Length != other.Length) return false;
       return true;
     }
 
@@ -1288,6 +1508,7 @@ namespace Littlstar.CFSNet.Protobuf {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= values_.GetHashCode();
+      if (Length != 0UL) hash ^= Length.GetHashCode();
       return hash;
     }
 
@@ -1299,12 +1520,19 @@ namespace Littlstar.CFSNet.Protobuf {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       values_.WriteTo(output, _repeated_values_codec);
+      if (Length != 0UL) {
+        output.WriteRawTag(16);
+        output.WriteUInt64(Length);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       size += values_.CalculateSize(_repeated_values_codec);
+      if (Length != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Length);
+      }
       return size;
     }
 
@@ -1314,6 +1542,9 @@ namespace Littlstar.CFSNet.Protobuf {
         return;
       }
       values_.Add(other.values_);
+      if (other.Length != 0UL) {
+        Length = other.Length;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1326,6 +1557,10 @@ namespace Littlstar.CFSNet.Protobuf {
             break;
           case 10: {
             values_.AddEntriesFrom(input, _repeated_values_codec);
+            break;
+          }
+          case 16: {
+            Length = input.ReadUInt64();
             break;
           }
         }
@@ -1341,7 +1576,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1458,7 +1693,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1575,7 +1810,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1685,6 +1920,123 @@ namespace Littlstar.CFSNet.Protobuf {
 
   }
 
+  public sealed partial class Number : pb::IMessage<Number> {
+    private static readonly pb::MessageParser<Number> _parser = new pb::MessageParser<Number>(() => new Number());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Number> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Number() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Number(Number other) : this() {
+      value_ = other.value_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Number Clone() {
+      return new Number(this);
+    }
+
+    /// <summary>Field number for the "value" field.</summary>
+    public const int ValueFieldNumber = 1;
+    private double value_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public double Value {
+      get { return value_; }
+      set {
+        value_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Number);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Number other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Value != other.Value) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Value != 0D) hash ^= Value.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Value != 0D) {
+        output.WriteRawTag(9);
+        output.WriteDouble(Value);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Value != 0D) {
+        size += 1 + 8;
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Number other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Value != 0D) {
+        Value = other.Value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 9: {
+            Value = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed partial class Open : pb::IMessage<Open> {
     private static readonly pb::MessageParser<Open> _parser = new pb::MessageParser<Open>(() => new Open());
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1692,7 +2044,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1710,6 +2062,7 @@ namespace Littlstar.CFSNet.Protobuf {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Open(Open other) : this() {
       path_ = other.path_;
+      flags_ = other.flags_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1728,6 +2081,17 @@ namespace Littlstar.CFSNet.Protobuf {
       }
     }
 
+    /// <summary>Field number for the "flags" field.</summary>
+    public const int FlagsFieldNumber = 2;
+    private string flags_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Flags {
+      get { return flags_; }
+      set {
+        flags_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Open);
@@ -1742,6 +2106,7 @@ namespace Littlstar.CFSNet.Protobuf {
         return true;
       }
       if (Path != other.Path) return false;
+      if (Flags != other.Flags) return false;
       return true;
     }
 
@@ -1749,6 +2114,7 @@ namespace Littlstar.CFSNet.Protobuf {
     public override int GetHashCode() {
       int hash = 1;
       if (Path.Length != 0) hash ^= Path.GetHashCode();
+      if (Flags.Length != 0) hash ^= Flags.GetHashCode();
       return hash;
     }
 
@@ -1763,6 +2129,10 @@ namespace Littlstar.CFSNet.Protobuf {
         output.WriteRawTag(10);
         output.WriteString(Path);
       }
+      if (Flags.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Flags);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1770,6 +2140,9 @@ namespace Littlstar.CFSNet.Protobuf {
       int size = 0;
       if (Path.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Path);
+      }
+      if (Flags.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Flags);
       }
       return size;
     }
@@ -1781,6 +2154,9 @@ namespace Littlstar.CFSNet.Protobuf {
       }
       if (other.Path.Length != 0) {
         Path = other.Path;
+      }
+      if (other.Flags.Length != 0) {
+        Flags = other.Flags;
       }
     }
 
@@ -1796,6 +2172,10 @@ namespace Littlstar.CFSNet.Protobuf {
             Path = input.ReadString();
             break;
           }
+          case 18: {
+            Flags = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -1809,7 +2189,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1982,7 +2362,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2155,7 +2535,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2272,7 +2652,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2389,7 +2769,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2596,7 +2976,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2713,7 +3093,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2982,7 +3362,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2999,15 +3379,14 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Stat(Stat other) : this() {
-      mode_ = other.mode_;
       uid_ = other.uid_;
       gid_ = other.gid_;
+      mode_ = other.mode_;
       size_ = other.size_;
-      blocks_ = other.blocks_;
-      offset_ = other.offset_;
-      byteOffset_ = other.byteOffset_;
-      mtime_ = other.mtime_;
+      atime_ = other.atime_;
       ctime_ = other.ctime_;
+      mtime_ = other.mtime_;
+      blocks_ = other.blocks_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3015,19 +3394,8 @@ namespace Littlstar.CFSNet.Protobuf {
       return new Stat(this);
     }
 
-    /// <summary>Field number for the "mode" field.</summary>
-    public const int ModeFieldNumber = 1;
-    private uint mode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint Mode {
-      get { return mode_; }
-      set {
-        mode_ = value;
-      }
-    }
-
     /// <summary>Field number for the "uid" field.</summary>
-    public const int UidFieldNumber = 2;
+    public const int UidFieldNumber = 1;
     private uint uid_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public uint Uid {
@@ -3038,13 +3406,24 @@ namespace Littlstar.CFSNet.Protobuf {
     }
 
     /// <summary>Field number for the "gid" field.</summary>
-    public const int GidFieldNumber = 3;
+    public const int GidFieldNumber = 2;
     private uint gid_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public uint Gid {
       get { return gid_; }
       set {
         gid_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "mode" field.</summary>
+    public const int ModeFieldNumber = 3;
+    private uint mode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint Mode {
+      get { return mode_; }
+      set {
+        mode_ = value;
       }
     }
 
@@ -3059,41 +3438,30 @@ namespace Littlstar.CFSNet.Protobuf {
       }
     }
 
-    /// <summary>Field number for the "blocks" field.</summary>
-    public const int BlocksFieldNumber = 5;
-    private ulong blocks_;
+    /// <summary>Field number for the "atime" field.</summary>
+    public const int AtimeFieldNumber = 5;
+    private ulong atime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong Blocks {
-      get { return blocks_; }
+    public ulong Atime {
+      get { return atime_; }
       set {
-        blocks_ = value;
+        atime_ = value;
       }
     }
 
-    /// <summary>Field number for the "offset" field.</summary>
-    public const int OffsetFieldNumber = 6;
-    private ulong offset_;
+    /// <summary>Field number for the "ctime" field.</summary>
+    public const int CtimeFieldNumber = 6;
+    private ulong ctime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong Offset {
-      get { return offset_; }
+    public ulong Ctime {
+      get { return ctime_; }
       set {
-        offset_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "byteOffset" field.</summary>
-    public const int ByteOffsetFieldNumber = 7;
-    private ulong byteOffset_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong ByteOffset {
-      get { return byteOffset_; }
-      set {
-        byteOffset_ = value;
+        ctime_ = value;
       }
     }
 
     /// <summary>Field number for the "mtime" field.</summary>
-    public const int MtimeFieldNumber = 8;
+    public const int MtimeFieldNumber = 7;
     private ulong mtime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ulong Mtime {
@@ -3103,14 +3471,14 @@ namespace Littlstar.CFSNet.Protobuf {
       }
     }
 
-    /// <summary>Field number for the "ctime" field.</summary>
-    public const int CtimeFieldNumber = 9;
-    private ulong ctime_;
+    /// <summary>Field number for the "blocks" field.</summary>
+    public const int BlocksFieldNumber = 8;
+    private ulong blocks_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong Ctime {
-      get { return ctime_; }
+    public ulong Blocks {
+      get { return blocks_; }
       set {
-        ctime_ = value;
+        blocks_ = value;
       }
     }
 
@@ -3127,30 +3495,28 @@ namespace Littlstar.CFSNet.Protobuf {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Mode != other.Mode) return false;
       if (Uid != other.Uid) return false;
       if (Gid != other.Gid) return false;
+      if (Mode != other.Mode) return false;
       if (Size != other.Size) return false;
-      if (Blocks != other.Blocks) return false;
-      if (Offset != other.Offset) return false;
-      if (ByteOffset != other.ByteOffset) return false;
-      if (Mtime != other.Mtime) return false;
+      if (Atime != other.Atime) return false;
       if (Ctime != other.Ctime) return false;
+      if (Mtime != other.Mtime) return false;
+      if (Blocks != other.Blocks) return false;
       return true;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Mode != 0) hash ^= Mode.GetHashCode();
       if (Uid != 0) hash ^= Uid.GetHashCode();
       if (Gid != 0) hash ^= Gid.GetHashCode();
+      if (Mode != 0) hash ^= Mode.GetHashCode();
       if (Size != 0UL) hash ^= Size.GetHashCode();
-      if (Blocks != 0UL) hash ^= Blocks.GetHashCode();
-      if (Offset != 0UL) hash ^= Offset.GetHashCode();
-      if (ByteOffset != 0UL) hash ^= ByteOffset.GetHashCode();
-      if (Mtime != 0UL) hash ^= Mtime.GetHashCode();
+      if (Atime != 0UL) hash ^= Atime.GetHashCode();
       if (Ctime != 0UL) hash ^= Ctime.GetHashCode();
+      if (Mtime != 0UL) hash ^= Mtime.GetHashCode();
+      if (Blocks != 0UL) hash ^= Blocks.GetHashCode();
       return hash;
     }
 
@@ -3161,73 +3527,66 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Mode != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(Mode);
-      }
       if (Uid != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(8);
         output.WriteUInt32(Uid);
       }
       if (Gid != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(16);
         output.WriteUInt32(Gid);
+      }
+      if (Mode != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(Mode);
       }
       if (Size != 0UL) {
         output.WriteRawTag(32);
         output.WriteUInt64(Size);
       }
-      if (Blocks != 0UL) {
+      if (Atime != 0UL) {
         output.WriteRawTag(40);
-        output.WriteUInt64(Blocks);
-      }
-      if (Offset != 0UL) {
-        output.WriteRawTag(48);
-        output.WriteUInt64(Offset);
-      }
-      if (ByteOffset != 0UL) {
-        output.WriteRawTag(56);
-        output.WriteUInt64(ByteOffset);
-      }
-      if (Mtime != 0UL) {
-        output.WriteRawTag(64);
-        output.WriteUInt64(Mtime);
+        output.WriteUInt64(Atime);
       }
       if (Ctime != 0UL) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(48);
         output.WriteUInt64(Ctime);
+      }
+      if (Mtime != 0UL) {
+        output.WriteRawTag(56);
+        output.WriteUInt64(Mtime);
+      }
+      if (Blocks != 0UL) {
+        output.WriteRawTag(64);
+        output.WriteUInt64(Blocks);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Mode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Mode);
-      }
       if (Uid != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Uid);
       }
       if (Gid != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Gid);
       }
+      if (Mode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Mode);
+      }
       if (Size != 0UL) {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Size);
       }
-      if (Blocks != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Blocks);
+      if (Atime != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Atime);
       }
-      if (Offset != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Offset);
-      }
-      if (ByteOffset != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(ByteOffset);
+      if (Ctime != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Ctime);
       }
       if (Mtime != 0UL) {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Mtime);
       }
-      if (Ctime != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Ctime);
+      if (Blocks != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Blocks);
       }
       return size;
     }
@@ -3237,32 +3596,29 @@ namespace Littlstar.CFSNet.Protobuf {
       if (other == null) {
         return;
       }
-      if (other.Mode != 0) {
-        Mode = other.Mode;
-      }
       if (other.Uid != 0) {
         Uid = other.Uid;
       }
       if (other.Gid != 0) {
         Gid = other.Gid;
       }
+      if (other.Mode != 0) {
+        Mode = other.Mode;
+      }
       if (other.Size != 0UL) {
         Size = other.Size;
       }
-      if (other.Blocks != 0UL) {
-        Blocks = other.Blocks;
+      if (other.Atime != 0UL) {
+        Atime = other.Atime;
       }
-      if (other.Offset != 0UL) {
-        Offset = other.Offset;
-      }
-      if (other.ByteOffset != 0UL) {
-        ByteOffset = other.ByteOffset;
+      if (other.Ctime != 0UL) {
+        Ctime = other.Ctime;
       }
       if (other.Mtime != 0UL) {
         Mtime = other.Mtime;
       }
-      if (other.Ctime != 0UL) {
-        Ctime = other.Ctime;
+      if (other.Blocks != 0UL) {
+        Blocks = other.Blocks;
       }
     }
 
@@ -3275,15 +3631,15 @@ namespace Littlstar.CFSNet.Protobuf {
             input.SkipLastField();
             break;
           case 8: {
-            Mode = input.ReadUInt32();
-            break;
-          }
-          case 16: {
             Uid = input.ReadUInt32();
             break;
           }
-          case 24: {
+          case 16: {
             Gid = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            Mode = input.ReadUInt32();
             break;
           }
           case 32: {
@@ -3291,23 +3647,19 @@ namespace Littlstar.CFSNet.Protobuf {
             break;
           }
           case 40: {
-            Blocks = input.ReadUInt64();
+            Atime = input.ReadUInt64();
             break;
           }
           case 48: {
-            Offset = input.ReadUInt64();
+            Ctime = input.ReadUInt64();
             break;
           }
           case 56: {
-            ByteOffset = input.ReadUInt64();
-            break;
-          }
-          case 64: {
             Mtime = input.ReadUInt64();
             break;
           }
-          case 72: {
-            Ctime = input.ReadUInt64();
+          case 64: {
+            Blocks = input.ReadUInt64();
             break;
           }
         }
@@ -3323,7 +3675,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3440,7 +3792,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3557,7 +3909,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3674,7 +4026,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[24]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3791,7 +4143,7 @@ namespace Littlstar.CFSNet.Protobuf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[25]; }
+      get { return global::Littlstar.CFSNet.Protobuf.CfsnetReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

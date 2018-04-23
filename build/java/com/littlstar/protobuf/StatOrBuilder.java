@@ -8,19 +8,19 @@ public interface StatOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>uint32 mode = 1;</code>
-   */
-  int getMode();
-
-  /**
-   * <code>uint32 uid = 2;</code>
+   * <code>uint32 uid = 1;</code>
    */
   int getUid();
 
   /**
-   * <code>uint32 gid = 3;</code>
+   * <code>uint32 gid = 2;</code>
    */
   int getGid();
+
+  /**
+   * <code>uint32 mode = 3;</code>
+   */
+  int getMode();
 
   /**
    * <code>uint64 size = 4;</code>
@@ -28,27 +28,22 @@ public interface StatOrBuilder extends
   long getSize();
 
   /**
-   * <code>uint64 blocks = 5;</code>
+   * <code>uint64 atime = 5;</code>
    */
-  long getBlocks();
+  long getAtime();
 
   /**
-   * <code>uint64 offset = 6;</code>
+   * <code>uint64 ctime = 6;</code>
    */
-  long getOffset();
+  long getCtime();
 
   /**
-   * <code>uint64 byteOffset = 7;</code>
-   */
-  long getByteOffset();
-
-  /**
-   * <code>uint64 mtime = 8;</code>
+   * <code>uint64 mtime = 7;</code>
    */
   long getMtime();
 
   /**
-   * <code>uint64 ctime = 9;</code>
+   * <code>uint64 blocks = 8;</code>
    */
-  long getCtime();
+  long getBlocks();
 }

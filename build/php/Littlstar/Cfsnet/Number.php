@@ -14,9 +14,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class Number extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>int64 value = 1;</code>
+     * <code>double value = 1;</code>
      */
-    private $value = 0;
+    private $value = 0.0;
 
     public function __construct() {
         \GPBMetadata\Cfsnet::initOnce();
@@ -24,7 +24,7 @@ class Number extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 value = 1;</code>
+     * <code>double value = 1;</code>
      */
     public function getValue()
     {
@@ -32,11 +32,11 @@ class Number extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 value = 1;</code>
+     * <code>double value = 1;</code>
      */
     public function setValue($var)
     {
-        GPBUtil::checkInt64($var);
+        GPBUtil::checkDouble($var);
         $this->value = $var;
     }
 

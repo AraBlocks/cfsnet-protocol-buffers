@@ -16,6 +16,7 @@ public  final class Buffer extends
   }
   private Buffer() {
     value_ = com.google.protobuf.ByteString.EMPTY;
+    length_ = 0L;
   }
 
   @java.lang.Override
@@ -46,6 +47,11 @@ public  final class Buffer extends
           case 10: {
 
             value_ = input.readBytes();
+            break;
+          }
+          case 16: {
+
+            length_ = input.readUInt64();
             break;
           }
         }
@@ -80,6 +86,15 @@ public  final class Buffer extends
     return value_;
   }
 
+  public static final int LENGTH_FIELD_NUMBER = 2;
+  private long length_;
+  /**
+   * <code>uint64 length = 2;</code>
+   */
+  public long getLength() {
+    return length_;
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -95,6 +110,9 @@ public  final class Buffer extends
     if (!value_.isEmpty()) {
       output.writeBytes(1, value_);
     }
+    if (length_ != 0L) {
+      output.writeUInt64(2, length_);
+    }
   }
 
   public int getSerializedSize() {
@@ -105,6 +123,10 @@ public  final class Buffer extends
     if (!value_.isEmpty()) {
       size += com.google.protobuf.CodedOutputStream
         .computeBytesSize(1, value_);
+    }
+    if (length_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(2, length_);
     }
     memoizedSize = size;
     return size;
@@ -124,6 +146,8 @@ public  final class Buffer extends
     boolean result = true;
     result = result && getValue()
         .equals(other.getValue());
+    result = result && (getLength()
+        == other.getLength());
     return result;
   }
 
@@ -136,6 +160,9 @@ public  final class Buffer extends
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + VALUE_FIELD_NUMBER;
     hash = (53 * hash) + getValue().hashCode();
+    hash = (37 * hash) + LENGTH_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getLength());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -267,6 +294,8 @@ public  final class Buffer extends
       super.clear();
       value_ = com.google.protobuf.ByteString.EMPTY;
 
+      length_ = 0L;
+
       return this;
     }
 
@@ -290,6 +319,7 @@ public  final class Buffer extends
     public com.littlstar.protobuf.Buffer buildPartial() {
       com.littlstar.protobuf.Buffer result = new com.littlstar.protobuf.Buffer(this);
       result.value_ = value_;
+      result.length_ = length_;
       onBuilt();
       return result;
     }
@@ -333,6 +363,9 @@ public  final class Buffer extends
       if (other == com.littlstar.protobuf.Buffer.getDefaultInstance()) return this;
       if (other.getValue() != com.google.protobuf.ByteString.EMPTY) {
         setValue(other.getValue());
+      }
+      if (other.getLength() != 0L) {
+        setLength(other.getLength());
       }
       onChanged();
       return this;
@@ -385,6 +418,32 @@ public  final class Buffer extends
     public Builder clearValue() {
       
       value_ = getDefaultInstance().getValue();
+      onChanged();
+      return this;
+    }
+
+    private long length_ ;
+    /**
+     * <code>uint64 length = 2;</code>
+     */
+    public long getLength() {
+      return length_;
+    }
+    /**
+     * <code>uint64 length = 2;</code>
+     */
+    public Builder setLength(long value) {
+      
+      length_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>uint64 length = 2;</code>
+     */
+    public Builder clearLength() {
+      
+      length_ = 0L;
       onChanged();
       return this;
     }

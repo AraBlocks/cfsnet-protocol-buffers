@@ -17,6 +17,10 @@ class Buffer extends \Google\Protobuf\Internal\Message
      * <code>bytes value = 1;</code>
      */
     private $value = '';
+    /**
+     * <code>uint64 length = 2;</code>
+     */
+    private $length = 0;
 
     public function __construct() {
         \GPBMetadata\Cfsnet::initOnce();
@@ -38,6 +42,23 @@ class Buffer extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, False);
         $this->value = $var;
+    }
+
+    /**
+     * <code>uint64 length = 2;</code>
+     */
+    public function getLength()
+    {
+        return $this->length;
+    }
+
+    /**
+     * <code>uint64 length = 2;</code>
+     */
+    public function setLength($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->length = $var;
     }
 
 }

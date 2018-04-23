@@ -14,9 +14,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class List extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>repeated string values = 1;</code>
+     * <code>repeated bytes values = 1;</code>
      */
     private $values;
+    /**
+     * <code>uint64 length = 2;</code>
+     */
+    private $length = 0;
 
     public function __construct() {
         \GPBMetadata\Cfsnet::initOnce();
@@ -24,7 +28,7 @@ class List extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>repeated string values = 1;</code>
+     * <code>repeated bytes values = 1;</code>
      */
     public function getValues()
     {
@@ -32,12 +36,29 @@ class List extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>repeated string values = 1;</code>
+     * <code>repeated bytes values = 1;</code>
      */
     public function setValues(&$var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::BYTES);
         $this->values = $arr;
+    }
+
+    /**
+     * <code>uint64 length = 2;</code>
+     */
+    public function getLength()
+    {
+        return $this->length;
+    }
+
+    /**
+     * <code>uint64 length = 2;</code>
+     */
+    public function setLength($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->length = $var;
     }
 
 }

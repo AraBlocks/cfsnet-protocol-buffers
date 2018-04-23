@@ -16,6 +16,7 @@ public  final class Open extends
   }
   private Open() {
     path_ = "";
+    flags_ = "";
   }
 
   @java.lang.Override
@@ -47,6 +48,12 @@ public  final class Open extends
             java.lang.String s = input.readStringRequireUtf8();
 
             path_ = s;
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            flags_ = s;
             break;
           }
         }
@@ -106,6 +113,40 @@ public  final class Open extends
     }
   }
 
+  public static final int FLAGS_FIELD_NUMBER = 2;
+  private volatile java.lang.Object flags_;
+  /**
+   * <code>string flags = 2;</code>
+   */
+  public java.lang.String getFlags() {
+    java.lang.Object ref = flags_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      flags_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string flags = 2;</code>
+   */
+  public com.google.protobuf.ByteString
+      getFlagsBytes() {
+    java.lang.Object ref = flags_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      flags_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -121,6 +162,9 @@ public  final class Open extends
     if (!getPathBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, path_);
     }
+    if (!getFlagsBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, flags_);
+    }
   }
 
   public int getSerializedSize() {
@@ -130,6 +174,9 @@ public  final class Open extends
     size = 0;
     if (!getPathBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, path_);
+    }
+    if (!getFlagsBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, flags_);
     }
     memoizedSize = size;
     return size;
@@ -149,6 +196,8 @@ public  final class Open extends
     boolean result = true;
     result = result && getPath()
         .equals(other.getPath());
+    result = result && getFlags()
+        .equals(other.getFlags());
     return result;
   }
 
@@ -161,6 +210,8 @@ public  final class Open extends
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + PATH_FIELD_NUMBER;
     hash = (53 * hash) + getPath().hashCode();
+    hash = (37 * hash) + FLAGS_FIELD_NUMBER;
+    hash = (53 * hash) + getFlags().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -292,6 +343,8 @@ public  final class Open extends
       super.clear();
       path_ = "";
 
+      flags_ = "";
+
       return this;
     }
 
@@ -315,6 +368,7 @@ public  final class Open extends
     public com.littlstar.protobuf.Open buildPartial() {
       com.littlstar.protobuf.Open result = new com.littlstar.protobuf.Open(this);
       result.path_ = path_;
+      result.flags_ = flags_;
       onBuilt();
       return result;
     }
@@ -358,6 +412,10 @@ public  final class Open extends
       if (other == com.littlstar.protobuf.Open.getDefaultInstance()) return this;
       if (!other.getPath().isEmpty()) {
         path_ = other.path_;
+        onChanged();
+      }
+      if (!other.getFlags().isEmpty()) {
+        flags_ = other.flags_;
         onChanged();
       }
       onChanged();
@@ -451,6 +509,75 @@ public  final class Open extends
   checkByteStringIsUtf8(value);
       
       path_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object flags_ = "";
+    /**
+     * <code>string flags = 2;</code>
+     */
+    public java.lang.String getFlags() {
+      java.lang.Object ref = flags_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        flags_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string flags = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getFlagsBytes() {
+      java.lang.Object ref = flags_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        flags_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string flags = 2;</code>
+     */
+    public Builder setFlags(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      flags_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string flags = 2;</code>
+     */
+    public Builder clearFlags() {
+      
+      flags_ = getDefaultInstance().getFlags();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string flags = 2;</code>
+     */
+    public Builder setFlagsBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      flags_ = value;
       onChanged();
       return this;
     }

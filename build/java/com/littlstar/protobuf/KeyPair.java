@@ -4,18 +4,20 @@
 package com.littlstar.protobuf;
 
 /**
- * Protobuf type {@code littlstar.cfsnet.Number}
+ * Protobuf type {@code littlstar.cfsnet.KeyPair}
  */
-public  final class Number extends
+public  final class KeyPair extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:littlstar.cfsnet.Number)
-    NumberOrBuilder {
-  // Use Number.newBuilder() to construct.
-  private Number(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // @@protoc_insertion_point(message_implements:littlstar.cfsnet.KeyPair)
+    KeyPairOrBuilder {
+  // Use KeyPair.newBuilder() to construct.
+  private KeyPair(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private Number() {
-    value_ = 0D;
+  private KeyPair() {
+    seed_ = com.google.protobuf.ByteString.EMPTY;
+    publicKey_ = com.google.protobuf.ByteString.EMPTY;
+    secretKey_ = com.google.protobuf.ByteString.EMPTY;
   }
 
   @java.lang.Override
@@ -23,7 +25,7 @@ public  final class Number extends
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
   }
-  private Number(
+  private KeyPair(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -43,9 +45,19 @@ public  final class Number extends
             }
             break;
           }
-          case 9: {
+          case 10: {
 
-            value_ = input.readDouble();
+            seed_ = input.readBytes();
+            break;
+          }
+          case 18: {
+
+            publicKey_ = input.readBytes();
+            break;
+          }
+          case 26: {
+
+            secretKey_ = input.readBytes();
             break;
           }
         }
@@ -61,23 +73,41 @@ public  final class Number extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.littlstar.protobuf.CFSNetProtobuf.internal_static_littlstar_cfsnet_Number_descriptor;
+    return com.littlstar.protobuf.CFSNetProtobuf.internal_static_littlstar_cfsnet_KeyPair_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.littlstar.protobuf.CFSNetProtobuf.internal_static_littlstar_cfsnet_Number_fieldAccessorTable
+    return com.littlstar.protobuf.CFSNetProtobuf.internal_static_littlstar_cfsnet_KeyPair_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.littlstar.protobuf.Number.class, com.littlstar.protobuf.Number.Builder.class);
+            com.littlstar.protobuf.KeyPair.class, com.littlstar.protobuf.KeyPair.Builder.class);
   }
 
-  public static final int VALUE_FIELD_NUMBER = 1;
-  private double value_;
+  public static final int SEED_FIELD_NUMBER = 1;
+  private com.google.protobuf.ByteString seed_;
   /**
-   * <code>double value = 1;</code>
+   * <code>bytes seed = 1;</code>
    */
-  public double getValue() {
-    return value_;
+  public com.google.protobuf.ByteString getSeed() {
+    return seed_;
+  }
+
+  public static final int PUBLICKEY_FIELD_NUMBER = 2;
+  private com.google.protobuf.ByteString publicKey_;
+  /**
+   * <code>bytes publicKey = 2;</code>
+   */
+  public com.google.protobuf.ByteString getPublicKey() {
+    return publicKey_;
+  }
+
+  public static final int SECRETKEY_FIELD_NUMBER = 3;
+  private com.google.protobuf.ByteString secretKey_;
+  /**
+   * <code>bytes secretKey = 3;</code>
+   */
+  public com.google.protobuf.ByteString getSecretKey() {
+    return secretKey_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -92,8 +122,14 @@ public  final class Number extends
 
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (value_ != 0D) {
-      output.writeDouble(1, value_);
+    if (!seed_.isEmpty()) {
+      output.writeBytes(1, seed_);
+    }
+    if (!publicKey_.isEmpty()) {
+      output.writeBytes(2, publicKey_);
+    }
+    if (!secretKey_.isEmpty()) {
+      output.writeBytes(3, secretKey_);
     }
   }
 
@@ -102,9 +138,17 @@ public  final class Number extends
     if (size != -1) return size;
 
     size = 0;
-    if (value_ != 0D) {
+    if (!seed_.isEmpty()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(1, value_);
+        .computeBytesSize(1, seed_);
+    }
+    if (!publicKey_.isEmpty()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBytesSize(2, publicKey_);
+    }
+    if (!secretKey_.isEmpty()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBytesSize(3, secretKey_);
     }
     memoizedSize = size;
     return size;
@@ -116,16 +160,18 @@ public  final class Number extends
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.littlstar.protobuf.Number)) {
+    if (!(obj instanceof com.littlstar.protobuf.KeyPair)) {
       return super.equals(obj);
     }
-    com.littlstar.protobuf.Number other = (com.littlstar.protobuf.Number) obj;
+    com.littlstar.protobuf.KeyPair other = (com.littlstar.protobuf.KeyPair) obj;
 
     boolean result = true;
-    result = result && (
-        java.lang.Double.doubleToLongBits(getValue())
-        == java.lang.Double.doubleToLongBits(
-            other.getValue()));
+    result = result && getSeed()
+        .equals(other.getSeed());
+    result = result && getPublicKey()
+        .equals(other.getPublicKey());
+    result = result && getSecretKey()
+        .equals(other.getSecretKey());
     return result;
   }
 
@@ -136,77 +182,80 @@ public  final class Number extends
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + VALUE_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        java.lang.Double.doubleToLongBits(getValue()));
+    hash = (37 * hash) + SEED_FIELD_NUMBER;
+    hash = (53 * hash) + getSeed().hashCode();
+    hash = (37 * hash) + PUBLICKEY_FIELD_NUMBER;
+    hash = (53 * hash) + getPublicKey().hashCode();
+    hash = (37 * hash) + SECRETKEY_FIELD_NUMBER;
+    hash = (53 * hash) + getSecretKey().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.littlstar.protobuf.Number parseFrom(
+  public static com.littlstar.protobuf.KeyPair parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.littlstar.protobuf.Number parseFrom(
+  public static com.littlstar.protobuf.KeyPair parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.littlstar.protobuf.Number parseFrom(
+  public static com.littlstar.protobuf.KeyPair parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.littlstar.protobuf.Number parseFrom(
+  public static com.littlstar.protobuf.KeyPair parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.littlstar.protobuf.Number parseFrom(byte[] data)
+  public static com.littlstar.protobuf.KeyPair parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.littlstar.protobuf.Number parseFrom(
+  public static com.littlstar.protobuf.KeyPair parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.littlstar.protobuf.Number parseFrom(java.io.InputStream input)
+  public static com.littlstar.protobuf.KeyPair parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.littlstar.protobuf.Number parseFrom(
+  public static com.littlstar.protobuf.KeyPair parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.littlstar.protobuf.Number parseDelimitedFrom(java.io.InputStream input)
+  public static com.littlstar.protobuf.KeyPair parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.littlstar.protobuf.Number parseDelimitedFrom(
+  public static com.littlstar.protobuf.KeyPair parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.littlstar.protobuf.Number parseFrom(
+  public static com.littlstar.protobuf.KeyPair parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.littlstar.protobuf.Number parseFrom(
+  public static com.littlstar.protobuf.KeyPair parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -218,7 +267,7 @@ public  final class Number extends
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.littlstar.protobuf.Number prototype) {
+  public static Builder newBuilder(com.littlstar.protobuf.KeyPair prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   public Builder toBuilder() {
@@ -233,25 +282,25 @@ public  final class Number extends
     return builder;
   }
   /**
-   * Protobuf type {@code littlstar.cfsnet.Number}
+   * Protobuf type {@code littlstar.cfsnet.KeyPair}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:littlstar.cfsnet.Number)
-      com.littlstar.protobuf.NumberOrBuilder {
+      // @@protoc_insertion_point(builder_implements:littlstar.cfsnet.KeyPair)
+      com.littlstar.protobuf.KeyPairOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.littlstar.protobuf.CFSNetProtobuf.internal_static_littlstar_cfsnet_Number_descriptor;
+      return com.littlstar.protobuf.CFSNetProtobuf.internal_static_littlstar_cfsnet_KeyPair_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.littlstar.protobuf.CFSNetProtobuf.internal_static_littlstar_cfsnet_Number_fieldAccessorTable
+      return com.littlstar.protobuf.CFSNetProtobuf.internal_static_littlstar_cfsnet_KeyPair_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.littlstar.protobuf.Number.class, com.littlstar.protobuf.Number.Builder.class);
+              com.littlstar.protobuf.KeyPair.class, com.littlstar.protobuf.KeyPair.Builder.class);
     }
 
-    // Construct using com.littlstar.protobuf.Number.newBuilder()
+    // Construct using com.littlstar.protobuf.KeyPair.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -268,31 +317,37 @@ public  final class Number extends
     }
     public Builder clear() {
       super.clear();
-      value_ = 0D;
+      seed_ = com.google.protobuf.ByteString.EMPTY;
+
+      publicKey_ = com.google.protobuf.ByteString.EMPTY;
+
+      secretKey_ = com.google.protobuf.ByteString.EMPTY;
 
       return this;
     }
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.littlstar.protobuf.CFSNetProtobuf.internal_static_littlstar_cfsnet_Number_descriptor;
+      return com.littlstar.protobuf.CFSNetProtobuf.internal_static_littlstar_cfsnet_KeyPair_descriptor;
     }
 
-    public com.littlstar.protobuf.Number getDefaultInstanceForType() {
-      return com.littlstar.protobuf.Number.getDefaultInstance();
+    public com.littlstar.protobuf.KeyPair getDefaultInstanceForType() {
+      return com.littlstar.protobuf.KeyPair.getDefaultInstance();
     }
 
-    public com.littlstar.protobuf.Number build() {
-      com.littlstar.protobuf.Number result = buildPartial();
+    public com.littlstar.protobuf.KeyPair build() {
+      com.littlstar.protobuf.KeyPair result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    public com.littlstar.protobuf.Number buildPartial() {
-      com.littlstar.protobuf.Number result = new com.littlstar.protobuf.Number(this);
-      result.value_ = value_;
+    public com.littlstar.protobuf.KeyPair buildPartial() {
+      com.littlstar.protobuf.KeyPair result = new com.littlstar.protobuf.KeyPair(this);
+      result.seed_ = seed_;
+      result.publicKey_ = publicKey_;
+      result.secretKey_ = secretKey_;
       onBuilt();
       return result;
     }
@@ -324,18 +379,24 @@ public  final class Number extends
       return (Builder) super.addRepeatedField(field, value);
     }
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.littlstar.protobuf.Number) {
-        return mergeFrom((com.littlstar.protobuf.Number)other);
+      if (other instanceof com.littlstar.protobuf.KeyPair) {
+        return mergeFrom((com.littlstar.protobuf.KeyPair)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.littlstar.protobuf.Number other) {
-      if (other == com.littlstar.protobuf.Number.getDefaultInstance()) return this;
-      if (other.getValue() != 0D) {
-        setValue(other.getValue());
+    public Builder mergeFrom(com.littlstar.protobuf.KeyPair other) {
+      if (other == com.littlstar.protobuf.KeyPair.getDefaultInstance()) return this;
+      if (other.getSeed() != com.google.protobuf.ByteString.EMPTY) {
+        setSeed(other.getSeed());
+      }
+      if (other.getPublicKey() != com.google.protobuf.ByteString.EMPTY) {
+        setPublicKey(other.getPublicKey());
+      }
+      if (other.getSecretKey() != com.google.protobuf.ByteString.EMPTY) {
+        setSecretKey(other.getSecretKey());
       }
       onChanged();
       return this;
@@ -349,11 +410,11 @@ public  final class Number extends
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.littlstar.protobuf.Number parsedMessage = null;
+      com.littlstar.protobuf.KeyPair parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.littlstar.protobuf.Number) e.getUnfinishedMessage();
+        parsedMessage = (com.littlstar.protobuf.KeyPair) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -363,28 +424,89 @@ public  final class Number extends
       return this;
     }
 
-    private double value_ ;
+    private com.google.protobuf.ByteString seed_ = com.google.protobuf.ByteString.EMPTY;
     /**
-     * <code>double value = 1;</code>
+     * <code>bytes seed = 1;</code>
      */
-    public double getValue() {
-      return value_;
+    public com.google.protobuf.ByteString getSeed() {
+      return seed_;
     }
     /**
-     * <code>double value = 1;</code>
+     * <code>bytes seed = 1;</code>
      */
-    public Builder setValue(double value) {
-      
-      value_ = value;
+    public Builder setSeed(com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      seed_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>double value = 1;</code>
+     * <code>bytes seed = 1;</code>
      */
-    public Builder clearValue() {
+    public Builder clearSeed() {
       
-      value_ = 0D;
+      seed_ = getDefaultInstance().getSeed();
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.ByteString publicKey_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes publicKey = 2;</code>
+     */
+    public com.google.protobuf.ByteString getPublicKey() {
+      return publicKey_;
+    }
+    /**
+     * <code>bytes publicKey = 2;</code>
+     */
+    public Builder setPublicKey(com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      publicKey_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bytes publicKey = 2;</code>
+     */
+    public Builder clearPublicKey() {
+      
+      publicKey_ = getDefaultInstance().getPublicKey();
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.ByteString secretKey_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes secretKey = 3;</code>
+     */
+    public com.google.protobuf.ByteString getSecretKey() {
+      return secretKey_;
+    }
+    /**
+     * <code>bytes secretKey = 3;</code>
+     */
+    public Builder setSecretKey(com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      secretKey_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bytes secretKey = 3;</code>
+     */
+    public Builder clearSecretKey() {
+      
+      secretKey_ = getDefaultInstance().getSecretKey();
       onChanged();
       return this;
     }
@@ -399,39 +521,39 @@ public  final class Number extends
     }
 
 
-    // @@protoc_insertion_point(builder_scope:littlstar.cfsnet.Number)
+    // @@protoc_insertion_point(builder_scope:littlstar.cfsnet.KeyPair)
   }
 
-  // @@protoc_insertion_point(class_scope:littlstar.cfsnet.Number)
-  private static final com.littlstar.protobuf.Number DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:littlstar.cfsnet.KeyPair)
+  private static final com.littlstar.protobuf.KeyPair DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.littlstar.protobuf.Number();
+    DEFAULT_INSTANCE = new com.littlstar.protobuf.KeyPair();
   }
 
-  public static com.littlstar.protobuf.Number getDefaultInstance() {
+  public static com.littlstar.protobuf.KeyPair getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Number>
-      PARSER = new com.google.protobuf.AbstractParser<Number>() {
-    public Number parsePartialFrom(
+  private static final com.google.protobuf.Parser<KeyPair>
+      PARSER = new com.google.protobuf.AbstractParser<KeyPair>() {
+    public KeyPair parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Number(input, extensionRegistry);
+        return new KeyPair(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<Number> parser() {
+  public static com.google.protobuf.Parser<KeyPair> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<Number> getParserForType() {
+  public com.google.protobuf.Parser<KeyPair> getParserForType() {
     return PARSER;
   }
 
-  public com.littlstar.protobuf.Number getDefaultInstanceForType() {
+  public com.littlstar.protobuf.KeyPair getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

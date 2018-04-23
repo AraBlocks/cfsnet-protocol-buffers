@@ -15,7 +15,8 @@ public  final class List extends
     super(builder);
   }
   private List() {
-    values_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    values_ = java.util.Collections.emptyList();
+    length_ = 0L;
   }
 
   @java.lang.Override
@@ -44,12 +45,16 @@ public  final class List extends
             break;
           }
           case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
             if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-              values_ = new com.google.protobuf.LazyStringArrayList();
+              values_ = new java.util.ArrayList<com.google.protobuf.ByteString>();
               mutable_bitField0_ |= 0x00000001;
             }
-            values_.add(s);
+            values_.add(input.readBytes());
+            break;
+          }
+          case 16: {
+
+            length_ = input.readUInt64();
             break;
           }
         }
@@ -61,7 +66,7 @@ public  final class List extends
           e).setUnfinishedMessage(this);
     } finally {
       if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-        values_ = values_.getUnmodifiableView();
+        values_ = java.util.Collections.unmodifiableList(values_);
       }
       makeExtensionsImmutable();
     }
@@ -78,33 +83,36 @@ public  final class List extends
             com.littlstar.protobuf.List.class, com.littlstar.protobuf.List.Builder.class);
   }
 
+  private int bitField0_;
   public static final int VALUES_FIELD_NUMBER = 1;
-  private com.google.protobuf.LazyStringList values_;
+  private java.util.List<com.google.protobuf.ByteString> values_;
   /**
-   * <code>repeated string values = 1;</code>
+   * <code>repeated bytes values = 1;</code>
    */
-  public com.google.protobuf.ProtocolStringList
+  public java.util.List<com.google.protobuf.ByteString>
       getValuesList() {
     return values_;
   }
   /**
-   * <code>repeated string values = 1;</code>
+   * <code>repeated bytes values = 1;</code>
    */
   public int getValuesCount() {
     return values_.size();
   }
   /**
-   * <code>repeated string values = 1;</code>
+   * <code>repeated bytes values = 1;</code>
    */
-  public java.lang.String getValues(int index) {
+  public com.google.protobuf.ByteString getValues(int index) {
     return values_.get(index);
   }
+
+  public static final int LENGTH_FIELD_NUMBER = 2;
+  private long length_;
   /**
-   * <code>repeated string values = 1;</code>
+   * <code>uint64 length = 2;</code>
    */
-  public com.google.protobuf.ByteString
-      getValuesBytes(int index) {
-    return values_.getByteString(index);
+  public long getLength() {
+    return length_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -120,7 +128,10 @@ public  final class List extends
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     for (int i = 0; i < values_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, values_.getRaw(i));
+      output.writeBytes(1, values_.get(i));
+    }
+    if (length_ != 0L) {
+      output.writeUInt64(2, length_);
     }
   }
 
@@ -132,10 +143,15 @@ public  final class List extends
     {
       int dataSize = 0;
       for (int i = 0; i < values_.size(); i++) {
-        dataSize += computeStringSizeNoTag(values_.getRaw(i));
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeBytesSizeNoTag(values_.get(i));
       }
       size += dataSize;
       size += 1 * getValuesList().size();
+    }
+    if (length_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(2, length_);
     }
     memoizedSize = size;
     return size;
@@ -155,6 +171,8 @@ public  final class List extends
     boolean result = true;
     result = result && getValuesList()
         .equals(other.getValuesList());
+    result = result && (getLength()
+        == other.getLength());
     return result;
   }
 
@@ -169,6 +187,9 @@ public  final class List extends
       hash = (37 * hash) + VALUES_FIELD_NUMBER;
       hash = (53 * hash) + getValuesList().hashCode();
     }
+    hash = (37 * hash) + LENGTH_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getLength());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -298,8 +319,10 @@ public  final class List extends
     }
     public Builder clear() {
       super.clear();
-      values_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      values_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000001);
+      length_ = 0L;
+
       return this;
     }
 
@@ -323,11 +346,14 @@ public  final class List extends
     public com.littlstar.protobuf.List buildPartial() {
       com.littlstar.protobuf.List result = new com.littlstar.protobuf.List(this);
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        values_ = values_.getUnmodifiableView();
+        values_ = java.util.Collections.unmodifiableList(values_);
         bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.values_ = values_;
+      result.length_ = length_;
+      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -379,6 +405,9 @@ public  final class List extends
         }
         onChanged();
       }
+      if (other.getLength() != 0L) {
+        setLength(other.getLength());
+      }
       onChanged();
       return this;
     }
@@ -406,44 +435,37 @@ public  final class List extends
     }
     private int bitField0_;
 
-    private com.google.protobuf.LazyStringList values_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private java.util.List<com.google.protobuf.ByteString> values_ = java.util.Collections.emptyList();
     private void ensureValuesIsMutable() {
       if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-        values_ = new com.google.protobuf.LazyStringArrayList(values_);
+        values_ = new java.util.ArrayList<com.google.protobuf.ByteString>(values_);
         bitField0_ |= 0x00000001;
        }
     }
     /**
-     * <code>repeated string values = 1;</code>
+     * <code>repeated bytes values = 1;</code>
      */
-    public com.google.protobuf.ProtocolStringList
+    public java.util.List<com.google.protobuf.ByteString>
         getValuesList() {
-      return values_.getUnmodifiableView();
+      return java.util.Collections.unmodifiableList(values_);
     }
     /**
-     * <code>repeated string values = 1;</code>
+     * <code>repeated bytes values = 1;</code>
      */
     public int getValuesCount() {
       return values_.size();
     }
     /**
-     * <code>repeated string values = 1;</code>
+     * <code>repeated bytes values = 1;</code>
      */
-    public java.lang.String getValues(int index) {
+    public com.google.protobuf.ByteString getValues(int index) {
       return values_.get(index);
     }
     /**
-     * <code>repeated string values = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getValuesBytes(int index) {
-      return values_.getByteString(index);
-    }
-    /**
-     * <code>repeated string values = 1;</code>
+     * <code>repeated bytes values = 1;</code>
      */
     public Builder setValues(
-        int index, java.lang.String value) {
+        int index, com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -453,10 +475,9 @@ public  final class List extends
       return this;
     }
     /**
-     * <code>repeated string values = 1;</code>
+     * <code>repeated bytes values = 1;</code>
      */
-    public Builder addValues(
-        java.lang.String value) {
+    public Builder addValues(com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -466,10 +487,10 @@ public  final class List extends
       return this;
     }
     /**
-     * <code>repeated string values = 1;</code>
+     * <code>repeated bytes values = 1;</code>
      */
     public Builder addAllValues(
-        java.lang.Iterable<java.lang.String> values) {
+        java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
       ensureValuesIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, values_);
@@ -477,25 +498,37 @@ public  final class List extends
       return this;
     }
     /**
-     * <code>repeated string values = 1;</code>
+     * <code>repeated bytes values = 1;</code>
      */
     public Builder clearValues() {
-      values_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      values_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
+
+    private long length_ ;
     /**
-     * <code>repeated string values = 1;</code>
+     * <code>uint64 length = 2;</code>
      */
-    public Builder addValuesBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      ensureValuesIsMutable();
-      values_.add(value);
+    public long getLength() {
+      return length_;
+    }
+    /**
+     * <code>uint64 length = 2;</code>
+     */
+    public Builder setLength(long value) {
+      
+      length_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>uint64 length = 2;</code>
+     */
+    public Builder clearLength() {
+      
+      length_ = 0L;
       onChanged();
       return this;
     }

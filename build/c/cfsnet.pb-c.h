@@ -23,6 +23,7 @@ typedef struct _Littlstar__Cfsnet__DownloadDirectory Littlstar__Cfsnet__Download
 typedef struct _Littlstar__Cfsnet__DownloadFile Littlstar__Cfsnet__DownloadFile;
 typedef struct _Littlstar__Cfsnet__Drive Littlstar__Cfsnet__Drive;
 typedef struct _Littlstar__Cfsnet__Handshake Littlstar__Cfsnet__Handshake;
+typedef struct _Littlstar__Cfsnet__KeyPair Littlstar__Cfsnet__KeyPair;
 typedef struct _Littlstar__Cfsnet__List Littlstar__Cfsnet__List;
 typedef struct _Littlstar__Cfsnet__ListDirectory Littlstar__Cfsnet__ListDirectory;
 typedef struct _Littlstar__Cfsnet__MakeDirectory Littlstar__Cfsnet__MakeDirectory;
@@ -67,23 +68,24 @@ typedef enum _Littlstar__Cfsnet__ErrorCode {
 typedef enum _Littlstar__Cfsnet__Operation {
   LITTLSTAR__CFSNET__OPERATION__NoOperation = 0,
   LITTLSTAR__CFSNET__OPERATION__ResolveOperation = 1,
-  LITTLSTAR__CFSNET__OPERATION__OpenOperation = 2,
-  LITTLSTAR__CFSNET__OPERATION__CloseOperation = 3,
-  LITTLSTAR__CFSNET__OPERATION__ReadOperation = 4,
-  LITTLSTAR__CFSNET__OPERATION__WriteOperation = 5,
-  LITTLSTAR__CFSNET__OPERATION__ReadFileOperation = 10,
-  LITTLSTAR__CFSNET__OPERATION__WriteFileOperation = 11,
-  LITTLSTAR__CFSNET__OPERATION__StatFileOperation = 12,
-  LITTLSTAR__CFSNET__OPERATION__UnlinkFileOperation = 13,
-  LITTLSTAR__CFSNET__OPERATION__AccessFileOperation = 14,
-  LITTLSTAR__CFSNET__OPERATION__TouchFileOperation = 15,
-  LITTLSTAR__CFSNET__OPERATION__DownloadFileOperation = 16,
-  LITTLSTAR__CFSNET__OPERATION__DownloadDirectoryOperation = 20,
-  LITTLSTAR__CFSNET__OPERATION__MakeDirectoryOperation = 21,
-  LITTLSTAR__CFSNET__OPERATION__MakeDirectoryPathOperation = 22,
-  LITTLSTAR__CFSNET__OPERATION__RemoveDirectoryOperation = 23,
-  LITTLSTAR__CFSNET__OPERATION__RemoveDirectoryPathOperation = 24,
-  LITTLSTAR__CFSNET__OPERATION__ListDirectoryOperation = 25
+  LITTLSTAR__CFSNET__OPERATION__KeyPairOperation = 2,
+  LITTLSTAR__CFSNET__OPERATION__OpenOperation = 10,
+  LITTLSTAR__CFSNET__OPERATION__CloseOperation = 11,
+  LITTLSTAR__CFSNET__OPERATION__ReadOperation = 12,
+  LITTLSTAR__CFSNET__OPERATION__WriteOperation = 13,
+  LITTLSTAR__CFSNET__OPERATION__ReadFileOperation = 20,
+  LITTLSTAR__CFSNET__OPERATION__WriteFileOperation = 21,
+  LITTLSTAR__CFSNET__OPERATION__StatFileOperation = 22,
+  LITTLSTAR__CFSNET__OPERATION__UnlinkFileOperation = 23,
+  LITTLSTAR__CFSNET__OPERATION__AccessFileOperation = 24,
+  LITTLSTAR__CFSNET__OPERATION__TouchFileOperation = 25,
+  LITTLSTAR__CFSNET__OPERATION__DownloadFileOperation = 26,
+  LITTLSTAR__CFSNET__OPERATION__DownloadDirectoryOperation = 30,
+  LITTLSTAR__CFSNET__OPERATION__MakeDirectoryOperation = 31,
+  LITTLSTAR__CFSNET__OPERATION__MakeDirectoryPathOperation = 32,
+  LITTLSTAR__CFSNET__OPERATION__RemoveDirectoryOperation = 33,
+  LITTLSTAR__CFSNET__OPERATION__RemoveDirectoryPathOperation = 34,
+  LITTLSTAR__CFSNET__OPERATION__ListDirectoryOperation = 35
     PROTOBUF_C__FORCE_ENUM_TO_BE_INT_SIZE(LITTLSTAR__CFSNET__OPERATION)
 } Littlstar__Cfsnet__Operation;
 
@@ -173,6 +175,18 @@ struct  _Littlstar__Cfsnet__Handshake
 #define LITTLSTAR__CFSNET__HANDSHAKE__INIT \
  { PROTOBUF_C_MESSAGE_INIT (&littlstar__cfsnet__handshake__descriptor) \
     , {0,NULL}, {0,NULL}, 0 }
+
+
+struct  _Littlstar__Cfsnet__KeyPair
+{
+  ProtobufCMessage base;
+  ProtobufCBinaryData seed;
+  ProtobufCBinaryData publickey;
+  ProtobufCBinaryData secretkey;
+};
+#define LITTLSTAR__CFSNET__KEY_PAIR__INIT \
+ { PROTOBUF_C_MESSAGE_INIT (&littlstar__cfsnet__key_pair__descriptor) \
+    , {0,NULL}, {0,NULL}, {0,NULL} }
 
 
 struct  _Littlstar__Cfsnet__List
@@ -541,6 +555,25 @@ Littlstar__Cfsnet__Handshake *
                       const uint8_t       *data);
 void   littlstar__cfsnet__handshake__free_unpacked
                      (Littlstar__Cfsnet__Handshake *message,
+                      ProtobufCAllocator *allocator);
+/* Littlstar__Cfsnet__KeyPair methods */
+void   littlstar__cfsnet__key_pair__init
+                     (Littlstar__Cfsnet__KeyPair         *message);
+size_t littlstar__cfsnet__key_pair__get_packed_size
+                     (const Littlstar__Cfsnet__KeyPair   *message);
+size_t littlstar__cfsnet__key_pair__pack
+                     (const Littlstar__Cfsnet__KeyPair   *message,
+                      uint8_t             *out);
+size_t littlstar__cfsnet__key_pair__pack_to_buffer
+                     (const Littlstar__Cfsnet__KeyPair   *message,
+                      ProtobufCBuffer     *buffer);
+Littlstar__Cfsnet__KeyPair *
+       littlstar__cfsnet__key_pair__unpack
+                     (ProtobufCAllocator  *allocator,
+                      size_t               len,
+                      const uint8_t       *data);
+void   littlstar__cfsnet__key_pair__free_unpacked
+                     (Littlstar__Cfsnet__KeyPair *message,
                       ProtobufCAllocator *allocator);
 /* Littlstar__Cfsnet__List methods */
 void   littlstar__cfsnet__list__init
@@ -929,6 +962,9 @@ typedef void (*Littlstar__Cfsnet__Drive_Closure)
 typedef void (*Littlstar__Cfsnet__Handshake_Closure)
                  (const Littlstar__Cfsnet__Handshake *message,
                   void *closure_data);
+typedef void (*Littlstar__Cfsnet__KeyPair_Closure)
+                 (const Littlstar__Cfsnet__KeyPair *message,
+                  void *closure_data);
 typedef void (*Littlstar__Cfsnet__List_Closure)
                  (const Littlstar__Cfsnet__List *message,
                   void *closure_data);
@@ -1003,6 +1039,7 @@ extern const ProtobufCMessageDescriptor littlstar__cfsnet__download_directory__d
 extern const ProtobufCMessageDescriptor littlstar__cfsnet__download_file__descriptor;
 extern const ProtobufCMessageDescriptor littlstar__cfsnet__drive__descriptor;
 extern const ProtobufCMessageDescriptor littlstar__cfsnet__handshake__descriptor;
+extern const ProtobufCMessageDescriptor littlstar__cfsnet__key_pair__descriptor;
 extern const ProtobufCMessageDescriptor littlstar__cfsnet__list__descriptor;
 extern const ProtobufCMessageDescriptor littlstar__cfsnet__list_directory__descriptor;
 extern const ProtobufCMessageDescriptor littlstar__cfsnet__make_directory__descriptor;

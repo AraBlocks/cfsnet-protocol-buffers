@@ -64,7 +64,8 @@ proto.littlstar.cfsnet.List.prototype.toObject = function(opt_includeInstance) {
  */
 proto.littlstar.cfsnet.List.toObject = function(includeInstance, msg) {
   var f, obj = {
-    valuesList: jspb.Message.getField(msg, 1)
+    valuesList: msg.getValuesList_asB64(),
+    length: jspb.Message.getFieldWithDefault(msg, 2, 0)
   };
 
   if (includeInstance) {
@@ -102,8 +103,12 @@ proto.littlstar.cfsnet.List.deserializeBinaryFromReader = function(msg, reader) 
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
       msg.addValues(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setLength(value);
       break;
     default:
       reader.skipField();
@@ -133,10 +138,17 @@ proto.littlstar.cfsnet.List.prototype.serializeBinary = function() {
  */
 proto.littlstar.cfsnet.List.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getValuesList();
+  f = message.getValuesList_asU8();
   if (f.length > 0) {
-    writer.writeRepeatedString(
+    writer.writeRepeatedBytes(
       1,
+      f
+    );
+  }
+  f = message.getLength();
+  if (f !== 0) {
+    writer.writeUint64(
+      2,
       f
     );
   }
@@ -144,7 +156,7 @@ proto.littlstar.cfsnet.List.serializeBinaryToWriter = function(message, writer) 
 
 
 /**
- * repeated string values = 1;
+ * repeated bytes values = 1;
  * If you change this array by adding, removing or replacing elements, or if you
  * replace the array itself, then you must call the setter to update it.
  * @return {!Array.<string>}
@@ -154,14 +166,42 @@ proto.littlstar.cfsnet.List.prototype.getValuesList = function() {
 };
 
 
-/** @param {!Array.<string>} value */
+/**
+ * repeated bytes values = 1;
+ * If you change this array by adding, removing or replacing elements, or if you
+ * replace the array itself, then you must call the setter to update it.
+ * This is a type-conversion wrapper around `getValuesList()`
+ * @return {!Array.<string>}
+ */
+proto.littlstar.cfsnet.List.prototype.getValuesList_asB64 = function() {
+  return /** @type {!Array.<string>} */ (jspb.Message.bytesListAsB64(
+      this.getValuesList()));
+};
+
+
+/**
+ * repeated bytes values = 1;
+ * If you change this array by adding, removing or replacing elements, or if you
+ * replace the array itself, then you must call the setter to update it.
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getValuesList()`
+ * @return {!Array.<!Uint8Array>}
+ */
+proto.littlstar.cfsnet.List.prototype.getValuesList_asU8 = function() {
+  return /** @type {!Array.<!Uint8Array>} */ (jspb.Message.bytesListAsU8(
+      this.getValuesList()));
+};
+
+
+/** @param {!(Array<!Uint8Array>|Array<string>)} value */
 proto.littlstar.cfsnet.List.prototype.setValuesList = function(value) {
   jspb.Message.setField(this, 1, value || []);
 };
 
 
 /**
- * @param {!string} value
+ * @param {!(string|Uint8Array)} value
  * @param {number=} opt_index
  */
 proto.littlstar.cfsnet.List.prototype.addValues = function(value, opt_index) {
@@ -171,6 +211,21 @@ proto.littlstar.cfsnet.List.prototype.addValues = function(value, opt_index) {
 
 proto.littlstar.cfsnet.List.prototype.clearValuesList = function() {
   this.setValuesList([]);
+};
+
+
+/**
+ * optional uint64 length = 2;
+ * @return {number}
+ */
+proto.littlstar.cfsnet.List.prototype.getLength = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/** @param {number} value */
+proto.littlstar.cfsnet.List.prototype.setLength = function(value) {
+  jspb.Message.setField(this, 2, value);
 };
 
 

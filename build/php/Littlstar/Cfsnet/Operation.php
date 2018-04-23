@@ -18,72 +18,76 @@ class Operation
      */
     const ResolveOperation = 1;
     /**
-     * <code>OpenOperation = 2;</code>
+     * <code>KeyPairOperation = 2;</code>
      */
-    const OpenOperation = 2;
+    const KeyPairOperation = 2;
     /**
-     * <code>CloseOperation = 3;</code>
+     * <code>OpenOperation = 10;</code>
      */
-    const CloseOperation = 3;
+    const OpenOperation = 10;
     /**
-     * <code>ReadOperation = 4;</code>
+     * <code>CloseOperation = 11;</code>
      */
-    const ReadOperation = 4;
+    const CloseOperation = 11;
     /**
-     * <code>WriteOperation = 5;</code>
+     * <code>ReadOperation = 12;</code>
      */
-    const WriteOperation = 5;
+    const ReadOperation = 12;
     /**
-     * <code>ReadFileOperation = 10;</code>
+     * <code>WriteOperation = 13;</code>
      */
-    const ReadFileOperation = 10;
+    const WriteOperation = 13;
     /**
-     * <code>WriteFileOperation = 11;</code>
+     * <code>ReadFileOperation = 20;</code>
      */
-    const WriteFileOperation = 11;
+    const ReadFileOperation = 20;
     /**
-     * <code>StatFileOperation = 12;</code>
+     * <code>WriteFileOperation = 21;</code>
      */
-    const StatFileOperation = 12;
+    const WriteFileOperation = 21;
     /**
-     * <code>UnlinkFileOperation = 13;</code>
+     * <code>StatFileOperation = 22;</code>
      */
-    const UnlinkFileOperation = 13;
+    const StatFileOperation = 22;
     /**
-     * <code>AccessFileOperation = 14;</code>
+     * <code>UnlinkFileOperation = 23;</code>
      */
-    const AccessFileOperation = 14;
+    const UnlinkFileOperation = 23;
     /**
-     * <code>TouchFileOperation = 15;</code>
+     * <code>AccessFileOperation = 24;</code>
      */
-    const TouchFileOperation = 15;
+    const AccessFileOperation = 24;
     /**
-     * <code>DownloadFileOperation = 16;</code>
+     * <code>TouchFileOperation = 25;</code>
      */
-    const DownloadFileOperation = 16;
+    const TouchFileOperation = 25;
     /**
-     * <code>DownloadDirectoryOperation = 20;</code>
+     * <code>DownloadFileOperation = 26;</code>
      */
-    const DownloadDirectoryOperation = 20;
+    const DownloadFileOperation = 26;
     /**
-     * <code>MakeDirectoryOperation = 21;</code>
+     * <code>DownloadDirectoryOperation = 30;</code>
      */
-    const MakeDirectoryOperation = 21;
+    const DownloadDirectoryOperation = 30;
     /**
-     * <code>MakeDirectoryPathOperation = 22;</code>
+     * <code>MakeDirectoryOperation = 31;</code>
      */
-    const MakeDirectoryPathOperation = 22;
+    const MakeDirectoryOperation = 31;
     /**
-     * <code>RemoveDirectoryOperation = 23;</code>
+     * <code>MakeDirectoryPathOperation = 32;</code>
      */
-    const RemoveDirectoryOperation = 23;
+    const MakeDirectoryPathOperation = 32;
     /**
-     * <code>RemoveDirectoryPathOperation = 24;</code>
+     * <code>RemoveDirectoryOperation = 33;</code>
      */
-    const RemoveDirectoryPathOperation = 24;
+    const RemoveDirectoryOperation = 33;
     /**
-     * <code>ListDirectoryOperation = 25;</code>
+     * <code>RemoveDirectoryPathOperation = 34;</code>
      */
-    const ListDirectoryOperation = 25;
+    const RemoveDirectoryPathOperation = 34;
+    /**
+     * <code>ListDirectoryOperation = 35;</code>
+     */
+    const ListDirectoryOperation = 35;
 }
 

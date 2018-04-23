@@ -57,7 +57,7 @@ proto.littlstar.cfsnet.Number.prototype.toObject = function(opt_includeInstance)
  */
 proto.littlstar.cfsnet.Number.toObject = function(includeInstance, msg) {
   var f, obj = {
-    value: jspb.Message.getFieldWithDefault(msg, 1, 0)
+    value: +jspb.Message.getFieldWithDefault(msg, 1, 0.0)
   };
 
   if (includeInstance) {
@@ -95,7 +95,7 @@ proto.littlstar.cfsnet.Number.deserializeBinaryFromReader = function(msg, reader
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {number} */ (reader.readInt64());
+      var value = /** @type {number} */ (reader.readDouble());
       msg.setValue(value);
       break;
     default:
@@ -127,8 +127,8 @@ proto.littlstar.cfsnet.Number.prototype.serializeBinary = function() {
 proto.littlstar.cfsnet.Number.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getValue();
-  if (f !== 0) {
-    writer.writeInt64(
+  if (f !== 0.0) {
+    writer.writeDouble(
       1,
       f
     );
@@ -137,11 +137,11 @@ proto.littlstar.cfsnet.Number.serializeBinaryToWriter = function(message, writer
 
 
 /**
- * optional int64 value = 1;
+ * optional double value = 1;
  * @return {number}
  */
 proto.littlstar.cfsnet.Number.prototype.getValue = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+  return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 1, 0.0));
 };
 
 

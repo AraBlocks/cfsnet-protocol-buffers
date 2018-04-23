@@ -8,21 +8,20 @@ public interface ListOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated string values = 1;</code>
+   * <code>repeated bytes values = 1;</code>
    */
-  java.util.List<java.lang.String>
-      getValuesList();
+  java.util.List<com.google.protobuf.ByteString> getValuesList();
   /**
-   * <code>repeated string values = 1;</code>
+   * <code>repeated bytes values = 1;</code>
    */
   int getValuesCount();
   /**
-   * <code>repeated string values = 1;</code>
+   * <code>repeated bytes values = 1;</code>
    */
-  java.lang.String getValues(int index);
+  com.google.protobuf.ByteString getValues(int index);
+
   /**
-   * <code>repeated string values = 1;</code>
+   * <code>uint64 length = 2;</code>
    */
-  com.google.protobuf.ByteString
-      getValuesBytes(int index);
+  long getLength();
 }

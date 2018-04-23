@@ -93,23 +93,24 @@ typedef GPB_ENUM(CFSPBOperation) {
   CFSPBOperation_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
   CFSPBOperation_NoOperation = 0,
   CFSPBOperation_ResolveOperation = 1,
-  CFSPBOperation_OpenOperation = 2,
-  CFSPBOperation_CloseOperation = 3,
-  CFSPBOperation_ReadOperation = 4,
-  CFSPBOperation_WriteOperation = 5,
-  CFSPBOperation_ReadFileOperation = 10,
-  CFSPBOperation_WriteFileOperation = 11,
-  CFSPBOperation_StatFileOperation = 12,
-  CFSPBOperation_UnlinkFileOperation = 13,
-  CFSPBOperation_AccessFileOperation = 14,
-  CFSPBOperation_TouchFileOperation = 15,
-  CFSPBOperation_DownloadFileOperation = 16,
-  CFSPBOperation_DownloadDirectoryOperation = 20,
-  CFSPBOperation_MakeDirectoryOperation = 21,
-  CFSPBOperation_MakeDirectoryPathOperation = 22,
-  CFSPBOperation_RemoveDirectoryOperation = 23,
-  CFSPBOperation_RemoveDirectoryPathOperation = 24,
-  CFSPBOperation_ListDirectoryOperation = 25,
+  CFSPBOperation_KeyPairOperation = 2,
+  CFSPBOperation_OpenOperation = 10,
+  CFSPBOperation_CloseOperation = 11,
+  CFSPBOperation_ReadOperation = 12,
+  CFSPBOperation_WriteOperation = 13,
+  CFSPBOperation_ReadFileOperation = 20,
+  CFSPBOperation_WriteFileOperation = 21,
+  CFSPBOperation_StatFileOperation = 22,
+  CFSPBOperation_UnlinkFileOperation = 23,
+  CFSPBOperation_AccessFileOperation = 24,
+  CFSPBOperation_TouchFileOperation = 25,
+  CFSPBOperation_DownloadFileOperation = 26,
+  CFSPBOperation_DownloadDirectoryOperation = 30,
+  CFSPBOperation_MakeDirectoryOperation = 31,
+  CFSPBOperation_MakeDirectoryPathOperation = 32,
+  CFSPBOperation_RemoveDirectoryOperation = 33,
+  CFSPBOperation_RemoveDirectoryPathOperation = 34,
+  CFSPBOperation_ListDirectoryOperation = 35,
 };
 
 GPBEnumDescriptor *CFSPBOperation_EnumDescriptor(void);
@@ -178,11 +179,14 @@ typedef GPB_ENUM(CFSPBBoolean_FieldNumber) {
 
 typedef GPB_ENUM(CFSPBBuffer_FieldNumber) {
   CFSPBBuffer_FieldNumber_Value = 1,
+  CFSPBBuffer_FieldNumber_Length = 2,
 };
 
 @interface CFSPBBuffer : GPBMessage
 
 @property(nonatomic, readwrite, copy, null_resettable) NSData *value;
+
+@property(nonatomic, readwrite) uint64_t length;
 
 @end
 
@@ -258,17 +262,38 @@ typedef GPB_ENUM(CFSPBHandshake_FieldNumber) {
 
 @end
 
+#pragma mark - CFSPBKeyPair
+
+typedef GPB_ENUM(CFSPBKeyPair_FieldNumber) {
+  CFSPBKeyPair_FieldNumber_Seed = 1,
+  CFSPBKeyPair_FieldNumber_PublicKey = 2,
+  CFSPBKeyPair_FieldNumber_SecretKey = 3,
+};
+
+@interface CFSPBKeyPair : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSData *seed;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSData *publicKey;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSData *secretKey;
+
+@end
+
 #pragma mark - CFSPBList
 
 typedef GPB_ENUM(CFSPBList_FieldNumber) {
   CFSPBList_FieldNumber_ValuesArray = 1,
+  CFSPBList_FieldNumber_Length = 2,
 };
 
 @interface CFSPBList : GPBMessage
 
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<NSString*> *valuesArray;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<NSData*> *valuesArray;
 /** The number of items in @c valuesArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger valuesArray_Count;
+
+@property(nonatomic, readwrite) uint64_t length;
 
 @end
 
@@ -308,15 +333,30 @@ typedef GPB_ENUM(CFSPBMakeDirectoryPath_FieldNumber) {
 
 @end
 
+#pragma mark - CFSPBNumber
+
+typedef GPB_ENUM(CFSPBNumber_FieldNumber) {
+  CFSPBNumber_FieldNumber_Value = 1,
+};
+
+@interface CFSPBNumber : GPBMessage
+
+@property(nonatomic, readwrite) double value;
+
+@end
+
 #pragma mark - CFSPBOpen
 
 typedef GPB_ENUM(CFSPBOpen_FieldNumber) {
   CFSPBOpen_FieldNumber_Path = 1,
+  CFSPBOpen_FieldNumber_Flags = 2,
 };
 
 @interface CFSPBOpen : GPBMessage
 
 @property(nonatomic, readwrite, copy, null_resettable) NSString *path;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *flags;
 
 @end
 
@@ -485,36 +525,33 @@ void SetCFSPBResponse_ErrorCode_RawValue(CFSPBResponse *message, int32_t value);
 #pragma mark - CFSPBStat
 
 typedef GPB_ENUM(CFSPBStat_FieldNumber) {
-  CFSPBStat_FieldNumber_Mode = 1,
-  CFSPBStat_FieldNumber_Uid = 2,
-  CFSPBStat_FieldNumber_Gid = 3,
+  CFSPBStat_FieldNumber_Uid = 1,
+  CFSPBStat_FieldNumber_Gid = 2,
+  CFSPBStat_FieldNumber_Mode = 3,
   CFSPBStat_FieldNumber_Size = 4,
-  CFSPBStat_FieldNumber_Blocks = 5,
-  CFSPBStat_FieldNumber_Offset = 6,
-  CFSPBStat_FieldNumber_ByteOffset = 7,
-  CFSPBStat_FieldNumber_Mtime = 8,
-  CFSPBStat_FieldNumber_Ctime = 9,
+  CFSPBStat_FieldNumber_Atime = 5,
+  CFSPBStat_FieldNumber_Ctime = 6,
+  CFSPBStat_FieldNumber_Mtime = 7,
+  CFSPBStat_FieldNumber_Blocks = 8,
 };
 
 @interface CFSPBStat : GPBMessage
-
-@property(nonatomic, readwrite) uint32_t mode;
 
 @property(nonatomic, readwrite) uint32_t uid;
 
 @property(nonatomic, readwrite) uint32_t gid;
 
+@property(nonatomic, readwrite) uint32_t mode;
+
 @property(nonatomic, readwrite) uint64_t size;
 
-@property(nonatomic, readwrite) uint64_t blocks;
+@property(nonatomic, readwrite) uint64_t atime;
 
-@property(nonatomic, readwrite) uint64_t offset;
-
-@property(nonatomic, readwrite) uint64_t byteOffset;
+@property(nonatomic, readwrite) uint64_t ctime;
 
 @property(nonatomic, readwrite) uint64_t mtime;
 
-@property(nonatomic, readwrite) uint64_t ctime;
+@property(nonatomic, readwrite) uint64_t blocks;
 
 @end
 

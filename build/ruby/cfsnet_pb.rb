@@ -13,6 +13,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
   end
   add_message "littlstar.cfsnet.Buffer" do
     optional :value, :bytes, 1
+    optional :length, :uint64, 2
   end
   add_message "littlstar.cfsnet.Close" do
     optional :fileDescriptor, :uint32, 1
@@ -33,8 +34,14 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     optional :key, :bytes, 2
     optional :ack, :bool, 3
   end
+  add_message "littlstar.cfsnet.KeyPair" do
+    optional :seed, :bytes, 1
+    optional :publicKey, :bytes, 2
+    optional :secretKey, :bytes, 3
+  end
   add_message "littlstar.cfsnet.List" do
-    repeated :values, :string, 1
+    repeated :values, :bytes, 1
+    optional :length, :uint64, 2
   end
   add_message "littlstar.cfsnet.ListDirectory" do
     optional :path, :string, 1
@@ -45,8 +52,12 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
   add_message "littlstar.cfsnet.MakeDirectoryPath" do
     optional :path, :string, 1
   end
+  add_message "littlstar.cfsnet.Number" do
+    optional :value, :double, 1
+  end
   add_message "littlstar.cfsnet.Open" do
     optional :path, :string, 1
+    optional :flags, :string, 2
   end
   add_message "littlstar.cfsnet.Read" do
     optional :fileDescriptor, :uint32, 1
@@ -82,15 +93,14 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     optional :buffer, :bytes, 6
   end
   add_message "littlstar.cfsnet.Stat" do
-    optional :mode, :uint32, 1
-    optional :uid, :uint32, 2
-    optional :gid, :uint32, 3
+    optional :uid, :uint32, 1
+    optional :gid, :uint32, 2
+    optional :mode, :uint32, 3
     optional :size, :uint64, 4
-    optional :blocks, :uint64, 5
-    optional :offset, :uint64, 6
-    optional :byteOffset, :uint64, 7
-    optional :mtime, :uint64, 8
-    optional :ctime, :uint64, 9
+    optional :atime, :uint64, 5
+    optional :ctime, :uint64, 6
+    optional :mtime, :uint64, 7
+    optional :blocks, :uint64, 8
   end
   add_message "littlstar.cfsnet.StatFile" do
     optional :path, :string, 1
@@ -129,23 +139,24 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
   add_enum "littlstar.cfsnet.Operation" do
     value :NoOperation, 0
     value :ResolveOperation, 1
-    value :OpenOperation, 2
-    value :CloseOperation, 3
-    value :ReadOperation, 4
-    value :WriteOperation, 5
-    value :ReadFileOperation, 10
-    value :WriteFileOperation, 11
-    value :StatFileOperation, 12
-    value :UnlinkFileOperation, 13
-    value :AccessFileOperation, 14
-    value :TouchFileOperation, 15
-    value :DownloadFileOperation, 16
-    value :DownloadDirectoryOperation, 20
-    value :MakeDirectoryOperation, 21
-    value :MakeDirectoryPathOperation, 22
-    value :RemoveDirectoryOperation, 23
-    value :RemoveDirectoryPathOperation, 24
-    value :ListDirectoryOperation, 25
+    value :KeyPairOperation, 2
+    value :OpenOperation, 10
+    value :CloseOperation, 11
+    value :ReadOperation, 12
+    value :WriteOperation, 13
+    value :ReadFileOperation, 20
+    value :WriteFileOperation, 21
+    value :StatFileOperation, 22
+    value :UnlinkFileOperation, 23
+    value :AccessFileOperation, 24
+    value :TouchFileOperation, 25
+    value :DownloadFileOperation, 26
+    value :DownloadDirectoryOperation, 30
+    value :MakeDirectoryOperation, 31
+    value :MakeDirectoryPathOperation, 32
+    value :RemoveDirectoryOperation, 33
+    value :RemoveDirectoryPathOperation, 34
+    value :ListDirectoryOperation, 35
   end
 end
 
@@ -159,10 +170,12 @@ module Littlstar
     DownloadFile = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.DownloadFile").msgclass
     Drive = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.Drive").msgclass
     Handshake = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.Handshake").msgclass
+    KeyPair = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.KeyPair").msgclass
     List = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.List").msgclass
     ListDirectory = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.ListDirectory").msgclass
     MakeDirectory = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.MakeDirectory").msgclass
     MakeDirectoryPath = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.MakeDirectoryPath").msgclass
+    Number = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.Number").msgclass
     Open = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.Open").msgclass
     Read = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.Read").msgclass
     ReadFile = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.ReadFile").msgclass

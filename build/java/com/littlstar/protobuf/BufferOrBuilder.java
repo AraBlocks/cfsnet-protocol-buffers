@@ -11,4 +11,9 @@ public interface BufferOrBuilder extends
    * <code>bytes value = 1;</code>
    */
   com.google.protobuf.ByteString getValue();
+
+  /**
+   * <code>uint64 length = 2;</code>
+   */
+  long getLength();
 }

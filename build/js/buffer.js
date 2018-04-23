@@ -57,7 +57,8 @@ proto.littlstar.cfsnet.Buffer.prototype.toObject = function(opt_includeInstance)
  */
 proto.littlstar.cfsnet.Buffer.toObject = function(includeInstance, msg) {
   var f, obj = {
-    value: msg.getValue_asB64()
+    value: msg.getValue_asB64(),
+    length: jspb.Message.getFieldWithDefault(msg, 2, 0)
   };
 
   if (includeInstance) {
@@ -98,6 +99,10 @@ proto.littlstar.cfsnet.Buffer.deserializeBinaryFromReader = function(msg, reader
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
       msg.setValue(value);
       break;
+    case 2:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setLength(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -130,6 +135,13 @@ proto.littlstar.cfsnet.Buffer.serializeBinaryToWriter = function(message, writer
   if (f.length > 0) {
     writer.writeBytes(
       1,
+      f
+    );
+  }
+  f = message.getLength();
+  if (f !== 0) {
+    writer.writeUint64(
+      2,
       f
     );
   }
@@ -172,6 +184,21 @@ proto.littlstar.cfsnet.Buffer.prototype.getValue_asU8 = function() {
 /** @param {!(string|Uint8Array)} value */
 proto.littlstar.cfsnet.Buffer.prototype.setValue = function(value) {
   jspb.Message.setField(this, 1, value);
+};
+
+
+/**
+ * optional uint64 length = 2;
+ * @return {number}
+ */
+proto.littlstar.cfsnet.Buffer.prototype.getLength = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/** @param {number} value */
+proto.littlstar.cfsnet.Buffer.prototype.setLength = function(value) {
+  jspb.Message.setField(this, 2, value);
 };
 
 

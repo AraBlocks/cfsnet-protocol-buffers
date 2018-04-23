@@ -15,15 +15,14 @@ public  final class Stat extends
     super(builder);
   }
   private Stat() {
-    mode_ = 0;
     uid_ = 0;
     gid_ = 0;
+    mode_ = 0;
     size_ = 0L;
-    blocks_ = 0L;
-    offset_ = 0L;
-    byteOffset_ = 0L;
-    mtime_ = 0L;
+    atime_ = 0L;
     ctime_ = 0L;
+    mtime_ = 0L;
+    blocks_ = 0L;
   }
 
   @java.lang.Override
@@ -53,17 +52,17 @@ public  final class Stat extends
           }
           case 8: {
 
-            mode_ = input.readUInt32();
+            uid_ = input.readUInt32();
             break;
           }
           case 16: {
 
-            uid_ = input.readUInt32();
+            gid_ = input.readUInt32();
             break;
           }
           case 24: {
 
-            gid_ = input.readUInt32();
+            mode_ = input.readUInt32();
             break;
           }
           case 32: {
@@ -73,27 +72,22 @@ public  final class Stat extends
           }
           case 40: {
 
-            blocks_ = input.readUInt64();
+            atime_ = input.readUInt64();
             break;
           }
           case 48: {
 
-            offset_ = input.readUInt64();
+            ctime_ = input.readUInt64();
             break;
           }
           case 56: {
 
-            byteOffset_ = input.readUInt64();
+            mtime_ = input.readUInt64();
             break;
           }
           case 64: {
 
-            mtime_ = input.readUInt64();
-            break;
-          }
-          case 72: {
-
-            ctime_ = input.readUInt64();
+            blocks_ = input.readUInt64();
             break;
           }
         }
@@ -119,31 +113,31 @@ public  final class Stat extends
             com.littlstar.protobuf.Stat.class, com.littlstar.protobuf.Stat.Builder.class);
   }
 
-  public static final int MODE_FIELD_NUMBER = 1;
-  private int mode_;
-  /**
-   * <code>uint32 mode = 1;</code>
-   */
-  public int getMode() {
-    return mode_;
-  }
-
-  public static final int UID_FIELD_NUMBER = 2;
+  public static final int UID_FIELD_NUMBER = 1;
   private int uid_;
   /**
-   * <code>uint32 uid = 2;</code>
+   * <code>uint32 uid = 1;</code>
    */
   public int getUid() {
     return uid_;
   }
 
-  public static final int GID_FIELD_NUMBER = 3;
+  public static final int GID_FIELD_NUMBER = 2;
   private int gid_;
   /**
-   * <code>uint32 gid = 3;</code>
+   * <code>uint32 gid = 2;</code>
    */
   public int getGid() {
     return gid_;
+  }
+
+  public static final int MODE_FIELD_NUMBER = 3;
+  private int mode_;
+  /**
+   * <code>uint32 mode = 3;</code>
+   */
+  public int getMode() {
+    return mode_;
   }
 
   public static final int SIZE_FIELD_NUMBER = 4;
@@ -155,49 +149,40 @@ public  final class Stat extends
     return size_;
   }
 
-  public static final int BLOCKS_FIELD_NUMBER = 5;
-  private long blocks_;
+  public static final int ATIME_FIELD_NUMBER = 5;
+  private long atime_;
   /**
-   * <code>uint64 blocks = 5;</code>
+   * <code>uint64 atime = 5;</code>
    */
-  public long getBlocks() {
-    return blocks_;
+  public long getAtime() {
+    return atime_;
   }
 
-  public static final int OFFSET_FIELD_NUMBER = 6;
-  private long offset_;
+  public static final int CTIME_FIELD_NUMBER = 6;
+  private long ctime_;
   /**
-   * <code>uint64 offset = 6;</code>
+   * <code>uint64 ctime = 6;</code>
    */
-  public long getOffset() {
-    return offset_;
+  public long getCtime() {
+    return ctime_;
   }
 
-  public static final int BYTEOFFSET_FIELD_NUMBER = 7;
-  private long byteOffset_;
-  /**
-   * <code>uint64 byteOffset = 7;</code>
-   */
-  public long getByteOffset() {
-    return byteOffset_;
-  }
-
-  public static final int MTIME_FIELD_NUMBER = 8;
+  public static final int MTIME_FIELD_NUMBER = 7;
   private long mtime_;
   /**
-   * <code>uint64 mtime = 8;</code>
+   * <code>uint64 mtime = 7;</code>
    */
   public long getMtime() {
     return mtime_;
   }
 
-  public static final int CTIME_FIELD_NUMBER = 9;
-  private long ctime_;
+  public static final int BLOCKS_FIELD_NUMBER = 8;
+  private long blocks_;
   /**
-   * <code>uint64 ctime = 9;</code>
+   * <code>uint64 blocks = 8;</code>
    */
-  public long getCtime() {
-    return ctime_;
+  public long getBlocks() {
+    return blocks_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -212,32 +197,29 @@ public  final class Stat extends
 
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (mode_ != 0) {
-      output.writeUInt32(1, mode_);
-    }
     if (uid_ != 0) {
-      output.writeUInt32(2, uid_);
+      output.writeUInt32(1, uid_);
     }
     if (gid_ != 0) {
-      output.writeUInt32(3, gid_);
+      output.writeUInt32(2, gid_);
+    }
+    if (mode_ != 0) {
+      output.writeUInt32(3, mode_);
     }
     if (size_ != 0L) {
       output.writeUInt64(4, size_);
     }
-    if (blocks_ != 0L) {
-      output.writeUInt64(5, blocks_);
-    }
-    if (offset_ != 0L) {
-      output.writeUInt64(6, offset_);
-    }
-    if (byteOffset_ != 0L) {
-      output.writeUInt64(7, byteOffset_);
-    }
-    if (mtime_ != 0L) {
-      output.writeUInt64(8, mtime_);
+    if (atime_ != 0L) {
+      output.writeUInt64(5, atime_);
     }
     if (ctime_ != 0L) {
-      output.writeUInt64(9, ctime_);
+      output.writeUInt64(6, ctime_);
+    }
+    if (mtime_ != 0L) {
+      output.writeUInt64(7, mtime_);
+    }
+    if (blocks_ != 0L) {
+      output.writeUInt64(8, blocks_);
     }
   }
 
@@ -246,41 +228,37 @@ public  final class Stat extends
     if (size != -1) return size;
 
     size = 0;
-    if (mode_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(1, mode_);
-    }
     if (uid_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(2, uid_);
+        .computeUInt32Size(1, uid_);
     }
     if (gid_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(3, gid_);
+        .computeUInt32Size(2, gid_);
+    }
+    if (mode_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt32Size(3, mode_);
     }
     if (size_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeUInt64Size(4, size_);
     }
-    if (blocks_ != 0L) {
+    if (atime_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt64Size(5, blocks_);
-    }
-    if (offset_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeUInt64Size(6, offset_);
-    }
-    if (byteOffset_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeUInt64Size(7, byteOffset_);
-    }
-    if (mtime_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeUInt64Size(8, mtime_);
+        .computeUInt64Size(5, atime_);
     }
     if (ctime_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt64Size(9, ctime_);
+        .computeUInt64Size(6, ctime_);
+    }
+    if (mtime_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(7, mtime_);
+    }
+    if (blocks_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(8, blocks_);
     }
     memoizedSize = size;
     return size;
@@ -298,24 +276,22 @@ public  final class Stat extends
     com.littlstar.protobuf.Stat other = (com.littlstar.protobuf.Stat) obj;
 
     boolean result = true;
-    result = result && (getMode()
-        == other.getMode());
     result = result && (getUid()
         == other.getUid());
     result = result && (getGid()
         == other.getGid());
+    result = result && (getMode()
+        == other.getMode());
     result = result && (getSize()
         == other.getSize());
-    result = result && (getBlocks()
-        == other.getBlocks());
-    result = result && (getOffset()
-        == other.getOffset());
-    result = result && (getByteOffset()
-        == other.getByteOffset());
-    result = result && (getMtime()
-        == other.getMtime());
+    result = result && (getAtime()
+        == other.getAtime());
     result = result && (getCtime()
         == other.getCtime());
+    result = result && (getMtime()
+        == other.getMtime());
+    result = result && (getBlocks()
+        == other.getBlocks());
     return result;
   }
 
@@ -326,30 +302,27 @@ public  final class Stat extends
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + MODE_FIELD_NUMBER;
-    hash = (53 * hash) + getMode();
     hash = (37 * hash) + UID_FIELD_NUMBER;
     hash = (53 * hash) + getUid();
     hash = (37 * hash) + GID_FIELD_NUMBER;
     hash = (53 * hash) + getGid();
+    hash = (37 * hash) + MODE_FIELD_NUMBER;
+    hash = (53 * hash) + getMode();
     hash = (37 * hash) + SIZE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getSize());
-    hash = (37 * hash) + BLOCKS_FIELD_NUMBER;
+    hash = (37 * hash) + ATIME_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getBlocks());
-    hash = (37 * hash) + OFFSET_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getOffset());
-    hash = (37 * hash) + BYTEOFFSET_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getByteOffset());
-    hash = (37 * hash) + MTIME_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getMtime());
+        getAtime());
     hash = (37 * hash) + CTIME_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getCtime());
+    hash = (37 * hash) + MTIME_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getMtime());
+    hash = (37 * hash) + BLOCKS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getBlocks());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -479,23 +452,21 @@ public  final class Stat extends
     }
     public Builder clear() {
       super.clear();
-      mode_ = 0;
-
       uid_ = 0;
 
       gid_ = 0;
 
+      mode_ = 0;
+
       size_ = 0L;
 
-      blocks_ = 0L;
+      atime_ = 0L;
 
-      offset_ = 0L;
-
-      byteOffset_ = 0L;
+      ctime_ = 0L;
 
       mtime_ = 0L;
 
-      ctime_ = 0L;
+      blocks_ = 0L;
 
       return this;
     }
@@ -519,15 +490,14 @@ public  final class Stat extends
 
     public com.littlstar.protobuf.Stat buildPartial() {
       com.littlstar.protobuf.Stat result = new com.littlstar.protobuf.Stat(this);
-      result.mode_ = mode_;
       result.uid_ = uid_;
       result.gid_ = gid_;
+      result.mode_ = mode_;
       result.size_ = size_;
-      result.blocks_ = blocks_;
-      result.offset_ = offset_;
-      result.byteOffset_ = byteOffset_;
-      result.mtime_ = mtime_;
+      result.atime_ = atime_;
       result.ctime_ = ctime_;
+      result.mtime_ = mtime_;
+      result.blocks_ = blocks_;
       onBuilt();
       return result;
     }
@@ -569,32 +539,29 @@ public  final class Stat extends
 
     public Builder mergeFrom(com.littlstar.protobuf.Stat other) {
       if (other == com.littlstar.protobuf.Stat.getDefaultInstance()) return this;
-      if (other.getMode() != 0) {
-        setMode(other.getMode());
-      }
       if (other.getUid() != 0) {
         setUid(other.getUid());
       }
       if (other.getGid() != 0) {
         setGid(other.getGid());
       }
+      if (other.getMode() != 0) {
+        setMode(other.getMode());
+      }
       if (other.getSize() != 0L) {
         setSize(other.getSize());
       }
-      if (other.getBlocks() != 0L) {
-        setBlocks(other.getBlocks());
+      if (other.getAtime() != 0L) {
+        setAtime(other.getAtime());
       }
-      if (other.getOffset() != 0L) {
-        setOffset(other.getOffset());
-      }
-      if (other.getByteOffset() != 0L) {
-        setByteOffset(other.getByteOffset());
+      if (other.getCtime() != 0L) {
+        setCtime(other.getCtime());
       }
       if (other.getMtime() != 0L) {
         setMtime(other.getMtime());
       }
-      if (other.getCtime() != 0L) {
-        setCtime(other.getCtime());
+      if (other.getBlocks() != 0L) {
+        setBlocks(other.getBlocks());
       }
       onChanged();
       return this;
@@ -622,41 +589,15 @@ public  final class Stat extends
       return this;
     }
 
-    private int mode_ ;
-    /**
-     * <code>uint32 mode = 1;</code>
-     */
-    public int getMode() {
-      return mode_;
-    }
-    /**
-     * <code>uint32 mode = 1;</code>
-     */
-    public Builder setMode(int value) {
-      
-      mode_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>uint32 mode = 1;</code>
-     */
-    public Builder clearMode() {
-      
-      mode_ = 0;
-      onChanged();
-      return this;
-    }
-
     private int uid_ ;
     /**
-     * <code>uint32 uid = 2;</code>
+     * <code>uint32 uid = 1;</code>
      */
     public int getUid() {
       return uid_;
     }
     /**
-     * <code>uint32 uid = 2;</code>
+     * <code>uint32 uid = 1;</code>
      */
     public Builder setUid(int value) {
       
@@ -665,7 +606,7 @@ public  final class Stat extends
       return this;
     }
     /**
-     * <code>uint32 uid = 2;</code>
+     * <code>uint32 uid = 1;</code>
      */
     public Builder clearUid() {
       
@@ -676,13 +617,13 @@ public  final class Stat extends
 
     private int gid_ ;
     /**
-     * <code>uint32 gid = 3;</code>
+     * <code>uint32 gid = 2;</code>
      */
     public int getGid() {
       return gid_;
     }
     /**
-     * <code>uint32 gid = 3;</code>
+     * <code>uint32 gid = 2;</code>
      */
     public Builder setGid(int value) {
       
@@ -691,11 +632,37 @@ public  final class Stat extends
       return this;
     }
     /**
-     * <code>uint32 gid = 3;</code>
+     * <code>uint32 gid = 2;</code>
      */
     public Builder clearGid() {
       
       gid_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int mode_ ;
+    /**
+     * <code>uint32 mode = 3;</code>
+     */
+    public int getMode() {
+      return mode_;
+    }
+    /**
+     * <code>uint32 mode = 3;</code>
+     */
+    public Builder setMode(int value) {
+      
+      mode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>uint32 mode = 3;</code>
+     */
+    public Builder clearMode() {
+      
+      mode_ = 0;
       onChanged();
       return this;
     }
@@ -726,119 +693,41 @@ public  final class Stat extends
       return this;
     }
 
-    private long blocks_ ;
+    private long atime_ ;
     /**
-     * <code>uint64 blocks = 5;</code>
+     * <code>uint64 atime = 5;</code>
      */
-    public long getBlocks() {
-      return blocks_;
+    public long getAtime() {
+      return atime_;
     }
     /**
-     * <code>uint64 blocks = 5;</code>
+     * <code>uint64 atime = 5;</code>
      */
-    public Builder setBlocks(long value) {
+    public Builder setAtime(long value) {
       
-      blocks_ = value;
+      atime_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>uint64 blocks = 5;</code>
+     * <code>uint64 atime = 5;</code>
      */
-    public Builder clearBlocks() {
+    public Builder clearAtime() {
       
-      blocks_ = 0L;
-      onChanged();
-      return this;
-    }
-
-    private long offset_ ;
-    /**
-     * <code>uint64 offset = 6;</code>
-     */
-    public long getOffset() {
-      return offset_;
-    }
-    /**
-     * <code>uint64 offset = 6;</code>
-     */
-    public Builder setOffset(long value) {
-      
-      offset_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>uint64 offset = 6;</code>
-     */
-    public Builder clearOffset() {
-      
-      offset_ = 0L;
-      onChanged();
-      return this;
-    }
-
-    private long byteOffset_ ;
-    /**
-     * <code>uint64 byteOffset = 7;</code>
-     */
-    public long getByteOffset() {
-      return byteOffset_;
-    }
-    /**
-     * <code>uint64 byteOffset = 7;</code>
-     */
-    public Builder setByteOffset(long value) {
-      
-      byteOffset_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>uint64 byteOffset = 7;</code>
-     */
-    public Builder clearByteOffset() {
-      
-      byteOffset_ = 0L;
-      onChanged();
-      return this;
-    }
-
-    private long mtime_ ;
-    /**
-     * <code>uint64 mtime = 8;</code>
-     */
-    public long getMtime() {
-      return mtime_;
-    }
-    /**
-     * <code>uint64 mtime = 8;</code>
-     */
-    public Builder setMtime(long value) {
-      
-      mtime_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>uint64 mtime = 8;</code>
-     */
-    public Builder clearMtime() {
-      
-      mtime_ = 0L;
+      atime_ = 0L;
       onChanged();
       return this;
     }
 
     private long ctime_ ;
     /**
-     * <code>uint64 ctime = 9;</code>
+     * <code>uint64 ctime = 6;</code>
      */
     public long getCtime() {
       return ctime_;
     }
     /**
-     * <code>uint64 ctime = 9;</code>
+     * <code>uint64 ctime = 6;</code>
      */
     public Builder setCtime(long value) {
       
@@ -847,11 +736,63 @@ public  final class Stat extends
       return this;
     }
     /**
-     * <code>uint64 ctime = 9;</code>
+     * <code>uint64 ctime = 6;</code>
      */
     public Builder clearCtime() {
       
       ctime_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long mtime_ ;
+    /**
+     * <code>uint64 mtime = 7;</code>
+     */
+    public long getMtime() {
+      return mtime_;
+    }
+    /**
+     * <code>uint64 mtime = 7;</code>
+     */
+    public Builder setMtime(long value) {
+      
+      mtime_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>uint64 mtime = 7;</code>
+     */
+    public Builder clearMtime() {
+      
+      mtime_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long blocks_ ;
+    /**
+     * <code>uint64 blocks = 8;</code>
+     */
+    public long getBlocks() {
+      return blocks_;
+    }
+    /**
+     * <code>uint64 blocks = 8;</code>
+     */
+    public Builder setBlocks(long value) {
+      
+      blocks_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>uint64 blocks = 8;</code>
+     */
+    public Builder clearBlocks() {
+      
+      blocks_ = 0L;
       onChanged();
       return this;
     }
