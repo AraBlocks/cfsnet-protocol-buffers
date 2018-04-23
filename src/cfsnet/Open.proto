@@ -1,8 +1,9 @@
 /**
- * Implements `Open(path)` operation.
+ * Implements `Open(path, mode)` operation.
  * Send this message to open a file and get
  * a file descriptor
  */
 message Open {
   string path = 1;
+  string flags = 2;
 }
