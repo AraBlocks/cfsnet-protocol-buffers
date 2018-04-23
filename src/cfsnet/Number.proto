@@ -1,0 +1,3 @@
+message Number {
+  double value = 1;
+}
