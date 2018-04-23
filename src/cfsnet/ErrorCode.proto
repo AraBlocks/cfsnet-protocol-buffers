@@ -1,5 +1,5 @@
 /**
- * Error codes that
+ * Error codes that indicate client or remote errors
  */
 enum ErrorCode {
   NoError = 0;

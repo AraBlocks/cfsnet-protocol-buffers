@@ -1,3 +1,6 @@
+/**
+ * File mode constants for determining file access
+ */
 enum FileMode {
   F_OK = 0;
   X_OK = 1;
