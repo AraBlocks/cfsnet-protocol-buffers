@@ -19,8 +19,8 @@ function visit(node, output, seen) {
     output.push('syntax = "proto3";\n')
   }
 
-  for (let filename of node.imports) {
-    filename = resolve(kImportPath, filename)
+  for (let f of node.imports) {
+    filename = resolve(kImportPath, f)
     if (isDirectory(filename)) {
       filename = resolve(filename, 'index.proto')
     }
@@ -44,7 +44,7 @@ function visit(node, output, seen) {
     debug("visit: seen: %s", filename)
     seen.push(filename)
     output.push('\n')
-    output.push(`// '${filename}' generated on ${Date()}`)
+    output.push(`// '${f}' generated on ${Date()}`)
     output.push(buffer)
     visit(child, output, seen)
   }
