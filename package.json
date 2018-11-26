@@ -4,12 +4,26 @@
   "description": "CFSNet Protocol Buffers",
   "main": "index.js",
   "scripts": {
+    "changelog": "conventional-changelog --same-file --preset angular --release-count 0 --infile CHANGELOG.md",
     "compile": "npm run build",
     "build": "./scripts/compile",
-    "test": ":"
+    "test": ":",
+    "version": "npm run changelog && git add CHANGELOG.md docs/"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arablocks/cfsnet-protocol-buffers.git"
+  },
+  "keywords": [
+    "cfsnet",
+    "ara"
+  ],
   "author": "Joseph Werle <werle@littlstar.com>",
-  "license": "Unlicense",
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/arablocks/cfsnet-protocol-buffers/issues"
+  },
+  "homepage": "https://github.com/arablocks/cfsnet-protocol-buffers#readme",
   "dependencies": {
     "debug": "^3.1.0",
     "is-directory": "^0.3.1",
@@ -19,6 +33,7 @@
     "protocol-buffers-schema": "^3.3.2"
   },
   "devDependencies": {
+    "conventional-changelog-cli": "^2.0.5",
     "extend": "^3.0.1",
     "minimist": "^1.2.0",
     "pify": "^3.0.0"
