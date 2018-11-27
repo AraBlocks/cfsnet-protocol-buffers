@@ -36,7 +36,7 @@ static GPBFileDescriptor *CFSPBCfsnetRoot_FileDescriptor(void) {
   static GPBFileDescriptor *descriptor = NULL;
   if (!descriptor) {
     GPB_DEBUG_CHECK_RUNTIME_VERSIONS();
-    descriptor = [[GPBFileDescriptor alloc] initWithPackage:@"littlstar.cfsnet"
+    descriptor = [[GPBFileDescriptor alloc] initWithPackage:@"ara.cfsnet"
                                                  objcPrefix:@"CFSPB"
                                                      syntax:GPBFileSyntaxProto3];
   }

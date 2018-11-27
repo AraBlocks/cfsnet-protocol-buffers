@@ -4,95 +4,95 @@
 require 'google/protobuf'
 
 Google::Protobuf::DescriptorPool.generated_pool.build do
-  add_message "littlstar.cfsnet.AccessFile" do
+  add_message "ara.cfsnet.AccessFile" do
     optional :path, :string, 1
-    optional :mode, :enum, 2, "littlstar.cfsnet.FileMode"
+    optional :mode, :enum, 2, "ara.cfsnet.FileMode"
   end
-  add_message "littlstar.cfsnet.Boolean" do
+  add_message "ara.cfsnet.Boolean" do
     optional :value, :bool, 1
   end
-  add_message "littlstar.cfsnet.Buffer" do
+  add_message "ara.cfsnet.Buffer" do
     optional :value, :bytes, 1
     optional :length, :uint64, 2
   end
-  add_message "littlstar.cfsnet.Close" do
+  add_message "ara.cfsnet.Close" do
     optional :fileDescriptor, :uint32, 1
   end
-  add_message "littlstar.cfsnet.DownloadDirectory" do
+  add_message "ara.cfsnet.DownloadDirectory" do
     optional :path, :string, 1
   end
-  add_message "littlstar.cfsnet.DownloadFile" do
+  add_message "ara.cfsnet.DownloadFile" do
     optional :path, :string, 1
   end
-  add_message "littlstar.cfsnet.Drive" do
+  add_message "ara.cfsnet.Drive" do
     optional :id, :bytes, 1
     optional :key, :bytes, 2
     optional :secretKey, :bytes, 3
   end
-  add_message "littlstar.cfsnet.Handshake" do
+  add_message "ara.cfsnet.Handshake" do
     optional :nonce, :bytes, 1
     optional :key, :bytes, 2
     optional :ack, :bool, 3
   end
-  add_message "littlstar.cfsnet.KeyPair" do
+  add_message "ara.cfsnet.KeyPair" do
     optional :seed, :bytes, 1
     optional :publicKey, :bytes, 2
     optional :secretKey, :bytes, 3
   end
-  add_message "littlstar.cfsnet.List" do
+  add_message "ara.cfsnet.List" do
     repeated :values, :bytes, 1
     optional :length, :uint64, 2
   end
-  add_message "littlstar.cfsnet.ListDirectory" do
+  add_message "ara.cfsnet.ListDirectory" do
     optional :path, :string, 1
   end
-  add_message "littlstar.cfsnet.MakeDirectory" do
+  add_message "ara.cfsnet.MakeDirectory" do
     optional :path, :string, 1
   end
-  add_message "littlstar.cfsnet.MakeDirectoryPath" do
+  add_message "ara.cfsnet.MakeDirectoryPath" do
     optional :path, :string, 1
   end
-  add_message "littlstar.cfsnet.Number" do
+  add_message "ara.cfsnet.Number" do
     optional :value, :double, 1
   end
-  add_message "littlstar.cfsnet.Open" do
+  add_message "ara.cfsnet.Open" do
     optional :path, :string, 1
     optional :flags, :string, 2
   end
-  add_message "littlstar.cfsnet.Read" do
+  add_message "ara.cfsnet.Read" do
     optional :fileDescriptor, :uint32, 1
     optional :start, :uint32, 2
     optional :end, :uint32, 3
   end
-  add_message "littlstar.cfsnet.ReadFile" do
+  add_message "ara.cfsnet.ReadFile" do
     optional :path, :string, 1
     optional :start, :uint32, 2
     optional :end, :uint32, 3
   end
-  add_message "littlstar.cfsnet.RemoveDirectory" do
+  add_message "ara.cfsnet.RemoveDirectory" do
     optional :path, :string, 1
   end
-  add_message "littlstar.cfsnet.RemoveDirectoryPath" do
+  add_message "ara.cfsnet.RemoveDirectoryPath" do
     optional :path, :string, 1
   end
-  add_message "littlstar.cfsnet.Request" do
+  add_message "ara.cfsnet.Request" do
     optional :nonce, :bytes, 1
-    optional :drive, :message, 2, "littlstar.cfsnet.Drive"
-    optional :operation, :enum, 3, "littlstar.cfsnet.Operation"
+    optional :drive, :message, 2, "ara.cfsnet.Drive"
+    optional :operation, :enum, 3, "ara.cfsnet.Operation"
     optional :buffer, :bytes, 4
   end
-  add_message "littlstar.cfsnet.Resolve" do
+  add_message "ara.cfsnet.Resolve" do
     optional :path, :string, 1
   end
-  add_message "littlstar.cfsnet.Response" do
+  add_message "ara.cfsnet.Response" do
     optional :nonce, :bytes, 1
-    optional :drive, :message, 2, "littlstar.cfsnet.Drive"
-    optional :operation, :enum, 3, "littlstar.cfsnet.Operation"
-    optional :request, :message, 4, "littlstar.cfsnet.Request"
-    optional :errorCode, :enum, 5, "littlstar.cfsnet.ErrorCode"
+    optional :drive, :message, 2, "ara.cfsnet.Drive"
+    optional :operation, :enum, 3, "ara.cfsnet.Operation"
+    optional :request, :message, 4, "ara.cfsnet.Request"
+    optional :errorCode, :enum, 5, "ara.cfsnet.ErrorCode"
     optional :buffer, :bytes, 6
   end
-  add_message "littlstar.cfsnet.Stat" do
+  add_message "ara.cfsnet.Stat" do
     optional :uid, :uint32, 1
     optional :gid, :uint32, 2
     optional :mode, :uint32, 3
@@ -102,31 +102,31 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     optional :mtime, :uint64, 7
     optional :blocks, :uint64, 8
   end
-  add_message "littlstar.cfsnet.StatFile" do
+  add_message "ara.cfsnet.StatFile" do
     optional :path, :string, 1
   end
-  add_message "littlstar.cfsnet.String" do
+  add_message "ara.cfsnet.String" do
     optional :value, :string, 1
   end
-  add_message "littlstar.cfsnet.TouchFile" do
+  add_message "ara.cfsnet.TouchFile" do
     optional :path, :string, 1
   end
-  add_message "littlstar.cfsnet.UnlinkFile" do
+  add_message "ara.cfsnet.UnlinkFile" do
     optional :path, :string, 1
   end
-  add_message "littlstar.cfsnet.WriteFile" do
+  add_message "ara.cfsnet.WriteFile" do
     optional :path, :string, 1
     optional :buffer, :bytes, 2
     optional :start, :uint32, 3
     optional :end, :uint32, 4
   end
-  add_enum "littlstar.cfsnet.FileMode" do
+  add_enum "ara.cfsnet.FileMode" do
     value :F_OK, 0
     value :X_OK, 1
     value :W_OK, 2
     value :R_OK, 4
   end
-  add_enum "littlstar.cfsnet.ErrorCode" do
+  add_enum "ara.cfsnet.ErrorCode" do
     value :NoError, 0
     value :BadRequestError, 400
     value :AccessDeniedError, 403
@@ -136,7 +136,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     value :InternalError, 500
     value :NotImplementedError, 501
   end
-  add_enum "littlstar.cfsnet.Operation" do
+  add_enum "ara.cfsnet.Operation" do
     value :NoOperation, 0
     value :ResolveOperation, 1
     value :KeyPairOperation, 2
@@ -160,38 +160,38 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
   end
 end
 
-module Littlstar
+module Ara
   module Cfsnet
-    AccessFile = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.AccessFile").msgclass
-    Boolean = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.Boolean").msgclass
-    Buffer = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.Buffer").msgclass
-    Close = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.Close").msgclass
-    DownloadDirectory = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.DownloadDirectory").msgclass
-    DownloadFile = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.DownloadFile").msgclass
-    Drive = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.Drive").msgclass
-    Handshake = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.Handshake").msgclass
-    KeyPair = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.KeyPair").msgclass
-    List = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.List").msgclass
-    ListDirectory = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.ListDirectory").msgclass
-    MakeDirectory = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.MakeDirectory").msgclass
-    MakeDirectoryPath = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.MakeDirectoryPath").msgclass
-    Number = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.Number").msgclass
-    Open = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.Open").msgclass
-    Read = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.Read").msgclass
-    ReadFile = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.ReadFile").msgclass
-    RemoveDirectory = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.RemoveDirectory").msgclass
-    RemoveDirectoryPath = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.RemoveDirectoryPath").msgclass
-    Request = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.Request").msgclass
-    Resolve = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.Resolve").msgclass
-    Response = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.Response").msgclass
-    Stat = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.Stat").msgclass
-    StatFile = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.StatFile").msgclass
-    String = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.String").msgclass
-    TouchFile = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.TouchFile").msgclass
-    UnlinkFile = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.UnlinkFile").msgclass
-    WriteFile = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.WriteFile").msgclass
-    FileMode = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.FileMode").enummodule
-    ErrorCode = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.ErrorCode").enummodule
-    Operation = Google::Protobuf::DescriptorPool.generated_pool.lookup("littlstar.cfsnet.Operation").enummodule
+    AccessFile = Google::Protobuf::DescriptorPool.generated_pool.lookup("ara.cfsnet.AccessFile").msgclass
+    Boolean = Google::Protobuf::DescriptorPool.generated_pool.lookup("ara.cfsnet.Boolean").msgclass
+    Buffer = Google::Protobuf::DescriptorPool.generated_pool.lookup("ara.cfsnet.Buffer").msgclass
+    Close = Google::Protobuf::DescriptorPool.generated_pool.lookup("ara.cfsnet.Close").msgclass
+    DownloadDirectory = Google::Protobuf::DescriptorPool.generated_pool.lookup("ara.cfsnet.DownloadDirectory").msgclass
+    DownloadFile = Google::Protobuf::DescriptorPool.generated_pool.lookup("ara.cfsnet.DownloadFile").msgclass
+    Drive = Google::Protobuf::DescriptorPool.generated_pool.lookup("ara.cfsnet.Drive").msgclass
+    Handshake = Google::Protobuf::DescriptorPool.generated_pool.lookup("ara.cfsnet.Handshake").msgclass
+    KeyPair = Google::Protobuf::DescriptorPool.generated_pool.lookup("ara.cfsnet.KeyPair").msgclass
+    List = Google::Protobuf::DescriptorPool.generated_pool.lookup("ara.cfsnet.List").msgclass
+    ListDirectory = Google::Protobuf::DescriptorPool.generated_pool.lookup("ara.cfsnet.ListDirectory").msgclass
+    MakeDirectory = Google::Protobuf::DescriptorPool.generated_pool.lookup("ara.cfsnet.MakeDirectory").msgclass
+    MakeDirectoryPath = Google::Protobuf::DescriptorPool.generated_pool.lookup("ara.cfsnet.MakeDirectoryPath").msgclass
+    Number = Google::Protobuf::DescriptorPool.generated_pool.lookup("ara.cfsnet.Number").msgclass
+    Open = Google::Protobuf::DescriptorPool.generated_pool.lookup("ara.cfsnet.Open").msgclass
+    Read = Google::Protobuf::DescriptorPool.generated_pool.lookup("ara.cfsnet.Read").msgclass
+    ReadFile = Google::Protobuf::DescriptorPool.generated_pool.lookup("ara.cfsnet.ReadFile").msgclass
+    RemoveDirectory = Google::Protobuf::DescriptorPool.generated_pool.lookup("ara.cfsnet.RemoveDirectory").msgclass
+    RemoveDirectoryPath = Google::Protobuf::DescriptorPool.generated_pool.lookup("ara.cfsnet.RemoveDirectoryPath").msgclass
+    Request = Google::Protobuf::DescriptorPool.generated_pool.lookup("ara.cfsnet.Request").msgclass
+    Resolve = Google::Protobuf::DescriptorPool.generated_pool.lookup("ara.cfsnet.Resolve").msgclass
+    Response = Google::Protobuf::DescriptorPool.generated_pool.lookup("ara.cfsnet.Response").msgclass
+    Stat = Google::Protobuf::DescriptorPool.generated_pool.lookup("ara.cfsnet.Stat").msgclass
+    StatFile = Google::Protobuf::DescriptorPool.generated_pool.lookup("ara.cfsnet.StatFile").msgclass
+    String = Google::Protobuf::DescriptorPool.generated_pool.lookup("ara.cfsnet.String").msgclass
+    TouchFile = Google::Protobuf::DescriptorPool.generated_pool.lookup("ara.cfsnet.TouchFile").msgclass
+    UnlinkFile = Google::Protobuf::DescriptorPool.generated_pool.lookup("ara.cfsnet.UnlinkFile").msgclass
+    WriteFile = Google::Protobuf::DescriptorPool.generated_pool.lookup("ara.cfsnet.WriteFile").msgclass
+    FileMode = Google::Protobuf::DescriptorPool.generated_pool.lookup("ara.cfsnet.FileMode").enummodule
+    ErrorCode = Google::Protobuf::DescriptorPool.generated_pool.lookup("ara.cfsnet.ErrorCode").enummodule
+    Operation = Google::Protobuf::DescriptorPool.generated_pool.lookup("ara.cfsnet.Operation").enummodule
   end
 end

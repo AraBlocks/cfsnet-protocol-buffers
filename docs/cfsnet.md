@@ -1,41 +1,41 @@
 # Protocol Documentation
-<a name="top"/>
+<a name="top"></a>
 
 ## Table of Contents
 
 - [cfsnet.proto](#cfsnet.proto)
-    - [AccessFile](#littlstar.cfsnet.AccessFile)
-    - [Boolean](#littlstar.cfsnet.Boolean)
-    - [Buffer](#littlstar.cfsnet.Buffer)
-    - [Close](#littlstar.cfsnet.Close)
-    - [DownloadDirectory](#littlstar.cfsnet.DownloadDirectory)
-    - [DownloadFile](#littlstar.cfsnet.DownloadFile)
-    - [Drive](#littlstar.cfsnet.Drive)
-    - [Handshake](#littlstar.cfsnet.Handshake)
-    - [KeyPair](#littlstar.cfsnet.KeyPair)
-    - [List](#littlstar.cfsnet.List)
-    - [ListDirectory](#littlstar.cfsnet.ListDirectory)
-    - [MakeDirectory](#littlstar.cfsnet.MakeDirectory)
-    - [MakeDirectoryPath](#littlstar.cfsnet.MakeDirectoryPath)
-    - [Number](#littlstar.cfsnet.Number)
-    - [Open](#littlstar.cfsnet.Open)
-    - [Read](#littlstar.cfsnet.Read)
-    - [ReadFile](#littlstar.cfsnet.ReadFile)
-    - [RemoveDirectory](#littlstar.cfsnet.RemoveDirectory)
-    - [RemoveDirectoryPath](#littlstar.cfsnet.RemoveDirectoryPath)
-    - [Request](#littlstar.cfsnet.Request)
-    - [Resolve](#littlstar.cfsnet.Resolve)
-    - [Response](#littlstar.cfsnet.Response)
-    - [Stat](#littlstar.cfsnet.Stat)
-    - [StatFile](#littlstar.cfsnet.StatFile)
-    - [String](#littlstar.cfsnet.String)
-    - [TouchFile](#littlstar.cfsnet.TouchFile)
-    - [UnlinkFile](#littlstar.cfsnet.UnlinkFile)
-    - [WriteFile](#littlstar.cfsnet.WriteFile)
+    - [AccessFile](#ara.cfsnet.AccessFile)
+    - [Boolean](#ara.cfsnet.Boolean)
+    - [Buffer](#ara.cfsnet.Buffer)
+    - [Close](#ara.cfsnet.Close)
+    - [DownloadDirectory](#ara.cfsnet.DownloadDirectory)
+    - [DownloadFile](#ara.cfsnet.DownloadFile)
+    - [Drive](#ara.cfsnet.Drive)
+    - [Handshake](#ara.cfsnet.Handshake)
+    - [KeyPair](#ara.cfsnet.KeyPair)
+    - [List](#ara.cfsnet.List)
+    - [ListDirectory](#ara.cfsnet.ListDirectory)
+    - [MakeDirectory](#ara.cfsnet.MakeDirectory)
+    - [MakeDirectoryPath](#ara.cfsnet.MakeDirectoryPath)
+    - [Number](#ara.cfsnet.Number)
+    - [Open](#ara.cfsnet.Open)
+    - [Read](#ara.cfsnet.Read)
+    - [ReadFile](#ara.cfsnet.ReadFile)
+    - [RemoveDirectory](#ara.cfsnet.RemoveDirectory)
+    - [RemoveDirectoryPath](#ara.cfsnet.RemoveDirectoryPath)
+    - [Request](#ara.cfsnet.Request)
+    - [Resolve](#ara.cfsnet.Resolve)
+    - [Response](#ara.cfsnet.Response)
+    - [Stat](#ara.cfsnet.Stat)
+    - [StatFile](#ara.cfsnet.StatFile)
+    - [String](#ara.cfsnet.String)
+    - [TouchFile](#ara.cfsnet.TouchFile)
+    - [UnlinkFile](#ara.cfsnet.UnlinkFile)
+    - [WriteFile](#ara.cfsnet.WriteFile)
   
-    - [ErrorCode](#littlstar.cfsnet.ErrorCode)
-    - [FileMode](#littlstar.cfsnet.FileMode)
-    - [Operation](#littlstar.cfsnet.Operation)
+    - [ErrorCode](#ara.cfsnet.ErrorCode)
+    - [FileMode](#ara.cfsnet.FileMode)
+    - [Operation](#ara.cfsnet.Operation)
   
   
   
@@ -44,14 +44,14 @@
 
 
 
-<a name="cfsnet.proto"/>
+<a name="cfsnet.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
 ## cfsnet.proto
 
 
 
-<a name="littlstar.cfsnet.AccessFile"/>
+<a name="ara.cfsnet.AccessFile"></a>
 
 ### AccessFile
 
@@ -60,14 +60,14 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | path | [string](#string) |  |  |
-| mode | [FileMode](#littlstar.cfsnet.FileMode) |  |  |
+| mode | [FileMode](#ara.cfsnet.FileMode) |  |  |
 
 
 
 
 
 
-<a name="littlstar.cfsnet.Boolean"/>
+<a name="ara.cfsnet.Boolean"></a>
 
 ### Boolean
 
@@ -82,7 +82,7 @@
 
 
 
-<a name="littlstar.cfsnet.Buffer"/>
+<a name="ara.cfsnet.Buffer"></a>
 
 ### Buffer
 
@@ -98,7 +98,7 @@
 
 
 
-<a name="littlstar.cfsnet.Close"/>
+<a name="ara.cfsnet.Close"></a>
 
 ### Close
 
@@ -113,7 +113,7 @@
 
 
 
-<a name="littlstar.cfsnet.DownloadDirectory"/>
+<a name="ara.cfsnet.DownloadDirectory"></a>
 
 ### DownloadDirectory
 
@@ -128,7 +128,7 @@
 
 
 
-<a name="littlstar.cfsnet.DownloadFile"/>
+<a name="ara.cfsnet.DownloadFile"></a>
 
 ### DownloadFile
 
@@ -143,7 +143,7 @@
 
 
 
-<a name="littlstar.cfsnet.Drive"/>
+<a name="ara.cfsnet.Drive"></a>
 
 ### Drive
 
@@ -160,7 +160,7 @@
 
 
 
-<a name="littlstar.cfsnet.Handshake"/>
+<a name="ara.cfsnet.Handshake"></a>
 
 ### Handshake
 
@@ -177,7 +177,7 @@
 
 
 
-<a name="littlstar.cfsnet.KeyPair"/>
+<a name="ara.cfsnet.KeyPair"></a>
 
 ### KeyPair
 
@@ -194,7 +194,7 @@
 
 
 
-<a name="littlstar.cfsnet.List"/>
+<a name="ara.cfsnet.List"></a>
 
 ### List
 
@@ -210,7 +210,7 @@
 
 
 
-<a name="littlstar.cfsnet.ListDirectory"/>
+<a name="ara.cfsnet.ListDirectory"></a>
 
 ### ListDirectory
 
@@ -225,7 +225,7 @@
 
 
 
-<a name="littlstar.cfsnet.MakeDirectory"/>
+<a name="ara.cfsnet.MakeDirectory"></a>
 
 ### MakeDirectory
 
@@ -240,7 +240,7 @@
 
 
 
-<a name="littlstar.cfsnet.MakeDirectoryPath"/>
+<a name="ara.cfsnet.MakeDirectoryPath"></a>
 
 ### MakeDirectoryPath
 
@@ -255,7 +255,7 @@
 
 
 
-<a name="littlstar.cfsnet.Number"/>
+<a name="ara.cfsnet.Number"></a>
 
 ### Number
 
@@ -270,7 +270,7 @@
 
 
 
-<a name="littlstar.cfsnet.Open"/>
+<a name="ara.cfsnet.Open"></a>
 
 ### Open
 
@@ -286,7 +286,7 @@
 
 
 
-<a name="littlstar.cfsnet.Read"/>
+<a name="ara.cfsnet.Read"></a>
 
 ### Read
 
@@ -303,7 +303,7 @@
 
 
 
-<a name="littlstar.cfsnet.ReadFile"/>
+<a name="ara.cfsnet.ReadFile"></a>
 
 ### ReadFile
 
@@ -320,7 +320,7 @@
 
 
 
-<a name="littlstar.cfsnet.RemoveDirectory"/>
+<a name="ara.cfsnet.RemoveDirectory"></a>
 
 ### RemoveDirectory
 
@@ -335,7 +335,7 @@
 
 
 
-<a name="littlstar.cfsnet.RemoveDirectoryPath"/>
+<a name="ara.cfsnet.RemoveDirectoryPath"></a>
 
 ### RemoveDirectoryPath
 
@@ -350,7 +350,7 @@
 
 
 
-<a name="littlstar.cfsnet.Request"/>
+<a name="ara.cfsnet.Request"></a>
 
 ### Request
 
@@ -359,8 +359,8 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | nonce | [bytes](#bytes) |  |  |
-| drive | [Drive](#littlstar.cfsnet.Drive) |  |  |
-| operation | [Operation](#littlstar.cfsnet.Operation) |  |  |
+| drive | [Drive](#ara.cfsnet.Drive) |  |  |
+| operation | [Operation](#ara.cfsnet.Operation) |  |  |
 | buffer | [bytes](#bytes) |  |  |
 
 
@@ -368,7 +368,7 @@
 
 
 
-<a name="littlstar.cfsnet.Resolve"/>
+<a name="ara.cfsnet.Resolve"></a>
 
 ### Resolve
 
@@ -383,7 +383,7 @@
 
 
 
-<a name="littlstar.cfsnet.Response"/>
+<a name="ara.cfsnet.Response"></a>
 
 ### Response
 
@@ -392,10 +392,10 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | nonce | [bytes](#bytes) |  |  |
-| drive | [Drive](#littlstar.cfsnet.Drive) |  |  |
-| operation | [Operation](#littlstar.cfsnet.Operation) |  |  |
-| request | [Request](#littlstar.cfsnet.Request) |  |  |
-| errorCode | [ErrorCode](#littlstar.cfsnet.ErrorCode) |  |  |
+| drive | [Drive](#ara.cfsnet.Drive) |  |  |
+| operation | [Operation](#ara.cfsnet.Operation) |  |  |
+| request | [Request](#ara.cfsnet.Request) |  |  |
+| errorCode | [ErrorCode](#ara.cfsnet.ErrorCode) |  |  |
 | buffer | [bytes](#bytes) |  |  |
 
 
@@ -403,7 +403,7 @@
 
 
 
-<a name="littlstar.cfsnet.Stat"/>
+<a name="ara.cfsnet.Stat"></a>
 
 ### Stat
 
@@ -425,7 +425,7 @@
 
 
 
-<a name="littlstar.cfsnet.StatFile"/>
+<a name="ara.cfsnet.StatFile"></a>
 
 ### StatFile
 
@@ -440,7 +440,7 @@
 
 
 
-<a name="littlstar.cfsnet.String"/>
+<a name="ara.cfsnet.String"></a>
 
 ### String
 
@@ -455,7 +455,7 @@
 
 
 
-<a name="littlstar.cfsnet.TouchFile"/>
+<a name="ara.cfsnet.TouchFile"></a>
 
 ### TouchFile
 
@@ -470,7 +470,7 @@
 
 
 
-<a name="littlstar.cfsnet.UnlinkFile"/>
+<a name="ara.cfsnet.UnlinkFile"></a>
 
 ### UnlinkFile
 
@@ -485,7 +485,7 @@
 
 
 
-<a name="littlstar.cfsnet.WriteFile"/>
+<a name="ara.cfsnet.WriteFile"></a>
 
 ### WriteFile
 
@@ -505,7 +505,7 @@
  
 
 
-<a name="littlstar.cfsnet.ErrorCode"/>
+<a name="ara.cfsnet.ErrorCode"></a>
 
 ### ErrorCode
 
@@ -523,7 +523,7 @@
 
 
 
-<a name="littlstar.cfsnet.FileMode"/>
+<a name="ara.cfsnet.FileMode"></a>
 
 ### FileMode
 
@@ -537,7 +537,7 @@
 
 
 
-<a name="littlstar.cfsnet.Operation"/>
+<a name="ara.cfsnet.Operation"></a>
 
 ### Operation
 
