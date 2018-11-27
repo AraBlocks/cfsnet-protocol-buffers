@@ -1,3 +1,7 @@
+## [0.1.11](https://github.com/arablocks/cfsnet-protocol-buffers/compare/0.1.10...0.1.11) (2018-11-27)
+
+
+
 ## [0.1.10](https://github.com/arablocks/cfsnet-protocol-buffers/compare/0.1.9...0.1.10) (2018-11-26)
 
 
