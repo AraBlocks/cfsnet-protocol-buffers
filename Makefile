@@ -12,7 +12,6 @@ RM := rm -rf
 PROTOCFLAGS += --cpp_out=$(BUILD)/cpp
 PROTOCFLAGS += --csharp_out=$(BUILD)/csharp
 PROTOCFLAGS += --java_out=$(BUILD)/java
-PROTOCFLAGS += --js_out=$(BUILD)/js
 PROTOCFLAGS += --objc_out=$(BUILD)/objc
 PROTOCFLAGS += --php_out=$(BUILD)/php
 PROTOCFLAGS += --python_out=$(BUILD)/python
@@ -26,17 +25,16 @@ PROTOC_DOC_FLAGS +=	--doc_opt=markdown,cfsnet.md
 
 define ENSURE_BUILD_DIRECTORIES
 	$(MKDIRP) $(DOCS)
-	$(MKDIRP) $(BUILD)/{c,cpp,csharp,java,js,objc,php,python,ruby}
+	$(MKDIRP) $(BUILD)/{c,cpp,csharp,java,objc,php,python,ruby}
 endef
 
 .PHONY: all
 
 all: $(BUILD) $(DOCS)
-build/: $(BUILD)
-doc/: $(DOCS)
 
 $(DOCS): $(TARGET)
-	$(PROTOC) $^ $(PROTOC_DOC_FLAGS)
+	$(ENSURE_BUILD_DIRECTORIES)
+	$(if $(shell which protoc-gen-doc),$(PROTOC) $^ $(PROTOC_DOC_FLAGS),$(warning Please install 'protoc-gen-doc' to generate docs.))
 
 $(BUILD): $(TARGET)
 	$(ENSURE_BUILD_DIRECTORIES)

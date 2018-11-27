@@ -19,11 +19,15 @@ Protocol buffers for CFSNET
 **Stable**
 
 ## Dependencies
-- [google-protobuf](https://www.npmjs.com/package/google-protobuf)
+- Protocol Buffer compiler [protoc](https://github.com/protocolbuffers/protobuf/releases)
+- [protoc-c](https://github.com/protobuf-c/protobuf-c)
+- [protoc-gen-doc](https://github.com/pseudomuto/protoc-gen-doc) to generate docs _optional_
 
 ## Installation
-- TODO
-
+```sh
+$ npm install
+$ make all
+```
 ## Usage
 - TODO
 
@@ -378,7 +382,7 @@ TODO
 Releases follow [Semantic Versioning](https://semver.org/)
 
 ## See Also
-- [other](https://goo.gl/MRcHmS)
+- [Protocol Buffers](https://github.com/protocolbuffers/protobuf)
 
 ## License
 LGPL-3.0
