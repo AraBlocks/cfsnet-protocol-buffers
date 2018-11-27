@@ -18,14 +18,14 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='cfsnet.proto',
-  package='littlstar.cfsnet',
+  package='ara.cfsnet',
   syntax='proto3',
-  serialized_pb=_b('\n\x0c\x63\x66snet.proto\x12\x10littlstar.cfsnet\"D\n\nAccessFile\x12\x0c\n\x04path\x18\x01 \x01(\t\x12(\n\x04mode\x18\x02 \x01(\x0e\x32\x1a.littlstar.cfsnet.FileMode\"\x18\n\x07\x42oolean\x12\r\n\x05value\x18\x01 \x01(\x08\"\'\n\x06\x42uffer\x12\r\n\x05value\x18\x01 \x01(\x0c\x12\x0e\n\x06length\x18\x02 \x01(\x04\"\x1f\n\x05\x43lose\x12\x16\n\x0e\x66ileDescriptor\x18\x01 \x01(\r\"!\n\x11\x44ownloadDirectory\x12\x0c\n\x04path\x18\x01 \x01(\t\"\x1c\n\x0c\x44ownloadFile\x12\x0c\n\x04path\x18\x01 \x01(\t\"3\n\x05\x44rive\x12\n\n\x02id\x18\x01 \x01(\x0c\x12\x0b\n\x03key\x18\x02 \x01(\x0c\x12\x11\n\tsecretKey\x18\x03 \x01(\x0c\"4\n\tHandshake\x12\r\n\x05nonce\x18\x01 \x01(\x0c\x12\x0b\n\x03key\x18\x02 \x01(\x0c\x12\x0b\n\x03\x61\x63k\x18\x03 \x01(\x08\"=\n\x07KeyPair\x12\x0c\n\x04seed\x18\x01 \x01(\x0c\x12\x11\n\tpublicKey\x18\x02 \x01(\x0c\x12\x11\n\tsecretKey\x18\x03 \x01(\x0c\"&\n\x04List\x12\x0e\n\x06values\x18\x01 \x03(\x0c\x12\x0e\n\x06length\x18\x02 \x01(\x04\"\x1d\n\rListDirectory\x12\x0c\n\x04path\x18\x01 \x01(\t\"\x1d\n\rMakeDirectory\x12\x0c\n\x04path\x18\x01 \x01(\t\"!\n\x11MakeDirectoryPath\x12\x0c\n\x04path\x18\x01 \x01(\t\"\x17\n\x06Number\x12\r\n\x05value\x18\x01 \x01(\x01\"#\n\x04Open\x12\x0c\n\x04path\x18\x01 \x01(\t\x12\r\n\x05\x66lags\x18\x02 \x01(\t\":\n\x04Read\x12\x16\n\x0e\x66ileDescriptor\x18\x01 \x01(\r\x12\r\n\x05start\x18\x02 \x01(\r\x12\x0b\n\x03\x65nd\x18\x03 \x01(\r\"4\n\x08ReadFile\x12\x0c\n\x04path\x18\x01 \x01(\t\x12\r\n\x05start\x18\x02 \x01(\r\x12\x0b\n\x03\x65nd\x18\x03 \x01(\r\"\x1f\n\x0fRemoveDirectory\x12\x0c\n\x04path\x18\x01 \x01(\t\"#\n\x13RemoveDirectoryPath\x12\x0c\n\x04path\x18\x01 \x01(\t\"\x80\x01\n\x07Request\x12\r\n\x05nonce\x18\x01 \x01(\x0c\x12&\n\x05\x64rive\x18\x02 \x01(\x0b\x32\x17.littlstar.cfsnet.Drive\x12.\n\toperation\x18\x03 \x01(\x0e\x32\x1b.littlstar.cfsnet.Operation\x12\x0e\n\x06\x62uffer\x18\x04 \x01(\x0c\"\x17\n\x07Resolve\x12\x0c\n\x04path\x18\x01 \x01(\t\"\xdd\x01\n\x08Response\x12\r\n\x05nonce\x18\x01 \x01(\x0c\x12&\n\x05\x64rive\x18\x02 \x01(\x0b\x32\x17.littlstar.cfsnet.Drive\x12.\n\toperation\x18\x03 \x01(\x0e\x32\x1b.littlstar.cfsnet.Operation\x12*\n\x07request\x18\x04 \x01(\x0b\x32\x19.littlstar.cfsnet.Request\x12.\n\terrorCode\x18\x05 \x01(\x0e\x32\x1b.littlstar.cfsnet.ErrorCode\x12\x0e\n\x06\x62uffer\x18\x06 \x01(\x0c\"y\n\x04Stat\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0b\n\x03gid\x18\x02 \x01(\r\x12\x0c\n\x04mode\x18\x03 \x01(\r\x12\x0c\n\x04size\x18\x04 \x01(\x04\x12\r\n\x05\x61time\x18\x05 \x01(\x04\x12\r\n\x05\x63time\x18\x06 \x01(\x04\x12\r\n\x05mtime\x18\x07 \x01(\x04\x12\x0e\n\x06\x62locks\x18\x08 \x01(\x04\"\x18\n\x08StatFile\x12\x0c\n\x04path\x18\x01 \x01(\t\"\x17\n\x06String\x12\r\n\x05value\x18\x01 \x01(\t\"\x19\n\tTouchFile\x12\x0c\n\x04path\x18\x01 \x01(\t\"\x1a\n\nUnlinkFile\x12\x0c\n\x04path\x18\x01 \x01(\t\"E\n\tWriteFile\x12\x0c\n\x04path\x18\x01 \x01(\t\x12\x0e\n\x06\x62uffer\x18\x02 \x01(\x0c\x12\r\n\x05start\x18\x03 \x01(\r\x12\x0b\n\x03\x65nd\x18\x04 \x01(\r*2\n\x08\x46ileMode\x12\x08\n\x04\x46_OK\x10\x00\x12\x08\n\x04X_OK\x10\x01\x12\x08\n\x04W_OK\x10\x02\x12\x08\n\x04R_OK\x10\x04*\xb5\x01\n\tErrorCode\x12\x0b\n\x07NoError\x10\x00\x12\x14\n\x0f\x42\x61\x64RequestError\x10\x90\x03\x12\x16\n\x11\x41\x63\x63\x65ssDeniedError\x10\x93\x03\x12\x12\n\rNotFoundError\x10\x94\x03\x12\x16\n\x11NotSupportedError\x10\x95\x03\x12\x13\n\x0eNotOpenedError\x10\x9a\x03\x12\x12\n\rInternalError\x10\xf4\x03\x12\x18\n\x13NotImplementedError\x10\xf5\x03*\xf9\x03\n\tOperation\x12\x0f\n\x0bNoOperation\x10\x00\x12\x14\n\x10ResolveOperation\x10\x01\x12\x14\n\x10KeyPairOperation\x10\x02\x12\x11\n\rOpenOperation\x10\n\x12\x12\n\x0e\x43loseOperation\x10\x0b\x12\x11\n\rReadOperation\x10\x0c\x12\x12\n\x0eWriteOperation\x10\r\x12\x15\n\x11ReadFileOperation\x10\x14\x12\x16\n\x12WriteFileOperation\x10\x15\x12\x15\n\x11StatFileOperation\x10\x16\x12\x17\n\x13UnlinkFileOperation\x10\x17\x12\x17\n\x13\x41\x63\x63\x65ssFileOperation\x10\x18\x12\x16\n\x12TouchFileOperation\x10\x19\x12\x19\n\x15\x44ownloadFileOperation\x10\x1a\x12\x1e\n\x1a\x44ownloadDirectoryOperation\x10\x1e\x12\x1a\n\x16MakeDirectoryOperation\x10\x1f\x12\x1e\n\x1aMakeDirectoryPathOperation\x10 \x12\x1c\n\x18RemoveDirectoryOperation\x10!\x12 \n\x1cRemoveDirectoryPathOperation\x10\"\x12\x1a\n\x16ListDirectoryOperation\x10#BN\n\x16\x63om.littlstar.protobufB\x0e\x43\x46SNetProtobufP\x01\xa2\x02\x05\x43\x46SPB\xaa\x02\x19Littlstar.CFSNet.Protobufb\x06proto3')
+  serialized_pb=_b('\n\x0c\x63\x66snet.proto\x12\nara.cfsnet\">\n\nAccessFile\x12\x0c\n\x04path\x18\x01 \x01(\t\x12\"\n\x04mode\x18\x02 \x01(\x0e\x32\x14.ara.cfsnet.FileMode\"\x18\n\x07\x42oolean\x12\r\n\x05value\x18\x01 \x01(\x08\"\'\n\x06\x42uffer\x12\r\n\x05value\x18\x01 \x01(\x0c\x12\x0e\n\x06length\x18\x02 \x01(\x04\"\x1f\n\x05\x43lose\x12\x16\n\x0e\x66ileDescriptor\x18\x01 \x01(\r\"!\n\x11\x44ownloadDirectory\x12\x0c\n\x04path\x18\x01 \x01(\t\"\x1c\n\x0c\x44ownloadFile\x12\x0c\n\x04path\x18\x01 \x01(\t\"3\n\x05\x44rive\x12\n\n\x02id\x18\x01 \x01(\x0c\x12\x0b\n\x03key\x18\x02 \x01(\x0c\x12\x11\n\tsecretKey\x18\x03 \x01(\x0c\"4\n\tHandshake\x12\r\n\x05nonce\x18\x01 \x01(\x0c\x12\x0b\n\x03key\x18\x02 \x01(\x0c\x12\x0b\n\x03\x61\x63k\x18\x03 \x01(\x08\"=\n\x07KeyPair\x12\x0c\n\x04seed\x18\x01 \x01(\x0c\x12\x11\n\tpublicKey\x18\x02 \x01(\x0c\x12\x11\n\tsecretKey\x18\x03 \x01(\x0c\"&\n\x04List\x12\x0e\n\x06values\x18\x01 \x03(\x0c\x12\x0e\n\x06length\x18\x02 \x01(\x04\"\x1d\n\rListDirectory\x12\x0c\n\x04path\x18\x01 \x01(\t\"\x1d\n\rMakeDirectory\x12\x0c\n\x04path\x18\x01 \x01(\t\"!\n\x11MakeDirectoryPath\x12\x0c\n\x04path\x18\x01 \x01(\t\"\x17\n\x06Number\x12\r\n\x05value\x18\x01 \x01(\x01\"#\n\x04Open\x12\x0c\n\x04path\x18\x01 \x01(\t\x12\r\n\x05\x66lags\x18\x02 \x01(\t\":\n\x04Read\x12\x16\n\x0e\x66ileDescriptor\x18\x01 \x01(\r\x12\r\n\x05start\x18\x02 \x01(\r\x12\x0b\n\x03\x65nd\x18\x03 \x01(\r\"4\n\x08ReadFile\x12\x0c\n\x04path\x18\x01 \x01(\t\x12\r\n\x05start\x18\x02 \x01(\r\x12\x0b\n\x03\x65nd\x18\x03 \x01(\r\"\x1f\n\x0fRemoveDirectory\x12\x0c\n\x04path\x18\x01 \x01(\t\"#\n\x13RemoveDirectoryPath\x12\x0c\n\x04path\x18\x01 \x01(\t\"t\n\x07Request\x12\r\n\x05nonce\x18\x01 \x01(\x0c\x12 \n\x05\x64rive\x18\x02 \x01(\x0b\x32\x11.ara.cfsnet.Drive\x12(\n\toperation\x18\x03 \x01(\x0e\x32\x15.ara.cfsnet.Operation\x12\x0e\n\x06\x62uffer\x18\x04 \x01(\x0c\"\x17\n\x07Resolve\x12\x0c\n\x04path\x18\x01 \x01(\t\"\xc5\x01\n\x08Response\x12\r\n\x05nonce\x18\x01 \x01(\x0c\x12 \n\x05\x64rive\x18\x02 \x01(\x0b\x32\x11.ara.cfsnet.Drive\x12(\n\toperation\x18\x03 \x01(\x0e\x32\x15.ara.cfsnet.Operation\x12$\n\x07request\x18\x04 \x01(\x0b\x32\x13.ara.cfsnet.Request\x12(\n\terrorCode\x18\x05 \x01(\x0e\x32\x15.ara.cfsnet.ErrorCode\x12\x0e\n\x06\x62uffer\x18\x06 \x01(\x0c\"y\n\x04Stat\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0b\n\x03gid\x18\x02 \x01(\r\x12\x0c\n\x04mode\x18\x03 \x01(\r\x12\x0c\n\x04size\x18\x04 \x01(\x04\x12\r\n\x05\x61time\x18\x05 \x01(\x04\x12\r\n\x05\x63time\x18\x06 \x01(\x04\x12\r\n\x05mtime\x18\x07 \x01(\x04\x12\x0e\n\x06\x62locks\x18\x08 \x01(\x04\"\x18\n\x08StatFile\x12\x0c\n\x04path\x18\x01 \x01(\t\"\x17\n\x06String\x12\r\n\x05value\x18\x01 \x01(\t\"\x19\n\tTouchFile\x12\x0c\n\x04path\x18\x01 \x01(\t\"\x1a\n\nUnlinkFile\x12\x0c\n\x04path\x18\x01 \x01(\t\"E\n\tWriteFile\x12\x0c\n\x04path\x18\x01 \x01(\t\x12\x0e\n\x06\x62uffer\x18\x02 \x01(\x0c\x12\r\n\x05start\x18\x03 \x01(\r\x12\x0b\n\x03\x65nd\x18\x04 \x01(\r*2\n\x08\x46ileMode\x12\x08\n\x04\x46_OK\x10\x00\x12\x08\n\x04X_OK\x10\x01\x12\x08\n\x04W_OK\x10\x02\x12\x08\n\x04R_OK\x10\x04*\xb5\x01\n\tErrorCode\x12\x0b\n\x07NoError\x10\x00\x12\x14\n\x0f\x42\x61\x64RequestError\x10\x90\x03\x12\x16\n\x11\x41\x63\x63\x65ssDeniedError\x10\x93\x03\x12\x12\n\rNotFoundError\x10\x94\x03\x12\x16\n\x11NotSupportedError\x10\x95\x03\x12\x13\n\x0eNotOpenedError\x10\x9a\x03\x12\x12\n\rInternalError\x10\xf4\x03\x12\x18\n\x13NotImplementedError\x10\xf5\x03*\xf9\x03\n\tOperation\x12\x0f\n\x0bNoOperation\x10\x00\x12\x14\n\x10ResolveOperation\x10\x01\x12\x14\n\x10KeyPairOperation\x10\x02\x12\x11\n\rOpenOperation\x10\n\x12\x12\n\x0e\x43loseOperation\x10\x0b\x12\x11\n\rReadOperation\x10\x0c\x12\x12\n\x0eWriteOperation\x10\r\x12\x15\n\x11ReadFileOperation\x10\x14\x12\x16\n\x12WriteFileOperation\x10\x15\x12\x15\n\x11StatFileOperation\x10\x16\x12\x17\n\x13UnlinkFileOperation\x10\x17\x12\x17\n\x13\x41\x63\x63\x65ssFileOperation\x10\x18\x12\x16\n\x12TouchFileOperation\x10\x19\x12\x19\n\x15\x44ownloadFileOperation\x10\x1a\x12\x1e\n\x1a\x44ownloadDirectoryOperation\x10\x1e\x12\x1a\n\x16MakeDirectoryOperation\x10\x1f\x12\x1e\n\x1aMakeDirectoryPathOperation\x10 \x12\x1c\n\x18RemoveDirectoryOperation\x10!\x12 \n\x1cRemoveDirectoryPathOperation\x10\"\x12\x1a\n\x16ListDirectoryOperation\x10#BB\n\x10\x63om.ara.protobufB\x0e\x43\x46SNetProtobufP\x01\xa2\x02\x05\x43\x46SPB\xaa\x02\x13\x41ra.CFSNet.Protobufb\x06proto3')
 )
 
 _FILEMODE = _descriptor.EnumDescriptor(
   name='FileMode',
-  full_name='littlstar.cfsnet.FileMode',
+  full_name='ara.cfsnet.FileMode',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -48,15 +48,15 @@ _FILEMODE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1502,
-  serialized_end=1552,
+  serialized_start=1453,
+  serialized_end=1503,
 )
 _sym_db.RegisterEnumDescriptor(_FILEMODE)
 
 FileMode = enum_type_wrapper.EnumTypeWrapper(_FILEMODE)
 _ERRORCODE = _descriptor.EnumDescriptor(
   name='ErrorCode',
-  full_name='littlstar.cfsnet.ErrorCode',
+  full_name='ara.cfsnet.ErrorCode',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -95,15 +95,15 @@ _ERRORCODE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1555,
-  serialized_end=1736,
+  serialized_start=1506,
+  serialized_end=1687,
 )
 _sym_db.RegisterEnumDescriptor(_ERRORCODE)
 
 ErrorCode = enum_type_wrapper.EnumTypeWrapper(_ERRORCODE)
 _OPERATION = _descriptor.EnumDescriptor(
   name='Operation',
-  full_name='littlstar.cfsnet.Operation',
+  full_name='ara.cfsnet.Operation',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -190,8 +190,8 @@ _OPERATION = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1739,
-  serialized_end=2244,
+  serialized_start=1690,
+  serialized_end=2195,
 )
 _sym_db.RegisterEnumDescriptor(_OPERATION)
 
@@ -233,25 +233,25 @@ ListDirectoryOperation = 35
 
 _ACCESSFILE = _descriptor.Descriptor(
   name='AccessFile',
-  full_name='littlstar.cfsnet.AccessFile',
+  full_name='ara.cfsnet.AccessFile',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='path', full_name='littlstar.cfsnet.AccessFile.path', index=0,
+      name='path', full_name='ara.cfsnet.AccessFile.path', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='mode', full_name='littlstar.cfsnet.AccessFile.mode', index=1,
+      name='mode', full_name='ara.cfsnet.AccessFile.mode', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -264,25 +264,25 @@ _ACCESSFILE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=34,
-  serialized_end=102,
+  serialized_start=28,
+  serialized_end=90,
 )
 
 
 _BOOLEAN = _descriptor.Descriptor(
   name='Boolean',
-  full_name='littlstar.cfsnet.Boolean',
+  full_name='ara.cfsnet.Boolean',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='value', full_name='littlstar.cfsnet.Boolean.value', index=0,
+      name='value', full_name='ara.cfsnet.Boolean.value', index=0,
       number=1, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -295,32 +295,32 @@ _BOOLEAN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=104,
-  serialized_end=128,
+  serialized_start=92,
+  serialized_end=116,
 )
 
 
 _BUFFER = _descriptor.Descriptor(
   name='Buffer',
-  full_name='littlstar.cfsnet.Buffer',
+  full_name='ara.cfsnet.Buffer',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='value', full_name='littlstar.cfsnet.Buffer.value', index=0,
+      name='value', full_name='ara.cfsnet.Buffer.value', index=0,
       number=1, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='length', full_name='littlstar.cfsnet.Buffer.length', index=1,
+      name='length', full_name='ara.cfsnet.Buffer.length', index=1,
       number=2, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -333,25 +333,25 @@ _BUFFER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=130,
-  serialized_end=169,
+  serialized_start=118,
+  serialized_end=157,
 )
 
 
 _CLOSE = _descriptor.Descriptor(
   name='Close',
-  full_name='littlstar.cfsnet.Close',
+  full_name='ara.cfsnet.Close',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='fileDescriptor', full_name='littlstar.cfsnet.Close.fileDescriptor', index=0,
+      name='fileDescriptor', full_name='ara.cfsnet.Close.fileDescriptor', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -364,25 +364,25 @@ _CLOSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=171,
-  serialized_end=202,
+  serialized_start=159,
+  serialized_end=190,
 )
 
 
 _DOWNLOADDIRECTORY = _descriptor.Descriptor(
   name='DownloadDirectory',
-  full_name='littlstar.cfsnet.DownloadDirectory',
+  full_name='ara.cfsnet.DownloadDirectory',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='path', full_name='littlstar.cfsnet.DownloadDirectory.path', index=0,
+      name='path', full_name='ara.cfsnet.DownloadDirectory.path', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -395,25 +395,25 @@ _DOWNLOADDIRECTORY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=204,
-  serialized_end=237,
+  serialized_start=192,
+  serialized_end=225,
 )
 
 
 _DOWNLOADFILE = _descriptor.Descriptor(
   name='DownloadFile',
-  full_name='littlstar.cfsnet.DownloadFile',
+  full_name='ara.cfsnet.DownloadFile',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='path', full_name='littlstar.cfsnet.DownloadFile.path', index=0,
+      name='path', full_name='ara.cfsnet.DownloadFile.path', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -426,39 +426,39 @@ _DOWNLOADFILE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=239,
-  serialized_end=267,
+  serialized_start=227,
+  serialized_end=255,
 )
 
 
 _DRIVE = _descriptor.Descriptor(
   name='Drive',
-  full_name='littlstar.cfsnet.Drive',
+  full_name='ara.cfsnet.Drive',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='littlstar.cfsnet.Drive.id', index=0,
+      name='id', full_name='ara.cfsnet.Drive.id', index=0,
       number=1, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='key', full_name='littlstar.cfsnet.Drive.key', index=1,
+      name='key', full_name='ara.cfsnet.Drive.key', index=1,
       number=2, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='secretKey', full_name='littlstar.cfsnet.Drive.secretKey', index=2,
+      name='secretKey', full_name='ara.cfsnet.Drive.secretKey', index=2,
       number=3, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -471,39 +471,39 @@ _DRIVE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=269,
-  serialized_end=320,
+  serialized_start=257,
+  serialized_end=308,
 )
 
 
 _HANDSHAKE = _descriptor.Descriptor(
   name='Handshake',
-  full_name='littlstar.cfsnet.Handshake',
+  full_name='ara.cfsnet.Handshake',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='nonce', full_name='littlstar.cfsnet.Handshake.nonce', index=0,
+      name='nonce', full_name='ara.cfsnet.Handshake.nonce', index=0,
       number=1, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='key', full_name='littlstar.cfsnet.Handshake.key', index=1,
+      name='key', full_name='ara.cfsnet.Handshake.key', index=1,
       number=2, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ack', full_name='littlstar.cfsnet.Handshake.ack', index=2,
+      name='ack', full_name='ara.cfsnet.Handshake.ack', index=2,
       number=3, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -516,39 +516,39 @@ _HANDSHAKE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=322,
-  serialized_end=374,
+  serialized_start=310,
+  serialized_end=362,
 )
 
 
 _KEYPAIR = _descriptor.Descriptor(
   name='KeyPair',
-  full_name='littlstar.cfsnet.KeyPair',
+  full_name='ara.cfsnet.KeyPair',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='seed', full_name='littlstar.cfsnet.KeyPair.seed', index=0,
+      name='seed', full_name='ara.cfsnet.KeyPair.seed', index=0,
       number=1, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='publicKey', full_name='littlstar.cfsnet.KeyPair.publicKey', index=1,
+      name='publicKey', full_name='ara.cfsnet.KeyPair.publicKey', index=1,
       number=2, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='secretKey', full_name='littlstar.cfsnet.KeyPair.secretKey', index=2,
+      name='secretKey', full_name='ara.cfsnet.KeyPair.secretKey', index=2,
       number=3, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -561,32 +561,32 @@ _KEYPAIR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=376,
-  serialized_end=437,
+  serialized_start=364,
+  serialized_end=425,
 )
 
 
 _LIST = _descriptor.Descriptor(
   name='List',
-  full_name='littlstar.cfsnet.List',
+  full_name='ara.cfsnet.List',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='values', full_name='littlstar.cfsnet.List.values', index=0,
+      name='values', full_name='ara.cfsnet.List.values', index=0,
       number=1, type=12, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='length', full_name='littlstar.cfsnet.List.length', index=1,
+      name='length', full_name='ara.cfsnet.List.length', index=1,
       number=2, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -599,25 +599,25 @@ _LIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=439,
-  serialized_end=477,
+  serialized_start=427,
+  serialized_end=465,
 )
 
 
 _LISTDIRECTORY = _descriptor.Descriptor(
   name='ListDirectory',
-  full_name='littlstar.cfsnet.ListDirectory',
+  full_name='ara.cfsnet.ListDirectory',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='path', full_name='littlstar.cfsnet.ListDirectory.path', index=0,
+      name='path', full_name='ara.cfsnet.ListDirectory.path', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -630,25 +630,25 @@ _LISTDIRECTORY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=479,
-  serialized_end=508,
+  serialized_start=467,
+  serialized_end=496,
 )
 
 
 _MAKEDIRECTORY = _descriptor.Descriptor(
   name='MakeDirectory',
-  full_name='littlstar.cfsnet.MakeDirectory',
+  full_name='ara.cfsnet.MakeDirectory',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='path', full_name='littlstar.cfsnet.MakeDirectory.path', index=0,
+      name='path', full_name='ara.cfsnet.MakeDirectory.path', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -661,25 +661,25 @@ _MAKEDIRECTORY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=510,
-  serialized_end=539,
+  serialized_start=498,
+  serialized_end=527,
 )
 
 
 _MAKEDIRECTORYPATH = _descriptor.Descriptor(
   name='MakeDirectoryPath',
-  full_name='littlstar.cfsnet.MakeDirectoryPath',
+  full_name='ara.cfsnet.MakeDirectoryPath',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='path', full_name='littlstar.cfsnet.MakeDirectoryPath.path', index=0,
+      name='path', full_name='ara.cfsnet.MakeDirectoryPath.path', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -692,25 +692,25 @@ _MAKEDIRECTORYPATH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=541,
-  serialized_end=574,
+  serialized_start=529,
+  serialized_end=562,
 )
 
 
 _NUMBER = _descriptor.Descriptor(
   name='Number',
-  full_name='littlstar.cfsnet.Number',
+  full_name='ara.cfsnet.Number',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='value', full_name='littlstar.cfsnet.Number.value', index=0,
+      name='value', full_name='ara.cfsnet.Number.value', index=0,
       number=1, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -723,32 +723,32 @@ _NUMBER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=576,
-  serialized_end=599,
+  serialized_start=564,
+  serialized_end=587,
 )
 
 
 _OPEN = _descriptor.Descriptor(
   name='Open',
-  full_name='littlstar.cfsnet.Open',
+  full_name='ara.cfsnet.Open',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='path', full_name='littlstar.cfsnet.Open.path', index=0,
+      name='path', full_name='ara.cfsnet.Open.path', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='flags', full_name='littlstar.cfsnet.Open.flags', index=1,
+      name='flags', full_name='ara.cfsnet.Open.flags', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -761,39 +761,39 @@ _OPEN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=601,
-  serialized_end=636,
+  serialized_start=589,
+  serialized_end=624,
 )
 
 
 _READ = _descriptor.Descriptor(
   name='Read',
-  full_name='littlstar.cfsnet.Read',
+  full_name='ara.cfsnet.Read',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='fileDescriptor', full_name='littlstar.cfsnet.Read.fileDescriptor', index=0,
+      name='fileDescriptor', full_name='ara.cfsnet.Read.fileDescriptor', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='start', full_name='littlstar.cfsnet.Read.start', index=1,
+      name='start', full_name='ara.cfsnet.Read.start', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='end', full_name='littlstar.cfsnet.Read.end', index=2,
+      name='end', full_name='ara.cfsnet.Read.end', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -806,39 +806,39 @@ _READ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=638,
-  serialized_end=696,
+  serialized_start=626,
+  serialized_end=684,
 )
 
 
 _READFILE = _descriptor.Descriptor(
   name='ReadFile',
-  full_name='littlstar.cfsnet.ReadFile',
+  full_name='ara.cfsnet.ReadFile',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='path', full_name='littlstar.cfsnet.ReadFile.path', index=0,
+      name='path', full_name='ara.cfsnet.ReadFile.path', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='start', full_name='littlstar.cfsnet.ReadFile.start', index=1,
+      name='start', full_name='ara.cfsnet.ReadFile.start', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='end', full_name='littlstar.cfsnet.ReadFile.end', index=2,
+      name='end', full_name='ara.cfsnet.ReadFile.end', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -851,25 +851,25 @@ _READFILE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=698,
-  serialized_end=750,
+  serialized_start=686,
+  serialized_end=738,
 )
 
 
 _REMOVEDIRECTORY = _descriptor.Descriptor(
   name='RemoveDirectory',
-  full_name='littlstar.cfsnet.RemoveDirectory',
+  full_name='ara.cfsnet.RemoveDirectory',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='path', full_name='littlstar.cfsnet.RemoveDirectory.path', index=0,
+      name='path', full_name='ara.cfsnet.RemoveDirectory.path', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -882,25 +882,25 @@ _REMOVEDIRECTORY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=752,
-  serialized_end=783,
+  serialized_start=740,
+  serialized_end=771,
 )
 
 
 _REMOVEDIRECTORYPATH = _descriptor.Descriptor(
   name='RemoveDirectoryPath',
-  full_name='littlstar.cfsnet.RemoveDirectoryPath',
+  full_name='ara.cfsnet.RemoveDirectoryPath',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='path', full_name='littlstar.cfsnet.RemoveDirectoryPath.path', index=0,
+      name='path', full_name='ara.cfsnet.RemoveDirectoryPath.path', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -913,46 +913,46 @@ _REMOVEDIRECTORYPATH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=785,
-  serialized_end=820,
+  serialized_start=773,
+  serialized_end=808,
 )
 
 
 _REQUEST = _descriptor.Descriptor(
   name='Request',
-  full_name='littlstar.cfsnet.Request',
+  full_name='ara.cfsnet.Request',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='nonce', full_name='littlstar.cfsnet.Request.nonce', index=0,
+      name='nonce', full_name='ara.cfsnet.Request.nonce', index=0,
       number=1, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='drive', full_name='littlstar.cfsnet.Request.drive', index=1,
+      name='drive', full_name='ara.cfsnet.Request.drive', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='operation', full_name='littlstar.cfsnet.Request.operation', index=2,
+      name='operation', full_name='ara.cfsnet.Request.operation', index=2,
       number=3, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='buffer', full_name='littlstar.cfsnet.Request.buffer', index=3,
+      name='buffer', full_name='ara.cfsnet.Request.buffer', index=3,
       number=4, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -965,25 +965,25 @@ _REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=823,
-  serialized_end=951,
+  serialized_start=810,
+  serialized_end=926,
 )
 
 
 _RESOLVE = _descriptor.Descriptor(
   name='Resolve',
-  full_name='littlstar.cfsnet.Resolve',
+  full_name='ara.cfsnet.Resolve',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='path', full_name='littlstar.cfsnet.Resolve.path', index=0,
+      name='path', full_name='ara.cfsnet.Resolve.path', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -996,60 +996,60 @@ _RESOLVE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=953,
-  serialized_end=976,
+  serialized_start=928,
+  serialized_end=951,
 )
 
 
 _RESPONSE = _descriptor.Descriptor(
   name='Response',
-  full_name='littlstar.cfsnet.Response',
+  full_name='ara.cfsnet.Response',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='nonce', full_name='littlstar.cfsnet.Response.nonce', index=0,
+      name='nonce', full_name='ara.cfsnet.Response.nonce', index=0,
       number=1, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='drive', full_name='littlstar.cfsnet.Response.drive', index=1,
+      name='drive', full_name='ara.cfsnet.Response.drive', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='operation', full_name='littlstar.cfsnet.Response.operation', index=2,
+      name='operation', full_name='ara.cfsnet.Response.operation', index=2,
       number=3, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='request', full_name='littlstar.cfsnet.Response.request', index=3,
+      name='request', full_name='ara.cfsnet.Response.request', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='errorCode', full_name='littlstar.cfsnet.Response.errorCode', index=4,
+      name='errorCode', full_name='ara.cfsnet.Response.errorCode', index=4,
       number=5, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='buffer', full_name='littlstar.cfsnet.Response.buffer', index=5,
+      name='buffer', full_name='ara.cfsnet.Response.buffer', index=5,
       number=6, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -1062,74 +1062,74 @@ _RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=979,
-  serialized_end=1200,
+  serialized_start=954,
+  serialized_end=1151,
 )
 
 
 _STAT = _descriptor.Descriptor(
   name='Stat',
-  full_name='littlstar.cfsnet.Stat',
+  full_name='ara.cfsnet.Stat',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='uid', full_name='littlstar.cfsnet.Stat.uid', index=0,
+      name='uid', full_name='ara.cfsnet.Stat.uid', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='gid', full_name='littlstar.cfsnet.Stat.gid', index=1,
+      name='gid', full_name='ara.cfsnet.Stat.gid', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='mode', full_name='littlstar.cfsnet.Stat.mode', index=2,
+      name='mode', full_name='ara.cfsnet.Stat.mode', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='size', full_name='littlstar.cfsnet.Stat.size', index=3,
+      name='size', full_name='ara.cfsnet.Stat.size', index=3,
       number=4, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='atime', full_name='littlstar.cfsnet.Stat.atime', index=4,
+      name='atime', full_name='ara.cfsnet.Stat.atime', index=4,
       number=5, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ctime', full_name='littlstar.cfsnet.Stat.ctime', index=5,
+      name='ctime', full_name='ara.cfsnet.Stat.ctime', index=5,
       number=6, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='mtime', full_name='littlstar.cfsnet.Stat.mtime', index=6,
+      name='mtime', full_name='ara.cfsnet.Stat.mtime', index=6,
       number=7, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='blocks', full_name='littlstar.cfsnet.Stat.blocks', index=7,
+      name='blocks', full_name='ara.cfsnet.Stat.blocks', index=7,
       number=8, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -1142,25 +1142,25 @@ _STAT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1202,
-  serialized_end=1323,
+  serialized_start=1153,
+  serialized_end=1274,
 )
 
 
 _STATFILE = _descriptor.Descriptor(
   name='StatFile',
-  full_name='littlstar.cfsnet.StatFile',
+  full_name='ara.cfsnet.StatFile',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='path', full_name='littlstar.cfsnet.StatFile.path', index=0,
+      name='path', full_name='ara.cfsnet.StatFile.path', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -1173,25 +1173,25 @@ _STATFILE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1325,
-  serialized_end=1349,
+  serialized_start=1276,
+  serialized_end=1300,
 )
 
 
 _STRING = _descriptor.Descriptor(
   name='String',
-  full_name='littlstar.cfsnet.String',
+  full_name='ara.cfsnet.String',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='value', full_name='littlstar.cfsnet.String.value', index=0,
+      name='value', full_name='ara.cfsnet.String.value', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -1204,25 +1204,25 @@ _STRING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1351,
-  serialized_end=1374,
+  serialized_start=1302,
+  serialized_end=1325,
 )
 
 
 _TOUCHFILE = _descriptor.Descriptor(
   name='TouchFile',
-  full_name='littlstar.cfsnet.TouchFile',
+  full_name='ara.cfsnet.TouchFile',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='path', full_name='littlstar.cfsnet.TouchFile.path', index=0,
+      name='path', full_name='ara.cfsnet.TouchFile.path', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -1235,25 +1235,25 @@ _TOUCHFILE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1376,
-  serialized_end=1401,
+  serialized_start=1327,
+  serialized_end=1352,
 )
 
 
 _UNLINKFILE = _descriptor.Descriptor(
   name='UnlinkFile',
-  full_name='littlstar.cfsnet.UnlinkFile',
+  full_name='ara.cfsnet.UnlinkFile',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='path', full_name='littlstar.cfsnet.UnlinkFile.path', index=0,
+      name='path', full_name='ara.cfsnet.UnlinkFile.path', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -1266,46 +1266,46 @@ _UNLINKFILE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1403,
-  serialized_end=1429,
+  serialized_start=1354,
+  serialized_end=1380,
 )
 
 
 _WRITEFILE = _descriptor.Descriptor(
   name='WriteFile',
-  full_name='littlstar.cfsnet.WriteFile',
+  full_name='ara.cfsnet.WriteFile',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='path', full_name='littlstar.cfsnet.WriteFile.path', index=0,
+      name='path', full_name='ara.cfsnet.WriteFile.path', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='buffer', full_name='littlstar.cfsnet.WriteFile.buffer', index=1,
+      name='buffer', full_name='ara.cfsnet.WriteFile.buffer', index=1,
       number=2, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='start', full_name='littlstar.cfsnet.WriteFile.start', index=2,
+      name='start', full_name='ara.cfsnet.WriteFile.start', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='end', full_name='littlstar.cfsnet.WriteFile.end', index=3,
+      name='end', full_name='ara.cfsnet.WriteFile.end', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -1318,8 +1318,8 @@ _WRITEFILE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1431,
-  serialized_end=1500,
+  serialized_start=1382,
+  serialized_end=1451,
 )
 
 _ACCESSFILE.fields_by_name['mode'].enum_type = _FILEMODE
@@ -1365,200 +1365,200 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 AccessFile = _reflection.GeneratedProtocolMessageType('AccessFile', (_message.Message,), dict(
   DESCRIPTOR = _ACCESSFILE,
   __module__ = 'cfsnet_pb2'
-  # @@protoc_insertion_point(class_scope:littlstar.cfsnet.AccessFile)
+  # @@protoc_insertion_point(class_scope:ara.cfsnet.AccessFile)
   ))
 _sym_db.RegisterMessage(AccessFile)
 
 Boolean = _reflection.GeneratedProtocolMessageType('Boolean', (_message.Message,), dict(
   DESCRIPTOR = _BOOLEAN,
   __module__ = 'cfsnet_pb2'
-  # @@protoc_insertion_point(class_scope:littlstar.cfsnet.Boolean)
+  # @@protoc_insertion_point(class_scope:ara.cfsnet.Boolean)
   ))
 _sym_db.RegisterMessage(Boolean)
 
 Buffer = _reflection.GeneratedProtocolMessageType('Buffer', (_message.Message,), dict(
   DESCRIPTOR = _BUFFER,
   __module__ = 'cfsnet_pb2'
-  # @@protoc_insertion_point(class_scope:littlstar.cfsnet.Buffer)
+  # @@protoc_insertion_point(class_scope:ara.cfsnet.Buffer)
   ))
 _sym_db.RegisterMessage(Buffer)
 
 Close = _reflection.GeneratedProtocolMessageType('Close', (_message.Message,), dict(
   DESCRIPTOR = _CLOSE,
   __module__ = 'cfsnet_pb2'
-  # @@protoc_insertion_point(class_scope:littlstar.cfsnet.Close)
+  # @@protoc_insertion_point(class_scope:ara.cfsnet.Close)
   ))
 _sym_db.RegisterMessage(Close)
 
 DownloadDirectory = _reflection.GeneratedProtocolMessageType('DownloadDirectory', (_message.Message,), dict(
   DESCRIPTOR = _DOWNLOADDIRECTORY,
   __module__ = 'cfsnet_pb2'
-  # @@protoc_insertion_point(class_scope:littlstar.cfsnet.DownloadDirectory)
+  # @@protoc_insertion_point(class_scope:ara.cfsnet.DownloadDirectory)
   ))
 _sym_db.RegisterMessage(DownloadDirectory)
 
 DownloadFile = _reflection.GeneratedProtocolMessageType('DownloadFile', (_message.Message,), dict(
   DESCRIPTOR = _DOWNLOADFILE,
   __module__ = 'cfsnet_pb2'
-  # @@protoc_insertion_point(class_scope:littlstar.cfsnet.DownloadFile)
+  # @@protoc_insertion_point(class_scope:ara.cfsnet.DownloadFile)
   ))
 _sym_db.RegisterMessage(DownloadFile)
 
 Drive = _reflection.GeneratedProtocolMessageType('Drive', (_message.Message,), dict(
   DESCRIPTOR = _DRIVE,
   __module__ = 'cfsnet_pb2'
-  # @@protoc_insertion_point(class_scope:littlstar.cfsnet.Drive)
+  # @@protoc_insertion_point(class_scope:ara.cfsnet.Drive)
   ))
 _sym_db.RegisterMessage(Drive)
 
 Handshake = _reflection.GeneratedProtocolMessageType('Handshake', (_message.Message,), dict(
   DESCRIPTOR = _HANDSHAKE,
   __module__ = 'cfsnet_pb2'
-  # @@protoc_insertion_point(class_scope:littlstar.cfsnet.Handshake)
+  # @@protoc_insertion_point(class_scope:ara.cfsnet.Handshake)
   ))
 _sym_db.RegisterMessage(Handshake)
 
 KeyPair = _reflection.GeneratedProtocolMessageType('KeyPair', (_message.Message,), dict(
   DESCRIPTOR = _KEYPAIR,
   __module__ = 'cfsnet_pb2'
-  # @@protoc_insertion_point(class_scope:littlstar.cfsnet.KeyPair)
+  # @@protoc_insertion_point(class_scope:ara.cfsnet.KeyPair)
   ))
 _sym_db.RegisterMessage(KeyPair)
 
 List = _reflection.GeneratedProtocolMessageType('List', (_message.Message,), dict(
   DESCRIPTOR = _LIST,
   __module__ = 'cfsnet_pb2'
-  # @@protoc_insertion_point(class_scope:littlstar.cfsnet.List)
+  # @@protoc_insertion_point(class_scope:ara.cfsnet.List)
   ))
 _sym_db.RegisterMessage(List)
 
 ListDirectory = _reflection.GeneratedProtocolMessageType('ListDirectory', (_message.Message,), dict(
   DESCRIPTOR = _LISTDIRECTORY,
   __module__ = 'cfsnet_pb2'
-  # @@protoc_insertion_point(class_scope:littlstar.cfsnet.ListDirectory)
+  # @@protoc_insertion_point(class_scope:ara.cfsnet.ListDirectory)
   ))
 _sym_db.RegisterMessage(ListDirectory)
 
 MakeDirectory = _reflection.GeneratedProtocolMessageType('MakeDirectory', (_message.Message,), dict(
   DESCRIPTOR = _MAKEDIRECTORY,
   __module__ = 'cfsnet_pb2'
-  # @@protoc_insertion_point(class_scope:littlstar.cfsnet.MakeDirectory)
+  # @@protoc_insertion_point(class_scope:ara.cfsnet.MakeDirectory)
   ))
 _sym_db.RegisterMessage(MakeDirectory)
 
 MakeDirectoryPath = _reflection.GeneratedProtocolMessageType('MakeDirectoryPath', (_message.Message,), dict(
   DESCRIPTOR = _MAKEDIRECTORYPATH,
   __module__ = 'cfsnet_pb2'
-  # @@protoc_insertion_point(class_scope:littlstar.cfsnet.MakeDirectoryPath)
+  # @@protoc_insertion_point(class_scope:ara.cfsnet.MakeDirectoryPath)
   ))
 _sym_db.RegisterMessage(MakeDirectoryPath)
 
 Number = _reflection.GeneratedProtocolMessageType('Number', (_message.Message,), dict(
   DESCRIPTOR = _NUMBER,
   __module__ = 'cfsnet_pb2'
-  # @@protoc_insertion_point(class_scope:littlstar.cfsnet.Number)
+  # @@protoc_insertion_point(class_scope:ara.cfsnet.Number)
   ))
 _sym_db.RegisterMessage(Number)
 
 Open = _reflection.GeneratedProtocolMessageType('Open', (_message.Message,), dict(
   DESCRIPTOR = _OPEN,
   __module__ = 'cfsnet_pb2'
-  # @@protoc_insertion_point(class_scope:littlstar.cfsnet.Open)
+  # @@protoc_insertion_point(class_scope:ara.cfsnet.Open)
   ))
 _sym_db.RegisterMessage(Open)
 
 Read = _reflection.GeneratedProtocolMessageType('Read', (_message.Message,), dict(
   DESCRIPTOR = _READ,
   __module__ = 'cfsnet_pb2'
-  # @@protoc_insertion_point(class_scope:littlstar.cfsnet.Read)
+  # @@protoc_insertion_point(class_scope:ara.cfsnet.Read)
   ))
 _sym_db.RegisterMessage(Read)
 
 ReadFile = _reflection.GeneratedProtocolMessageType('ReadFile', (_message.Message,), dict(
   DESCRIPTOR = _READFILE,
   __module__ = 'cfsnet_pb2'
-  # @@protoc_insertion_point(class_scope:littlstar.cfsnet.ReadFile)
+  # @@protoc_insertion_point(class_scope:ara.cfsnet.ReadFile)
   ))
 _sym_db.RegisterMessage(ReadFile)
 
 RemoveDirectory = _reflection.GeneratedProtocolMessageType('RemoveDirectory', (_message.Message,), dict(
   DESCRIPTOR = _REMOVEDIRECTORY,
   __module__ = 'cfsnet_pb2'
-  # @@protoc_insertion_point(class_scope:littlstar.cfsnet.RemoveDirectory)
+  # @@protoc_insertion_point(class_scope:ara.cfsnet.RemoveDirectory)
   ))
 _sym_db.RegisterMessage(RemoveDirectory)
 
 RemoveDirectoryPath = _reflection.GeneratedProtocolMessageType('RemoveDirectoryPath', (_message.Message,), dict(
   DESCRIPTOR = _REMOVEDIRECTORYPATH,
   __module__ = 'cfsnet_pb2'
-  # @@protoc_insertion_point(class_scope:littlstar.cfsnet.RemoveDirectoryPath)
+  # @@protoc_insertion_point(class_scope:ara.cfsnet.RemoveDirectoryPath)
   ))
 _sym_db.RegisterMessage(RemoveDirectoryPath)
 
 Request = _reflection.GeneratedProtocolMessageType('Request', (_message.Message,), dict(
   DESCRIPTOR = _REQUEST,
   __module__ = 'cfsnet_pb2'
-  # @@protoc_insertion_point(class_scope:littlstar.cfsnet.Request)
+  # @@protoc_insertion_point(class_scope:ara.cfsnet.Request)
   ))
 _sym_db.RegisterMessage(Request)
 
 Resolve = _reflection.GeneratedProtocolMessageType('Resolve', (_message.Message,), dict(
   DESCRIPTOR = _RESOLVE,
   __module__ = 'cfsnet_pb2'
-  # @@protoc_insertion_point(class_scope:littlstar.cfsnet.Resolve)
+  # @@protoc_insertion_point(class_scope:ara.cfsnet.Resolve)
   ))
 _sym_db.RegisterMessage(Resolve)
 
 Response = _reflection.GeneratedProtocolMessageType('Response', (_message.Message,), dict(
   DESCRIPTOR = _RESPONSE,
   __module__ = 'cfsnet_pb2'
-  # @@protoc_insertion_point(class_scope:littlstar.cfsnet.Response)
+  # @@protoc_insertion_point(class_scope:ara.cfsnet.Response)
   ))
 _sym_db.RegisterMessage(Response)
 
 Stat = _reflection.GeneratedProtocolMessageType('Stat', (_message.Message,), dict(
   DESCRIPTOR = _STAT,
   __module__ = 'cfsnet_pb2'
-  # @@protoc_insertion_point(class_scope:littlstar.cfsnet.Stat)
+  # @@protoc_insertion_point(class_scope:ara.cfsnet.Stat)
   ))
 _sym_db.RegisterMessage(Stat)
 
 StatFile = _reflection.GeneratedProtocolMessageType('StatFile', (_message.Message,), dict(
   DESCRIPTOR = _STATFILE,
   __module__ = 'cfsnet_pb2'
-  # @@protoc_insertion_point(class_scope:littlstar.cfsnet.StatFile)
+  # @@protoc_insertion_point(class_scope:ara.cfsnet.StatFile)
   ))
 _sym_db.RegisterMessage(StatFile)
 
 String = _reflection.GeneratedProtocolMessageType('String', (_message.Message,), dict(
   DESCRIPTOR = _STRING,
   __module__ = 'cfsnet_pb2'
-  # @@protoc_insertion_point(class_scope:littlstar.cfsnet.String)
+  # @@protoc_insertion_point(class_scope:ara.cfsnet.String)
   ))
 _sym_db.RegisterMessage(String)
 
 TouchFile = _reflection.GeneratedProtocolMessageType('TouchFile', (_message.Message,), dict(
   DESCRIPTOR = _TOUCHFILE,
   __module__ = 'cfsnet_pb2'
-  # @@protoc_insertion_point(class_scope:littlstar.cfsnet.TouchFile)
+  # @@protoc_insertion_point(class_scope:ara.cfsnet.TouchFile)
   ))
 _sym_db.RegisterMessage(TouchFile)
 
 UnlinkFile = _reflection.GeneratedProtocolMessageType('UnlinkFile', (_message.Message,), dict(
   DESCRIPTOR = _UNLINKFILE,
   __module__ = 'cfsnet_pb2'
-  # @@protoc_insertion_point(class_scope:littlstar.cfsnet.UnlinkFile)
+  # @@protoc_insertion_point(class_scope:ara.cfsnet.UnlinkFile)
   ))
 _sym_db.RegisterMessage(UnlinkFile)
 
 WriteFile = _reflection.GeneratedProtocolMessageType('WriteFile', (_message.Message,), dict(
   DESCRIPTOR = _WRITEFILE,
   __module__ = 'cfsnet_pb2'
-  # @@protoc_insertion_point(class_scope:littlstar.cfsnet.WriteFile)
+  # @@protoc_insertion_point(class_scope:ara.cfsnet.WriteFile)
   ))
 _sym_db.RegisterMessage(WriteFile)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\026com.littlstar.protobufB\016CFSNetProtobufP\001\242\002\005CFSPB\252\002\031Littlstar.CFSNet.Protobuf'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\020com.ara.protobufB\016CFSNetProtobufP\001\242\002\005CFSPB\252\002\023Ara.CFSNet.Protobuf'))
 # @@protoc_insertion_point(module_scope)

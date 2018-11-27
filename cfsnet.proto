@@ -1,25 +1,25 @@
 syntax = "proto3";
 
-// 'index.proto' generated on Mon Nov 26 2018 17:19:39 GMT-0500 (Eastern Standard Time)syntax = "proto3";
+// 'index.proto' generated on Tue Nov 27 2018 13:24:58 GMT-0500 (Eastern Standard Time)syntax = "proto3";
 
-option java_package = "com.littlstar.protobuf";
+option java_package = "com.ara.protobuf";
 option java_multiple_files = true;
 option java_outer_classname = "CFSNetProtobuf";
 option objc_class_prefix = "CFSPB";
-option csharp_namespace = "Littlstar.CFSNet.Protobuf";
+option csharp_namespace = "Ara.CFSNet.Protobuf";
 
-// 'cfsnet' generated on Mon Nov 26 2018 17:19:39 GMT-0500 (Eastern Standard Time)syntax = "proto3";
+// 'cfsnet' generated on Tue Nov 27 2018 13:24:58 GMT-0500 (Eastern Standard Time)syntax = "proto3";
 
-package littlstar.cfsnet;
+package ara.cfsnet;
 
-// 'cfsnet/AccessFile' generated on Mon Nov 26 2018 17:19:39 GMT-0500 (Eastern Standard Time)syntax = "proto3";
+// 'cfsnet/AccessFile' generated on Tue Nov 27 2018 13:24:58 GMT-0500 (Eastern Standard Time)syntax = "proto3";
 
 message AccessFile {
   string path = 1;
   FileMode mode = 2;
 }
 
-// 'cfsnet/FileMode' generated on Mon Nov 26 2018 17:19:39 GMT-0500 (Eastern Standard Time)syntax = "proto3";
+// 'cfsnet/FileMode' generated on Tue Nov 27 2018 13:24:58 GMT-0500 (Eastern Standard Time)syntax = "proto3";
 
 enum FileMode {
   F_OK = 0;
@@ -28,38 +28,38 @@ enum FileMode {
   R_OK = 4;
 }
 
-// 'cfsnet/Boolean' generated on Mon Nov 26 2018 17:19:39 GMT-0500 (Eastern Standard Time)syntax = "proto3";
+// 'cfsnet/Boolean' generated on Tue Nov 27 2018 13:24:58 GMT-0500 (Eastern Standard Time)syntax = "proto3";
 
 message Boolean {
   bool value = 1;
 }
 
-// 'cfsnet/Buffer' generated on Mon Nov 26 2018 17:19:39 GMT-0500 (Eastern Standard Time)syntax = "proto3";
+// 'cfsnet/Buffer' generated on Tue Nov 27 2018 13:24:58 GMT-0500 (Eastern Standard Time)syntax = "proto3";
 
 message Buffer {
   bytes value = 1;
   uint64 length = 2;
 }
 
-// 'cfsnet/Close' generated on Mon Nov 26 2018 17:19:39 GMT-0500 (Eastern Standard Time)syntax = "proto3";
+// 'cfsnet/Close' generated on Tue Nov 27 2018 13:24:58 GMT-0500 (Eastern Standard Time)syntax = "proto3";
 
 message Close {
   uint32 fileDescriptor = 1;
 }
 
-// 'cfsnet/DownloadDirectory' generated on Mon Nov 26 2018 17:19:39 GMT-0500 (Eastern Standard Time)syntax = "proto3";
+// 'cfsnet/DownloadDirectory' generated on Tue Nov 27 2018 13:24:58 GMT-0500 (Eastern Standard Time)syntax = "proto3";
 
 message DownloadDirectory {
   string path = 1;
 }
 
-// 'cfsnet/DownloadFile' generated on Mon Nov 26 2018 17:19:39 GMT-0500 (Eastern Standard Time)syntax = "proto3";
+// 'cfsnet/DownloadFile' generated on Tue Nov 27 2018 13:24:58 GMT-0500 (Eastern Standard Time)syntax = "proto3";
 
 message DownloadFile {
   string path = 1;
 }
 
-// 'cfsnet/Drive' generated on Mon Nov 26 2018 17:19:39 GMT-0500 (Eastern Standard Time)syntax = "proto3";
+// 'cfsnet/Drive' generated on Tue Nov 27 2018 13:24:58 GMT-0500 (Eastern Standard Time)syntax = "proto3";
 
 message Drive {
   bytes id = 1;
@@ -67,7 +67,7 @@ message Drive {
   bytes secretKey = 3;
 }
 
-// 'cfsnet/ErrorCode' generated on Mon Nov 26 2018 17:19:39 GMT-0500 (Eastern Standard Time)syntax = "proto3";
+// 'cfsnet/ErrorCode' generated on Tue Nov 27 2018 13:24:58 GMT-0500 (Eastern Standard Time)syntax = "proto3";
 
 enum ErrorCode {
   NoError = 0;
@@ -80,7 +80,7 @@ enum ErrorCode {
   NotImplementedError = 501;
 }
 
-// 'cfsnet/Handshake' generated on Mon Nov 26 2018 17:19:39 GMT-0500 (Eastern Standard Time)syntax = "proto3";
+// 'cfsnet/Handshake' generated on Tue Nov 27 2018 13:24:58 GMT-0500 (Eastern Standard Time)syntax = "proto3";
 
 message Handshake {
   bytes nonce = 1;
@@ -88,7 +88,7 @@ message Handshake {
   bool ack = 3;
 }
 
-// 'cfsnet/KeyPair' generated on Mon Nov 26 2018 17:19:39 GMT-0500 (Eastern Standard Time)syntax = "proto3";
+// 'cfsnet/KeyPair' generated on Tue Nov 27 2018 13:24:58 GMT-0500 (Eastern Standard Time)syntax = "proto3";
 
 message KeyPair {
   bytes seed = 1;
@@ -96,45 +96,45 @@ message KeyPair {
   bytes secretKey = 3;
 }
 
-// 'cfsnet/List' generated on Mon Nov 26 2018 17:19:39 GMT-0500 (Eastern Standard Time)syntax = "proto3";
+// 'cfsnet/List' generated on Tue Nov 27 2018 13:24:58 GMT-0500 (Eastern Standard Time)syntax = "proto3";
 
 message List {
   repeated bytes values = 1;
   uint64 length = 2;
 }
 
-// 'cfsnet/ListDirectory' generated on Mon Nov 26 2018 17:19:39 GMT-0500 (Eastern Standard Time)syntax = "proto3";
+// 'cfsnet/ListDirectory' generated on Tue Nov 27 2018 13:24:58 GMT-0500 (Eastern Standard Time)syntax = "proto3";
 
 message ListDirectory {
   string path = 1;
 }
 
-// 'cfsnet/MakeDirectory' generated on Mon Nov 26 2018 17:19:39 GMT-0500 (Eastern Standard Time)syntax = "proto3";
+// 'cfsnet/MakeDirectory' generated on Tue Nov 27 2018 13:24:58 GMT-0500 (Eastern Standard Time)syntax = "proto3";
 
 message MakeDirectory {
   string path = 1;
 }
 
-// 'cfsnet/MakeDirectoryPath' generated on Mon Nov 26 2018 17:19:39 GMT-0500 (Eastern Standard Time)syntax = "proto3";
+// 'cfsnet/MakeDirectoryPath' generated on Tue Nov 27 2018 13:24:58 GMT-0500 (Eastern Standard Time)syntax = "proto3";
 
 message MakeDirectoryPath {
   string path = 1;
 }
 
-// 'cfsnet/Number' generated on Mon Nov 26 2018 17:19:39 GMT-0500 (Eastern Standard Time)syntax = "proto3";
+// 'cfsnet/Number' generated on Tue Nov 27 2018 13:24:58 GMT-0500 (Eastern Standard Time)syntax = "proto3";
 
 message Number {
   double value = 1;
 }
 
-// 'cfsnet/Open' generated on Mon Nov 26 2018 17:19:39 GMT-0500 (Eastern Standard Time)syntax = "proto3";
+// 'cfsnet/Open' generated on Tue Nov 27 2018 13:24:58 GMT-0500 (Eastern Standard Time)syntax = "proto3";
 
 message Open {
   string path = 1;
   string flags = 2;
 }
 
-// 'cfsnet/Operation' generated on Mon Nov 26 2018 17:19:39 GMT-0500 (Eastern Standard Time)syntax = "proto3";
+// 'cfsnet/Operation' generated on Tue Nov 27 2018 13:24:58 GMT-0500 (Eastern Standard Time)syntax = "proto3";
 
 enum Operation {
   NoOperation = 0;
@@ -159,7 +159,7 @@ enum Operation {
   ListDirectoryOperation = 35;
 }
 
-// 'cfsnet/Read' generated on Mon Nov 26 2018 17:19:39 GMT-0500 (Eastern Standard Time)syntax = "proto3";
+// 'cfsnet/Read' generated on Tue Nov 27 2018 13:24:58 GMT-0500 (Eastern Standard Time)syntax = "proto3";
 
 message Read {
   uint32 fileDescriptor = 1;
@@ -167,7 +167,7 @@ message Read {
   uint32 end = 3;
 }
 
-// 'cfsnet/ReadFile' generated on Mon Nov 26 2018 17:19:39 GMT-0500 (Eastern Standard Time)syntax = "proto3";
+// 'cfsnet/ReadFile' generated on Tue Nov 27 2018 13:24:58 GMT-0500 (Eastern Standard Time)syntax = "proto3";
 
 message ReadFile {
   string path = 1;
@@ -175,19 +175,19 @@ message ReadFile {
   uint32 end = 3;
 }
 
-// 'cfsnet/RemoveDirectory' generated on Mon Nov 26 2018 17:19:39 GMT-0500 (Eastern Standard Time)syntax = "proto3";
+// 'cfsnet/RemoveDirectory' generated on Tue Nov 27 2018 13:24:58 GMT-0500 (Eastern Standard Time)syntax = "proto3";
 
 message RemoveDirectory {
   string path = 1;
 }
 
-// 'cfsnet/RemoveDirectoryPath' generated on Mon Nov 26 2018 17:19:39 GMT-0500 (Eastern Standard Time)syntax = "proto3";
+// 'cfsnet/RemoveDirectoryPath' generated on Tue Nov 27 2018 13:24:58 GMT-0500 (Eastern Standard Time)syntax = "proto3";
 
 message RemoveDirectoryPath {
   string path = 1;
 }
 
-// 'cfsnet/Request' generated on Mon Nov 26 2018 17:19:39 GMT-0500 (Eastern Standard Time)syntax = "proto3";
+// 'cfsnet/Request' generated on Tue Nov 27 2018 13:24:58 GMT-0500 (Eastern Standard Time)syntax = "proto3";
 
 message Request {
   bytes nonce = 1;
@@ -196,13 +196,13 @@ message Request {
   bytes buffer = 4;
 }
 
-// 'cfsnet/Resolve' generated on Mon Nov 26 2018 17:19:39 GMT-0500 (Eastern Standard Time)syntax = "proto3";
+// 'cfsnet/Resolve' generated on Tue Nov 27 2018 13:24:58 GMT-0500 (Eastern Standard Time)syntax = "proto3";
 
 message Resolve {
   string path = 1;
 }
 
-// 'cfsnet/Response' generated on Mon Nov 26 2018 17:19:39 GMT-0500 (Eastern Standard Time)syntax = "proto3";
+// 'cfsnet/Response' generated on Tue Nov 27 2018 13:24:58 GMT-0500 (Eastern Standard Time)syntax = "proto3";
 
 message Response {
   bytes nonce = 1;
@@ -213,7 +213,7 @@ message Response {
   bytes buffer = 6;
 }
 
-// 'cfsnet/Stat' generated on Mon Nov 26 2018 17:19:39 GMT-0500 (Eastern Standard Time)syntax = "proto3";
+// 'cfsnet/Stat' generated on Tue Nov 27 2018 13:24:58 GMT-0500 (Eastern Standard Time)syntax = "proto3";
 
 message Stat {
   uint32 uid = 1;
@@ -226,31 +226,31 @@ message Stat {
   uint64 blocks = 8;
 }
 
-// 'cfsnet/StatFile' generated on Mon Nov 26 2018 17:19:39 GMT-0500 (Eastern Standard Time)syntax = "proto3";
+// 'cfsnet/StatFile' generated on Tue Nov 27 2018 13:24:58 GMT-0500 (Eastern Standard Time)syntax = "proto3";
 
 message StatFile {
   string path = 1;
 }
 
-// 'cfsnet/String' generated on Mon Nov 26 2018 17:19:39 GMT-0500 (Eastern Standard Time)syntax = "proto3";
+// 'cfsnet/String' generated on Tue Nov 27 2018 13:24:58 GMT-0500 (Eastern Standard Time)syntax = "proto3";
 
 message String {
   string value = 1;
 }
 
-// 'cfsnet/TouchFile' generated on Mon Nov 26 2018 17:19:39 GMT-0500 (Eastern Standard Time)syntax = "proto3";
+// 'cfsnet/TouchFile' generated on Tue Nov 27 2018 13:24:58 GMT-0500 (Eastern Standard Time)syntax = "proto3";
 
 message TouchFile {
   string path = 1;
 }
 
-// 'cfsnet/UnlinkFile' generated on Mon Nov 26 2018 17:19:39 GMT-0500 (Eastern Standard Time)syntax = "proto3";
+// 'cfsnet/UnlinkFile' generated on Tue Nov 27 2018 13:24:58 GMT-0500 (Eastern Standard Time)syntax = "proto3";
 
 message UnlinkFile {
   string path = 1;
 }
 
-// 'cfsnet/WriteFile' generated on Mon Nov 26 2018 17:19:39 GMT-0500 (Eastern Standard Time)syntax = "proto3";
+// 'cfsnet/WriteFile' generated on Tue Nov 27 2018 13:24:58 GMT-0500 (Eastern Standard Time)syntax = "proto3";
 
 message WriteFile {
   string path = 1;

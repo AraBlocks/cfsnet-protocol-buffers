@@ -7,1267 +7,1267 @@
 #endif
 
 #include "cfsnet.pb-c.h"
-void   littlstar__cfsnet__access_file__init
-                     (Littlstar__Cfsnet__AccessFile         *message)
+void   ara__cfsnet__access_file__init
+                     (Ara__Cfsnet__AccessFile         *message)
 {
-  static const Littlstar__Cfsnet__AccessFile init_value = LITTLSTAR__CFSNET__ACCESS_FILE__INIT;
+  static const Ara__Cfsnet__AccessFile init_value = ARA__CFSNET__ACCESS_FILE__INIT;
   *message = init_value;
 }
-size_t littlstar__cfsnet__access_file__get_packed_size
-                     (const Littlstar__Cfsnet__AccessFile *message)
+size_t ara__cfsnet__access_file__get_packed_size
+                     (const Ara__Cfsnet__AccessFile *message)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__access_file__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__access_file__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t littlstar__cfsnet__access_file__pack
-                     (const Littlstar__Cfsnet__AccessFile *message,
+size_t ara__cfsnet__access_file__pack
+                     (const Ara__Cfsnet__AccessFile *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__access_file__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__access_file__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t littlstar__cfsnet__access_file__pack_to_buffer
-                     (const Littlstar__Cfsnet__AccessFile *message,
+size_t ara__cfsnet__access_file__pack_to_buffer
+                     (const Ara__Cfsnet__AccessFile *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__access_file__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__access_file__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Littlstar__Cfsnet__AccessFile *
-       littlstar__cfsnet__access_file__unpack
+Ara__Cfsnet__AccessFile *
+       ara__cfsnet__access_file__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Littlstar__Cfsnet__AccessFile *)
-     protobuf_c_message_unpack (&littlstar__cfsnet__access_file__descriptor,
+  return (Ara__Cfsnet__AccessFile *)
+     protobuf_c_message_unpack (&ara__cfsnet__access_file__descriptor,
                                 allocator, len, data);
 }
-void   littlstar__cfsnet__access_file__free_unpacked
-                     (Littlstar__Cfsnet__AccessFile *message,
+void   ara__cfsnet__access_file__free_unpacked
+                     (Ara__Cfsnet__AccessFile *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &littlstar__cfsnet__access_file__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__access_file__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   littlstar__cfsnet__boolean__init
-                     (Littlstar__Cfsnet__Boolean         *message)
+void   ara__cfsnet__boolean__init
+                     (Ara__Cfsnet__Boolean         *message)
 {
-  static const Littlstar__Cfsnet__Boolean init_value = LITTLSTAR__CFSNET__BOOLEAN__INIT;
+  static const Ara__Cfsnet__Boolean init_value = ARA__CFSNET__BOOLEAN__INIT;
   *message = init_value;
 }
-size_t littlstar__cfsnet__boolean__get_packed_size
-                     (const Littlstar__Cfsnet__Boolean *message)
+size_t ara__cfsnet__boolean__get_packed_size
+                     (const Ara__Cfsnet__Boolean *message)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__boolean__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__boolean__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t littlstar__cfsnet__boolean__pack
-                     (const Littlstar__Cfsnet__Boolean *message,
+size_t ara__cfsnet__boolean__pack
+                     (const Ara__Cfsnet__Boolean *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__boolean__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__boolean__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t littlstar__cfsnet__boolean__pack_to_buffer
-                     (const Littlstar__Cfsnet__Boolean *message,
+size_t ara__cfsnet__boolean__pack_to_buffer
+                     (const Ara__Cfsnet__Boolean *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__boolean__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__boolean__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Littlstar__Cfsnet__Boolean *
-       littlstar__cfsnet__boolean__unpack
+Ara__Cfsnet__Boolean *
+       ara__cfsnet__boolean__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Littlstar__Cfsnet__Boolean *)
-     protobuf_c_message_unpack (&littlstar__cfsnet__boolean__descriptor,
+  return (Ara__Cfsnet__Boolean *)
+     protobuf_c_message_unpack (&ara__cfsnet__boolean__descriptor,
                                 allocator, len, data);
 }
-void   littlstar__cfsnet__boolean__free_unpacked
-                     (Littlstar__Cfsnet__Boolean *message,
+void   ara__cfsnet__boolean__free_unpacked
+                     (Ara__Cfsnet__Boolean *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &littlstar__cfsnet__boolean__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__boolean__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   littlstar__cfsnet__buffer__init
-                     (Littlstar__Cfsnet__Buffer         *message)
+void   ara__cfsnet__buffer__init
+                     (Ara__Cfsnet__Buffer         *message)
 {
-  static const Littlstar__Cfsnet__Buffer init_value = LITTLSTAR__CFSNET__BUFFER__INIT;
+  static const Ara__Cfsnet__Buffer init_value = ARA__CFSNET__BUFFER__INIT;
   *message = init_value;
 }
-size_t littlstar__cfsnet__buffer__get_packed_size
-                     (const Littlstar__Cfsnet__Buffer *message)
+size_t ara__cfsnet__buffer__get_packed_size
+                     (const Ara__Cfsnet__Buffer *message)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__buffer__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__buffer__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t littlstar__cfsnet__buffer__pack
-                     (const Littlstar__Cfsnet__Buffer *message,
+size_t ara__cfsnet__buffer__pack
+                     (const Ara__Cfsnet__Buffer *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__buffer__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__buffer__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t littlstar__cfsnet__buffer__pack_to_buffer
-                     (const Littlstar__Cfsnet__Buffer *message,
+size_t ara__cfsnet__buffer__pack_to_buffer
+                     (const Ara__Cfsnet__Buffer *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__buffer__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__buffer__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Littlstar__Cfsnet__Buffer *
-       littlstar__cfsnet__buffer__unpack
+Ara__Cfsnet__Buffer *
+       ara__cfsnet__buffer__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Littlstar__Cfsnet__Buffer *)
-     protobuf_c_message_unpack (&littlstar__cfsnet__buffer__descriptor,
+  return (Ara__Cfsnet__Buffer *)
+     protobuf_c_message_unpack (&ara__cfsnet__buffer__descriptor,
                                 allocator, len, data);
 }
-void   littlstar__cfsnet__buffer__free_unpacked
-                     (Littlstar__Cfsnet__Buffer *message,
+void   ara__cfsnet__buffer__free_unpacked
+                     (Ara__Cfsnet__Buffer *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &littlstar__cfsnet__buffer__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__buffer__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   littlstar__cfsnet__close__init
-                     (Littlstar__Cfsnet__Close         *message)
+void   ara__cfsnet__close__init
+                     (Ara__Cfsnet__Close         *message)
 {
-  static const Littlstar__Cfsnet__Close init_value = LITTLSTAR__CFSNET__CLOSE__INIT;
+  static const Ara__Cfsnet__Close init_value = ARA__CFSNET__CLOSE__INIT;
   *message = init_value;
 }
-size_t littlstar__cfsnet__close__get_packed_size
-                     (const Littlstar__Cfsnet__Close *message)
+size_t ara__cfsnet__close__get_packed_size
+                     (const Ara__Cfsnet__Close *message)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__close__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__close__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t littlstar__cfsnet__close__pack
-                     (const Littlstar__Cfsnet__Close *message,
+size_t ara__cfsnet__close__pack
+                     (const Ara__Cfsnet__Close *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__close__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__close__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t littlstar__cfsnet__close__pack_to_buffer
-                     (const Littlstar__Cfsnet__Close *message,
+size_t ara__cfsnet__close__pack_to_buffer
+                     (const Ara__Cfsnet__Close *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__close__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__close__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Littlstar__Cfsnet__Close *
-       littlstar__cfsnet__close__unpack
+Ara__Cfsnet__Close *
+       ara__cfsnet__close__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Littlstar__Cfsnet__Close *)
-     protobuf_c_message_unpack (&littlstar__cfsnet__close__descriptor,
+  return (Ara__Cfsnet__Close *)
+     protobuf_c_message_unpack (&ara__cfsnet__close__descriptor,
                                 allocator, len, data);
 }
-void   littlstar__cfsnet__close__free_unpacked
-                     (Littlstar__Cfsnet__Close *message,
+void   ara__cfsnet__close__free_unpacked
+                     (Ara__Cfsnet__Close *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &littlstar__cfsnet__close__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__close__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   littlstar__cfsnet__download_directory__init
-                     (Littlstar__Cfsnet__DownloadDirectory         *message)
+void   ara__cfsnet__download_directory__init
+                     (Ara__Cfsnet__DownloadDirectory         *message)
 {
-  static const Littlstar__Cfsnet__DownloadDirectory init_value = LITTLSTAR__CFSNET__DOWNLOAD_DIRECTORY__INIT;
+  static const Ara__Cfsnet__DownloadDirectory init_value = ARA__CFSNET__DOWNLOAD_DIRECTORY__INIT;
   *message = init_value;
 }
-size_t littlstar__cfsnet__download_directory__get_packed_size
-                     (const Littlstar__Cfsnet__DownloadDirectory *message)
+size_t ara__cfsnet__download_directory__get_packed_size
+                     (const Ara__Cfsnet__DownloadDirectory *message)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__download_directory__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__download_directory__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t littlstar__cfsnet__download_directory__pack
-                     (const Littlstar__Cfsnet__DownloadDirectory *message,
+size_t ara__cfsnet__download_directory__pack
+                     (const Ara__Cfsnet__DownloadDirectory *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__download_directory__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__download_directory__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t littlstar__cfsnet__download_directory__pack_to_buffer
-                     (const Littlstar__Cfsnet__DownloadDirectory *message,
+size_t ara__cfsnet__download_directory__pack_to_buffer
+                     (const Ara__Cfsnet__DownloadDirectory *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__download_directory__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__download_directory__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Littlstar__Cfsnet__DownloadDirectory *
-       littlstar__cfsnet__download_directory__unpack
+Ara__Cfsnet__DownloadDirectory *
+       ara__cfsnet__download_directory__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Littlstar__Cfsnet__DownloadDirectory *)
-     protobuf_c_message_unpack (&littlstar__cfsnet__download_directory__descriptor,
+  return (Ara__Cfsnet__DownloadDirectory *)
+     protobuf_c_message_unpack (&ara__cfsnet__download_directory__descriptor,
                                 allocator, len, data);
 }
-void   littlstar__cfsnet__download_directory__free_unpacked
-                     (Littlstar__Cfsnet__DownloadDirectory *message,
+void   ara__cfsnet__download_directory__free_unpacked
+                     (Ara__Cfsnet__DownloadDirectory *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &littlstar__cfsnet__download_directory__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__download_directory__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   littlstar__cfsnet__download_file__init
-                     (Littlstar__Cfsnet__DownloadFile         *message)
+void   ara__cfsnet__download_file__init
+                     (Ara__Cfsnet__DownloadFile         *message)
 {
-  static const Littlstar__Cfsnet__DownloadFile init_value = LITTLSTAR__CFSNET__DOWNLOAD_FILE__INIT;
+  static const Ara__Cfsnet__DownloadFile init_value = ARA__CFSNET__DOWNLOAD_FILE__INIT;
   *message = init_value;
 }
-size_t littlstar__cfsnet__download_file__get_packed_size
-                     (const Littlstar__Cfsnet__DownloadFile *message)
+size_t ara__cfsnet__download_file__get_packed_size
+                     (const Ara__Cfsnet__DownloadFile *message)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__download_file__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__download_file__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t littlstar__cfsnet__download_file__pack
-                     (const Littlstar__Cfsnet__DownloadFile *message,
+size_t ara__cfsnet__download_file__pack
+                     (const Ara__Cfsnet__DownloadFile *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__download_file__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__download_file__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t littlstar__cfsnet__download_file__pack_to_buffer
-                     (const Littlstar__Cfsnet__DownloadFile *message,
+size_t ara__cfsnet__download_file__pack_to_buffer
+                     (const Ara__Cfsnet__DownloadFile *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__download_file__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__download_file__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Littlstar__Cfsnet__DownloadFile *
-       littlstar__cfsnet__download_file__unpack
+Ara__Cfsnet__DownloadFile *
+       ara__cfsnet__download_file__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Littlstar__Cfsnet__DownloadFile *)
-     protobuf_c_message_unpack (&littlstar__cfsnet__download_file__descriptor,
+  return (Ara__Cfsnet__DownloadFile *)
+     protobuf_c_message_unpack (&ara__cfsnet__download_file__descriptor,
                                 allocator, len, data);
 }
-void   littlstar__cfsnet__download_file__free_unpacked
-                     (Littlstar__Cfsnet__DownloadFile *message,
+void   ara__cfsnet__download_file__free_unpacked
+                     (Ara__Cfsnet__DownloadFile *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &littlstar__cfsnet__download_file__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__download_file__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   littlstar__cfsnet__drive__init
-                     (Littlstar__Cfsnet__Drive         *message)
+void   ara__cfsnet__drive__init
+                     (Ara__Cfsnet__Drive         *message)
 {
-  static const Littlstar__Cfsnet__Drive init_value = LITTLSTAR__CFSNET__DRIVE__INIT;
+  static const Ara__Cfsnet__Drive init_value = ARA__CFSNET__DRIVE__INIT;
   *message = init_value;
 }
-size_t littlstar__cfsnet__drive__get_packed_size
-                     (const Littlstar__Cfsnet__Drive *message)
+size_t ara__cfsnet__drive__get_packed_size
+                     (const Ara__Cfsnet__Drive *message)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__drive__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__drive__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t littlstar__cfsnet__drive__pack
-                     (const Littlstar__Cfsnet__Drive *message,
+size_t ara__cfsnet__drive__pack
+                     (const Ara__Cfsnet__Drive *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__drive__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__drive__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t littlstar__cfsnet__drive__pack_to_buffer
-                     (const Littlstar__Cfsnet__Drive *message,
+size_t ara__cfsnet__drive__pack_to_buffer
+                     (const Ara__Cfsnet__Drive *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__drive__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__drive__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Littlstar__Cfsnet__Drive *
-       littlstar__cfsnet__drive__unpack
+Ara__Cfsnet__Drive *
+       ara__cfsnet__drive__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Littlstar__Cfsnet__Drive *)
-     protobuf_c_message_unpack (&littlstar__cfsnet__drive__descriptor,
+  return (Ara__Cfsnet__Drive *)
+     protobuf_c_message_unpack (&ara__cfsnet__drive__descriptor,
                                 allocator, len, data);
 }
-void   littlstar__cfsnet__drive__free_unpacked
-                     (Littlstar__Cfsnet__Drive *message,
+void   ara__cfsnet__drive__free_unpacked
+                     (Ara__Cfsnet__Drive *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &littlstar__cfsnet__drive__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__drive__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   littlstar__cfsnet__handshake__init
-                     (Littlstar__Cfsnet__Handshake         *message)
+void   ara__cfsnet__handshake__init
+                     (Ara__Cfsnet__Handshake         *message)
 {
-  static const Littlstar__Cfsnet__Handshake init_value = LITTLSTAR__CFSNET__HANDSHAKE__INIT;
+  static const Ara__Cfsnet__Handshake init_value = ARA__CFSNET__HANDSHAKE__INIT;
   *message = init_value;
 }
-size_t littlstar__cfsnet__handshake__get_packed_size
-                     (const Littlstar__Cfsnet__Handshake *message)
+size_t ara__cfsnet__handshake__get_packed_size
+                     (const Ara__Cfsnet__Handshake *message)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__handshake__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__handshake__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t littlstar__cfsnet__handshake__pack
-                     (const Littlstar__Cfsnet__Handshake *message,
+size_t ara__cfsnet__handshake__pack
+                     (const Ara__Cfsnet__Handshake *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__handshake__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__handshake__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t littlstar__cfsnet__handshake__pack_to_buffer
-                     (const Littlstar__Cfsnet__Handshake *message,
+size_t ara__cfsnet__handshake__pack_to_buffer
+                     (const Ara__Cfsnet__Handshake *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__handshake__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__handshake__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Littlstar__Cfsnet__Handshake *
-       littlstar__cfsnet__handshake__unpack
+Ara__Cfsnet__Handshake *
+       ara__cfsnet__handshake__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Littlstar__Cfsnet__Handshake *)
-     protobuf_c_message_unpack (&littlstar__cfsnet__handshake__descriptor,
+  return (Ara__Cfsnet__Handshake *)
+     protobuf_c_message_unpack (&ara__cfsnet__handshake__descriptor,
                                 allocator, len, data);
 }
-void   littlstar__cfsnet__handshake__free_unpacked
-                     (Littlstar__Cfsnet__Handshake *message,
+void   ara__cfsnet__handshake__free_unpacked
+                     (Ara__Cfsnet__Handshake *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &littlstar__cfsnet__handshake__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__handshake__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   littlstar__cfsnet__key_pair__init
-                     (Littlstar__Cfsnet__KeyPair         *message)
+void   ara__cfsnet__key_pair__init
+                     (Ara__Cfsnet__KeyPair         *message)
 {
-  static const Littlstar__Cfsnet__KeyPair init_value = LITTLSTAR__CFSNET__KEY_PAIR__INIT;
+  static const Ara__Cfsnet__KeyPair init_value = ARA__CFSNET__KEY_PAIR__INIT;
   *message = init_value;
 }
-size_t littlstar__cfsnet__key_pair__get_packed_size
-                     (const Littlstar__Cfsnet__KeyPair *message)
+size_t ara__cfsnet__key_pair__get_packed_size
+                     (const Ara__Cfsnet__KeyPair *message)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__key_pair__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__key_pair__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t littlstar__cfsnet__key_pair__pack
-                     (const Littlstar__Cfsnet__KeyPair *message,
+size_t ara__cfsnet__key_pair__pack
+                     (const Ara__Cfsnet__KeyPair *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__key_pair__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__key_pair__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t littlstar__cfsnet__key_pair__pack_to_buffer
-                     (const Littlstar__Cfsnet__KeyPair *message,
+size_t ara__cfsnet__key_pair__pack_to_buffer
+                     (const Ara__Cfsnet__KeyPair *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__key_pair__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__key_pair__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Littlstar__Cfsnet__KeyPair *
-       littlstar__cfsnet__key_pair__unpack
+Ara__Cfsnet__KeyPair *
+       ara__cfsnet__key_pair__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Littlstar__Cfsnet__KeyPair *)
-     protobuf_c_message_unpack (&littlstar__cfsnet__key_pair__descriptor,
+  return (Ara__Cfsnet__KeyPair *)
+     protobuf_c_message_unpack (&ara__cfsnet__key_pair__descriptor,
                                 allocator, len, data);
 }
-void   littlstar__cfsnet__key_pair__free_unpacked
-                     (Littlstar__Cfsnet__KeyPair *message,
+void   ara__cfsnet__key_pair__free_unpacked
+                     (Ara__Cfsnet__KeyPair *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &littlstar__cfsnet__key_pair__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__key_pair__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   littlstar__cfsnet__list__init
-                     (Littlstar__Cfsnet__List         *message)
+void   ara__cfsnet__list__init
+                     (Ara__Cfsnet__List         *message)
 {
-  static const Littlstar__Cfsnet__List init_value = LITTLSTAR__CFSNET__LIST__INIT;
+  static const Ara__Cfsnet__List init_value = ARA__CFSNET__LIST__INIT;
   *message = init_value;
 }
-size_t littlstar__cfsnet__list__get_packed_size
-                     (const Littlstar__Cfsnet__List *message)
+size_t ara__cfsnet__list__get_packed_size
+                     (const Ara__Cfsnet__List *message)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__list__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__list__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t littlstar__cfsnet__list__pack
-                     (const Littlstar__Cfsnet__List *message,
+size_t ara__cfsnet__list__pack
+                     (const Ara__Cfsnet__List *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__list__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__list__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t littlstar__cfsnet__list__pack_to_buffer
-                     (const Littlstar__Cfsnet__List *message,
+size_t ara__cfsnet__list__pack_to_buffer
+                     (const Ara__Cfsnet__List *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__list__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__list__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Littlstar__Cfsnet__List *
-       littlstar__cfsnet__list__unpack
+Ara__Cfsnet__List *
+       ara__cfsnet__list__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Littlstar__Cfsnet__List *)
-     protobuf_c_message_unpack (&littlstar__cfsnet__list__descriptor,
+  return (Ara__Cfsnet__List *)
+     protobuf_c_message_unpack (&ara__cfsnet__list__descriptor,
                                 allocator, len, data);
 }
-void   littlstar__cfsnet__list__free_unpacked
-                     (Littlstar__Cfsnet__List *message,
+void   ara__cfsnet__list__free_unpacked
+                     (Ara__Cfsnet__List *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &littlstar__cfsnet__list__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__list__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   littlstar__cfsnet__list_directory__init
-                     (Littlstar__Cfsnet__ListDirectory         *message)
+void   ara__cfsnet__list_directory__init
+                     (Ara__Cfsnet__ListDirectory         *message)
 {
-  static const Littlstar__Cfsnet__ListDirectory init_value = LITTLSTAR__CFSNET__LIST_DIRECTORY__INIT;
+  static const Ara__Cfsnet__ListDirectory init_value = ARA__CFSNET__LIST_DIRECTORY__INIT;
   *message = init_value;
 }
-size_t littlstar__cfsnet__list_directory__get_packed_size
-                     (const Littlstar__Cfsnet__ListDirectory *message)
+size_t ara__cfsnet__list_directory__get_packed_size
+                     (const Ara__Cfsnet__ListDirectory *message)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__list_directory__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__list_directory__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t littlstar__cfsnet__list_directory__pack
-                     (const Littlstar__Cfsnet__ListDirectory *message,
+size_t ara__cfsnet__list_directory__pack
+                     (const Ara__Cfsnet__ListDirectory *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__list_directory__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__list_directory__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t littlstar__cfsnet__list_directory__pack_to_buffer
-                     (const Littlstar__Cfsnet__ListDirectory *message,
+size_t ara__cfsnet__list_directory__pack_to_buffer
+                     (const Ara__Cfsnet__ListDirectory *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__list_directory__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__list_directory__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Littlstar__Cfsnet__ListDirectory *
-       littlstar__cfsnet__list_directory__unpack
+Ara__Cfsnet__ListDirectory *
+       ara__cfsnet__list_directory__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Littlstar__Cfsnet__ListDirectory *)
-     protobuf_c_message_unpack (&littlstar__cfsnet__list_directory__descriptor,
+  return (Ara__Cfsnet__ListDirectory *)
+     protobuf_c_message_unpack (&ara__cfsnet__list_directory__descriptor,
                                 allocator, len, data);
 }
-void   littlstar__cfsnet__list_directory__free_unpacked
-                     (Littlstar__Cfsnet__ListDirectory *message,
+void   ara__cfsnet__list_directory__free_unpacked
+                     (Ara__Cfsnet__ListDirectory *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &littlstar__cfsnet__list_directory__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__list_directory__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   littlstar__cfsnet__make_directory__init
-                     (Littlstar__Cfsnet__MakeDirectory         *message)
+void   ara__cfsnet__make_directory__init
+                     (Ara__Cfsnet__MakeDirectory         *message)
 {
-  static const Littlstar__Cfsnet__MakeDirectory init_value = LITTLSTAR__CFSNET__MAKE_DIRECTORY__INIT;
+  static const Ara__Cfsnet__MakeDirectory init_value = ARA__CFSNET__MAKE_DIRECTORY__INIT;
   *message = init_value;
 }
-size_t littlstar__cfsnet__make_directory__get_packed_size
-                     (const Littlstar__Cfsnet__MakeDirectory *message)
+size_t ara__cfsnet__make_directory__get_packed_size
+                     (const Ara__Cfsnet__MakeDirectory *message)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__make_directory__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__make_directory__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t littlstar__cfsnet__make_directory__pack
-                     (const Littlstar__Cfsnet__MakeDirectory *message,
+size_t ara__cfsnet__make_directory__pack
+                     (const Ara__Cfsnet__MakeDirectory *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__make_directory__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__make_directory__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t littlstar__cfsnet__make_directory__pack_to_buffer
-                     (const Littlstar__Cfsnet__MakeDirectory *message,
+size_t ara__cfsnet__make_directory__pack_to_buffer
+                     (const Ara__Cfsnet__MakeDirectory *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__make_directory__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__make_directory__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Littlstar__Cfsnet__MakeDirectory *
-       littlstar__cfsnet__make_directory__unpack
+Ara__Cfsnet__MakeDirectory *
+       ara__cfsnet__make_directory__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Littlstar__Cfsnet__MakeDirectory *)
-     protobuf_c_message_unpack (&littlstar__cfsnet__make_directory__descriptor,
+  return (Ara__Cfsnet__MakeDirectory *)
+     protobuf_c_message_unpack (&ara__cfsnet__make_directory__descriptor,
                                 allocator, len, data);
 }
-void   littlstar__cfsnet__make_directory__free_unpacked
-                     (Littlstar__Cfsnet__MakeDirectory *message,
+void   ara__cfsnet__make_directory__free_unpacked
+                     (Ara__Cfsnet__MakeDirectory *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &littlstar__cfsnet__make_directory__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__make_directory__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   littlstar__cfsnet__make_directory_path__init
-                     (Littlstar__Cfsnet__MakeDirectoryPath         *message)
+void   ara__cfsnet__make_directory_path__init
+                     (Ara__Cfsnet__MakeDirectoryPath         *message)
 {
-  static const Littlstar__Cfsnet__MakeDirectoryPath init_value = LITTLSTAR__CFSNET__MAKE_DIRECTORY_PATH__INIT;
+  static const Ara__Cfsnet__MakeDirectoryPath init_value = ARA__CFSNET__MAKE_DIRECTORY_PATH__INIT;
   *message = init_value;
 }
-size_t littlstar__cfsnet__make_directory_path__get_packed_size
-                     (const Littlstar__Cfsnet__MakeDirectoryPath *message)
+size_t ara__cfsnet__make_directory_path__get_packed_size
+                     (const Ara__Cfsnet__MakeDirectoryPath *message)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__make_directory_path__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__make_directory_path__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t littlstar__cfsnet__make_directory_path__pack
-                     (const Littlstar__Cfsnet__MakeDirectoryPath *message,
+size_t ara__cfsnet__make_directory_path__pack
+                     (const Ara__Cfsnet__MakeDirectoryPath *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__make_directory_path__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__make_directory_path__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t littlstar__cfsnet__make_directory_path__pack_to_buffer
-                     (const Littlstar__Cfsnet__MakeDirectoryPath *message,
+size_t ara__cfsnet__make_directory_path__pack_to_buffer
+                     (const Ara__Cfsnet__MakeDirectoryPath *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__make_directory_path__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__make_directory_path__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Littlstar__Cfsnet__MakeDirectoryPath *
-       littlstar__cfsnet__make_directory_path__unpack
+Ara__Cfsnet__MakeDirectoryPath *
+       ara__cfsnet__make_directory_path__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Littlstar__Cfsnet__MakeDirectoryPath *)
-     protobuf_c_message_unpack (&littlstar__cfsnet__make_directory_path__descriptor,
+  return (Ara__Cfsnet__MakeDirectoryPath *)
+     protobuf_c_message_unpack (&ara__cfsnet__make_directory_path__descriptor,
                                 allocator, len, data);
 }
-void   littlstar__cfsnet__make_directory_path__free_unpacked
-                     (Littlstar__Cfsnet__MakeDirectoryPath *message,
+void   ara__cfsnet__make_directory_path__free_unpacked
+                     (Ara__Cfsnet__MakeDirectoryPath *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &littlstar__cfsnet__make_directory_path__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__make_directory_path__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   littlstar__cfsnet__number__init
-                     (Littlstar__Cfsnet__Number         *message)
+void   ara__cfsnet__number__init
+                     (Ara__Cfsnet__Number         *message)
 {
-  static const Littlstar__Cfsnet__Number init_value = LITTLSTAR__CFSNET__NUMBER__INIT;
+  static const Ara__Cfsnet__Number init_value = ARA__CFSNET__NUMBER__INIT;
   *message = init_value;
 }
-size_t littlstar__cfsnet__number__get_packed_size
-                     (const Littlstar__Cfsnet__Number *message)
+size_t ara__cfsnet__number__get_packed_size
+                     (const Ara__Cfsnet__Number *message)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__number__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__number__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t littlstar__cfsnet__number__pack
-                     (const Littlstar__Cfsnet__Number *message,
+size_t ara__cfsnet__number__pack
+                     (const Ara__Cfsnet__Number *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__number__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__number__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t littlstar__cfsnet__number__pack_to_buffer
-                     (const Littlstar__Cfsnet__Number *message,
+size_t ara__cfsnet__number__pack_to_buffer
+                     (const Ara__Cfsnet__Number *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__number__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__number__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Littlstar__Cfsnet__Number *
-       littlstar__cfsnet__number__unpack
+Ara__Cfsnet__Number *
+       ara__cfsnet__number__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Littlstar__Cfsnet__Number *)
-     protobuf_c_message_unpack (&littlstar__cfsnet__number__descriptor,
+  return (Ara__Cfsnet__Number *)
+     protobuf_c_message_unpack (&ara__cfsnet__number__descriptor,
                                 allocator, len, data);
 }
-void   littlstar__cfsnet__number__free_unpacked
-                     (Littlstar__Cfsnet__Number *message,
+void   ara__cfsnet__number__free_unpacked
+                     (Ara__Cfsnet__Number *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &littlstar__cfsnet__number__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__number__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   littlstar__cfsnet__open__init
-                     (Littlstar__Cfsnet__Open         *message)
+void   ara__cfsnet__open__init
+                     (Ara__Cfsnet__Open         *message)
 {
-  static const Littlstar__Cfsnet__Open init_value = LITTLSTAR__CFSNET__OPEN__INIT;
+  static const Ara__Cfsnet__Open init_value = ARA__CFSNET__OPEN__INIT;
   *message = init_value;
 }
-size_t littlstar__cfsnet__open__get_packed_size
-                     (const Littlstar__Cfsnet__Open *message)
+size_t ara__cfsnet__open__get_packed_size
+                     (const Ara__Cfsnet__Open *message)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__open__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__open__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t littlstar__cfsnet__open__pack
-                     (const Littlstar__Cfsnet__Open *message,
+size_t ara__cfsnet__open__pack
+                     (const Ara__Cfsnet__Open *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__open__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__open__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t littlstar__cfsnet__open__pack_to_buffer
-                     (const Littlstar__Cfsnet__Open *message,
+size_t ara__cfsnet__open__pack_to_buffer
+                     (const Ara__Cfsnet__Open *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__open__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__open__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Littlstar__Cfsnet__Open *
-       littlstar__cfsnet__open__unpack
+Ara__Cfsnet__Open *
+       ara__cfsnet__open__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Littlstar__Cfsnet__Open *)
-     protobuf_c_message_unpack (&littlstar__cfsnet__open__descriptor,
+  return (Ara__Cfsnet__Open *)
+     protobuf_c_message_unpack (&ara__cfsnet__open__descriptor,
                                 allocator, len, data);
 }
-void   littlstar__cfsnet__open__free_unpacked
-                     (Littlstar__Cfsnet__Open *message,
+void   ara__cfsnet__open__free_unpacked
+                     (Ara__Cfsnet__Open *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &littlstar__cfsnet__open__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__open__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   littlstar__cfsnet__read__init
-                     (Littlstar__Cfsnet__Read         *message)
+void   ara__cfsnet__read__init
+                     (Ara__Cfsnet__Read         *message)
 {
-  static const Littlstar__Cfsnet__Read init_value = LITTLSTAR__CFSNET__READ__INIT;
+  static const Ara__Cfsnet__Read init_value = ARA__CFSNET__READ__INIT;
   *message = init_value;
 }
-size_t littlstar__cfsnet__read__get_packed_size
-                     (const Littlstar__Cfsnet__Read *message)
+size_t ara__cfsnet__read__get_packed_size
+                     (const Ara__Cfsnet__Read *message)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__read__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__read__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t littlstar__cfsnet__read__pack
-                     (const Littlstar__Cfsnet__Read *message,
+size_t ara__cfsnet__read__pack
+                     (const Ara__Cfsnet__Read *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__read__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__read__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t littlstar__cfsnet__read__pack_to_buffer
-                     (const Littlstar__Cfsnet__Read *message,
+size_t ara__cfsnet__read__pack_to_buffer
+                     (const Ara__Cfsnet__Read *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__read__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__read__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Littlstar__Cfsnet__Read *
-       littlstar__cfsnet__read__unpack
+Ara__Cfsnet__Read *
+       ara__cfsnet__read__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Littlstar__Cfsnet__Read *)
-     protobuf_c_message_unpack (&littlstar__cfsnet__read__descriptor,
+  return (Ara__Cfsnet__Read *)
+     protobuf_c_message_unpack (&ara__cfsnet__read__descriptor,
                                 allocator, len, data);
 }
-void   littlstar__cfsnet__read__free_unpacked
-                     (Littlstar__Cfsnet__Read *message,
+void   ara__cfsnet__read__free_unpacked
+                     (Ara__Cfsnet__Read *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &littlstar__cfsnet__read__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__read__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   littlstar__cfsnet__read_file__init
-                     (Littlstar__Cfsnet__ReadFile         *message)
+void   ara__cfsnet__read_file__init
+                     (Ara__Cfsnet__ReadFile         *message)
 {
-  static const Littlstar__Cfsnet__ReadFile init_value = LITTLSTAR__CFSNET__READ_FILE__INIT;
+  static const Ara__Cfsnet__ReadFile init_value = ARA__CFSNET__READ_FILE__INIT;
   *message = init_value;
 }
-size_t littlstar__cfsnet__read_file__get_packed_size
-                     (const Littlstar__Cfsnet__ReadFile *message)
+size_t ara__cfsnet__read_file__get_packed_size
+                     (const Ara__Cfsnet__ReadFile *message)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__read_file__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__read_file__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t littlstar__cfsnet__read_file__pack
-                     (const Littlstar__Cfsnet__ReadFile *message,
+size_t ara__cfsnet__read_file__pack
+                     (const Ara__Cfsnet__ReadFile *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__read_file__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__read_file__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t littlstar__cfsnet__read_file__pack_to_buffer
-                     (const Littlstar__Cfsnet__ReadFile *message,
+size_t ara__cfsnet__read_file__pack_to_buffer
+                     (const Ara__Cfsnet__ReadFile *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__read_file__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__read_file__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Littlstar__Cfsnet__ReadFile *
-       littlstar__cfsnet__read_file__unpack
+Ara__Cfsnet__ReadFile *
+       ara__cfsnet__read_file__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Littlstar__Cfsnet__ReadFile *)
-     protobuf_c_message_unpack (&littlstar__cfsnet__read_file__descriptor,
+  return (Ara__Cfsnet__ReadFile *)
+     protobuf_c_message_unpack (&ara__cfsnet__read_file__descriptor,
                                 allocator, len, data);
 }
-void   littlstar__cfsnet__read_file__free_unpacked
-                     (Littlstar__Cfsnet__ReadFile *message,
+void   ara__cfsnet__read_file__free_unpacked
+                     (Ara__Cfsnet__ReadFile *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &littlstar__cfsnet__read_file__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__read_file__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   littlstar__cfsnet__remove_directory__init
-                     (Littlstar__Cfsnet__RemoveDirectory         *message)
+void   ara__cfsnet__remove_directory__init
+                     (Ara__Cfsnet__RemoveDirectory         *message)
 {
-  static const Littlstar__Cfsnet__RemoveDirectory init_value = LITTLSTAR__CFSNET__REMOVE_DIRECTORY__INIT;
+  static const Ara__Cfsnet__RemoveDirectory init_value = ARA__CFSNET__REMOVE_DIRECTORY__INIT;
   *message = init_value;
 }
-size_t littlstar__cfsnet__remove_directory__get_packed_size
-                     (const Littlstar__Cfsnet__RemoveDirectory *message)
+size_t ara__cfsnet__remove_directory__get_packed_size
+                     (const Ara__Cfsnet__RemoveDirectory *message)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__remove_directory__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__remove_directory__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t littlstar__cfsnet__remove_directory__pack
-                     (const Littlstar__Cfsnet__RemoveDirectory *message,
+size_t ara__cfsnet__remove_directory__pack
+                     (const Ara__Cfsnet__RemoveDirectory *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__remove_directory__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__remove_directory__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t littlstar__cfsnet__remove_directory__pack_to_buffer
-                     (const Littlstar__Cfsnet__RemoveDirectory *message,
+size_t ara__cfsnet__remove_directory__pack_to_buffer
+                     (const Ara__Cfsnet__RemoveDirectory *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__remove_directory__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__remove_directory__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Littlstar__Cfsnet__RemoveDirectory *
-       littlstar__cfsnet__remove_directory__unpack
+Ara__Cfsnet__RemoveDirectory *
+       ara__cfsnet__remove_directory__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Littlstar__Cfsnet__RemoveDirectory *)
-     protobuf_c_message_unpack (&littlstar__cfsnet__remove_directory__descriptor,
+  return (Ara__Cfsnet__RemoveDirectory *)
+     protobuf_c_message_unpack (&ara__cfsnet__remove_directory__descriptor,
                                 allocator, len, data);
 }
-void   littlstar__cfsnet__remove_directory__free_unpacked
-                     (Littlstar__Cfsnet__RemoveDirectory *message,
+void   ara__cfsnet__remove_directory__free_unpacked
+                     (Ara__Cfsnet__RemoveDirectory *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &littlstar__cfsnet__remove_directory__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__remove_directory__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   littlstar__cfsnet__remove_directory_path__init
-                     (Littlstar__Cfsnet__RemoveDirectoryPath         *message)
+void   ara__cfsnet__remove_directory_path__init
+                     (Ara__Cfsnet__RemoveDirectoryPath         *message)
 {
-  static const Littlstar__Cfsnet__RemoveDirectoryPath init_value = LITTLSTAR__CFSNET__REMOVE_DIRECTORY_PATH__INIT;
+  static const Ara__Cfsnet__RemoveDirectoryPath init_value = ARA__CFSNET__REMOVE_DIRECTORY_PATH__INIT;
   *message = init_value;
 }
-size_t littlstar__cfsnet__remove_directory_path__get_packed_size
-                     (const Littlstar__Cfsnet__RemoveDirectoryPath *message)
+size_t ara__cfsnet__remove_directory_path__get_packed_size
+                     (const Ara__Cfsnet__RemoveDirectoryPath *message)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__remove_directory_path__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__remove_directory_path__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t littlstar__cfsnet__remove_directory_path__pack
-                     (const Littlstar__Cfsnet__RemoveDirectoryPath *message,
+size_t ara__cfsnet__remove_directory_path__pack
+                     (const Ara__Cfsnet__RemoveDirectoryPath *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__remove_directory_path__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__remove_directory_path__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t littlstar__cfsnet__remove_directory_path__pack_to_buffer
-                     (const Littlstar__Cfsnet__RemoveDirectoryPath *message,
+size_t ara__cfsnet__remove_directory_path__pack_to_buffer
+                     (const Ara__Cfsnet__RemoveDirectoryPath *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__remove_directory_path__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__remove_directory_path__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Littlstar__Cfsnet__RemoveDirectoryPath *
-       littlstar__cfsnet__remove_directory_path__unpack
+Ara__Cfsnet__RemoveDirectoryPath *
+       ara__cfsnet__remove_directory_path__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Littlstar__Cfsnet__RemoveDirectoryPath *)
-     protobuf_c_message_unpack (&littlstar__cfsnet__remove_directory_path__descriptor,
+  return (Ara__Cfsnet__RemoveDirectoryPath *)
+     protobuf_c_message_unpack (&ara__cfsnet__remove_directory_path__descriptor,
                                 allocator, len, data);
 }
-void   littlstar__cfsnet__remove_directory_path__free_unpacked
-                     (Littlstar__Cfsnet__RemoveDirectoryPath *message,
+void   ara__cfsnet__remove_directory_path__free_unpacked
+                     (Ara__Cfsnet__RemoveDirectoryPath *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &littlstar__cfsnet__remove_directory_path__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__remove_directory_path__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   littlstar__cfsnet__request__init
-                     (Littlstar__Cfsnet__Request         *message)
+void   ara__cfsnet__request__init
+                     (Ara__Cfsnet__Request         *message)
 {
-  static const Littlstar__Cfsnet__Request init_value = LITTLSTAR__CFSNET__REQUEST__INIT;
+  static const Ara__Cfsnet__Request init_value = ARA__CFSNET__REQUEST__INIT;
   *message = init_value;
 }
-size_t littlstar__cfsnet__request__get_packed_size
-                     (const Littlstar__Cfsnet__Request *message)
+size_t ara__cfsnet__request__get_packed_size
+                     (const Ara__Cfsnet__Request *message)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__request__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__request__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t littlstar__cfsnet__request__pack
-                     (const Littlstar__Cfsnet__Request *message,
+size_t ara__cfsnet__request__pack
+                     (const Ara__Cfsnet__Request *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__request__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__request__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t littlstar__cfsnet__request__pack_to_buffer
-                     (const Littlstar__Cfsnet__Request *message,
+size_t ara__cfsnet__request__pack_to_buffer
+                     (const Ara__Cfsnet__Request *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__request__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__request__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Littlstar__Cfsnet__Request *
-       littlstar__cfsnet__request__unpack
+Ara__Cfsnet__Request *
+       ara__cfsnet__request__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Littlstar__Cfsnet__Request *)
-     protobuf_c_message_unpack (&littlstar__cfsnet__request__descriptor,
+  return (Ara__Cfsnet__Request *)
+     protobuf_c_message_unpack (&ara__cfsnet__request__descriptor,
                                 allocator, len, data);
 }
-void   littlstar__cfsnet__request__free_unpacked
-                     (Littlstar__Cfsnet__Request *message,
+void   ara__cfsnet__request__free_unpacked
+                     (Ara__Cfsnet__Request *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &littlstar__cfsnet__request__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__request__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   littlstar__cfsnet__resolve__init
-                     (Littlstar__Cfsnet__Resolve         *message)
+void   ara__cfsnet__resolve__init
+                     (Ara__Cfsnet__Resolve         *message)
 {
-  static const Littlstar__Cfsnet__Resolve init_value = LITTLSTAR__CFSNET__RESOLVE__INIT;
+  static const Ara__Cfsnet__Resolve init_value = ARA__CFSNET__RESOLVE__INIT;
   *message = init_value;
 }
-size_t littlstar__cfsnet__resolve__get_packed_size
-                     (const Littlstar__Cfsnet__Resolve *message)
+size_t ara__cfsnet__resolve__get_packed_size
+                     (const Ara__Cfsnet__Resolve *message)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__resolve__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__resolve__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t littlstar__cfsnet__resolve__pack
-                     (const Littlstar__Cfsnet__Resolve *message,
+size_t ara__cfsnet__resolve__pack
+                     (const Ara__Cfsnet__Resolve *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__resolve__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__resolve__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t littlstar__cfsnet__resolve__pack_to_buffer
-                     (const Littlstar__Cfsnet__Resolve *message,
+size_t ara__cfsnet__resolve__pack_to_buffer
+                     (const Ara__Cfsnet__Resolve *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__resolve__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__resolve__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Littlstar__Cfsnet__Resolve *
-       littlstar__cfsnet__resolve__unpack
+Ara__Cfsnet__Resolve *
+       ara__cfsnet__resolve__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Littlstar__Cfsnet__Resolve *)
-     protobuf_c_message_unpack (&littlstar__cfsnet__resolve__descriptor,
+  return (Ara__Cfsnet__Resolve *)
+     protobuf_c_message_unpack (&ara__cfsnet__resolve__descriptor,
                                 allocator, len, data);
 }
-void   littlstar__cfsnet__resolve__free_unpacked
-                     (Littlstar__Cfsnet__Resolve *message,
+void   ara__cfsnet__resolve__free_unpacked
+                     (Ara__Cfsnet__Resolve *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &littlstar__cfsnet__resolve__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__resolve__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   littlstar__cfsnet__response__init
-                     (Littlstar__Cfsnet__Response         *message)
+void   ara__cfsnet__response__init
+                     (Ara__Cfsnet__Response         *message)
 {
-  static const Littlstar__Cfsnet__Response init_value = LITTLSTAR__CFSNET__RESPONSE__INIT;
+  static const Ara__Cfsnet__Response init_value = ARA__CFSNET__RESPONSE__INIT;
   *message = init_value;
 }
-size_t littlstar__cfsnet__response__get_packed_size
-                     (const Littlstar__Cfsnet__Response *message)
+size_t ara__cfsnet__response__get_packed_size
+                     (const Ara__Cfsnet__Response *message)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__response__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__response__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t littlstar__cfsnet__response__pack
-                     (const Littlstar__Cfsnet__Response *message,
+size_t ara__cfsnet__response__pack
+                     (const Ara__Cfsnet__Response *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__response__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__response__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t littlstar__cfsnet__response__pack_to_buffer
-                     (const Littlstar__Cfsnet__Response *message,
+size_t ara__cfsnet__response__pack_to_buffer
+                     (const Ara__Cfsnet__Response *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__response__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__response__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Littlstar__Cfsnet__Response *
-       littlstar__cfsnet__response__unpack
+Ara__Cfsnet__Response *
+       ara__cfsnet__response__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Littlstar__Cfsnet__Response *)
-     protobuf_c_message_unpack (&littlstar__cfsnet__response__descriptor,
+  return (Ara__Cfsnet__Response *)
+     protobuf_c_message_unpack (&ara__cfsnet__response__descriptor,
                                 allocator, len, data);
 }
-void   littlstar__cfsnet__response__free_unpacked
-                     (Littlstar__Cfsnet__Response *message,
+void   ara__cfsnet__response__free_unpacked
+                     (Ara__Cfsnet__Response *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &littlstar__cfsnet__response__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__response__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   littlstar__cfsnet__stat__init
-                     (Littlstar__Cfsnet__Stat         *message)
+void   ara__cfsnet__stat__init
+                     (Ara__Cfsnet__Stat         *message)
 {
-  static const Littlstar__Cfsnet__Stat init_value = LITTLSTAR__CFSNET__STAT__INIT;
+  static const Ara__Cfsnet__Stat init_value = ARA__CFSNET__STAT__INIT;
   *message = init_value;
 }
-size_t littlstar__cfsnet__stat__get_packed_size
-                     (const Littlstar__Cfsnet__Stat *message)
+size_t ara__cfsnet__stat__get_packed_size
+                     (const Ara__Cfsnet__Stat *message)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__stat__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__stat__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t littlstar__cfsnet__stat__pack
-                     (const Littlstar__Cfsnet__Stat *message,
+size_t ara__cfsnet__stat__pack
+                     (const Ara__Cfsnet__Stat *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__stat__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__stat__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t littlstar__cfsnet__stat__pack_to_buffer
-                     (const Littlstar__Cfsnet__Stat *message,
+size_t ara__cfsnet__stat__pack_to_buffer
+                     (const Ara__Cfsnet__Stat *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__stat__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__stat__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Littlstar__Cfsnet__Stat *
-       littlstar__cfsnet__stat__unpack
+Ara__Cfsnet__Stat *
+       ara__cfsnet__stat__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Littlstar__Cfsnet__Stat *)
-     protobuf_c_message_unpack (&littlstar__cfsnet__stat__descriptor,
+  return (Ara__Cfsnet__Stat *)
+     protobuf_c_message_unpack (&ara__cfsnet__stat__descriptor,
                                 allocator, len, data);
 }
-void   littlstar__cfsnet__stat__free_unpacked
-                     (Littlstar__Cfsnet__Stat *message,
+void   ara__cfsnet__stat__free_unpacked
+                     (Ara__Cfsnet__Stat *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &littlstar__cfsnet__stat__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__stat__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   littlstar__cfsnet__stat_file__init
-                     (Littlstar__Cfsnet__StatFile         *message)
+void   ara__cfsnet__stat_file__init
+                     (Ara__Cfsnet__StatFile         *message)
 {
-  static const Littlstar__Cfsnet__StatFile init_value = LITTLSTAR__CFSNET__STAT_FILE__INIT;
+  static const Ara__Cfsnet__StatFile init_value = ARA__CFSNET__STAT_FILE__INIT;
   *message = init_value;
 }
-size_t littlstar__cfsnet__stat_file__get_packed_size
-                     (const Littlstar__Cfsnet__StatFile *message)
+size_t ara__cfsnet__stat_file__get_packed_size
+                     (const Ara__Cfsnet__StatFile *message)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__stat_file__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__stat_file__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t littlstar__cfsnet__stat_file__pack
-                     (const Littlstar__Cfsnet__StatFile *message,
+size_t ara__cfsnet__stat_file__pack
+                     (const Ara__Cfsnet__StatFile *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__stat_file__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__stat_file__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t littlstar__cfsnet__stat_file__pack_to_buffer
-                     (const Littlstar__Cfsnet__StatFile *message,
+size_t ara__cfsnet__stat_file__pack_to_buffer
+                     (const Ara__Cfsnet__StatFile *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__stat_file__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__stat_file__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Littlstar__Cfsnet__StatFile *
-       littlstar__cfsnet__stat_file__unpack
+Ara__Cfsnet__StatFile *
+       ara__cfsnet__stat_file__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Littlstar__Cfsnet__StatFile *)
-     protobuf_c_message_unpack (&littlstar__cfsnet__stat_file__descriptor,
+  return (Ara__Cfsnet__StatFile *)
+     protobuf_c_message_unpack (&ara__cfsnet__stat_file__descriptor,
                                 allocator, len, data);
 }
-void   littlstar__cfsnet__stat_file__free_unpacked
-                     (Littlstar__Cfsnet__StatFile *message,
+void   ara__cfsnet__stat_file__free_unpacked
+                     (Ara__Cfsnet__StatFile *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &littlstar__cfsnet__stat_file__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__stat_file__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   littlstar__cfsnet__string__init
-                     (Littlstar__Cfsnet__String         *message)
+void   ara__cfsnet__string__init
+                     (Ara__Cfsnet__String         *message)
 {
-  static const Littlstar__Cfsnet__String init_value = LITTLSTAR__CFSNET__STRING__INIT;
+  static const Ara__Cfsnet__String init_value = ARA__CFSNET__STRING__INIT;
   *message = init_value;
 }
-size_t littlstar__cfsnet__string__get_packed_size
-                     (const Littlstar__Cfsnet__String *message)
+size_t ara__cfsnet__string__get_packed_size
+                     (const Ara__Cfsnet__String *message)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__string__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__string__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t littlstar__cfsnet__string__pack
-                     (const Littlstar__Cfsnet__String *message,
+size_t ara__cfsnet__string__pack
+                     (const Ara__Cfsnet__String *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__string__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__string__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t littlstar__cfsnet__string__pack_to_buffer
-                     (const Littlstar__Cfsnet__String *message,
+size_t ara__cfsnet__string__pack_to_buffer
+                     (const Ara__Cfsnet__String *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__string__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__string__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Littlstar__Cfsnet__String *
-       littlstar__cfsnet__string__unpack
+Ara__Cfsnet__String *
+       ara__cfsnet__string__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Littlstar__Cfsnet__String *)
-     protobuf_c_message_unpack (&littlstar__cfsnet__string__descriptor,
+  return (Ara__Cfsnet__String *)
+     protobuf_c_message_unpack (&ara__cfsnet__string__descriptor,
                                 allocator, len, data);
 }
-void   littlstar__cfsnet__string__free_unpacked
-                     (Littlstar__Cfsnet__String *message,
+void   ara__cfsnet__string__free_unpacked
+                     (Ara__Cfsnet__String *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &littlstar__cfsnet__string__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__string__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   littlstar__cfsnet__touch_file__init
-                     (Littlstar__Cfsnet__TouchFile         *message)
+void   ara__cfsnet__touch_file__init
+                     (Ara__Cfsnet__TouchFile         *message)
 {
-  static const Littlstar__Cfsnet__TouchFile init_value = LITTLSTAR__CFSNET__TOUCH_FILE__INIT;
+  static const Ara__Cfsnet__TouchFile init_value = ARA__CFSNET__TOUCH_FILE__INIT;
   *message = init_value;
 }
-size_t littlstar__cfsnet__touch_file__get_packed_size
-                     (const Littlstar__Cfsnet__TouchFile *message)
+size_t ara__cfsnet__touch_file__get_packed_size
+                     (const Ara__Cfsnet__TouchFile *message)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__touch_file__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__touch_file__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t littlstar__cfsnet__touch_file__pack
-                     (const Littlstar__Cfsnet__TouchFile *message,
+size_t ara__cfsnet__touch_file__pack
+                     (const Ara__Cfsnet__TouchFile *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__touch_file__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__touch_file__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t littlstar__cfsnet__touch_file__pack_to_buffer
-                     (const Littlstar__Cfsnet__TouchFile *message,
+size_t ara__cfsnet__touch_file__pack_to_buffer
+                     (const Ara__Cfsnet__TouchFile *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__touch_file__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__touch_file__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Littlstar__Cfsnet__TouchFile *
-       littlstar__cfsnet__touch_file__unpack
+Ara__Cfsnet__TouchFile *
+       ara__cfsnet__touch_file__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Littlstar__Cfsnet__TouchFile *)
-     protobuf_c_message_unpack (&littlstar__cfsnet__touch_file__descriptor,
+  return (Ara__Cfsnet__TouchFile *)
+     protobuf_c_message_unpack (&ara__cfsnet__touch_file__descriptor,
                                 allocator, len, data);
 }
-void   littlstar__cfsnet__touch_file__free_unpacked
-                     (Littlstar__Cfsnet__TouchFile *message,
+void   ara__cfsnet__touch_file__free_unpacked
+                     (Ara__Cfsnet__TouchFile *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &littlstar__cfsnet__touch_file__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__touch_file__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   littlstar__cfsnet__unlink_file__init
-                     (Littlstar__Cfsnet__UnlinkFile         *message)
+void   ara__cfsnet__unlink_file__init
+                     (Ara__Cfsnet__UnlinkFile         *message)
 {
-  static const Littlstar__Cfsnet__UnlinkFile init_value = LITTLSTAR__CFSNET__UNLINK_FILE__INIT;
+  static const Ara__Cfsnet__UnlinkFile init_value = ARA__CFSNET__UNLINK_FILE__INIT;
   *message = init_value;
 }
-size_t littlstar__cfsnet__unlink_file__get_packed_size
-                     (const Littlstar__Cfsnet__UnlinkFile *message)
+size_t ara__cfsnet__unlink_file__get_packed_size
+                     (const Ara__Cfsnet__UnlinkFile *message)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__unlink_file__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__unlink_file__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t littlstar__cfsnet__unlink_file__pack
-                     (const Littlstar__Cfsnet__UnlinkFile *message,
+size_t ara__cfsnet__unlink_file__pack
+                     (const Ara__Cfsnet__UnlinkFile *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__unlink_file__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__unlink_file__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t littlstar__cfsnet__unlink_file__pack_to_buffer
-                     (const Littlstar__Cfsnet__UnlinkFile *message,
+size_t ara__cfsnet__unlink_file__pack_to_buffer
+                     (const Ara__Cfsnet__UnlinkFile *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__unlink_file__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__unlink_file__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Littlstar__Cfsnet__UnlinkFile *
-       littlstar__cfsnet__unlink_file__unpack
+Ara__Cfsnet__UnlinkFile *
+       ara__cfsnet__unlink_file__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Littlstar__Cfsnet__UnlinkFile *)
-     protobuf_c_message_unpack (&littlstar__cfsnet__unlink_file__descriptor,
+  return (Ara__Cfsnet__UnlinkFile *)
+     protobuf_c_message_unpack (&ara__cfsnet__unlink_file__descriptor,
                                 allocator, len, data);
 }
-void   littlstar__cfsnet__unlink_file__free_unpacked
-                     (Littlstar__Cfsnet__UnlinkFile *message,
+void   ara__cfsnet__unlink_file__free_unpacked
+                     (Ara__Cfsnet__UnlinkFile *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &littlstar__cfsnet__unlink_file__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__unlink_file__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   littlstar__cfsnet__write_file__init
-                     (Littlstar__Cfsnet__WriteFile         *message)
+void   ara__cfsnet__write_file__init
+                     (Ara__Cfsnet__WriteFile         *message)
 {
-  static const Littlstar__Cfsnet__WriteFile init_value = LITTLSTAR__CFSNET__WRITE_FILE__INIT;
+  static const Ara__Cfsnet__WriteFile init_value = ARA__CFSNET__WRITE_FILE__INIT;
   *message = init_value;
 }
-size_t littlstar__cfsnet__write_file__get_packed_size
-                     (const Littlstar__Cfsnet__WriteFile *message)
+size_t ara__cfsnet__write_file__get_packed_size
+                     (const Ara__Cfsnet__WriteFile *message)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__write_file__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__write_file__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t littlstar__cfsnet__write_file__pack
-                     (const Littlstar__Cfsnet__WriteFile *message,
+size_t ara__cfsnet__write_file__pack
+                     (const Ara__Cfsnet__WriteFile *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__write_file__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__write_file__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t littlstar__cfsnet__write_file__pack_to_buffer
-                     (const Littlstar__Cfsnet__WriteFile *message,
+size_t ara__cfsnet__write_file__pack_to_buffer
+                     (const Ara__Cfsnet__WriteFile *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &littlstar__cfsnet__write_file__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__write_file__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Littlstar__Cfsnet__WriteFile *
-       littlstar__cfsnet__write_file__unpack
+Ara__Cfsnet__WriteFile *
+       ara__cfsnet__write_file__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Littlstar__Cfsnet__WriteFile *)
-     protobuf_c_message_unpack (&littlstar__cfsnet__write_file__descriptor,
+  return (Ara__Cfsnet__WriteFile *)
+     protobuf_c_message_unpack (&ara__cfsnet__write_file__descriptor,
                                 allocator, len, data);
 }
-void   littlstar__cfsnet__write_file__free_unpacked
-                     (Littlstar__Cfsnet__WriteFile *message,
+void   ara__cfsnet__write_file__free_unpacked
+                     (Ara__Cfsnet__WriteFile *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &littlstar__cfsnet__write_file__descriptor);
+  assert(message->base.descriptor == &ara__cfsnet__write_file__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-static const ProtobufCFieldDescriptor littlstar__cfsnet__access_file__field_descriptors[2] =
+static const ProtobufCFieldDescriptor ara__cfsnet__access_file__field_descriptors[2] =
 {
   {
     "path",
@@ -1275,7 +1275,7 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__access_file__field_desc
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__AccessFile, path),
+    offsetof(Ara__Cfsnet__AccessFile, path),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
@@ -1287,38 +1287,38 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__access_file__field_desc
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_ENUM,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__AccessFile, mode),
-    &littlstar__cfsnet__file_mode__descriptor,
+    offsetof(Ara__Cfsnet__AccessFile, mode),
+    &ara__cfsnet__file_mode__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned littlstar__cfsnet__access_file__field_indices_by_name[] = {
+static const unsigned ara__cfsnet__access_file__field_indices_by_name[] = {
   1,   /* field[1] = mode */
   0,   /* field[0] = path */
 };
-static const ProtobufCIntRange littlstar__cfsnet__access_file__number_ranges[1 + 1] =
+static const ProtobufCIntRange ara__cfsnet__access_file__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 2 }
 };
-const ProtobufCMessageDescriptor littlstar__cfsnet__access_file__descriptor =
+const ProtobufCMessageDescriptor ara__cfsnet__access_file__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "littlstar.cfsnet.AccessFile",
+  "ara.cfsnet.AccessFile",
   "AccessFile",
-  "Littlstar__Cfsnet__AccessFile",
-  "littlstar.cfsnet",
-  sizeof(Littlstar__Cfsnet__AccessFile),
+  "Ara__Cfsnet__AccessFile",
+  "ara.cfsnet",
+  sizeof(Ara__Cfsnet__AccessFile),
   2,
-  littlstar__cfsnet__access_file__field_descriptors,
-  littlstar__cfsnet__access_file__field_indices_by_name,
-  1,  littlstar__cfsnet__access_file__number_ranges,
-  (ProtobufCMessageInit) littlstar__cfsnet__access_file__init,
+  ara__cfsnet__access_file__field_descriptors,
+  ara__cfsnet__access_file__field_indices_by_name,
+  1,  ara__cfsnet__access_file__number_ranges,
+  (ProtobufCMessageInit) ara__cfsnet__access_file__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor littlstar__cfsnet__boolean__field_descriptors[1] =
+static const ProtobufCFieldDescriptor ara__cfsnet__boolean__field_descriptors[1] =
 {
   {
     "value",
@@ -1326,37 +1326,37 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__boolean__field_descript
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BOOL,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Boolean, value),
+    offsetof(Ara__Cfsnet__Boolean, value),
     NULL,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned littlstar__cfsnet__boolean__field_indices_by_name[] = {
+static const unsigned ara__cfsnet__boolean__field_indices_by_name[] = {
   0,   /* field[0] = value */
 };
-static const ProtobufCIntRange littlstar__cfsnet__boolean__number_ranges[1 + 1] =
+static const ProtobufCIntRange ara__cfsnet__boolean__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 1 }
 };
-const ProtobufCMessageDescriptor littlstar__cfsnet__boolean__descriptor =
+const ProtobufCMessageDescriptor ara__cfsnet__boolean__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "littlstar.cfsnet.Boolean",
+  "ara.cfsnet.Boolean",
   "Boolean",
-  "Littlstar__Cfsnet__Boolean",
-  "littlstar.cfsnet",
-  sizeof(Littlstar__Cfsnet__Boolean),
+  "Ara__Cfsnet__Boolean",
+  "ara.cfsnet",
+  sizeof(Ara__Cfsnet__Boolean),
   1,
-  littlstar__cfsnet__boolean__field_descriptors,
-  littlstar__cfsnet__boolean__field_indices_by_name,
-  1,  littlstar__cfsnet__boolean__number_ranges,
-  (ProtobufCMessageInit) littlstar__cfsnet__boolean__init,
+  ara__cfsnet__boolean__field_descriptors,
+  ara__cfsnet__boolean__field_indices_by_name,
+  1,  ara__cfsnet__boolean__number_ranges,
+  (ProtobufCMessageInit) ara__cfsnet__boolean__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor littlstar__cfsnet__buffer__field_descriptors[2] =
+static const ProtobufCFieldDescriptor ara__cfsnet__buffer__field_descriptors[2] =
 {
   {
     "value",
@@ -1364,7 +1364,7 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__buffer__field_descripto
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BYTES,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Buffer, value),
+    offsetof(Ara__Cfsnet__Buffer, value),
     NULL,
     NULL,
     0,             /* flags */
@@ -1376,38 +1376,38 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__buffer__field_descripto
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_UINT64,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Buffer, length),
+    offsetof(Ara__Cfsnet__Buffer, length),
     NULL,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned littlstar__cfsnet__buffer__field_indices_by_name[] = {
+static const unsigned ara__cfsnet__buffer__field_indices_by_name[] = {
   1,   /* field[1] = length */
   0,   /* field[0] = value */
 };
-static const ProtobufCIntRange littlstar__cfsnet__buffer__number_ranges[1 + 1] =
+static const ProtobufCIntRange ara__cfsnet__buffer__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 2 }
 };
-const ProtobufCMessageDescriptor littlstar__cfsnet__buffer__descriptor =
+const ProtobufCMessageDescriptor ara__cfsnet__buffer__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "littlstar.cfsnet.Buffer",
+  "ara.cfsnet.Buffer",
   "Buffer",
-  "Littlstar__Cfsnet__Buffer",
-  "littlstar.cfsnet",
-  sizeof(Littlstar__Cfsnet__Buffer),
+  "Ara__Cfsnet__Buffer",
+  "ara.cfsnet",
+  sizeof(Ara__Cfsnet__Buffer),
   2,
-  littlstar__cfsnet__buffer__field_descriptors,
-  littlstar__cfsnet__buffer__field_indices_by_name,
-  1,  littlstar__cfsnet__buffer__number_ranges,
-  (ProtobufCMessageInit) littlstar__cfsnet__buffer__init,
+  ara__cfsnet__buffer__field_descriptors,
+  ara__cfsnet__buffer__field_indices_by_name,
+  1,  ara__cfsnet__buffer__number_ranges,
+  (ProtobufCMessageInit) ara__cfsnet__buffer__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor littlstar__cfsnet__close__field_descriptors[1] =
+static const ProtobufCFieldDescriptor ara__cfsnet__close__field_descriptors[1] =
 {
   {
     "fileDescriptor",
@@ -1415,37 +1415,37 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__close__field_descriptor
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_UINT32,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Close, filedescriptor),
+    offsetof(Ara__Cfsnet__Close, filedescriptor),
     NULL,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned littlstar__cfsnet__close__field_indices_by_name[] = {
+static const unsigned ara__cfsnet__close__field_indices_by_name[] = {
   0,   /* field[0] = fileDescriptor */
 };
-static const ProtobufCIntRange littlstar__cfsnet__close__number_ranges[1 + 1] =
+static const ProtobufCIntRange ara__cfsnet__close__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 1 }
 };
-const ProtobufCMessageDescriptor littlstar__cfsnet__close__descriptor =
+const ProtobufCMessageDescriptor ara__cfsnet__close__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "littlstar.cfsnet.Close",
+  "ara.cfsnet.Close",
   "Close",
-  "Littlstar__Cfsnet__Close",
-  "littlstar.cfsnet",
-  sizeof(Littlstar__Cfsnet__Close),
+  "Ara__Cfsnet__Close",
+  "ara.cfsnet",
+  sizeof(Ara__Cfsnet__Close),
   1,
-  littlstar__cfsnet__close__field_descriptors,
-  littlstar__cfsnet__close__field_indices_by_name,
-  1,  littlstar__cfsnet__close__number_ranges,
-  (ProtobufCMessageInit) littlstar__cfsnet__close__init,
+  ara__cfsnet__close__field_descriptors,
+  ara__cfsnet__close__field_indices_by_name,
+  1,  ara__cfsnet__close__number_ranges,
+  (ProtobufCMessageInit) ara__cfsnet__close__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor littlstar__cfsnet__download_directory__field_descriptors[1] =
+static const ProtobufCFieldDescriptor ara__cfsnet__download_directory__field_descriptors[1] =
 {
   {
     "path",
@@ -1453,37 +1453,37 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__download_directory__fie
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__DownloadDirectory, path),
+    offsetof(Ara__Cfsnet__DownloadDirectory, path),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned littlstar__cfsnet__download_directory__field_indices_by_name[] = {
+static const unsigned ara__cfsnet__download_directory__field_indices_by_name[] = {
   0,   /* field[0] = path */
 };
-static const ProtobufCIntRange littlstar__cfsnet__download_directory__number_ranges[1 + 1] =
+static const ProtobufCIntRange ara__cfsnet__download_directory__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 1 }
 };
-const ProtobufCMessageDescriptor littlstar__cfsnet__download_directory__descriptor =
+const ProtobufCMessageDescriptor ara__cfsnet__download_directory__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "littlstar.cfsnet.DownloadDirectory",
+  "ara.cfsnet.DownloadDirectory",
   "DownloadDirectory",
-  "Littlstar__Cfsnet__DownloadDirectory",
-  "littlstar.cfsnet",
-  sizeof(Littlstar__Cfsnet__DownloadDirectory),
+  "Ara__Cfsnet__DownloadDirectory",
+  "ara.cfsnet",
+  sizeof(Ara__Cfsnet__DownloadDirectory),
   1,
-  littlstar__cfsnet__download_directory__field_descriptors,
-  littlstar__cfsnet__download_directory__field_indices_by_name,
-  1,  littlstar__cfsnet__download_directory__number_ranges,
-  (ProtobufCMessageInit) littlstar__cfsnet__download_directory__init,
+  ara__cfsnet__download_directory__field_descriptors,
+  ara__cfsnet__download_directory__field_indices_by_name,
+  1,  ara__cfsnet__download_directory__number_ranges,
+  (ProtobufCMessageInit) ara__cfsnet__download_directory__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor littlstar__cfsnet__download_file__field_descriptors[1] =
+static const ProtobufCFieldDescriptor ara__cfsnet__download_file__field_descriptors[1] =
 {
   {
     "path",
@@ -1491,37 +1491,37 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__download_file__field_de
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__DownloadFile, path),
+    offsetof(Ara__Cfsnet__DownloadFile, path),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned littlstar__cfsnet__download_file__field_indices_by_name[] = {
+static const unsigned ara__cfsnet__download_file__field_indices_by_name[] = {
   0,   /* field[0] = path */
 };
-static const ProtobufCIntRange littlstar__cfsnet__download_file__number_ranges[1 + 1] =
+static const ProtobufCIntRange ara__cfsnet__download_file__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 1 }
 };
-const ProtobufCMessageDescriptor littlstar__cfsnet__download_file__descriptor =
+const ProtobufCMessageDescriptor ara__cfsnet__download_file__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "littlstar.cfsnet.DownloadFile",
+  "ara.cfsnet.DownloadFile",
   "DownloadFile",
-  "Littlstar__Cfsnet__DownloadFile",
-  "littlstar.cfsnet",
-  sizeof(Littlstar__Cfsnet__DownloadFile),
+  "Ara__Cfsnet__DownloadFile",
+  "ara.cfsnet",
+  sizeof(Ara__Cfsnet__DownloadFile),
   1,
-  littlstar__cfsnet__download_file__field_descriptors,
-  littlstar__cfsnet__download_file__field_indices_by_name,
-  1,  littlstar__cfsnet__download_file__number_ranges,
-  (ProtobufCMessageInit) littlstar__cfsnet__download_file__init,
+  ara__cfsnet__download_file__field_descriptors,
+  ara__cfsnet__download_file__field_indices_by_name,
+  1,  ara__cfsnet__download_file__number_ranges,
+  (ProtobufCMessageInit) ara__cfsnet__download_file__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor littlstar__cfsnet__drive__field_descriptors[3] =
+static const ProtobufCFieldDescriptor ara__cfsnet__drive__field_descriptors[3] =
 {
   {
     "id",
@@ -1529,7 +1529,7 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__drive__field_descriptor
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BYTES,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Drive, id),
+    offsetof(Ara__Cfsnet__Drive, id),
     NULL,
     NULL,
     0,             /* flags */
@@ -1541,7 +1541,7 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__drive__field_descriptor
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BYTES,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Drive, key),
+    offsetof(Ara__Cfsnet__Drive, key),
     NULL,
     NULL,
     0,             /* flags */
@@ -1553,39 +1553,39 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__drive__field_descriptor
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BYTES,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Drive, secretkey),
+    offsetof(Ara__Cfsnet__Drive, secretkey),
     NULL,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned littlstar__cfsnet__drive__field_indices_by_name[] = {
+static const unsigned ara__cfsnet__drive__field_indices_by_name[] = {
   0,   /* field[0] = id */
   1,   /* field[1] = key */
   2,   /* field[2] = secretKey */
 };
-static const ProtobufCIntRange littlstar__cfsnet__drive__number_ranges[1 + 1] =
+static const ProtobufCIntRange ara__cfsnet__drive__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 3 }
 };
-const ProtobufCMessageDescriptor littlstar__cfsnet__drive__descriptor =
+const ProtobufCMessageDescriptor ara__cfsnet__drive__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "littlstar.cfsnet.Drive",
+  "ara.cfsnet.Drive",
   "Drive",
-  "Littlstar__Cfsnet__Drive",
-  "littlstar.cfsnet",
-  sizeof(Littlstar__Cfsnet__Drive),
+  "Ara__Cfsnet__Drive",
+  "ara.cfsnet",
+  sizeof(Ara__Cfsnet__Drive),
   3,
-  littlstar__cfsnet__drive__field_descriptors,
-  littlstar__cfsnet__drive__field_indices_by_name,
-  1,  littlstar__cfsnet__drive__number_ranges,
-  (ProtobufCMessageInit) littlstar__cfsnet__drive__init,
+  ara__cfsnet__drive__field_descriptors,
+  ara__cfsnet__drive__field_indices_by_name,
+  1,  ara__cfsnet__drive__number_ranges,
+  (ProtobufCMessageInit) ara__cfsnet__drive__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor littlstar__cfsnet__handshake__field_descriptors[3] =
+static const ProtobufCFieldDescriptor ara__cfsnet__handshake__field_descriptors[3] =
 {
   {
     "nonce",
@@ -1593,7 +1593,7 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__handshake__field_descri
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BYTES,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Handshake, nonce),
+    offsetof(Ara__Cfsnet__Handshake, nonce),
     NULL,
     NULL,
     0,             /* flags */
@@ -1605,7 +1605,7 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__handshake__field_descri
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BYTES,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Handshake, key),
+    offsetof(Ara__Cfsnet__Handshake, key),
     NULL,
     NULL,
     0,             /* flags */
@@ -1617,39 +1617,39 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__handshake__field_descri
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BOOL,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Handshake, ack),
+    offsetof(Ara__Cfsnet__Handshake, ack),
     NULL,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned littlstar__cfsnet__handshake__field_indices_by_name[] = {
+static const unsigned ara__cfsnet__handshake__field_indices_by_name[] = {
   2,   /* field[2] = ack */
   1,   /* field[1] = key */
   0,   /* field[0] = nonce */
 };
-static const ProtobufCIntRange littlstar__cfsnet__handshake__number_ranges[1 + 1] =
+static const ProtobufCIntRange ara__cfsnet__handshake__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 3 }
 };
-const ProtobufCMessageDescriptor littlstar__cfsnet__handshake__descriptor =
+const ProtobufCMessageDescriptor ara__cfsnet__handshake__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "littlstar.cfsnet.Handshake",
+  "ara.cfsnet.Handshake",
   "Handshake",
-  "Littlstar__Cfsnet__Handshake",
-  "littlstar.cfsnet",
-  sizeof(Littlstar__Cfsnet__Handshake),
+  "Ara__Cfsnet__Handshake",
+  "ara.cfsnet",
+  sizeof(Ara__Cfsnet__Handshake),
   3,
-  littlstar__cfsnet__handshake__field_descriptors,
-  littlstar__cfsnet__handshake__field_indices_by_name,
-  1,  littlstar__cfsnet__handshake__number_ranges,
-  (ProtobufCMessageInit) littlstar__cfsnet__handshake__init,
+  ara__cfsnet__handshake__field_descriptors,
+  ara__cfsnet__handshake__field_indices_by_name,
+  1,  ara__cfsnet__handshake__number_ranges,
+  (ProtobufCMessageInit) ara__cfsnet__handshake__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor littlstar__cfsnet__key_pair__field_descriptors[3] =
+static const ProtobufCFieldDescriptor ara__cfsnet__key_pair__field_descriptors[3] =
 {
   {
     "seed",
@@ -1657,7 +1657,7 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__key_pair__field_descrip
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BYTES,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__KeyPair, seed),
+    offsetof(Ara__Cfsnet__KeyPair, seed),
     NULL,
     NULL,
     0,             /* flags */
@@ -1669,7 +1669,7 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__key_pair__field_descrip
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BYTES,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__KeyPair, publickey),
+    offsetof(Ara__Cfsnet__KeyPair, publickey),
     NULL,
     NULL,
     0,             /* flags */
@@ -1681,47 +1681,47 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__key_pair__field_descrip
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BYTES,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__KeyPair, secretkey),
+    offsetof(Ara__Cfsnet__KeyPair, secretkey),
     NULL,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned littlstar__cfsnet__key_pair__field_indices_by_name[] = {
+static const unsigned ara__cfsnet__key_pair__field_indices_by_name[] = {
   1,   /* field[1] = publicKey */
   2,   /* field[2] = secretKey */
   0,   /* field[0] = seed */
 };
-static const ProtobufCIntRange littlstar__cfsnet__key_pair__number_ranges[1 + 1] =
+static const ProtobufCIntRange ara__cfsnet__key_pair__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 3 }
 };
-const ProtobufCMessageDescriptor littlstar__cfsnet__key_pair__descriptor =
+const ProtobufCMessageDescriptor ara__cfsnet__key_pair__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "littlstar.cfsnet.KeyPair",
+  "ara.cfsnet.KeyPair",
   "KeyPair",
-  "Littlstar__Cfsnet__KeyPair",
-  "littlstar.cfsnet",
-  sizeof(Littlstar__Cfsnet__KeyPair),
+  "Ara__Cfsnet__KeyPair",
+  "ara.cfsnet",
+  sizeof(Ara__Cfsnet__KeyPair),
   3,
-  littlstar__cfsnet__key_pair__field_descriptors,
-  littlstar__cfsnet__key_pair__field_indices_by_name,
-  1,  littlstar__cfsnet__key_pair__number_ranges,
-  (ProtobufCMessageInit) littlstar__cfsnet__key_pair__init,
+  ara__cfsnet__key_pair__field_descriptors,
+  ara__cfsnet__key_pair__field_indices_by_name,
+  1,  ara__cfsnet__key_pair__number_ranges,
+  (ProtobufCMessageInit) ara__cfsnet__key_pair__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor littlstar__cfsnet__list__field_descriptors[2] =
+static const ProtobufCFieldDescriptor ara__cfsnet__list__field_descriptors[2] =
 {
   {
     "values",
     1,
     PROTOBUF_C_LABEL_REPEATED,
     PROTOBUF_C_TYPE_BYTES,
-    offsetof(Littlstar__Cfsnet__List, n_values),
-    offsetof(Littlstar__Cfsnet__List, values),
+    offsetof(Ara__Cfsnet__List, n_values),
+    offsetof(Ara__Cfsnet__List, values),
     NULL,
     NULL,
     0,             /* flags */
@@ -1733,38 +1733,38 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__list__field_descriptors
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_UINT64,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__List, length),
+    offsetof(Ara__Cfsnet__List, length),
     NULL,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned littlstar__cfsnet__list__field_indices_by_name[] = {
+static const unsigned ara__cfsnet__list__field_indices_by_name[] = {
   1,   /* field[1] = length */
   0,   /* field[0] = values */
 };
-static const ProtobufCIntRange littlstar__cfsnet__list__number_ranges[1 + 1] =
+static const ProtobufCIntRange ara__cfsnet__list__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 2 }
 };
-const ProtobufCMessageDescriptor littlstar__cfsnet__list__descriptor =
+const ProtobufCMessageDescriptor ara__cfsnet__list__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "littlstar.cfsnet.List",
+  "ara.cfsnet.List",
   "List",
-  "Littlstar__Cfsnet__List",
-  "littlstar.cfsnet",
-  sizeof(Littlstar__Cfsnet__List),
+  "Ara__Cfsnet__List",
+  "ara.cfsnet",
+  sizeof(Ara__Cfsnet__List),
   2,
-  littlstar__cfsnet__list__field_descriptors,
-  littlstar__cfsnet__list__field_indices_by_name,
-  1,  littlstar__cfsnet__list__number_ranges,
-  (ProtobufCMessageInit) littlstar__cfsnet__list__init,
+  ara__cfsnet__list__field_descriptors,
+  ara__cfsnet__list__field_indices_by_name,
+  1,  ara__cfsnet__list__number_ranges,
+  (ProtobufCMessageInit) ara__cfsnet__list__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor littlstar__cfsnet__list_directory__field_descriptors[1] =
+static const ProtobufCFieldDescriptor ara__cfsnet__list_directory__field_descriptors[1] =
 {
   {
     "path",
@@ -1772,37 +1772,37 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__list_directory__field_d
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__ListDirectory, path),
+    offsetof(Ara__Cfsnet__ListDirectory, path),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned littlstar__cfsnet__list_directory__field_indices_by_name[] = {
+static const unsigned ara__cfsnet__list_directory__field_indices_by_name[] = {
   0,   /* field[0] = path */
 };
-static const ProtobufCIntRange littlstar__cfsnet__list_directory__number_ranges[1 + 1] =
+static const ProtobufCIntRange ara__cfsnet__list_directory__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 1 }
 };
-const ProtobufCMessageDescriptor littlstar__cfsnet__list_directory__descriptor =
+const ProtobufCMessageDescriptor ara__cfsnet__list_directory__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "littlstar.cfsnet.ListDirectory",
+  "ara.cfsnet.ListDirectory",
   "ListDirectory",
-  "Littlstar__Cfsnet__ListDirectory",
-  "littlstar.cfsnet",
-  sizeof(Littlstar__Cfsnet__ListDirectory),
+  "Ara__Cfsnet__ListDirectory",
+  "ara.cfsnet",
+  sizeof(Ara__Cfsnet__ListDirectory),
   1,
-  littlstar__cfsnet__list_directory__field_descriptors,
-  littlstar__cfsnet__list_directory__field_indices_by_name,
-  1,  littlstar__cfsnet__list_directory__number_ranges,
-  (ProtobufCMessageInit) littlstar__cfsnet__list_directory__init,
+  ara__cfsnet__list_directory__field_descriptors,
+  ara__cfsnet__list_directory__field_indices_by_name,
+  1,  ara__cfsnet__list_directory__number_ranges,
+  (ProtobufCMessageInit) ara__cfsnet__list_directory__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor littlstar__cfsnet__make_directory__field_descriptors[1] =
+static const ProtobufCFieldDescriptor ara__cfsnet__make_directory__field_descriptors[1] =
 {
   {
     "path",
@@ -1810,37 +1810,37 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__make_directory__field_d
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__MakeDirectory, path),
+    offsetof(Ara__Cfsnet__MakeDirectory, path),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned littlstar__cfsnet__make_directory__field_indices_by_name[] = {
+static const unsigned ara__cfsnet__make_directory__field_indices_by_name[] = {
   0,   /* field[0] = path */
 };
-static const ProtobufCIntRange littlstar__cfsnet__make_directory__number_ranges[1 + 1] =
+static const ProtobufCIntRange ara__cfsnet__make_directory__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 1 }
 };
-const ProtobufCMessageDescriptor littlstar__cfsnet__make_directory__descriptor =
+const ProtobufCMessageDescriptor ara__cfsnet__make_directory__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "littlstar.cfsnet.MakeDirectory",
+  "ara.cfsnet.MakeDirectory",
   "MakeDirectory",
-  "Littlstar__Cfsnet__MakeDirectory",
-  "littlstar.cfsnet",
-  sizeof(Littlstar__Cfsnet__MakeDirectory),
+  "Ara__Cfsnet__MakeDirectory",
+  "ara.cfsnet",
+  sizeof(Ara__Cfsnet__MakeDirectory),
   1,
-  littlstar__cfsnet__make_directory__field_descriptors,
-  littlstar__cfsnet__make_directory__field_indices_by_name,
-  1,  littlstar__cfsnet__make_directory__number_ranges,
-  (ProtobufCMessageInit) littlstar__cfsnet__make_directory__init,
+  ara__cfsnet__make_directory__field_descriptors,
+  ara__cfsnet__make_directory__field_indices_by_name,
+  1,  ara__cfsnet__make_directory__number_ranges,
+  (ProtobufCMessageInit) ara__cfsnet__make_directory__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor littlstar__cfsnet__make_directory_path__field_descriptors[1] =
+static const ProtobufCFieldDescriptor ara__cfsnet__make_directory_path__field_descriptors[1] =
 {
   {
     "path",
@@ -1848,37 +1848,37 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__make_directory_path__fi
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__MakeDirectoryPath, path),
+    offsetof(Ara__Cfsnet__MakeDirectoryPath, path),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned littlstar__cfsnet__make_directory_path__field_indices_by_name[] = {
+static const unsigned ara__cfsnet__make_directory_path__field_indices_by_name[] = {
   0,   /* field[0] = path */
 };
-static const ProtobufCIntRange littlstar__cfsnet__make_directory_path__number_ranges[1 + 1] =
+static const ProtobufCIntRange ara__cfsnet__make_directory_path__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 1 }
 };
-const ProtobufCMessageDescriptor littlstar__cfsnet__make_directory_path__descriptor =
+const ProtobufCMessageDescriptor ara__cfsnet__make_directory_path__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "littlstar.cfsnet.MakeDirectoryPath",
+  "ara.cfsnet.MakeDirectoryPath",
   "MakeDirectoryPath",
-  "Littlstar__Cfsnet__MakeDirectoryPath",
-  "littlstar.cfsnet",
-  sizeof(Littlstar__Cfsnet__MakeDirectoryPath),
+  "Ara__Cfsnet__MakeDirectoryPath",
+  "ara.cfsnet",
+  sizeof(Ara__Cfsnet__MakeDirectoryPath),
   1,
-  littlstar__cfsnet__make_directory_path__field_descriptors,
-  littlstar__cfsnet__make_directory_path__field_indices_by_name,
-  1,  littlstar__cfsnet__make_directory_path__number_ranges,
-  (ProtobufCMessageInit) littlstar__cfsnet__make_directory_path__init,
+  ara__cfsnet__make_directory_path__field_descriptors,
+  ara__cfsnet__make_directory_path__field_indices_by_name,
+  1,  ara__cfsnet__make_directory_path__number_ranges,
+  (ProtobufCMessageInit) ara__cfsnet__make_directory_path__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor littlstar__cfsnet__number__field_descriptors[1] =
+static const ProtobufCFieldDescriptor ara__cfsnet__number__field_descriptors[1] =
 {
   {
     "value",
@@ -1886,37 +1886,37 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__number__field_descripto
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_DOUBLE,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Number, value),
+    offsetof(Ara__Cfsnet__Number, value),
     NULL,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned littlstar__cfsnet__number__field_indices_by_name[] = {
+static const unsigned ara__cfsnet__number__field_indices_by_name[] = {
   0,   /* field[0] = value */
 };
-static const ProtobufCIntRange littlstar__cfsnet__number__number_ranges[1 + 1] =
+static const ProtobufCIntRange ara__cfsnet__number__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 1 }
 };
-const ProtobufCMessageDescriptor littlstar__cfsnet__number__descriptor =
+const ProtobufCMessageDescriptor ara__cfsnet__number__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "littlstar.cfsnet.Number",
+  "ara.cfsnet.Number",
   "Number",
-  "Littlstar__Cfsnet__Number",
-  "littlstar.cfsnet",
-  sizeof(Littlstar__Cfsnet__Number),
+  "Ara__Cfsnet__Number",
+  "ara.cfsnet",
+  sizeof(Ara__Cfsnet__Number),
   1,
-  littlstar__cfsnet__number__field_descriptors,
-  littlstar__cfsnet__number__field_indices_by_name,
-  1,  littlstar__cfsnet__number__number_ranges,
-  (ProtobufCMessageInit) littlstar__cfsnet__number__init,
+  ara__cfsnet__number__field_descriptors,
+  ara__cfsnet__number__field_indices_by_name,
+  1,  ara__cfsnet__number__number_ranges,
+  (ProtobufCMessageInit) ara__cfsnet__number__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor littlstar__cfsnet__open__field_descriptors[2] =
+static const ProtobufCFieldDescriptor ara__cfsnet__open__field_descriptors[2] =
 {
   {
     "path",
@@ -1924,7 +1924,7 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__open__field_descriptors
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Open, path),
+    offsetof(Ara__Cfsnet__Open, path),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
@@ -1936,38 +1936,38 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__open__field_descriptors
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Open, flags),
+    offsetof(Ara__Cfsnet__Open, flags),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned littlstar__cfsnet__open__field_indices_by_name[] = {
+static const unsigned ara__cfsnet__open__field_indices_by_name[] = {
   1,   /* field[1] = flags */
   0,   /* field[0] = path */
 };
-static const ProtobufCIntRange littlstar__cfsnet__open__number_ranges[1 + 1] =
+static const ProtobufCIntRange ara__cfsnet__open__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 2 }
 };
-const ProtobufCMessageDescriptor littlstar__cfsnet__open__descriptor =
+const ProtobufCMessageDescriptor ara__cfsnet__open__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "littlstar.cfsnet.Open",
+  "ara.cfsnet.Open",
   "Open",
-  "Littlstar__Cfsnet__Open",
-  "littlstar.cfsnet",
-  sizeof(Littlstar__Cfsnet__Open),
+  "Ara__Cfsnet__Open",
+  "ara.cfsnet",
+  sizeof(Ara__Cfsnet__Open),
   2,
-  littlstar__cfsnet__open__field_descriptors,
-  littlstar__cfsnet__open__field_indices_by_name,
-  1,  littlstar__cfsnet__open__number_ranges,
-  (ProtobufCMessageInit) littlstar__cfsnet__open__init,
+  ara__cfsnet__open__field_descriptors,
+  ara__cfsnet__open__field_indices_by_name,
+  1,  ara__cfsnet__open__number_ranges,
+  (ProtobufCMessageInit) ara__cfsnet__open__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor littlstar__cfsnet__read__field_descriptors[3] =
+static const ProtobufCFieldDescriptor ara__cfsnet__read__field_descriptors[3] =
 {
   {
     "fileDescriptor",
@@ -1975,7 +1975,7 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__read__field_descriptors
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_UINT32,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Read, filedescriptor),
+    offsetof(Ara__Cfsnet__Read, filedescriptor),
     NULL,
     NULL,
     0,             /* flags */
@@ -1987,7 +1987,7 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__read__field_descriptors
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_UINT32,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Read, start),
+    offsetof(Ara__Cfsnet__Read, start),
     NULL,
     NULL,
     0,             /* flags */
@@ -1999,39 +1999,39 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__read__field_descriptors
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_UINT32,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Read, end),
+    offsetof(Ara__Cfsnet__Read, end),
     NULL,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned littlstar__cfsnet__read__field_indices_by_name[] = {
+static const unsigned ara__cfsnet__read__field_indices_by_name[] = {
   2,   /* field[2] = end */
   0,   /* field[0] = fileDescriptor */
   1,   /* field[1] = start */
 };
-static const ProtobufCIntRange littlstar__cfsnet__read__number_ranges[1 + 1] =
+static const ProtobufCIntRange ara__cfsnet__read__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 3 }
 };
-const ProtobufCMessageDescriptor littlstar__cfsnet__read__descriptor =
+const ProtobufCMessageDescriptor ara__cfsnet__read__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "littlstar.cfsnet.Read",
+  "ara.cfsnet.Read",
   "Read",
-  "Littlstar__Cfsnet__Read",
-  "littlstar.cfsnet",
-  sizeof(Littlstar__Cfsnet__Read),
+  "Ara__Cfsnet__Read",
+  "ara.cfsnet",
+  sizeof(Ara__Cfsnet__Read),
   3,
-  littlstar__cfsnet__read__field_descriptors,
-  littlstar__cfsnet__read__field_indices_by_name,
-  1,  littlstar__cfsnet__read__number_ranges,
-  (ProtobufCMessageInit) littlstar__cfsnet__read__init,
+  ara__cfsnet__read__field_descriptors,
+  ara__cfsnet__read__field_indices_by_name,
+  1,  ara__cfsnet__read__number_ranges,
+  (ProtobufCMessageInit) ara__cfsnet__read__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor littlstar__cfsnet__read_file__field_descriptors[3] =
+static const ProtobufCFieldDescriptor ara__cfsnet__read_file__field_descriptors[3] =
 {
   {
     "path",
@@ -2039,7 +2039,7 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__read_file__field_descri
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__ReadFile, path),
+    offsetof(Ara__Cfsnet__ReadFile, path),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
@@ -2051,7 +2051,7 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__read_file__field_descri
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_UINT32,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__ReadFile, start),
+    offsetof(Ara__Cfsnet__ReadFile, start),
     NULL,
     NULL,
     0,             /* flags */
@@ -2063,39 +2063,39 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__read_file__field_descri
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_UINT32,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__ReadFile, end),
+    offsetof(Ara__Cfsnet__ReadFile, end),
     NULL,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned littlstar__cfsnet__read_file__field_indices_by_name[] = {
+static const unsigned ara__cfsnet__read_file__field_indices_by_name[] = {
   2,   /* field[2] = end */
   0,   /* field[0] = path */
   1,   /* field[1] = start */
 };
-static const ProtobufCIntRange littlstar__cfsnet__read_file__number_ranges[1 + 1] =
+static const ProtobufCIntRange ara__cfsnet__read_file__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 3 }
 };
-const ProtobufCMessageDescriptor littlstar__cfsnet__read_file__descriptor =
+const ProtobufCMessageDescriptor ara__cfsnet__read_file__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "littlstar.cfsnet.ReadFile",
+  "ara.cfsnet.ReadFile",
   "ReadFile",
-  "Littlstar__Cfsnet__ReadFile",
-  "littlstar.cfsnet",
-  sizeof(Littlstar__Cfsnet__ReadFile),
+  "Ara__Cfsnet__ReadFile",
+  "ara.cfsnet",
+  sizeof(Ara__Cfsnet__ReadFile),
   3,
-  littlstar__cfsnet__read_file__field_descriptors,
-  littlstar__cfsnet__read_file__field_indices_by_name,
-  1,  littlstar__cfsnet__read_file__number_ranges,
-  (ProtobufCMessageInit) littlstar__cfsnet__read_file__init,
+  ara__cfsnet__read_file__field_descriptors,
+  ara__cfsnet__read_file__field_indices_by_name,
+  1,  ara__cfsnet__read_file__number_ranges,
+  (ProtobufCMessageInit) ara__cfsnet__read_file__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor littlstar__cfsnet__remove_directory__field_descriptors[1] =
+static const ProtobufCFieldDescriptor ara__cfsnet__remove_directory__field_descriptors[1] =
 {
   {
     "path",
@@ -2103,37 +2103,37 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__remove_directory__field
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__RemoveDirectory, path),
+    offsetof(Ara__Cfsnet__RemoveDirectory, path),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned littlstar__cfsnet__remove_directory__field_indices_by_name[] = {
+static const unsigned ara__cfsnet__remove_directory__field_indices_by_name[] = {
   0,   /* field[0] = path */
 };
-static const ProtobufCIntRange littlstar__cfsnet__remove_directory__number_ranges[1 + 1] =
+static const ProtobufCIntRange ara__cfsnet__remove_directory__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 1 }
 };
-const ProtobufCMessageDescriptor littlstar__cfsnet__remove_directory__descriptor =
+const ProtobufCMessageDescriptor ara__cfsnet__remove_directory__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "littlstar.cfsnet.RemoveDirectory",
+  "ara.cfsnet.RemoveDirectory",
   "RemoveDirectory",
-  "Littlstar__Cfsnet__RemoveDirectory",
-  "littlstar.cfsnet",
-  sizeof(Littlstar__Cfsnet__RemoveDirectory),
+  "Ara__Cfsnet__RemoveDirectory",
+  "ara.cfsnet",
+  sizeof(Ara__Cfsnet__RemoveDirectory),
   1,
-  littlstar__cfsnet__remove_directory__field_descriptors,
-  littlstar__cfsnet__remove_directory__field_indices_by_name,
-  1,  littlstar__cfsnet__remove_directory__number_ranges,
-  (ProtobufCMessageInit) littlstar__cfsnet__remove_directory__init,
+  ara__cfsnet__remove_directory__field_descriptors,
+  ara__cfsnet__remove_directory__field_indices_by_name,
+  1,  ara__cfsnet__remove_directory__number_ranges,
+  (ProtobufCMessageInit) ara__cfsnet__remove_directory__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor littlstar__cfsnet__remove_directory_path__field_descriptors[1] =
+static const ProtobufCFieldDescriptor ara__cfsnet__remove_directory_path__field_descriptors[1] =
 {
   {
     "path",
@@ -2141,37 +2141,37 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__remove_directory_path__
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__RemoveDirectoryPath, path),
+    offsetof(Ara__Cfsnet__RemoveDirectoryPath, path),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned littlstar__cfsnet__remove_directory_path__field_indices_by_name[] = {
+static const unsigned ara__cfsnet__remove_directory_path__field_indices_by_name[] = {
   0,   /* field[0] = path */
 };
-static const ProtobufCIntRange littlstar__cfsnet__remove_directory_path__number_ranges[1 + 1] =
+static const ProtobufCIntRange ara__cfsnet__remove_directory_path__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 1 }
 };
-const ProtobufCMessageDescriptor littlstar__cfsnet__remove_directory_path__descriptor =
+const ProtobufCMessageDescriptor ara__cfsnet__remove_directory_path__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "littlstar.cfsnet.RemoveDirectoryPath",
+  "ara.cfsnet.RemoveDirectoryPath",
   "RemoveDirectoryPath",
-  "Littlstar__Cfsnet__RemoveDirectoryPath",
-  "littlstar.cfsnet",
-  sizeof(Littlstar__Cfsnet__RemoveDirectoryPath),
+  "Ara__Cfsnet__RemoveDirectoryPath",
+  "ara.cfsnet",
+  sizeof(Ara__Cfsnet__RemoveDirectoryPath),
   1,
-  littlstar__cfsnet__remove_directory_path__field_descriptors,
-  littlstar__cfsnet__remove_directory_path__field_indices_by_name,
-  1,  littlstar__cfsnet__remove_directory_path__number_ranges,
-  (ProtobufCMessageInit) littlstar__cfsnet__remove_directory_path__init,
+  ara__cfsnet__remove_directory_path__field_descriptors,
+  ara__cfsnet__remove_directory_path__field_indices_by_name,
+  1,  ara__cfsnet__remove_directory_path__number_ranges,
+  (ProtobufCMessageInit) ara__cfsnet__remove_directory_path__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor littlstar__cfsnet__request__field_descriptors[4] =
+static const ProtobufCFieldDescriptor ara__cfsnet__request__field_descriptors[4] =
 {
   {
     "nonce",
@@ -2179,7 +2179,7 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__request__field_descript
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BYTES,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Request, nonce),
+    offsetof(Ara__Cfsnet__Request, nonce),
     NULL,
     NULL,
     0,             /* flags */
@@ -2191,8 +2191,8 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__request__field_descript
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Request, drive),
-    &littlstar__cfsnet__drive__descriptor,
+    offsetof(Ara__Cfsnet__Request, drive),
+    &ara__cfsnet__drive__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
@@ -2203,8 +2203,8 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__request__field_descript
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_ENUM,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Request, operation),
-    &littlstar__cfsnet__operation__descriptor,
+    offsetof(Ara__Cfsnet__Request, operation),
+    &ara__cfsnet__operation__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
@@ -2215,40 +2215,40 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__request__field_descript
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BYTES,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Request, buffer),
+    offsetof(Ara__Cfsnet__Request, buffer),
     NULL,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned littlstar__cfsnet__request__field_indices_by_name[] = {
+static const unsigned ara__cfsnet__request__field_indices_by_name[] = {
   3,   /* field[3] = buffer */
   1,   /* field[1] = drive */
   0,   /* field[0] = nonce */
   2,   /* field[2] = operation */
 };
-static const ProtobufCIntRange littlstar__cfsnet__request__number_ranges[1 + 1] =
+static const ProtobufCIntRange ara__cfsnet__request__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 4 }
 };
-const ProtobufCMessageDescriptor littlstar__cfsnet__request__descriptor =
+const ProtobufCMessageDescriptor ara__cfsnet__request__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "littlstar.cfsnet.Request",
+  "ara.cfsnet.Request",
   "Request",
-  "Littlstar__Cfsnet__Request",
-  "littlstar.cfsnet",
-  sizeof(Littlstar__Cfsnet__Request),
+  "Ara__Cfsnet__Request",
+  "ara.cfsnet",
+  sizeof(Ara__Cfsnet__Request),
   4,
-  littlstar__cfsnet__request__field_descriptors,
-  littlstar__cfsnet__request__field_indices_by_name,
-  1,  littlstar__cfsnet__request__number_ranges,
-  (ProtobufCMessageInit) littlstar__cfsnet__request__init,
+  ara__cfsnet__request__field_descriptors,
+  ara__cfsnet__request__field_indices_by_name,
+  1,  ara__cfsnet__request__number_ranges,
+  (ProtobufCMessageInit) ara__cfsnet__request__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor littlstar__cfsnet__resolve__field_descriptors[1] =
+static const ProtobufCFieldDescriptor ara__cfsnet__resolve__field_descriptors[1] =
 {
   {
     "path",
@@ -2256,37 +2256,37 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__resolve__field_descript
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Resolve, path),
+    offsetof(Ara__Cfsnet__Resolve, path),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned littlstar__cfsnet__resolve__field_indices_by_name[] = {
+static const unsigned ara__cfsnet__resolve__field_indices_by_name[] = {
   0,   /* field[0] = path */
 };
-static const ProtobufCIntRange littlstar__cfsnet__resolve__number_ranges[1 + 1] =
+static const ProtobufCIntRange ara__cfsnet__resolve__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 1 }
 };
-const ProtobufCMessageDescriptor littlstar__cfsnet__resolve__descriptor =
+const ProtobufCMessageDescriptor ara__cfsnet__resolve__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "littlstar.cfsnet.Resolve",
+  "ara.cfsnet.Resolve",
   "Resolve",
-  "Littlstar__Cfsnet__Resolve",
-  "littlstar.cfsnet",
-  sizeof(Littlstar__Cfsnet__Resolve),
+  "Ara__Cfsnet__Resolve",
+  "ara.cfsnet",
+  sizeof(Ara__Cfsnet__Resolve),
   1,
-  littlstar__cfsnet__resolve__field_descriptors,
-  littlstar__cfsnet__resolve__field_indices_by_name,
-  1,  littlstar__cfsnet__resolve__number_ranges,
-  (ProtobufCMessageInit) littlstar__cfsnet__resolve__init,
+  ara__cfsnet__resolve__field_descriptors,
+  ara__cfsnet__resolve__field_indices_by_name,
+  1,  ara__cfsnet__resolve__number_ranges,
+  (ProtobufCMessageInit) ara__cfsnet__resolve__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor littlstar__cfsnet__response__field_descriptors[6] =
+static const ProtobufCFieldDescriptor ara__cfsnet__response__field_descriptors[6] =
 {
   {
     "nonce",
@@ -2294,7 +2294,7 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__response__field_descrip
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BYTES,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Response, nonce),
+    offsetof(Ara__Cfsnet__Response, nonce),
     NULL,
     NULL,
     0,             /* flags */
@@ -2306,8 +2306,8 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__response__field_descrip
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Response, drive),
-    &littlstar__cfsnet__drive__descriptor,
+    offsetof(Ara__Cfsnet__Response, drive),
+    &ara__cfsnet__drive__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
@@ -2318,8 +2318,8 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__response__field_descrip
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_ENUM,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Response, operation),
-    &littlstar__cfsnet__operation__descriptor,
+    offsetof(Ara__Cfsnet__Response, operation),
+    &ara__cfsnet__operation__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
@@ -2330,8 +2330,8 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__response__field_descrip
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Response, request),
-    &littlstar__cfsnet__request__descriptor,
+    offsetof(Ara__Cfsnet__Response, request),
+    &ara__cfsnet__request__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
@@ -2342,8 +2342,8 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__response__field_descrip
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_ENUM,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Response, errorcode),
-    &littlstar__cfsnet__error_code__descriptor,
+    offsetof(Ara__Cfsnet__Response, errorcode),
+    &ara__cfsnet__error_code__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
@@ -2354,14 +2354,14 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__response__field_descrip
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BYTES,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Response, buffer),
+    offsetof(Ara__Cfsnet__Response, buffer),
     NULL,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned littlstar__cfsnet__response__field_indices_by_name[] = {
+static const unsigned ara__cfsnet__response__field_indices_by_name[] = {
   5,   /* field[5] = buffer */
   1,   /* field[1] = drive */
   4,   /* field[4] = errorCode */
@@ -2369,27 +2369,27 @@ static const unsigned littlstar__cfsnet__response__field_indices_by_name[] = {
   2,   /* field[2] = operation */
   3,   /* field[3] = request */
 };
-static const ProtobufCIntRange littlstar__cfsnet__response__number_ranges[1 + 1] =
+static const ProtobufCIntRange ara__cfsnet__response__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 6 }
 };
-const ProtobufCMessageDescriptor littlstar__cfsnet__response__descriptor =
+const ProtobufCMessageDescriptor ara__cfsnet__response__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "littlstar.cfsnet.Response",
+  "ara.cfsnet.Response",
   "Response",
-  "Littlstar__Cfsnet__Response",
-  "littlstar.cfsnet",
-  sizeof(Littlstar__Cfsnet__Response),
+  "Ara__Cfsnet__Response",
+  "ara.cfsnet",
+  sizeof(Ara__Cfsnet__Response),
   6,
-  littlstar__cfsnet__response__field_descriptors,
-  littlstar__cfsnet__response__field_indices_by_name,
-  1,  littlstar__cfsnet__response__number_ranges,
-  (ProtobufCMessageInit) littlstar__cfsnet__response__init,
+  ara__cfsnet__response__field_descriptors,
+  ara__cfsnet__response__field_indices_by_name,
+  1,  ara__cfsnet__response__number_ranges,
+  (ProtobufCMessageInit) ara__cfsnet__response__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor littlstar__cfsnet__stat__field_descriptors[8] =
+static const ProtobufCFieldDescriptor ara__cfsnet__stat__field_descriptors[8] =
 {
   {
     "uid",
@@ -2397,7 +2397,7 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__stat__field_descriptors
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_UINT32,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Stat, uid),
+    offsetof(Ara__Cfsnet__Stat, uid),
     NULL,
     NULL,
     0,             /* flags */
@@ -2409,7 +2409,7 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__stat__field_descriptors
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_UINT32,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Stat, gid),
+    offsetof(Ara__Cfsnet__Stat, gid),
     NULL,
     NULL,
     0,             /* flags */
@@ -2421,7 +2421,7 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__stat__field_descriptors
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_UINT32,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Stat, mode),
+    offsetof(Ara__Cfsnet__Stat, mode),
     NULL,
     NULL,
     0,             /* flags */
@@ -2433,7 +2433,7 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__stat__field_descriptors
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_UINT64,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Stat, size),
+    offsetof(Ara__Cfsnet__Stat, size),
     NULL,
     NULL,
     0,             /* flags */
@@ -2445,7 +2445,7 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__stat__field_descriptors
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_UINT64,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Stat, atime),
+    offsetof(Ara__Cfsnet__Stat, atime),
     NULL,
     NULL,
     0,             /* flags */
@@ -2457,7 +2457,7 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__stat__field_descriptors
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_UINT64,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Stat, ctime),
+    offsetof(Ara__Cfsnet__Stat, ctime),
     NULL,
     NULL,
     0,             /* flags */
@@ -2469,7 +2469,7 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__stat__field_descriptors
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_UINT64,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Stat, mtime),
+    offsetof(Ara__Cfsnet__Stat, mtime),
     NULL,
     NULL,
     0,             /* flags */
@@ -2481,14 +2481,14 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__stat__field_descriptors
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_UINT64,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__Stat, blocks),
+    offsetof(Ara__Cfsnet__Stat, blocks),
     NULL,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned littlstar__cfsnet__stat__field_indices_by_name[] = {
+static const unsigned ara__cfsnet__stat__field_indices_by_name[] = {
   4,   /* field[4] = atime */
   7,   /* field[7] = blocks */
   5,   /* field[5] = ctime */
@@ -2498,27 +2498,27 @@ static const unsigned littlstar__cfsnet__stat__field_indices_by_name[] = {
   3,   /* field[3] = size */
   0,   /* field[0] = uid */
 };
-static const ProtobufCIntRange littlstar__cfsnet__stat__number_ranges[1 + 1] =
+static const ProtobufCIntRange ara__cfsnet__stat__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 8 }
 };
-const ProtobufCMessageDescriptor littlstar__cfsnet__stat__descriptor =
+const ProtobufCMessageDescriptor ara__cfsnet__stat__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "littlstar.cfsnet.Stat",
+  "ara.cfsnet.Stat",
   "Stat",
-  "Littlstar__Cfsnet__Stat",
-  "littlstar.cfsnet",
-  sizeof(Littlstar__Cfsnet__Stat),
+  "Ara__Cfsnet__Stat",
+  "ara.cfsnet",
+  sizeof(Ara__Cfsnet__Stat),
   8,
-  littlstar__cfsnet__stat__field_descriptors,
-  littlstar__cfsnet__stat__field_indices_by_name,
-  1,  littlstar__cfsnet__stat__number_ranges,
-  (ProtobufCMessageInit) littlstar__cfsnet__stat__init,
+  ara__cfsnet__stat__field_descriptors,
+  ara__cfsnet__stat__field_indices_by_name,
+  1,  ara__cfsnet__stat__number_ranges,
+  (ProtobufCMessageInit) ara__cfsnet__stat__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor littlstar__cfsnet__stat_file__field_descriptors[1] =
+static const ProtobufCFieldDescriptor ara__cfsnet__stat_file__field_descriptors[1] =
 {
   {
     "path",
@@ -2526,37 +2526,37 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__stat_file__field_descri
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__StatFile, path),
+    offsetof(Ara__Cfsnet__StatFile, path),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned littlstar__cfsnet__stat_file__field_indices_by_name[] = {
+static const unsigned ara__cfsnet__stat_file__field_indices_by_name[] = {
   0,   /* field[0] = path */
 };
-static const ProtobufCIntRange littlstar__cfsnet__stat_file__number_ranges[1 + 1] =
+static const ProtobufCIntRange ara__cfsnet__stat_file__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 1 }
 };
-const ProtobufCMessageDescriptor littlstar__cfsnet__stat_file__descriptor =
+const ProtobufCMessageDescriptor ara__cfsnet__stat_file__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "littlstar.cfsnet.StatFile",
+  "ara.cfsnet.StatFile",
   "StatFile",
-  "Littlstar__Cfsnet__StatFile",
-  "littlstar.cfsnet",
-  sizeof(Littlstar__Cfsnet__StatFile),
+  "Ara__Cfsnet__StatFile",
+  "ara.cfsnet",
+  sizeof(Ara__Cfsnet__StatFile),
   1,
-  littlstar__cfsnet__stat_file__field_descriptors,
-  littlstar__cfsnet__stat_file__field_indices_by_name,
-  1,  littlstar__cfsnet__stat_file__number_ranges,
-  (ProtobufCMessageInit) littlstar__cfsnet__stat_file__init,
+  ara__cfsnet__stat_file__field_descriptors,
+  ara__cfsnet__stat_file__field_indices_by_name,
+  1,  ara__cfsnet__stat_file__number_ranges,
+  (ProtobufCMessageInit) ara__cfsnet__stat_file__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor littlstar__cfsnet__string__field_descriptors[1] =
+static const ProtobufCFieldDescriptor ara__cfsnet__string__field_descriptors[1] =
 {
   {
     "value",
@@ -2564,37 +2564,37 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__string__field_descripto
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__String, value),
+    offsetof(Ara__Cfsnet__String, value),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned littlstar__cfsnet__string__field_indices_by_name[] = {
+static const unsigned ara__cfsnet__string__field_indices_by_name[] = {
   0,   /* field[0] = value */
 };
-static const ProtobufCIntRange littlstar__cfsnet__string__number_ranges[1 + 1] =
+static const ProtobufCIntRange ara__cfsnet__string__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 1 }
 };
-const ProtobufCMessageDescriptor littlstar__cfsnet__string__descriptor =
+const ProtobufCMessageDescriptor ara__cfsnet__string__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "littlstar.cfsnet.String",
+  "ara.cfsnet.String",
   "String",
-  "Littlstar__Cfsnet__String",
-  "littlstar.cfsnet",
-  sizeof(Littlstar__Cfsnet__String),
+  "Ara__Cfsnet__String",
+  "ara.cfsnet",
+  sizeof(Ara__Cfsnet__String),
   1,
-  littlstar__cfsnet__string__field_descriptors,
-  littlstar__cfsnet__string__field_indices_by_name,
-  1,  littlstar__cfsnet__string__number_ranges,
-  (ProtobufCMessageInit) littlstar__cfsnet__string__init,
+  ara__cfsnet__string__field_descriptors,
+  ara__cfsnet__string__field_indices_by_name,
+  1,  ara__cfsnet__string__number_ranges,
+  (ProtobufCMessageInit) ara__cfsnet__string__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor littlstar__cfsnet__touch_file__field_descriptors[1] =
+static const ProtobufCFieldDescriptor ara__cfsnet__touch_file__field_descriptors[1] =
 {
   {
     "path",
@@ -2602,37 +2602,37 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__touch_file__field_descr
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__TouchFile, path),
+    offsetof(Ara__Cfsnet__TouchFile, path),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned littlstar__cfsnet__touch_file__field_indices_by_name[] = {
+static const unsigned ara__cfsnet__touch_file__field_indices_by_name[] = {
   0,   /* field[0] = path */
 };
-static const ProtobufCIntRange littlstar__cfsnet__touch_file__number_ranges[1 + 1] =
+static const ProtobufCIntRange ara__cfsnet__touch_file__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 1 }
 };
-const ProtobufCMessageDescriptor littlstar__cfsnet__touch_file__descriptor =
+const ProtobufCMessageDescriptor ara__cfsnet__touch_file__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "littlstar.cfsnet.TouchFile",
+  "ara.cfsnet.TouchFile",
   "TouchFile",
-  "Littlstar__Cfsnet__TouchFile",
-  "littlstar.cfsnet",
-  sizeof(Littlstar__Cfsnet__TouchFile),
+  "Ara__Cfsnet__TouchFile",
+  "ara.cfsnet",
+  sizeof(Ara__Cfsnet__TouchFile),
   1,
-  littlstar__cfsnet__touch_file__field_descriptors,
-  littlstar__cfsnet__touch_file__field_indices_by_name,
-  1,  littlstar__cfsnet__touch_file__number_ranges,
-  (ProtobufCMessageInit) littlstar__cfsnet__touch_file__init,
+  ara__cfsnet__touch_file__field_descriptors,
+  ara__cfsnet__touch_file__field_indices_by_name,
+  1,  ara__cfsnet__touch_file__number_ranges,
+  (ProtobufCMessageInit) ara__cfsnet__touch_file__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor littlstar__cfsnet__unlink_file__field_descriptors[1] =
+static const ProtobufCFieldDescriptor ara__cfsnet__unlink_file__field_descriptors[1] =
 {
   {
     "path",
@@ -2640,37 +2640,37 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__unlink_file__field_desc
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__UnlinkFile, path),
+    offsetof(Ara__Cfsnet__UnlinkFile, path),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned littlstar__cfsnet__unlink_file__field_indices_by_name[] = {
+static const unsigned ara__cfsnet__unlink_file__field_indices_by_name[] = {
   0,   /* field[0] = path */
 };
-static const ProtobufCIntRange littlstar__cfsnet__unlink_file__number_ranges[1 + 1] =
+static const ProtobufCIntRange ara__cfsnet__unlink_file__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 1 }
 };
-const ProtobufCMessageDescriptor littlstar__cfsnet__unlink_file__descriptor =
+const ProtobufCMessageDescriptor ara__cfsnet__unlink_file__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "littlstar.cfsnet.UnlinkFile",
+  "ara.cfsnet.UnlinkFile",
   "UnlinkFile",
-  "Littlstar__Cfsnet__UnlinkFile",
-  "littlstar.cfsnet",
-  sizeof(Littlstar__Cfsnet__UnlinkFile),
+  "Ara__Cfsnet__UnlinkFile",
+  "ara.cfsnet",
+  sizeof(Ara__Cfsnet__UnlinkFile),
   1,
-  littlstar__cfsnet__unlink_file__field_descriptors,
-  littlstar__cfsnet__unlink_file__field_indices_by_name,
-  1,  littlstar__cfsnet__unlink_file__number_ranges,
-  (ProtobufCMessageInit) littlstar__cfsnet__unlink_file__init,
+  ara__cfsnet__unlink_file__field_descriptors,
+  ara__cfsnet__unlink_file__field_indices_by_name,
+  1,  ara__cfsnet__unlink_file__number_ranges,
+  (ProtobufCMessageInit) ara__cfsnet__unlink_file__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor littlstar__cfsnet__write_file__field_descriptors[4] =
+static const ProtobufCFieldDescriptor ara__cfsnet__write_file__field_descriptors[4] =
 {
   {
     "path",
@@ -2678,7 +2678,7 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__write_file__field_descr
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__WriteFile, path),
+    offsetof(Ara__Cfsnet__WriteFile, path),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
@@ -2690,7 +2690,7 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__write_file__field_descr
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BYTES,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__WriteFile, buffer),
+    offsetof(Ara__Cfsnet__WriteFile, buffer),
     NULL,
     NULL,
     0,             /* flags */
@@ -2702,7 +2702,7 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__write_file__field_descr
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_UINT32,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__WriteFile, start),
+    offsetof(Ara__Cfsnet__WriteFile, start),
     NULL,
     NULL,
     0,             /* flags */
@@ -2714,86 +2714,86 @@ static const ProtobufCFieldDescriptor littlstar__cfsnet__write_file__field_descr
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_UINT32,
     0,   /* quantifier_offset */
-    offsetof(Littlstar__Cfsnet__WriteFile, end),
+    offsetof(Ara__Cfsnet__WriteFile, end),
     NULL,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned littlstar__cfsnet__write_file__field_indices_by_name[] = {
+static const unsigned ara__cfsnet__write_file__field_indices_by_name[] = {
   1,   /* field[1] = buffer */
   3,   /* field[3] = end */
   0,   /* field[0] = path */
   2,   /* field[2] = start */
 };
-static const ProtobufCIntRange littlstar__cfsnet__write_file__number_ranges[1 + 1] =
+static const ProtobufCIntRange ara__cfsnet__write_file__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 4 }
 };
-const ProtobufCMessageDescriptor littlstar__cfsnet__write_file__descriptor =
+const ProtobufCMessageDescriptor ara__cfsnet__write_file__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "littlstar.cfsnet.WriteFile",
+  "ara.cfsnet.WriteFile",
   "WriteFile",
-  "Littlstar__Cfsnet__WriteFile",
-  "littlstar.cfsnet",
-  sizeof(Littlstar__Cfsnet__WriteFile),
+  "Ara__Cfsnet__WriteFile",
+  "ara.cfsnet",
+  sizeof(Ara__Cfsnet__WriteFile),
   4,
-  littlstar__cfsnet__write_file__field_descriptors,
-  littlstar__cfsnet__write_file__field_indices_by_name,
-  1,  littlstar__cfsnet__write_file__number_ranges,
-  (ProtobufCMessageInit) littlstar__cfsnet__write_file__init,
+  ara__cfsnet__write_file__field_descriptors,
+  ara__cfsnet__write_file__field_indices_by_name,
+  1,  ara__cfsnet__write_file__number_ranges,
+  (ProtobufCMessageInit) ara__cfsnet__write_file__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCEnumValue littlstar__cfsnet__file_mode__enum_values_by_number[4] =
+static const ProtobufCEnumValue ara__cfsnet__file_mode__enum_values_by_number[4] =
 {
-  { "F_OK", "LITTLSTAR__CFSNET__FILE_MODE__F_OK", 0 },
-  { "X_OK", "LITTLSTAR__CFSNET__FILE_MODE__X_OK", 1 },
-  { "W_OK", "LITTLSTAR__CFSNET__FILE_MODE__W_OK", 2 },
-  { "R_OK", "LITTLSTAR__CFSNET__FILE_MODE__R_OK", 4 },
+  { "F_OK", "ARA__CFSNET__FILE_MODE__F_OK", 0 },
+  { "X_OK", "ARA__CFSNET__FILE_MODE__X_OK", 1 },
+  { "W_OK", "ARA__CFSNET__FILE_MODE__W_OK", 2 },
+  { "R_OK", "ARA__CFSNET__FILE_MODE__R_OK", 4 },
 };
-static const ProtobufCIntRange littlstar__cfsnet__file_mode__value_ranges[] = {
+static const ProtobufCIntRange ara__cfsnet__file_mode__value_ranges[] = {
 {0, 0},{4, 3},{0, 4}
 };
-static const ProtobufCEnumValueIndex littlstar__cfsnet__file_mode__enum_values_by_name[4] =
+static const ProtobufCEnumValueIndex ara__cfsnet__file_mode__enum_values_by_name[4] =
 {
   { "F_OK", 0 },
   { "R_OK", 3 },
   { "W_OK", 2 },
   { "X_OK", 1 },
 };
-const ProtobufCEnumDescriptor littlstar__cfsnet__file_mode__descriptor =
+const ProtobufCEnumDescriptor ara__cfsnet__file_mode__descriptor =
 {
   PROTOBUF_C__ENUM_DESCRIPTOR_MAGIC,
-  "littlstar.cfsnet.FileMode",
+  "ara.cfsnet.FileMode",
   "FileMode",
-  "Littlstar__Cfsnet__FileMode",
-  "littlstar.cfsnet",
+  "Ara__Cfsnet__FileMode",
+  "ara.cfsnet",
   4,
-  littlstar__cfsnet__file_mode__enum_values_by_number,
+  ara__cfsnet__file_mode__enum_values_by_number,
   4,
-  littlstar__cfsnet__file_mode__enum_values_by_name,
+  ara__cfsnet__file_mode__enum_values_by_name,
   2,
-  littlstar__cfsnet__file_mode__value_ranges,
+  ara__cfsnet__file_mode__value_ranges,
   NULL,NULL,NULL,NULL   /* reserved[1234] */
 };
-static const ProtobufCEnumValue littlstar__cfsnet__error_code__enum_values_by_number[8] =
+static const ProtobufCEnumValue ara__cfsnet__error_code__enum_values_by_number[8] =
 {
-  { "NoError", "LITTLSTAR__CFSNET__ERROR_CODE__NoError", 0 },
-  { "BadRequestError", "LITTLSTAR__CFSNET__ERROR_CODE__BadRequestError", 400 },
-  { "AccessDeniedError", "LITTLSTAR__CFSNET__ERROR_CODE__AccessDeniedError", 403 },
-  { "NotFoundError", "LITTLSTAR__CFSNET__ERROR_CODE__NotFoundError", 404 },
-  { "NotSupportedError", "LITTLSTAR__CFSNET__ERROR_CODE__NotSupportedError", 405 },
-  { "NotOpenedError", "LITTLSTAR__CFSNET__ERROR_CODE__NotOpenedError", 410 },
-  { "InternalError", "LITTLSTAR__CFSNET__ERROR_CODE__InternalError", 500 },
-  { "NotImplementedError", "LITTLSTAR__CFSNET__ERROR_CODE__NotImplementedError", 501 },
+  { "NoError", "ARA__CFSNET__ERROR_CODE__NoError", 0 },
+  { "BadRequestError", "ARA__CFSNET__ERROR_CODE__BadRequestError", 400 },
+  { "AccessDeniedError", "ARA__CFSNET__ERROR_CODE__AccessDeniedError", 403 },
+  { "NotFoundError", "ARA__CFSNET__ERROR_CODE__NotFoundError", 404 },
+  { "NotSupportedError", "ARA__CFSNET__ERROR_CODE__NotSupportedError", 405 },
+  { "NotOpenedError", "ARA__CFSNET__ERROR_CODE__NotOpenedError", 410 },
+  { "InternalError", "ARA__CFSNET__ERROR_CODE__InternalError", 500 },
+  { "NotImplementedError", "ARA__CFSNET__ERROR_CODE__NotImplementedError", 501 },
 };
-static const ProtobufCIntRange littlstar__cfsnet__error_code__value_ranges[] = {
+static const ProtobufCIntRange ara__cfsnet__error_code__value_ranges[] = {
 {0, 0},{400, 1},{403, 2},{410, 5},{500, 6},{0, 8}
 };
-static const ProtobufCEnumValueIndex littlstar__cfsnet__error_code__enum_values_by_name[8] =
+static const ProtobufCEnumValueIndex ara__cfsnet__error_code__enum_values_by_name[8] =
 {
   { "AccessDeniedError", 2 },
   { "BadRequestError", 1 },
@@ -2804,48 +2804,48 @@ static const ProtobufCEnumValueIndex littlstar__cfsnet__error_code__enum_values_
   { "NotOpenedError", 5 },
   { "NotSupportedError", 4 },
 };
-const ProtobufCEnumDescriptor littlstar__cfsnet__error_code__descriptor =
+const ProtobufCEnumDescriptor ara__cfsnet__error_code__descriptor =
 {
   PROTOBUF_C__ENUM_DESCRIPTOR_MAGIC,
-  "littlstar.cfsnet.ErrorCode",
+  "ara.cfsnet.ErrorCode",
   "ErrorCode",
-  "Littlstar__Cfsnet__ErrorCode",
-  "littlstar.cfsnet",
+  "Ara__Cfsnet__ErrorCode",
+  "ara.cfsnet",
   8,
-  littlstar__cfsnet__error_code__enum_values_by_number,
+  ara__cfsnet__error_code__enum_values_by_number,
   8,
-  littlstar__cfsnet__error_code__enum_values_by_name,
+  ara__cfsnet__error_code__enum_values_by_name,
   5,
-  littlstar__cfsnet__error_code__value_ranges,
+  ara__cfsnet__error_code__value_ranges,
   NULL,NULL,NULL,NULL   /* reserved[1234] */
 };
-static const ProtobufCEnumValue littlstar__cfsnet__operation__enum_values_by_number[20] =
+static const ProtobufCEnumValue ara__cfsnet__operation__enum_values_by_number[20] =
 {
-  { "NoOperation", "LITTLSTAR__CFSNET__OPERATION__NoOperation", 0 },
-  { "ResolveOperation", "LITTLSTAR__CFSNET__OPERATION__ResolveOperation", 1 },
-  { "KeyPairOperation", "LITTLSTAR__CFSNET__OPERATION__KeyPairOperation", 2 },
-  { "OpenOperation", "LITTLSTAR__CFSNET__OPERATION__OpenOperation", 10 },
-  { "CloseOperation", "LITTLSTAR__CFSNET__OPERATION__CloseOperation", 11 },
-  { "ReadOperation", "LITTLSTAR__CFSNET__OPERATION__ReadOperation", 12 },
-  { "WriteOperation", "LITTLSTAR__CFSNET__OPERATION__WriteOperation", 13 },
-  { "ReadFileOperation", "LITTLSTAR__CFSNET__OPERATION__ReadFileOperation", 20 },
-  { "WriteFileOperation", "LITTLSTAR__CFSNET__OPERATION__WriteFileOperation", 21 },
-  { "StatFileOperation", "LITTLSTAR__CFSNET__OPERATION__StatFileOperation", 22 },
-  { "UnlinkFileOperation", "LITTLSTAR__CFSNET__OPERATION__UnlinkFileOperation", 23 },
-  { "AccessFileOperation", "LITTLSTAR__CFSNET__OPERATION__AccessFileOperation", 24 },
-  { "TouchFileOperation", "LITTLSTAR__CFSNET__OPERATION__TouchFileOperation", 25 },
-  { "DownloadFileOperation", "LITTLSTAR__CFSNET__OPERATION__DownloadFileOperation", 26 },
-  { "DownloadDirectoryOperation", "LITTLSTAR__CFSNET__OPERATION__DownloadDirectoryOperation", 30 },
-  { "MakeDirectoryOperation", "LITTLSTAR__CFSNET__OPERATION__MakeDirectoryOperation", 31 },
-  { "MakeDirectoryPathOperation", "LITTLSTAR__CFSNET__OPERATION__MakeDirectoryPathOperation", 32 },
-  { "RemoveDirectoryOperation", "LITTLSTAR__CFSNET__OPERATION__RemoveDirectoryOperation", 33 },
-  { "RemoveDirectoryPathOperation", "LITTLSTAR__CFSNET__OPERATION__RemoveDirectoryPathOperation", 34 },
-  { "ListDirectoryOperation", "LITTLSTAR__CFSNET__OPERATION__ListDirectoryOperation", 35 },
+  { "NoOperation", "ARA__CFSNET__OPERATION__NoOperation", 0 },
+  { "ResolveOperation", "ARA__CFSNET__OPERATION__ResolveOperation", 1 },
+  { "KeyPairOperation", "ARA__CFSNET__OPERATION__KeyPairOperation", 2 },
+  { "OpenOperation", "ARA__CFSNET__OPERATION__OpenOperation", 10 },
+  { "CloseOperation", "ARA__CFSNET__OPERATION__CloseOperation", 11 },
+  { "ReadOperation", "ARA__CFSNET__OPERATION__ReadOperation", 12 },
+  { "WriteOperation", "ARA__CFSNET__OPERATION__WriteOperation", 13 },
+  { "ReadFileOperation", "ARA__CFSNET__OPERATION__ReadFileOperation", 20 },
+  { "WriteFileOperation", "ARA__CFSNET__OPERATION__WriteFileOperation", 21 },
+  { "StatFileOperation", "ARA__CFSNET__OPERATION__StatFileOperation", 22 },
+  { "UnlinkFileOperation", "ARA__CFSNET__OPERATION__UnlinkFileOperation", 23 },
+  { "AccessFileOperation", "ARA__CFSNET__OPERATION__AccessFileOperation", 24 },
+  { "TouchFileOperation", "ARA__CFSNET__OPERATION__TouchFileOperation", 25 },
+  { "DownloadFileOperation", "ARA__CFSNET__OPERATION__DownloadFileOperation", 26 },
+  { "DownloadDirectoryOperation", "ARA__CFSNET__OPERATION__DownloadDirectoryOperation", 30 },
+  { "MakeDirectoryOperation", "ARA__CFSNET__OPERATION__MakeDirectoryOperation", 31 },
+  { "MakeDirectoryPathOperation", "ARA__CFSNET__OPERATION__MakeDirectoryPathOperation", 32 },
+  { "RemoveDirectoryOperation", "ARA__CFSNET__OPERATION__RemoveDirectoryOperation", 33 },
+  { "RemoveDirectoryPathOperation", "ARA__CFSNET__OPERATION__RemoveDirectoryPathOperation", 34 },
+  { "ListDirectoryOperation", "ARA__CFSNET__OPERATION__ListDirectoryOperation", 35 },
 };
-static const ProtobufCIntRange littlstar__cfsnet__operation__value_ranges[] = {
+static const ProtobufCIntRange ara__cfsnet__operation__value_ranges[] = {
 {0, 0},{10, 3},{20, 7},{30, 14},{0, 20}
 };
-static const ProtobufCEnumValueIndex littlstar__cfsnet__operation__enum_values_by_name[20] =
+static const ProtobufCEnumValueIndex ara__cfsnet__operation__enum_values_by_name[20] =
 {
   { "AccessFileOperation", 11 },
   { "CloseOperation", 4 },
@@ -2868,18 +2868,18 @@ static const ProtobufCEnumValueIndex littlstar__cfsnet__operation__enum_values_b
   { "WriteFileOperation", 8 },
   { "WriteOperation", 6 },
 };
-const ProtobufCEnumDescriptor littlstar__cfsnet__operation__descriptor =
+const ProtobufCEnumDescriptor ara__cfsnet__operation__descriptor =
 {
   PROTOBUF_C__ENUM_DESCRIPTOR_MAGIC,
-  "littlstar.cfsnet.Operation",
+  "ara.cfsnet.Operation",
   "Operation",
-  "Littlstar__Cfsnet__Operation",
-  "littlstar.cfsnet",
+  "Ara__Cfsnet__Operation",
+  "ara.cfsnet",
   20,
-  littlstar__cfsnet__operation__enum_values_by_number,
+  ara__cfsnet__operation__enum_values_by_number,
   20,
-  littlstar__cfsnet__operation__enum_values_by_name,
+  ara__cfsnet__operation__enum_values_by_name,
   4,
-  littlstar__cfsnet__operation__value_ranges,
+  ara__cfsnet__operation__value_ranges,
   NULL,NULL,NULL,NULL   /* reserved[1234] */
 };
