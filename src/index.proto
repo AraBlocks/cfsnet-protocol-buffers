@@ -4,12 +4,12 @@ syntax = "proto3";
 /**
  * Compiled output file configuration.
  */
-option java_package = "com.littlstar.protobuf";
+option java_package = "com.ara.protobuf";
 option java_multiple_files = true;
 option java_outer_classname = "CFSNetProtobuf";
 
 option objc_class_prefix = "CFSPB";
-option csharp_namespace = "Littlstar.CFSNet.Protobuf";
+option csharp_namespace = "Ara.CFSNet.Protobuf";
 
 /**
  * Public Protocol Buffers exported

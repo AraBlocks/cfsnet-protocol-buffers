@@ -1,4 +1,4 @@
-package littlstar.cfsnet;
+package ara.cfsnet;
 
 import "cfsnet/AccessFile";
 import "cfsnet/Boolean";
